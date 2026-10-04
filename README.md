@@ -52,9 +52,9 @@ Os dados públicos existem, mas não estão prontos para análise: têm inconsis
 |---|---|
 | Estabelecimentos no arquivo nacional | 12.643.067 |
 | Estabelecimentos de São José dos Campos (código IBGE 354990) | 47.339 |
-| Do tipo Cnpj | 46.244 |
-| Do tipo Caepf | 708 |
-| Do tipo Cno | 387 |
+| Do tipo CNPJ | 46.244 |
+| Do tipo CAEPF | 708 |
+| Do tipo CNO | 387 |
 
 ---
 
@@ -133,8 +133,8 @@ Os problemas encontrados na RAIS e o tratamento de cada um estão registrados no
 
 | ID | Problema | Decisão | Status |
 |---|---|---|---|
-| DEC-001 | 30.470 estabelecimentos (64,37%) com RAIS negativa, ou seja, sem vínculos ativos | Manter na base e tratar como indicador próprio do painel, pois o cliente esclareceu que não é um erro a descartar | Fechada |
-| DEC-002 | A base mistura três tipos de estabelecimento (Cnpj, Caepf e Cno) | Segmentar os dados, com recorte padrão em Cnpj | Fechada |
+| DEC-001 | 30.470 estabelecimentos (64,37%) com RAIS negativa, ou seja, sem vínculos ativos | Manter na base, com indicador próprio, pois o cliente esclareceu que não é um erro a descartar. As análises de contratação usam por padrão os 16.869 estabelecimentos com vínculo ativo | Fechada |
+| DEC-002 | A base mistura três tipos de estabelecimento (CNPJ, CAEPF e CNO) | Segmentar os dados, com recorte padrão em CNPJ | Fechada |
 | DEC-003 | O arquivo não tem campo de ano ou competência | Ano-base 2024, confirmado pelo cliente | Fechada |
 | DEC-004 | A base pública não traz razão social, CNPJ ou CPF dos estabelecimentos | Em aberto, aguardando o cliente sobre uma base identificada. Contingência: indicadores agregados por setor e região | **Aberta** |
 | DEC-005 | O PIB dos Municípios mais recente publicado é a série 2022–2023 | Cruzar a RAIS 2024 com o PIB 2023, documentando a defasagem de 1 ano | Fechada |
