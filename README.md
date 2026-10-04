@@ -101,7 +101,7 @@ A coluna **Prior.** é a ordem de prioridade definida no Backlog do Produto (1 �
 
 ### Sprint 1: Fundação técnica ✅
 
-|ID| User Story | Critério de aceite | Prior. | Status |
+| ID | User Story | Critério de aceite | Prior. | Status |
 |---|---|---|---|---|
 | US01 | Como equipe do projeto, quero um pipeline de ETL no Google Colab (Python) que extraia e prepare os dados brutos da RAIS, para que os dados estejam prontos para análise no Power BI. | O notebook executa de ponta a ponta e gera os CSVs de saída sem erros. | 1 | Concluído |
 | US02 | Como equipe do projeto, quero filtrar e padronizar os dados para o município de São José dos Campos (código 354990), para que a análise reflita exclusivamente o ecossistema local. | 100% dos registros do CSV final pertencem ao município 354990. | 3 | Concluído |
