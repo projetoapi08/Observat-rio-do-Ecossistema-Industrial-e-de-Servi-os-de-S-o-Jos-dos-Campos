@@ -1,0 +1,34 @@
+name: Converter docx para md
+
+on:
+  push:
+    paths:
+      - 'observatorio-sjc/docs/**.docx'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  converter:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Instalar Pandoc
+        run: sudo apt-get update && sudo apt-get install -y pandoc
+
+      - name: Converter arquivos
+        run: |
+          cd observatorio-sjc/docs
+          for f in *.docx; do
+            pandoc "$f" -o "${f%.docx}.md" --wrap=none --extract-media="imagens/${f%.docx}"
+          done
+
+      - name: Salvar no repositório
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add observatorio-sjc/docs
+          git commit -m "Converte docx para md" || exit 0
+          git push
