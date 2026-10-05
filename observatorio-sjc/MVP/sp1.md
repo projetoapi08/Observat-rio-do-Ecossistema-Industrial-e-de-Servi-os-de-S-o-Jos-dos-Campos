@@ -93,7 +93,11 @@
 - Documentação (Visão e Escopo, Backlog, DoR, DoD, Log de Decisões, Relatório Técnico): `docs/`
 - Notebook de ETL (Google Colab): `notebooks/` *https://colab.research.google.com/drive/1zOZJ0oXUY7QJlAMfuiMbI5g9EcBWSnMz?usp=sharing*
 - Dados tratados (CSVs): *(colar o link do Drive)*
-- Pré-visualização inicial no Power BI: *(colar o link ou arrastar o print)*
+- Pré-visualização inicial no Power BI:
+- <img width="1313" height="479" alt="WhatsApp Image 2026-10-05 at 19 10 35" src="https://github.com/user-attachments/assets/1aedb568-9db7-4d1d-adf7-79e8ebb92feb" />
+<img width="674" height="542" alt="WhatsApp Image 2026-10-05 at 19 10 49" src="https://github.com/user-attachments/assets/0c2420d0-e8b7-4dfc-9d89-82c2550f7b3d" />
+
+
 - Vídeo ou prints da execução do ETL: *(arrastar o arquivo para este arquivo no GitHub)*
 - Referência do projeto: [Observatório da Inovação RS](https://sict.rs.gov.br/observatorio)
 
