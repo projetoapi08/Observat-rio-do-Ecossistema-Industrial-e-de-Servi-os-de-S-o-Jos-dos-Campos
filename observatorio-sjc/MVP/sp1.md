@@ -91,7 +91,7 @@
 
 - Repositório: <https://github.com/projetoapi08/observatorio-sjc>
 - Documentação (Visão e Escopo, Backlog, DoR, DoD, Log de Decisões, Relatório Técnico): `docs/`
-- Notebook de ETL (Google Colab): `notebooks/` *(colar o link do Colab)*
+- Notebook de ETL (Google Colab): `notebooks/` *https://colab.research.google.com/drive/1zOZJ0oXUY7QJlAMfuiMbI5g9EcBWSnMz?usp=sharing*
 - Dados tratados (CSVs): *(colar o link do Drive)*
 - Pré-visualização inicial no Power BI: *(colar o link ou arrastar o print)*
 - Vídeo ou prints da execução do ETL: *(arrastar o arquivo para este arquivo no GitHub)*
