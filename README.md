@@ -74,7 +74,7 @@ observatorio-sjc/
 
 - [MVP da Sprint 1](https://github.com/projetoapi08/Observat-rio-do-Ecossistema-Industrial-e-de-Servi-os-de-S-o-Jos-dos-Campos/blob/main/observatorio-sjc/MVP/sp1.md)
 - [Relatório da Sprint 1](https://github.com/projetoapi08/Observat-rio-do-Ecossistema-Industrial-e-de-Servi-os-de-S-o-Jos-dos-Campos/blob/main/observatorio-sjc/RELATORIO_SPRINT_1.md)
-- Visão e Escopo, Backlog do Produto, Backlog das Sprints, DoR, DoD e Log de Decisões de Dados: pasta [`docs/`](docs/)
+- Visão e Escopo, Backlog do Produto, Backlog das Sprints, DoR, DoD e Log de Decisões de Dados: pasta [`docs/`](https://github.com/projetoapi08/Observat-rio-do-Ecossistema-Industrial-e-de-Servi-os-de-S-o-Jos-dos-Campos/tree/main/observatorio-sjc/docs)
 
 ---
 
