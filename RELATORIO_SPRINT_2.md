@@ -85,7 +85,7 @@ Marque cada item depois de adicionar o print ou arquivo na pasta `evidencias/`.
 ## 5. Estrutura do repositório
 
 ```
-observatorio-sjc/
+.
 ├── README.md
 ├── RELATORIO_SPRINT_1.md
 ├── RELATORIO_SPRINT_2.md
