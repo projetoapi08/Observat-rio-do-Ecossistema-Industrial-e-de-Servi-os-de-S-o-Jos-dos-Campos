@@ -45,7 +45,7 @@ Atualizados ou criados na pasta `docs/`: Visão e Escopo (restrições e riscos)
 - **Classificação CNAE:** hierarquia de seção a subclasse, com descrições oficiais da CNAE 2.3 (`dados/CNAE_RAIS_SJC_2024.xlsx`)
 - **PIB dos Municípios:** série 2002–2023 tratada no Colab e conferida (`dados/IBGE_PIB_SJC_Observatorio.xlsx`)
 - **Geocodificação:** CEP → bairro e coordenada, com BrasilAPI e Nominatim (OpenStreetMap)
-- **Região oficial:** bairro → região pela lista do Plano Diretor da Prefeitura, conferida pelo setor do CEP (35 dos 37 setores caem inteiros numa só região)
+- **Região oficial:** bairro → região pela lista do Plano Diretor da Prefeitura, conferida pelo setor do CEP (33 dos 37 setores caem inteiros numa só região; os outros 4 estão na divisa Centro–Oeste ou misturam área urbana e rural)
 - **Base única:** `dados/RAIS_SJC_2024_PowerBI.csv` — 47.339 linhas e 46 colunas, com os nomes de colunas usados pelo painel; guia em `evidencias/Importacao_PowerBI_RAIS_SJC.txt`
 
 ### 4.3 Resposta ao feedback da Sprint 1
