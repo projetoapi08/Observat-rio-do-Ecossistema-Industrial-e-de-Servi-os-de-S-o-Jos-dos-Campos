@@ -75,11 +75,13 @@ O orientador pediu para esclarecer se os 64,37% de RAIS negativa poderiam ser er
 
 Marque cada item depois de adicionar o print ou arquivo na pasta `evidencias/`.
 
-- [ ] Print da página KPIs e Mapa
-- [ ] Print da página Setor de Atividades (CNAE)
-- [ ] Print da página PIB e Emprego
-- [ ] Print da página Notas Metodológicas
-- [x] Gráfico de vínculos por região oficial gerado da base (`evidencias/sprint2_vinculos_por_regiao.png`)
+- [x] Print da página KPIs e Mapa (`evidencias/sprint2/painel_kpis_mapa.png`)
+- [x] Print da página Setor de Atividades (CNAE) (`evidencias/sprint2/painel_setor_atividades.png`)
+- [ ] Print da página PIB e Emprego (está na versão `PowerbiATT_Api_Sprint2.pbix`)
+- [ ] Print da página Notas Metodológicas (idem)
+- [x] Relatório do Power BI com as medidas DAX (`docs/Relatorio_PowerBI_Sprint2.md`)
+- [x] Painel exportado em PDF (`powerbi/Powerbi_API_Sprint2.pdf`)
+- [x] Gráfico de vínculos por região oficial gerado da base (`evidencias/sprint2/vinculos_por_regiao.png`)
 - [x] Notebook da base única (`notebooks/02_Base_PowerBI_SJC.ipynb`)
 - [ ] Execução do notebook do PIB no Colab
 - [ ] Vídeo de incremento da Sprint 2

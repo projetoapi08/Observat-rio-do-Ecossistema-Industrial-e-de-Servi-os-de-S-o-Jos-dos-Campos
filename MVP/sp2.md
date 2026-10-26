@@ -103,7 +103,7 @@ flowchart LR
 | PIB de São José dos Campos em 2023 | R$ 61,4 bilhões |
 | Decisões de dados registradas | 22 (DEC-001 a DEC-022) |
 
-![Vínculos ativos por região oficial](../evidencias/sprint2_vinculos_por_regiao.png)
+![Vínculos ativos por região oficial](../evidencias/sprint2/vinculos_por_regiao.png)
 
 ---
 
@@ -118,6 +118,24 @@ flowchart LR
 
 ---
 
+## 🖥️ Telas do MVP
+
+### Página 1 — KPIs e Mapa
+
+![KPIs e Mapa](../evidencias/sprint2/painel_kpis_mapa.png)
+
+Cartões com o total de estabelecimentos (47.339), com e sem vínculo e vínculos ativos (206.717); pizza com 35,52% com vínculo e 64,48% sem vínculo; mapa dos estabelecimentos por CEP; filtros por setor (Seção CNAE), porte e tipo de estabelecimento.
+
+### Página 2 — Setor de Atividades (CNAE)
+
+![Setor de Atividades](../evidencias/sprint2/painel_setor_atividades.png)
+
+Top 10 setores por empregos CLT (fabricação de aeronaves, atendimento hospitalar e restaurantes na frente) e por número de estabelecimentos; participação de cada Seção CNAE em vínculos × estabelecimentos; tabela de vínculos CLT por faixa de porte e setor.
+
+> As páginas **PIB e Emprego** e **Notas Metodológicas** estão na versão `PowerbiATT_Api_Sprint2.pbix` e ainda precisam ser trazidas para a versão atual do painel. A região oficial e o mapa por coordenadas entram na Sprint 3 (US06).
+
+---
+
 ## 📂 Anexos / Evidências
 
 - Relatório da Sprint 2: [`RELATORIO_SPRINT_2.md`](../RELATORIO_SPRINT_2.md)
@@ -125,12 +143,8 @@ flowchart LR
 - Base única para o Power BI: [`dados/RAIS_SJC_2024_PowerBI.csv`](../dados/RAIS_SJC_2024_PowerBI.csv) — guia em [`evidencias/Importacao_PowerBI_RAIS_SJC.txt`](../evidencias/Importacao_PowerBI_RAIS_SJC.txt)
 - Notebook que gera a base (Google Colab): [`notebooks/02_Base_PowerBI_SJC.ipynb`](../notebooks/02_Base_PowerBI_SJC.ipynb) · dicionário de dados em [`dados/README.md`](../dados/README.md)
 - Planilhas tratadas: [`dados/CNAE_RAIS_SJC_2024.xlsx`](../dados/CNAE_RAIS_SJC_2024.xlsx) e [`dados/IBGE_PIB_SJC_Observatorio.xlsx`](../dados/IBGE_PIB_SJC_Observatorio.xlsx)
-- Painel: [`powerbi/PowerbiATT_Api_Sprint2.pbix`](../powerbi/PowerbiATT_Api_Sprint2.pbix)
-- Telas do painel *(arrastar os prints para este arquivo no GitHub)*:
-  - Página **KPIs e Mapa**:
-  - Página **Setor de Atividades (CNAE)**:
-  - Página **PIB e Emprego**:
-  - Página **Notas Metodológicas**:
+- Painel: [`powerbi/Powerbi_API_Sprint2.pbix`](../powerbi/Powerbi_API_Sprint2.pbix) (versão atual, com [PDF](../powerbi/Powerbi_API_Sprint2.pdf) e [modelo .pbit](../powerbi/Powerbi_API_Sprint2.pbit)) e [`powerbi/PowerbiATT_Api_Sprint2.pbix`](../powerbi/PowerbiATT_Api_Sprint2.pbix) (versão com as páginas PIB e Emprego e Notas Metodológicas) — ver [`powerbi/README.md`](../powerbi/README.md)
+- Relatório do Power BI (fontes, medidas DAX e leitura de cada visual): [`docs/Relatorio_PowerBI_Sprint2.md`](../docs/Relatorio_PowerBI_Sprint2.md)
 - Vídeo de incremento da Sprint 2: *(adicionar link do YouTube)*
 - Referência do projeto: [Observatório da Inovação RS](https://sict.rs.gov.br/observatorio)
 

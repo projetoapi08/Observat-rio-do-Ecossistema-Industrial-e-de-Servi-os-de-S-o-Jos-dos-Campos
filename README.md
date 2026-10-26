@@ -4,7 +4,7 @@ Projeto da disciplina **API (Aprendizagem por Projetos Integrados)** do curso de
 
 O projeto constrói uma ferramenta de inteligência de dados, em parceria com o **CADI** e a **Secretaria de Desenvolvimento Econômico** do município, que consolida e disponibiliza indicadores públicos sobre os estabelecimentos industriais e de serviços da cidade. O produto final é um painel interativo em **Power BI**, nos moldes do [Observatório da Inovação RS](https://sict.rs.gov.br/observatorio) ([ver painel](https://sict.rs.gov.br/painel-do-observatorio)).
 
-**Acesso rápido:** [MVP da Sprint 2](MVP/sp2.md) · [Relatório da Sprint 2](RELATORIO_SPRINT_2.md) · [Log de Decisões](docs/06-Decisoes-de-Dados.md) · [Backlog do Produto](docs/02-Backlog-do-Produto.md) · [Dicionário de dados](dados/README.md) · [Painel (.pbix)](powerbi/PowerbiATT_Api_Sprint2.pbix)
+**Acesso rápido:** [MVP da Sprint 2](MVP/sp2.md) · [Relatório da Sprint 2](RELATORIO_SPRINT_2.md) · [Log de Decisões](docs/06-Decisoes-de-Dados.md) · [Backlog do Produto](docs/02-Backlog-do-Produto.md) · [Dicionário de dados](dados/README.md) · [Painel (.pbix)](powerbi/Powerbi_API_Sprint2.pbix) · [Painel em PDF](powerbi/Powerbi_API_Sprint2.pdf)
 
 ---
 
@@ -75,7 +75,7 @@ Os dados públicos existem, mas não estão prontos para análise: têm inconsis
 | Indústria: emprego privado × valor adicionado privado | 24,7% × 45,8% (índice 1,86) |
 | PIB de São José dos Campos em 2023 | R$ 61,4 bilhões |
 
-![Vínculos ativos por região oficial](evidencias/sprint2_vinculos_por_regiao.png)
+![Vínculos ativos por região oficial](evidencias/sprint2/vinculos_por_regiao.png)
 
 ---
 
@@ -102,6 +102,7 @@ Os dados públicos existem, mas não estão prontos para análise: têm inconsis
 - [Relatório da Sprint 1](RELATORIO_SPRINT_1.md)
 - [MVP da Sprint 2](MVP/sp2.md)
 - [Relatório da Sprint 2](RELATORIO_SPRINT_2.md)
+- [Relatório do Power BI da Sprint 2](docs/Relatorio_PowerBI_Sprint2.md) — fontes, medidas DAX e leitura de cada visual
 - Base única para o Power BI: [`dados/RAIS_SJC_2024_PowerBI.csv`](dados/RAIS_SJC_2024_PowerBI.csv) (47.339 estabelecimentos, 46 colunas) e [guia de importação](evidencias/Importacao_PowerBI_RAIS_SJC.txt)
 
 Documentos da pasta `docs/` (a coluna **Ler no GitHub** abre a versão em Markdown):
@@ -121,6 +122,7 @@ Documentos da pasta `docs/` (a coluna **Ler no GitHub** abre a versão em Markdo
 | Relatório Técnico da Sprint 2 | [10-Relatorio-Tecnico-Sprint-2.docx](docs/10-Relatorio-Tecnico-Sprint-2.docx) | — |
 | Relatório de Desenvolvimento, Anexo 8 — Sprint 1 | [Relatorio_Sprint1_Anexo8.docx](docs/Relatorio_Sprint1_Anexo8.docx) | — |
 | Relatório de Desenvolvimento, Anexo 8 — Sprint 2 | [Relatorio_Sprint2_Anexo8.docx](docs/Relatorio_Sprint2_Anexo8.docx) | — |
+| Relatório do Power BI — Sprint 2 | [Relatorio_PowerBI_Sprint2.docx](docs/Relatorio_PowerBI_Sprint2.docx) | [Relatorio_PowerBI_Sprint2.md](docs/Relatorio_PowerBI_Sprint2.md) |
 
 ---
 
