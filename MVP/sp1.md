@@ -91,7 +91,7 @@
 
 - Repositório: <https://github.com/projetoapi08/Observat-rio-do-Ecossistema-Industrial-e-de-Servi-os-de-S-o-Jos-dos-Campos>
 - Documentação (Visão e Escopo, Backlog, DoR, DoD, Log de Decisões, Relatório Técnico): `docs/`
-- Notebook de ETL (Google Colab): [`notebooks/ETL_RAIS_SJC.ipynb`](../notebooks/ETL_RAIS_SJC.ipynb) · [abrir no Colab](https://colab.research.google.com/drive/1zOZJ0oXUY7QJlAMfuiMbI5g9EcBWSnMz?usp=sharing)
+- Notebook de ETL (Google Colab): [`notebooks/01_ETL_RAIS_SJC.ipynb`](../notebooks/01_ETL_RAIS_SJC.ipynb) · [abrir no Colab](https://colab.research.google.com/drive/1zOZJ0oXUY7QJlAMfuiMbI5g9EcBWSnMz?usp=sharing)
 - Dados tratados (CSVs): [`dados/`](../dados/)
 - Pré-visualização inicial no Power BI:
 - <img width="1313" height="479" alt="WhatsApp Image 2026-10-05 at 19 10 35" src="https://github.com/user-attachments/assets/1aedb568-9db7-4d1d-adf7-79e8ebb92feb" />
