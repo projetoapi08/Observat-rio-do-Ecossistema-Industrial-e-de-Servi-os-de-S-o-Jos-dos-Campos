@@ -145,7 +145,7 @@ Documentos da pasta `docs/` (a coluna **Ler no GitHub** abre a versão em Markdo
 
 ## 🗓️ Sprints
 
-As entregas de cada sprint estão marcadas com tags no GitHub (`sprint-1`, `sprint-2`), na aba [Tags](https://github.com/projetoapi08/Observat-rio-do-Ecossistema-Industrial-e-de-Servi-os-de-S-o-Jos-dos-Campos/tags).
+Cada entrega pode ser marcada como uma *release* no GitHub (aba **Releases → Draft a new release**): `sprint-1` no commit `6f73fc8` (estado do repositório antes da publicação da Sprint 2) e `sprint-2` no último commit do fechamento da Sprint 2.
 
 | Sprint | Objetivo | Entrega | Status |
 |---|---|---|---|
