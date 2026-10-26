@@ -1,0 +1,151 @@
+OBSERVATÓRIO SJC – IMPORTAÇÃO DO RAIS_SJC_2024_PowerBI.csv NO POWER BI
+=======================================================================
+
+O CSV substitui a fonte da tabela RAIS_SJC do arquivo PowerbiATT_Api_Sprint2.
+As colunas usadas pelos visuais atuais mantêm o mesmo nome:
+CEP Estab, CNAE 2.0 Classe, Seção CNAE, Setor, Faixa de Porte, Situação Vínculo, Tipo Estab_1.
+
+-----------------------------------------------------------------------
+1. CONSULTA (Power Query > tabela RAIS_SJC > Editor Avançado)
+   Troque o caminho do arquivo e cole no lugar do código atual.
+   O "en-US" no final evita perder o ponto decimal da latitude/longitude.
+   CEP e códigos CNAE ficam como texto para não perder o zero à esquerda.
+-----------------------------------------------------------------------
+let
+    Fonte = Csv.Document(
+        File.Contents("C:\CAMINHO\RAIS_SJC_2024_PowerBI.csv"),
+        [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+    Cabecalhos = Table.PromoteHeaders(Fonte, [PromoteAllScalars = true]),
+    Tipos = Table.TransformColumnTypes(Cabecalhos, {
+        {"ID Estab", Int64.Type},
+        {"Ano Base", Int64.Type},
+        {"CEP Estab", type text},
+        {"CEP Formatado", type text},
+        {"CEP Genérico", type text},
+        {"Logradouro", type text},
+        {"Bairro", type text},
+        {"Região Oficial", type text},
+        {"Fonte Região", type text},
+        {"Confiabilidade Região", type text},
+        {"Latitude", type number},
+        {"Longitude", type number},
+        {"Precisão Geo", type text},
+        {"Alerta Coordenada", type text},
+        {"Seção Cód", type text},
+        {"Seção CNAE", type text},
+        {"Setor", type text},
+        {"Divisão CNAE", type text},
+        {"Divisão Descrição", type text},
+        {"Grupo CNAE", type text},
+        {"Grupo Descrição", type text},
+        {"CNAE 2.0 Classe", type text},
+        {"Classe Descrição", type text},
+        {"CNAE 2.0 Subclasse", type text},
+        {"Subclasse Descrição", type text},
+        {"Subclasse na CNAE 2.3", type text},
+        {"Tipo de Atividade", type text},
+        {"Intensidade Tecnológica OCDE", type text},
+        {"Setor Destaque", type text},
+        {"Tamanho Estabelecimento", Int64.Type},
+        {"Faixa de Porte", type text},
+        {"Porte SEBRAE", type text},
+        {"Tipo Estab_1", type text},
+        {"Situação Vínculo", type text},
+        {"Situação Detalhada", type text},
+        {"Ind Rais Negativa", Int64.Type},
+        {"Atividade no Ano", type text},
+        {"Qtd Vínculos Ativos", Int64.Type},
+        {"Qtd Vínculos CLT", Int64.Type},
+        {"Qtd Vínculos Estatutários", Int64.Type},
+        {"Natureza Jurídica", type text},
+        {"Natureza Descrição", type text},
+        {"Natureza Grupo", type text},
+        {"Simples", type text},
+        {"IBGE Subsetor", type text},
+        {"IBGE Subsetor Descrição", type text}
+    }, "en-US")
+in
+    Tipos
+
+Depois de carregar:
+- Faixa de Porte  > Classificar por coluna > Tamanho Estabelecimento
+- Latitude / Longitude > Categoria de dados > Latitude / Longitude
+- Região Oficial > Categoria de dados > Não categorizado (é texto, não endereço)
+
+-----------------------------------------------------------------------
+2. MEDIDAS (mesmos nomes das medidas que os visuais usam hoje)
+   Se alguma medida antiga der erro depois da troca, apague e recrie com
+   a fórmula abaixo; os visuais voltam a funcionar porque o nome é igual.
+-----------------------------------------------------------------------
+Total de Estabelecimentos =
+    COUNTROWS ( RAIS_SJC )
+
+Estabelecimentos Com Vínculo =
+    CALCULATE ( [Total de Estabelecimentos], RAIS_SJC[Situação Vínculo] = "Com vínculo" )
+
+Estabelecimentos Sem Vínculo =
+    CALCULATE ( [Total de Estabelecimentos], RAIS_SJC[Situação Vínculo] = "Sem vínculo" )
+
+% Com Vínculo =
+    DIVIDE ( [Estabelecimentos Com Vínculo], [Total de Estabelecimentos] )
+
+% Sem Vínculo =
+    DIVIDE ( [Estabelecimentos Sem Vínculo], [Total de Estabelecimentos] )
+
+Total Vínculos Ativos =
+    SUM ( RAIS_SJC[Qtd Vínculos Ativos] )
+
+Total Vínculos CLT =
+    SUM ( RAIS_SJC[Qtd Vínculos CLT] )
+
+% Participação Estab =
+    DIVIDE ( [Total de Estabelecimentos],
+             CALCULATE ( [Total de Estabelecimentos], ALLSELECTED ( RAIS_SJC[Seção CNAE] ) ) )
+
+% Participação Vínculos =
+    DIVIDE ( [Total Vínculos Ativos],
+             CALCULATE ( [Total Vínculos Ativos], ALLSELECTED ( RAIS_SJC[Seção CNAE] ) ) )
+
+-- Medidas novas (opcionais)
+Estab Com Vínculo em 31/12 =
+    CALCULATE ( [Total de Estabelecimentos], RAIS_SJC[Situação Detalhada] = "Com vínculos em 31/12" )
+
+Vínculos por Estabelecimento =
+    DIVIDE ( [Total Vínculos Ativos], [Estab Com Vínculo em 31/12] )
+
+% Vínculos Alta/Média-alta Tecnologia =
+    DIVIDE (
+        CALCULATE ( [Total Vínculos Ativos],
+                    RAIS_SJC[Intensidade Tecnológica OCDE] IN { "Alta", "Média-alta" } ),
+        CALCULATE ( [Total Vínculos Ativos], ALL ( RAIS_SJC[Intensidade Tecnológica OCDE] ) ) )
+
+-----------------------------------------------------------------------
+3. MAPA (página KPIS E MAPA)
+-----------------------------------------------------------------------
+Hoje o mapa usa "CEP Estab" como local: o Azure Maps tenta achar o número do
+CEP e erra ou não acha muitos pontos. Trocar por:
+- Latitude  = RAIS_SJC[Latitude]
+- Longitude = RAIS_SJC[Longitude]
+- Legenda   = RAIS_SJC[Região Oficial]   (ou Tipo de Atividade)
+- Tamanho   = [Total Vínculos Ativos]    (ou Total de Estabelecimentos)
+- Filtros do visual: Latitude "não está em branco" e Alerta Coordenada "está em branco"
+Os pontos são o centro do bairro (não o endereço exato).
+Para contagens por região use Região Oficial em gráficos de barras: ela cobre
+99,99% dos estabelecimentos, inclusive os que não têm ponto no mapa.
+
+-----------------------------------------------------------------------
+4. RÓTULOS A CORRIGIR NA PÁGINA KPIS E MAPA
+-----------------------------------------------------------------------
+- Cartão "Total de Estabelecimentos" (47.339) está com o subtítulo
+  "Unidades com CNPJ próprio": o total inclui 708 CAEPF e 387 CNO.
+  Sugestão: "Estabelecimentos cadastrados (CNPJ, CAEPF e CNO)".
+- Cartão "Estabelecimentos Com Vínculo" (16.816) está com o subtítulo
+  "Empregados com contrato formal": ele conta estabelecimentos, não pessoas.
+  Sugestão: "Estabelecimentos com RAIS positiva".
+- O subtítulo "Cadastrados, com RAIS positiva" está embaixo do cartão
+  "Estabelecimentos Sem Vínculo" (30.523), que já tem subtítulo próprio.
+- Notas metodológicas: "15.058 vínculos ativos em 31/12" deve ser
+  "15.058 estabelecimentos com vínculo ativo em 31/12".
+  Os vínculos ativos são 206.717. Os 16.816 "com vínculo" incluem 1.758
+  estabelecimentos que tiveram empregados no ano, mas fecharam 2024 com zero
+  (coluna Situação Detalhada).
