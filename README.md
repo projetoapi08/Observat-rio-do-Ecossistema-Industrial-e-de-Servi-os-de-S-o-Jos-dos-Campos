@@ -4,6 +4,8 @@ Projeto da disciplina **API (Aprendizagem por Projetos Integrados)** do curso de
 
 O projeto constrói uma ferramenta de inteligência de dados, em parceria com o **CADI** e a **Secretaria de Desenvolvimento Econômico** do município, que consolida e disponibiliza indicadores públicos sobre os estabelecimentos industriais e de serviços da cidade. O produto final é um painel interativo em **Power BI**, nos moldes do [Observatório da Inovação RS](https://sict.rs.gov.br/observatorio) ([ver painel](https://sict.rs.gov.br/painel-do-observatorio)).
 
+**Acesso rápido:** [MVP da Sprint 2](MVP/sp2.md) · [Relatório da Sprint 2](RELATORIO_SPRINT_2.md) · [Log de Decisões](docs/06-Decisoes-de-Dados.md) · [Backlog do Produto](docs/02-Backlog-do-Produto.md) · [Dicionário de dados](dados/README.md) · [Painel (.pbix)](powerbi/PowerbiATT_Api_Sprint2.pbix)
+
 ---
 
 ## 🎯 Contexto
@@ -86,8 +88,10 @@ Os dados públicos existem, mas não estão prontos para análise: têm inconsis
 ├── RELATORIO_SPRINT_2.md   Relatório da Sprint 2
 ├── MVP/                    MVP de cada sprint (sp1.md, sp2.md)
 ├── docs/                   Documentação Scrum e relatórios técnicos (.docx e .md)
-├── dados/                  Bases tratadas prontas para o Power BI
-├── notebooks/              Notebooks do Google Colab (Python)
+├── dados/                  Bases tratadas prontas para o Power BI (com dicionário)
+│   ├── entrada/            Arquivos de entrada do notebook 02
+│   └── referencia/         Tabela bairro → região e CNAE 2.3
+├── notebooks/              01: ETL da RAIS (Sprint 1) · 02: base única do Power BI (Sprint 2)
 ├── powerbi/                Arquivo do painel (.pbix)
 └── evidencias/             Prints, gráficos, guias e comprovações de cada sprint
 ```
@@ -100,37 +104,48 @@ Os dados públicos existem, mas não estão prontos para análise: têm inconsis
 - [Relatório da Sprint 2](RELATORIO_SPRINT_2.md)
 - Base única para o Power BI: [`dados/RAIS_SJC_2024_PowerBI.csv`](dados/RAIS_SJC_2024_PowerBI.csv) (47.339 estabelecimentos, 46 colunas) e [guia de importação](evidencias/Importacao_PowerBI_RAIS_SJC.txt)
 
-Documentos da pasta `docs/`:
+Documentos da pasta `docs/` (a coluna **Ler no GitHub** abre a versão em Markdown):
 
-| Documento | Arquivo |
-|---|---|
-| Guia do repositório (README em Word) | [00-README.docx](docs/00-README.docx) |
-| Visão e Escopo | [01-Visao-e-Escopo.docx](docs/01-Visao-e-Escopo.docx) |
-| Backlog do Produto | [02-Backlog-do-Produto.docx](docs/02-Backlog-do-Produto.docx) |
-| Backlog da Sprint 1 | [03-Backlog-Sprint-1.docx](docs/03-Backlog-Sprint-1.docx) |
-| Checklist DoR (Definition of Ready) | [04-DoR-Checklist.docx](docs/04-DoR-Checklist.docx) |
-| DoD (Definition of Done) | [05-DoD.docx](docs/05-DoD.docx) |
-| Log de Decisões de Dados (DEC-001 a DEC-022) | [06-Decisoes-de-Dados.docx](docs/06-Decisoes-de-Dados.docx) |
-| Relatório Técnico da Sprint 1 | [07-Relatorio-Tecnico-Sprint-1.docx](docs/07-Relatorio-Tecnico-Sprint-1.docx) |
-| Backlog da Sprint 2 | [08-Backlog-Sprint-2.docx](docs/08-Backlog-Sprint-2.docx) |
-| Backlog da Sprint 3 | [09-Backlog-Sprint-3.docx](docs/09-Backlog-Sprint-3.docx) |
-| Relatório Técnico da Sprint 2 | [10-Relatorio-Tecnico-Sprint-2.docx](docs/10-Relatorio-Tecnico-Sprint-2.docx) |
-| Relatório de Desenvolvimento, Anexo 8 — Sprint 1 | [Relatorio_Sprint1_Anexo8.docx](docs/Relatorio_Sprint1_Anexo8.docx) |
-| Relatório de Desenvolvimento, Anexo 8 — Sprint 2 | [Relatorio_Sprint2_Anexo8.docx](docs/Relatorio_Sprint2_Anexo8.docx) |
+| Documento | Word | Ler no GitHub |
+|---|---|---|
+| Guia do repositório (README em Word) | [00-README.docx](docs/00-README.docx) | — |
+| Visão e Escopo | [01-Visao-e-Escopo.docx](docs/01-Visao-e-Escopo.docx) | — |
+| Backlog do Produto | [02-Backlog-do-Produto.docx](docs/02-Backlog-do-Produto.docx) | [02-Backlog-do-Produto.md](docs/02-Backlog-do-Produto.md) |
+| Backlog da Sprint 1 | [03-Backlog-Sprint-1.docx](docs/03-Backlog-Sprint-1.docx) | — |
+| Checklist DoR (Definition of Ready) | [04-DoR-Checklist.docx](docs/04-DoR-Checklist.docx) | — |
+| DoD (Definition of Done) | [05-DoD.docx](docs/05-DoD.docx) | — |
+| Log de Decisões de Dados (DEC-001 a DEC-022) | [06-Decisoes-de-Dados.docx](docs/06-Decisoes-de-Dados.docx) | [06-Decisoes-de-Dados.md](docs/06-Decisoes-de-Dados.md) |
+| Relatório Técnico da Sprint 1 | [07-Relatorio-Tecnico-Sprint-1.docx](docs/07-Relatorio-Tecnico-Sprint-1.docx) | — |
+| Backlog da Sprint 2 | [08-Backlog-Sprint-2.docx](docs/08-Backlog-Sprint-2.docx) | [08-Backlog-Sprint-2.md](docs/08-Backlog-Sprint-2.md) |
+| Backlog da Sprint 3 | [09-Backlog-Sprint-3.docx](docs/09-Backlog-Sprint-3.docx) | [09-Backlog-Sprint-3.md](docs/09-Backlog-Sprint-3.md) |
+| Relatório Técnico da Sprint 2 | [10-Relatorio-Tecnico-Sprint-2.docx](docs/10-Relatorio-Tecnico-Sprint-2.docx) | — |
+| Relatório de Desenvolvimento, Anexo 8 — Sprint 1 | [Relatorio_Sprint1_Anexo8.docx](docs/Relatorio_Sprint1_Anexo8.docx) | — |
+| Relatório de Desenvolvimento, Anexo 8 — Sprint 2 | [Relatorio_Sprint2_Anexo8.docx](docs/Relatorio_Sprint2_Anexo8.docx) | — |
 
 ---
 
 ## ▶️ Como reproduzir o tratamento dos dados
 
+**Sprint 1 — ETL da RAIS** ([`notebooks/01_ETL_RAIS_SJC.ipynb`](notebooks/01_ETL_RAIS_SJC.ipynb))
+
 1. Baixe o arquivo público `RAIS_ESTAB_PUB` no site do Ministério do Trabalho e Emprego.
-2. Abra o notebook da pasta `notebooks/` no Google Colab e carregue o arquivo.
+2. Abra o notebook no Google Colab e carregue o arquivo.
 3. Execute todas as células. O notebook lê o arquivo linha a linha e mantém apenas os registros do município 354990.
-4. Os arquivos CSV tratados são gerados ao final.
-5. Para o painel, importe `dados/RAIS_SJC_2024_PowerBI.csv` no Power BI seguindo o guia `evidencias/Importacao_PowerBI_RAIS_SJC.txt` (CEP e CNAE como texto; latitude e longitude com localidade "Inglês (EUA)").
+4. Os arquivos CSV tratados são gerados ao final (`dados/entrada/RAIS_SJC_completo.csv`).
+
+**Sprint 2 — Base única do Power BI** ([`notebooks/02_Base_PowerBI_SJC.ipynb`](notebooks/02_Base_PowerBI_SJC.ipynb))
+
+1. Abra o notebook no Google Colab (*Arquivo → Abrir notebook → GitHub* e cole o endereço deste repositório).
+2. Clique em *Ambiente de execução → Executar tudo*. A primeira célula baixa o repositório com os arquivos de `dados/entrada/` e `dados/referencia/`.
+3. O notebook gera `dados/RAIS_SJC_2024_PowerBI.csv` e confere os totais (47.339 estabelecimentos, 206.717 vínculos).
+4. Para atualizar a região oficial, edite `dados/referencia/bairros_regiao_sjc.csv` e rode de novo.
+5. No Power BI, importe a base seguindo [`evidencias/Importacao_PowerBI_RAIS_SJC.txt`](evidencias/Importacao_PowerBI_RAIS_SJC.txt) (CEP e CNAE como texto; latitude e longitude com localidade "Inglês (EUA)").
 
 ---
 
 ## 🗓️ Sprints
+
+As entregas de cada sprint estão marcadas com tags no GitHub (`sprint-1`, `sprint-2`), na aba [Tags](https://github.com/projetoapi08/Observat-rio-do-Ecossistema-Industrial-e-de-Servi-os-de-S-o-Jos-dos-Campos/tags).
 
 | Sprint | Objetivo | Entrega | Status |
 |---|---|---|---|

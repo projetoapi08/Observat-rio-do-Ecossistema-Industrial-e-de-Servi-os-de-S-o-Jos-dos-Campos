@@ -46,6 +46,7 @@ Atualizados ou criados na pasta `docs/`: Visão e Escopo (restrições e riscos)
 - **PIB dos Municípios:** série 2002–2023 tratada no Colab e conferida (`dados/IBGE_PIB_SJC_Observatorio.xlsx`)
 - **Geocodificação:** CEP → bairro e coordenada, com BrasilAPI e Nominatim (OpenStreetMap)
 - **Região oficial:** bairro → região pela lista do Plano Diretor da Prefeitura, conferida pelo setor do CEP (33 dos 37 setores caem inteiros numa só região; os outros 4 estão na divisa Centro–Oeste ou misturam área urbana e rural)
+- **Notebook:** `notebooks/02_Base_PowerBI_SJC.ipynb` refaz todo o tratamento da Sprint 2 no Google Colab e gera a base única (saída conferida contra o arquivo publicado)
 - **Base única:** `dados/RAIS_SJC_2024_PowerBI.csv` — 47.339 linhas e 46 colunas, com os nomes de colunas usados pelo painel; guia em `evidencias/Importacao_PowerBI_RAIS_SJC.txt`
 
 ### 4.3 Resposta ao feedback da Sprint 1
@@ -79,6 +80,7 @@ Marque cada item depois de adicionar o print ou arquivo na pasta `evidencias/`.
 - [ ] Print da página PIB e Emprego
 - [ ] Print da página Notas Metodológicas
 - [x] Gráfico de vínculos por região oficial gerado da base (`evidencias/sprint2_vinculos_por_regiao.png`)
+- [x] Notebook da base única (`notebooks/02_Base_PowerBI_SJC.ipynb`)
 - [ ] Execução do notebook do PIB no Colab
 - [ ] Vídeo de incremento da Sprint 2
 
@@ -92,7 +94,7 @@ Marque cada item depois de adicionar o print ou arquivo na pasta `evidencias/`.
 ├── MVP/           MVP de cada sprint (sp1.md, sp2.md)
 ├── docs/          documentação Scrum e relatórios técnicos
 ├── dados/         bases tratadas prontas para o Power BI
-├── notebooks/     ETL em Google Colab
+├── notebooks/     01: ETL da RAIS · 02: base única do Power BI
 ├── powerbi/       dashboard
 └── evidencias/    prints, gráficos e guias de cada sprint
 ```

@@ -123,6 +123,7 @@ flowchart LR
 - Relatório da Sprint 2: [`RELATORIO_SPRINT_2.md`](../RELATORIO_SPRINT_2.md)
 - Documentação (Backlog da Sprint 2, Log de Decisões, Relatório Técnico, Anexo 8): `docs/`
 - Base única para o Power BI: [`dados/RAIS_SJC_2024_PowerBI.csv`](../dados/RAIS_SJC_2024_PowerBI.csv) — guia em [`evidencias/Importacao_PowerBI_RAIS_SJC.txt`](../evidencias/Importacao_PowerBI_RAIS_SJC.txt)
+- Notebook que gera a base (Google Colab): [`notebooks/02_Base_PowerBI_SJC.ipynb`](../notebooks/02_Base_PowerBI_SJC.ipynb) · dicionário de dados em [`dados/README.md`](../dados/README.md)
 - Planilhas tratadas: [`dados/CNAE_RAIS_SJC_2024.xlsx`](../dados/CNAE_RAIS_SJC_2024.xlsx) e [`dados/IBGE_PIB_SJC_Observatorio.xlsx`](../dados/IBGE_PIB_SJC_Observatorio.xlsx)
 - Painel: [`powerbi/PowerbiATT_Api_Sprint2.pbix`](../powerbi/PowerbiATT_Api_Sprint2.pbix)
 - Telas do painel *(arrastar os prints para este arquivo no GitHub)*:
