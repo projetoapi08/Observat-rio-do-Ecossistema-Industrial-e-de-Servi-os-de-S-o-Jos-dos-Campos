@@ -5,7 +5,7 @@
 **Cliente:** CADI e Secretaria de Desenvolvimento Econômico de São José dos Campos
 **Orientadores:** Prof. José Jaétis (M2) e Prof. Marcus Nascimento (P2)
 **Entrega da Sprint 1:** 28/09/2026
-**Repositório:** `projetoapi08/observatorio-sjc`
+**Repositório:** [projetoapi08/Observat-rio-do-Ecossistema-Industrial-e-de-Servi-os-de-S-o-Jos-dos-Campos](https://github.com/projetoapi08/Observat-rio-do-Ecossistema-Industrial-e-de-Servi-os-de-S-o-Jos-dos-Campos)
 
 ---
 
@@ -86,7 +86,7 @@ Marque cada item depois de adicionar o print ou arquivo na pasta `evidencias/`.
 ## 5. Estrutura do repositório
 
 ```
-observatorio-sjc/
+.
 ├── README.md
 ├── RELATORIO_SPRINT_1.md
 ├── MVP/           MVP de cada sprint

@@ -73,50 +73,50 @@ Os dados públicos existem, mas não estão prontos para análise: têm inconsis
 | Indústria: emprego privado × valor adicionado privado | 24,7% × 45,8% (índice 1,86) |
 | PIB de São José dos Campos em 2023 | R$ 61,4 bilhões |
 
-![Vínculos ativos por região oficial](observatorio-sjc/evidencias/sprint2_vinculos_por_regiao.png)
+![Vínculos ativos por região oficial](evidencias/sprint2_vinculos_por_regiao.png)
 
 ---
 
 ## 📁 Estrutura do repositório
 
 ```
-observatorio-sjc/
+.
 ├── README.md
-├── MVP/            MVP de cada sprint (sp1.md, sp2.md)
-├── RELATORIO_SPRINT_1.md
-├── RELATORIO_SPRINT_2.md
-├── docs/           Documentação Scrum e relatórios técnicos
-├── dados/          Bases tratadas prontas para o Power BI
-├── notebooks/      ETL em Google Colab (Python)
-├── powerbi/        Dashboard
-└── evidencias/     Prints e comprovações de cada sprint
+├── RELATORIO_SPRINT_1.md   Relatório da Sprint 1
+├── RELATORIO_SPRINT_2.md   Relatório da Sprint 2
+├── MVP/                    MVP de cada sprint (sp1.md, sp2.md)
+├── docs/                   Documentação Scrum e relatórios técnicos (.docx e .md)
+├── dados/                  Bases tratadas prontas para o Power BI
+├── notebooks/              Notebooks do Google Colab (Python)
+├── powerbi/                Arquivo do painel (.pbix)
+└── evidencias/             Prints, gráficos, guias e comprovações de cada sprint
 ```
 
 ## 📚 Documentação
 
-- [MVP da Sprint 1](https://github.com/projetoapi08/Observat-rio-do-Ecossistema-Industrial-e-de-Servi-os-de-S-o-Jos-dos-Campos/blob/main/observatorio-sjc/MVP/sp1.md)
-- [Relatório da Sprint 1](https://github.com/projetoapi08/Observat-rio-do-Ecossistema-Industrial-e-de-Servi-os-de-S-o-Jos-dos-Campos/blob/main/observatorio-sjc/RELATORIO_SPRINT_1.md)
-- [MVP da Sprint 2](https://github.com/projetoapi08/Observat-rio-do-Ecossistema-Industrial-e-de-Servi-os-de-S-o-Jos-dos-Campos/blob/main/observatorio-sjc/MVP/sp2.md)
-- [Relatório da Sprint 2](https://github.com/projetoapi08/Observat-rio-do-Ecossistema-Industrial-e-de-Servi-os-de-S-o-Jos-dos-Campos/blob/main/observatorio-sjc/RELATORIO_SPRINT_2.md)
-- Base única para o Power BI: [`dados/RAIS_SJC_2024_PowerBI.csv`](https://github.com/projetoapi08/Observat-rio-do-Ecossistema-Industrial-e-de-Servi-os-de-S-o-Jos-dos-Campos/blob/main/observatorio-sjc/dados/RAIS_SJC_2024_PowerBI.csv) (47.339 estabelecimentos, 46 colunas) e [guia de importação](https://github.com/projetoapi08/Observat-rio-do-Ecossistema-Industrial-e-de-Servi-os-de-S-o-Jos-dos-Campos/blob/main/observatorio-sjc/evidencias/Importacao_PowerBI_RAIS_SJC.txt)
+- [MVP da Sprint 1](MVP/sp1.md)
+- [Relatório da Sprint 1](RELATORIO_SPRINT_1.md)
+- [MVP da Sprint 2](MVP/sp2.md)
+- [Relatório da Sprint 2](RELATORIO_SPRINT_2.md)
+- Base única para o Power BI: [`dados/RAIS_SJC_2024_PowerBI.csv`](dados/RAIS_SJC_2024_PowerBI.csv) (47.339 estabelecimentos, 46 colunas) e [guia de importação](evidencias/Importacao_PowerBI_RAIS_SJC.txt)
 
 Documentos da pasta `docs/`:
 
 | Documento | Arquivo |
 |---|---|
-| Guia do repositório (README em Word) | [00-README.docx](https://github.com/projetoapi08/Observat-rio-do-Ecossistema-Industrial-e-de-Servi-os-de-S-o-Jos-dos-Campos/blob/main/observatorio-sjc/docs/00-README.docx) |
-| Visão e Escopo | [01-Visao-e-Escopo.docx](https://github.com/projetoapi08/Observat-rio-do-Ecossistema-Industrial-e-de-Servi-os-de-S-o-Jos-dos-Campos/blob/main/observatorio-sjc/docs/01-Visao-e-Escopo.docx) |
-| Backlog do Produto | [02-Backlog-do-Produto.docx](https://github.com/projetoapi08/Observat-rio-do-Ecossistema-Industrial-e-de-Servi-os-de-S-o-Jos-dos-Campos/blob/main/observatorio-sjc/docs/02-Backlog-do-Produto.docx) |
-| Backlog da Sprint 1 | [03-Backlog-Sprint-1.docx](https://github.com/projetoapi08/Observat-rio-do-Ecossistema-Industrial-e-de-Servi-os-de-S-o-Jos-dos-Campos/blob/main/observatorio-sjc/docs/03-Backlog-Sprint-1.docx) |
-| Checklist DoR (Definition of Ready) | [04-DoR-Checklist.docx](https://github.com/projetoapi08/Observat-rio-do-Ecossistema-Industrial-e-de-Servi-os-de-S-o-Jos-dos-Campos/blob/main/observatorio-sjc/docs/04-DoR-Checklist.docx) |
-| DoD (Definition of Done) | [05-DoD.docx](https://github.com/projetoapi08/Observat-rio-do-Ecossistema-Industrial-e-de-Servi-os-de-S-o-Jos-dos-Campos/blob/main/observatorio-sjc/docs/05-DoD.docx) |
-| Log de Decisões de Dados (DEC-001 a DEC-022) | [06-Decisoes-de-Dados.docx](https://github.com/projetoapi08/Observat-rio-do-Ecossistema-Industrial-e-de-Servi-os-de-S-o-Jos-dos-Campos/blob/main/observatorio-sjc/docs/06-Decisoes-de-Dados.docx) |
-| Relatório Técnico da Sprint 1 | [07-Relatorio-Tecnico-Sprint-1.docx](https://github.com/projetoapi08/Observat-rio-do-Ecossistema-Industrial-e-de-Servi-os-de-S-o-Jos-dos-Campos/blob/main/observatorio-sjc/docs/07-Relatorio-Tecnico-Sprint-1.docx) |
-| Backlog da Sprint 2 | [08-Backlog-Sprint-2.docx](https://github.com/projetoapi08/Observat-rio-do-Ecossistema-Industrial-e-de-Servi-os-de-S-o-Jos-dos-Campos/blob/main/observatorio-sjc/docs/08-Backlog-Sprint-2.docx) |
-| Backlog da Sprint 3 | [09-Backlog-Sprint-3.docx](https://github.com/projetoapi08/Observat-rio-do-Ecossistema-Industrial-e-de-Servi-os-de-S-o-Jos-dos-Campos/blob/main/observatorio-sjc/docs/09-Backlog-Sprint-3.docx) |
-| Relatório Técnico da Sprint 2 | [10-Relatorio-Tecnico-Sprint-2.docx](https://github.com/projetoapi08/Observat-rio-do-Ecossistema-Industrial-e-de-Servi-os-de-S-o-Jos-dos-Campos/blob/main/observatorio-sjc/docs/10-Relatorio-Tecnico-Sprint-2.docx) |
-| Relatório de Desenvolvimento, Anexo 8 — Sprint 1 | [Relatorio_Sprint1_Anexo8.docx](https://github.com/projetoapi08/Observat-rio-do-Ecossistema-Industrial-e-de-Servi-os-de-S-o-Jos-dos-Campos/blob/main/observatorio-sjc/docs/Relatorio_Sprint1_Anexo8.docx) |
-| Relatório de Desenvolvimento, Anexo 8 — Sprint 2 | [Relatorio_Sprint2_Anexo8.docx](https://github.com/projetoapi08/Observat-rio-do-Ecossistema-Industrial-e-de-Servi-os-de-S-o-Jos-dos-Campos/blob/main/observatorio-sjc/docs/Relatorio_Sprint2_Anexo8.docx) |
+| Guia do repositório (README em Word) | [00-README.docx](docs/00-README.docx) |
+| Visão e Escopo | [01-Visao-e-Escopo.docx](docs/01-Visao-e-Escopo.docx) |
+| Backlog do Produto | [02-Backlog-do-Produto.docx](docs/02-Backlog-do-Produto.docx) |
+| Backlog da Sprint 1 | [03-Backlog-Sprint-1.docx](docs/03-Backlog-Sprint-1.docx) |
+| Checklist DoR (Definition of Ready) | [04-DoR-Checklist.docx](docs/04-DoR-Checklist.docx) |
+| DoD (Definition of Done) | [05-DoD.docx](docs/05-DoD.docx) |
+| Log de Decisões de Dados (DEC-001 a DEC-022) | [06-Decisoes-de-Dados.docx](docs/06-Decisoes-de-Dados.docx) |
+| Relatório Técnico da Sprint 1 | [07-Relatorio-Tecnico-Sprint-1.docx](docs/07-Relatorio-Tecnico-Sprint-1.docx) |
+| Backlog da Sprint 2 | [08-Backlog-Sprint-2.docx](docs/08-Backlog-Sprint-2.docx) |
+| Backlog da Sprint 3 | [09-Backlog-Sprint-3.docx](docs/09-Backlog-Sprint-3.docx) |
+| Relatório Técnico da Sprint 2 | [10-Relatorio-Tecnico-Sprint-2.docx](docs/10-Relatorio-Tecnico-Sprint-2.docx) |
+| Relatório de Desenvolvimento, Anexo 8 — Sprint 1 | [Relatorio_Sprint1_Anexo8.docx](docs/Relatorio_Sprint1_Anexo8.docx) |
+| Relatório de Desenvolvimento, Anexo 8 — Sprint 2 | [Relatorio_Sprint2_Anexo8.docx](docs/Relatorio_Sprint2_Anexo8.docx) |
 
 ---
 
