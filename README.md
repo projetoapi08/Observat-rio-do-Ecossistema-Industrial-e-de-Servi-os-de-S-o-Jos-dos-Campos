@@ -166,8 +166,6 @@ Documentos da pasta `docs/` (a coluna **Ler no GitHub** abre a versão em Markdo
 
 ## 🗓️ Sprints
 
-Cada entrega pode ser marcada como uma *release* no GitHub (aba **Releases → Draft a new release**): `sprint-1` no commit `6f73fc8` (estado do repositório antes da publicação da Sprint 2) e `sprint-2` no último commit do fechamento da Sprint 2.
-
 | Sprint | Objetivo | Entrega | Status |
 |---|---|---|---|
 | 01 | Fundação técnica: pipeline de dados, tratamento de inconsistências e documentação de metodologia | 28/09/2026 (confirmada) | Concluída |
