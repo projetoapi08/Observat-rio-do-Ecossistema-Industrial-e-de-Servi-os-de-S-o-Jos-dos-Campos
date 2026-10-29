@@ -1,0 +1,103 @@
+table 'CEP x Região'
+	lineageTag: 7a9ec19c-2e4f-4aec-941d-3647f895cbb9
+
+	column CEP
+		dataType: int64
+		formatString: 0
+		lineageTag: 54b7322d-8f78-4b22-bd03-0dd46026b846
+		summarizeBy: none
+		sourceColumn: CEP
+
+		annotation SummarizationSetBy = Automatic
+
+	column Região
+		dataType: string
+		lineageTag: e255af32-d572-421c-9634-1e234817e924
+		summarizeBy: none
+		sourceColumn: Região
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Origem da região'
+		dataType: string
+		lineageTag: 4282b69f-9c08-443a-b4b7-df224040920e
+		summarizeBy: none
+		sourceColumn: Origem da região
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bairro
+		dataType: string
+		lineageTag: 3b9aaed1-1140-4dab-a4c8-925429839df7
+		summarizeBy: none
+		sourceColumn: Bairro
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nível geo'
+		dataType: string
+		lineageTag: c763a46f-f3db-4646-bd15-7770e302efd8
+		summarizeBy: none
+		sourceColumn: Nível geo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'CEP genérico'
+		dataType: string
+		lineageTag: 04b5c42f-bd19-45a5-b247-ebd8957d1f81
+		summarizeBy: none
+		sourceColumn: CEP genérico
+
+		annotation SummarizationSetBy = Automatic
+
+	column Latitude
+		dataType: double
+		lineageTag: c8b3590b-a89e-4f6d-b46f-017b624e630f
+		summarizeBy: none
+		sourceColumn: Latitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Longitude
+		dataType: double
+		lineageTag: e5d4c059-52bd-4ddc-83cb-41153c0ab335
+		summarizeBy: none
+		sourceColumn: Longitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Estabelecimentos
+		dataType: int64
+		formatString: 0
+		lineageTag: 262d1d51-8d85-4457-9a31-03731c90e29b
+		summarizeBy: none
+		sourceColumn: Estabelecimentos
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Vínculos ativos'
+		dataType: int64
+		formatString: 0
+		lineageTag: 76cc9e26-56f2-4b2d-bf2f-0125c6700005
+		summarizeBy: none
+		sourceColumn: Vínculos ativos
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'CEP x Região' = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(File.Contents("C:\Users\thaly\Downloads\Regioes_SJC_filtro_por_regiao.xlsx"), null, true),
+				    #"CEP x Região_Sheet" = Fonte{[Item="CEP x Região",Kind="Sheet"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"CEP x Região_Sheet", [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"CEP", Int64.Type}, {"Região", type text}, {"Origem da região", type text}, {"Bairro", type text}, {"Nível geo", type text}, {"CEP genérico", type text}, {"Latitude", type number}, {"Longitude", type number}, {"Estabelecimentos", Int64.Type}, {"Vínculos ativos", Int64.Type}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_ResultType = Table
+

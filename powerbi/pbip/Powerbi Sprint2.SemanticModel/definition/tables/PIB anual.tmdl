@@ -1,0 +1,110 @@
+table 'PIB anual'
+	lineageTag: 305adc22-912e-4232-b252-7d4d11f871e1
+
+	column ano
+		dataType: string
+		lineageTag: 6fd589e6-4c06-493b-a0a0-a8a1f983404e
+		summarizeBy: none
+		sourceColumn: ano
+
+		annotation SummarizationSetBy = Automatic
+
+	column pib
+		dataType: int64
+		formatString: 0
+		lineageTag: 4162d790-a70a-4f60-a2bb-30d263b7387f
+		summarizeBy: sum
+		sourceColumn: pib
+
+		annotation SummarizationSetBy = Automatic
+
+	column pib_real_2023
+		dataType: double
+		lineageTag: 4f029bd6-12d3-4883-abd3-438cb15a8bbf
+		summarizeBy: sum
+		sourceColumn: pib_real_2023
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column cresc_real_pct
+		dataType: double
+		lineageTag: 4d1e829a-50d2-4e34-8602-5ccd6dc34f7f
+		summarizeBy: sum
+		sourceColumn: cresc_real_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column indice_pib_real_2010_100
+		dataType: double
+		lineageTag: 065c6b34-6115-4547-92e3-3d7312d64a0c
+		summarizeBy: sum
+		sourceColumn: indice_pib_real_2010_100
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pib_per_capita
+		dataType: double
+		lineageTag: 991bb22d-d761-4c9a-ab5f-44092e2404c8
+		summarizeBy: sum
+		sourceColumn: pib_per_capita
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pib_per_capita_real_2023
+		dataType: double
+		lineageTag: a83999c3-3c12-47bf-bfaf-5c1e1d224886
+		summarizeBy: sum
+		sourceColumn: pib_per_capita_real_2023
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column part_pib_estado_sp_pct
+		dataType: double
+		lineageTag: 3515c654-3a85-4bd3-8e8d-a4aa21bd046b
+		summarizeBy: sum
+		sourceColumn: part_pib_estado_sp_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column populacao
+		dataType: int64
+		formatString: 0
+		lineageTag: cc65a37c-0d31-45b1-a1bc-e1b880e40255
+		summarizeBy: sum
+		sourceColumn: populacao
+
+		annotation SummarizationSetBy = Automatic
+
+	column fonte_populacao
+		dataType: string
+		lineageTag: fcafaf41-f66c-49a8-a4a5-cf3cfd60da21
+		summarizeBy: none
+		sourceColumn: fonte_populacao
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'PIB anual' = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(File.Contents("C:\Users\thaly\Desktop\Api\Cruzamento_RAIS_IBGE_Observatorio_SJC (1).xlsx"), null, true),
+				    #"PIB anual_Sheet" = Fonte{[Item="PIB anual",Kind="Sheet"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"PIB anual_Sheet", [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"ano", type any}, {"pib", Int64.Type}, {"pib_real_2023", type number}, {"cresc_real_pct", type number}, {"indice_pib_real_2010_100", type number}, {"pib_per_capita", type number}, {"pib_per_capita_real_2023", type number}, {"part_pib_estado_sp_pct", type number}, {"populacao", Int64.Type}, {"fonte_populacao", type text}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_ResultType = Table
+

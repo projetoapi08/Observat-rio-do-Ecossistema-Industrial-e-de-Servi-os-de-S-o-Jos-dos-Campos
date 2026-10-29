@@ -1,0 +1,65 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "8705ad30ec7057d5b444",
+  "displayName": "SETOR DE ATIVIDADES (CNAE)",
+  "displayOption": "FitToPage",
+  "height": 1080,
+  "width": 1920,
+  "pageBinding": {
+    "name": "53344d3d3c0c93c11cd4",
+    "type": "Default",
+    "parameters": []
+  },
+  "objects": {
+    "background": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "ThemeDataColor": {
+                    "ColorId": 9,
+                    "Percent": 0.6
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "visualInteractions": [
+    {
+      "source": "7cc762e7d86683894bb2",
+      "target": "43b4a685a2038e63551e",
+      "type": "DataFilter"
+    },
+    {
+      "source": "7cc762e7d86683894bb2",
+      "target": "9e0dc48c606405b1105e",
+      "type": "DataFilter"
+    },
+    {
+      "source": "7cc762e7d86683894bb2",
+      "target": "827717381f7ade215815",
+      "type": "DataFilter"
+    },
+    {
+      "source": "43b4a685a2038e63551e",
+      "target": "7cc762e7d86683894bb2",
+      "type": "DataFilter"
+    },
+    {
+      "source": "9e0dc48c606405b1105e",
+      "target": "7cc762e7d86683894bb2",
+      "type": "DataFilter"
+    },
+    {
+      "source": "827717381f7ade215815",
+      "target": "7cc762e7d86683894bb2",
+      "type": "DataFilter"
+    }
+  ]
+}

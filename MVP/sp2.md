@@ -1,5 +1,7 @@
 # 📌 MVP - [Análises centrais e mapeamento geográfico do ecossistema de São José dos Campos no Power BI]
 
+> 🌐 **Painel publicado:** [abrir no Power BI](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9) (abre no navegador, sem login)
+
 ## 🎯 Objetivo do MVP
 
 > O MVP da Sprint 2 transforma a base tratada da RAIS em um painel no Power BI que mostra **quais setores predominam, onde as empresas estão e quanto cada setor pesa no emprego e na economia** de São José dos Campos.
@@ -58,12 +60,12 @@ flowchart LR
 
 | ID   | User Story | Prioridade | Status |
 | ---- | ---------- | ---------- | ------ |
-| US06 | Como gestor público (usuário do observatório), quero visualizar a distribuição geográfica das empresas de SJC no mapa, para que eu possa identificar polos e vazios industriais na cidade. | 2 | Parcial |
+| US06 | Como gestor público (usuário do observatório), quero visualizar a distribuição geográfica das empresas de SJC no mapa, para que eu possa identificar polos e vazios industriais na cidade. | 2 | Parcial (mapa por coordenadas e filtro de região prontos; 78% com ponto) |
 | US07 | Como gestor público, quero ver um ranking das empresas que mais contratam em SJC, para que eu possa direcionar políticas de fomento ao emprego. | 7 | Concluído |
 | US08 | Como gestor público, quero identificar quais setores/áreas estão em alta em termos de contratação, para que eu possa priorizar investimentos e qualificação de mão de obra. | 8 | Parcial |
 | US09 | Como gestor público, quero visualizar o impacto do ecossistema de empresas no PIB municipal (dados do IBGE), para que eu possa avaliar a relevância econômica de cada setor. | 9 | Concluído |
 
-> US06 e US08 continuam na Sprint 3: a base do mapa está pronta, mas o visual ainda localiza pelo texto do CEP; a evolução dos setores depende de RAIS de outros anos.
+> US06 e US08 continuam na Sprint 3: o mapa já usa latitude/longitude e tem filtro por região, mas 22% dos estabelecimentos ainda não têm ponto (a meta é 90%); a evolução dos setores depende de RAIS de outros anos.
 
 ---
 
@@ -81,7 +83,7 @@ flowchart LR
 
 | US | Critério | Resultado |
 | -- | -------- | --------- |
-| US06 | Mapa no Power BI plota os estabelecimentos geocodificados a partir do CEP com taxa de acerto acima de 90%. | 99,99% com região oficial; 78,3% com ponto no mapa. Falta trocar o mapa para latitude/longitude. |
+| US06 | Mapa no Power BI plota os estabelecimentos geocodificados a partir do CEP com taxa de acerto acima de 90%. | Mapa por latitude/longitude e filtro por região oficial no painel; 99,99% com região na base única e 78,3% com ponto no mapa. |
 | US07 | Visual lista os estabelecimentos ordenados por vínculos ativos, com filtro por setor (agregado — DEC-004). | Top 10 de setores por estabelecimentos e por empregos CLT, com filtros por seção, porte e tipo. |
 | US08 | Visual mostra a evolução de contratações por setor (CNAE agrupado). | Participação por setor disponível; evolução depende de série histórica. |
 | US09 | Dashboard cruza RAIS 2024 e PIB dos Municípios por setor, com fonte, ano e defasagem indicados. | Página PIB e Emprego com anos de cada fonte e produtividade relativa. |
@@ -109,11 +111,11 @@ flowchart LR
 
 ## 🚀 Próximos Passos
 
-- Importar a base única no Power BI e trocar o mapa do texto do CEP para **latitude/longitude**, com legenda por região oficial (US06).
+- Aumentar a cobertura do mapa (hoje 78,3% com ponto) e unificar a região do painel com a da base única (US06, DEC-015).
 - Pedir à Prefeitura, via cliente, a **tabela oficial bairro → região** (com a Região Norte) ou o shapefile das regiões.
 - Definir com o cliente a fonte para a **evolução dos setores** (RAIS 2022–2023) e para as **contratações recentes** (RAIS Vínculos), ou ajustar os critérios de US08 e US10.
 - Criar os visuais por região, tipo de atividade, intensidade tecnológica e porte SEBRAE.
-- Corrigir os subtítulos de três cartões da página KPIs (total inclui CAEPF e CNO; "com vínculo" conta estabelecimentos, não pessoas).
+- Ajustes visuais da página KPIs: cartões sem a unidade "Mil", título "Distribuição" e subtítulos de dois cartões (ver [`powerbi/README.md`](../powerbi/README.md)).
 - Sprint 3 (23/11/2026): consolidar o dashboard, o relatório técnico final e a apresentação da Feira de Soluções (03/12/2026).
 
 ---
@@ -124,15 +126,25 @@ flowchart LR
 
 ![KPIs e Mapa](../evidencias/sprint2/painel_kpis_mapa.png)
 
-Cartões com o total de estabelecimentos (47.339), com e sem vínculo e vínculos ativos (206.717); pizza com 35,52% com vínculo e 64,48% sem vínculo; mapa dos estabelecimentos por CEP; filtros por setor (Seção CNAE), porte e tipo de estabelecimento.
+Cartões com o total de estabelecimentos (47.339), com e sem vínculo e vínculos ativos (206.717); pizza com 35,52% com vínculo e 64,48% sem vínculo; mapa dos estabelecimentos por latitude e longitude do CEP; filtros por setor (Seção CNAE), porte, tipo de estabelecimento e região.
 
 ### Página 2 — Setor de Atividades (CNAE)
 
 ![Setor de Atividades](../evidencias/sprint2/painel_setor_atividades.png)
 
-Top 10 setores por empregos CLT (fabricação de aeronaves, atendimento hospitalar e restaurantes na frente) e por número de estabelecimentos; participação de cada Seção CNAE em vínculos × estabelecimentos; tabela de vínculos CLT por faixa de porte e setor.
+Top 10 setores por empregos CLT (fabricação de aeronaves, atendimento hospitalar e restaurantes na frente) e por número de estabelecimentos; participação de cada Seção CNAE em vínculos × estabelecimentos; empregos CLT dentro da indústria (Seção C) por setor; tabela de vínculos CLT por faixa de porte e setor (206.626 no total).
 
-> As páginas **PIB e Emprego** e **Notas Metodológicas** estão na versão `PowerbiATT_Api_Sprint2.pbix` e ainda precisam ser trazidas para a versão atual do painel. A região oficial e o mapa por coordenadas entram na Sprint 3 (US06).
+### Página 3 — PIB e Emprego
+
+![PIB e Emprego](../evidencias/sprint2/painel_pib_emprego.png)
+
+Peso de cada setor no emprego (RAIS 2024) e no valor adicionado (IBGE 2021); tabela de produtividade relativa (Indústria 1,86, Agropecuária 1,65, Serviços 0,72); PIB de 2002 a 2023 em R$ de 2023 (R$ 61,4 bilhões em 2023); variação anual do PIB; valor adicionado por setor de 2002 a 2021; caixa "O que isso mostra para a gestão".
+
+### Página 4 — Notas Metodológicas
+
+![Notas Metodológicas](../evidencias/sprint2/painel_notas_metodologicas.png)
+
+Limites, cruzamento com o PIB, decisões do grupo (DEC-011 e DEC-014), ferramentas e definições usadas no painel.
 
 ---
 
@@ -143,8 +155,10 @@ Top 10 setores por empregos CLT (fabricação de aeronaves, atendimento hospital
 - Base única para o Power BI: [`dados/RAIS_SJC_2024_PowerBI.csv`](../dados/RAIS_SJC_2024_PowerBI.csv) — guia em [`evidencias/Importacao_PowerBI_RAIS_SJC.txt`](../evidencias/Importacao_PowerBI_RAIS_SJC.txt)
 - Notebook que gera a base (Google Colab): [`notebooks/02_Base_PowerBI_SJC.ipynb`](../notebooks/02_Base_PowerBI_SJC.ipynb) · dicionário de dados em [`dados/README.md`](../dados/README.md)
 - Planilhas tratadas: [`dados/CNAE_RAIS_SJC_2024.xlsx`](../dados/CNAE_RAIS_SJC_2024.xlsx) e [`dados/IBGE_PIB_SJC_Observatorio.xlsx`](../dados/IBGE_PIB_SJC_Observatorio.xlsx)
-- Painel: [`powerbi/Powerbi_API_Sprint2.pbix`](../powerbi/Powerbi_API_Sprint2.pbix) (versão atual, com [PDF](../powerbi/Powerbi_API_Sprint2.pdf) e [modelo .pbit](../powerbi/Powerbi_API_Sprint2.pbit)) e [`powerbi/PowerbiATT_Api_Sprint2.pbix`](../powerbi/PowerbiATT_Api_Sprint2.pbix) (versão com as páginas PIB e Emprego e Notas Metodológicas) — ver [`powerbi/README.md`](../powerbi/README.md)
-- Relatório do Power BI (fontes, medidas DAX e leitura de cada visual): [`docs/Relatorio_PowerBI_Sprint2.md`](../docs/Relatorio_PowerBI_Sprint2.md)
+- **Painel publicado:** [abrir no Power BI](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9)
+- Arquivos do painel: [`powerbi/pbip/`](../powerbi/pbip/) (versão publicada, projeto `.pbip`), planilhas em [`powerbi/fontes/`](../powerbi/fontes/), [PDF](../powerbi/Powerbi_API_Sprint2.pdf) e versões anteriores em `.pbix` — ver [`powerbi/README.md`](../powerbi/README.md)
+- Relatório do Power BI (fontes e leitura de cada visual): [`docs/Relatorio_PowerBI_Sprint2.md`](../docs/Relatorio_PowerBI_Sprint2.md)
+- Fórmulas do painel (medidas DAX e Power Query): [`docs/Formulas_PowerBI_Sprint2.md`](../docs/Formulas_PowerBI_Sprint2.md)
 - Vídeo de incremento da Sprint 2: *(adicionar link do YouTube)*
 - Referência do projeto: [Observatório da Inovação RS](https://sict.rs.gov.br/observatorio)
 
@@ -164,6 +178,6 @@ Top 10 setores por empregos CLT (fabricação de aeronaves, atendimento hospital
 | DEC-019 | "Com vínculo" inclui 1.758 que fecharam o ano sem empregados | Nova coluna Situação Detalhada | Fechada |
 | DEC-020 | Descrições CNAE com grafia antiga | Texto oficial da CNAE 2.3; códigos mantidos | Fechada |
 | DEC-021 | Requisitos pedem tipo de atividade e intensidade tecnológica | Colunas Tipo de Atividade, OCDE, Porte SEBRAE e Setor Destaque | Fechada |
-| DEC-022 | Mapa localizava pelo texto do CEP | Base única com latitude/longitude para substituir a fonte do painel | **Aberta** |
+| DEC-022 | Mapa localizava pelo texto do CEP | Base única com latitude/longitude para substituir a fonte do painel | **Aberta** (o mapa já usa latitude/longitude pela tabela CEP x Região; falta trocar a fonte pela base única) |
 
 > DEC-007, DEC-010 e DEC-012 foram numeradas pela equipe e ainda precisam ser transcritas para o Log de Decisões (`docs/06-Decisoes-de-Dados.docx`).

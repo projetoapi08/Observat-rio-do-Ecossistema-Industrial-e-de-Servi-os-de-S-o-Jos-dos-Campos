@@ -1,0 +1,8 @@
+relationship AutoDetected_b5b2903b-69bc-4db6-9d07-2d66e9549f6d
+	fromColumn: Cruzamento.vab_real_2023
+	toColumn: 'VAB setorial'.vab_real_2023
+
+relationship 8de44c03-96ad-4d75-d23e-ad270be7e1e1
+	fromColumn: RAIS_SJC.'CEP Estab'
+	toColumn: 'CEP x Região'.CEP
+

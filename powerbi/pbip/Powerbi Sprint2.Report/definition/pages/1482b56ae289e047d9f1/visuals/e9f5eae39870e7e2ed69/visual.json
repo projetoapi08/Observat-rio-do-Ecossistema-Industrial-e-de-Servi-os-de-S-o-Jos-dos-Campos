@@ -1,0 +1,48 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "e9f5eae39870e7e2ed69",
+  "position": {
+    "x": 1451.6363636363637,
+    "y": 7.2727272727272725,
+    "z": 5000,
+    "height": 141.09090909090909,
+    "width": 468.36363636363637,
+    "tabOrder": 10000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Base: RAIS Estabelecimentos 2024 (Ministério do Trabalho e Emprego), 47.339 estabelecimentos de São José dos Campos, uma linha por estabelecimento. Valor adicionado e PIB: IBGE, PIB dos Municípios (Sidra, tabela 5938), extração de 08/10/2026."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

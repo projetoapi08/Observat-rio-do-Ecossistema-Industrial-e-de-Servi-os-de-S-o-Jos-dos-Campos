@@ -1,0 +1,121 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "275d86a5ed48f3601efe",
+  "position": {
+    "x": 1334.9544072948329,
+    "y": 614.224924012158,
+    "z": 5000,
+    "height": 449.36170212765956,
+    "width": 585.04559270516722,
+    "tabOrder": 5000
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Cruzamento"
+                    }
+                  },
+                  "Property": "setor"
+                }
+              },
+              "queryRef": "Cruzamento.setor",
+              "nativeQueryRef": "setor",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Cruzamento"
+                        }
+                      },
+                      "Property": "part_emprego_pct"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Cruzamento.part_emprego_pct)",
+              "nativeQueryRef": "% do emprego formal (RAIS 2024)",
+              "displayName": "% do emprego formal (RAIS 2024)"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Cruzamento"
+                        }
+                      },
+                      "Property": "part_vab_pct"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Cruzamento.part_vab_pct)",
+              "nativeQueryRef": "% do valor adicionado (IBGE 2021)",
+              "displayName": "% do valor adicionado (IBGE 2021)"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Cruzamento"
+                      }
+                    },
+                    "Property": "part_emprego_pct"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Peso de cada setor no emprego e no valor adicionado de SJC'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

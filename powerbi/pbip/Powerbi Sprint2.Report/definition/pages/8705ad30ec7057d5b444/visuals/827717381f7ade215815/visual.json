@@ -1,0 +1,166 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "827717381f7ade215815",
+  "position": {
+    "x": 1298.6111111111111,
+    "y": 231.94444444444446,
+    "z": 7000,
+    "height": 401.38888888888891,
+    "width": 616.66666666666674,
+    "tabOrder": 7000
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "RAIS_SJC"
+                    }
+                  },
+                  "Property": "Seção CNAE"
+                }
+              },
+              "queryRef": "RAIS_SJC.Seção CNAE",
+              "nativeQueryRef": "Seção CNAE",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "RAIS_SJC"
+                    }
+                  },
+                  "Property": "% Participação Vínculos"
+                }
+              },
+              "queryRef": "RAIS_SJC.% Participação Vínculos",
+              "nativeQueryRef": "% Participação Vínculos"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "RAIS_SJC"
+                    }
+                  },
+                  "Property": "% Participação Estab"
+                }
+              },
+              "queryRef": "RAIS_SJC.% Participação Estab",
+              "nativeQueryRef": "% Participação Estabelecimento",
+              "displayName": "% Participação Estabelecimento"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "RAIS_SJC"
+                  }
+                },
+                "Property": "% Participação Vínculos"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Peso de cada Seção em empregos e em estabelecimentos (%)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "8fcebf1b5fe57d73c86f",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "RAIS_SJC"
+              }
+            },
+            "Property": "Seção CNAE"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "a1f451844f2366adf10d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "RAIS_SJC"
+              }
+            },
+            "Property": "% Participação Vínculos"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "dcf870126279cddcc052",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "RAIS_SJC"
+              }
+            },
+            "Property": "% Participação Estab"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

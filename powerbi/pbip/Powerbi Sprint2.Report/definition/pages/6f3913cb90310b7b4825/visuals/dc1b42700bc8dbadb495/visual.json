@@ -1,0 +1,64 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "dc1b42700bc8dbadb495",
+  "position": {
+    "x": 725.43325526932074,
+    "y": 380.70257611241215,
+    "z": 9000,
+    "height": 158.87587822014049,
+    "width": 305.76112412177986,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "listSlicer",
+    "query": {
+      "queryState": {
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "RAIS_SJC"
+                    }
+                  },
+                  "Property": "Total de Estabelecimentos"
+                }
+              },
+              "queryRef": "RAIS_SJC.Total de Estabelecimentos",
+              "nativeQueryRef": "Total de Estabelecimentos"
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "RAIS_SJC"
+                    }
+                  },
+                  "Property": "Situação Vínculo"
+                }
+              },
+              "queryRef": "RAIS_SJC.Situação Vínculo",
+              "nativeQueryRef": "Situação Vínculo",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "general": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

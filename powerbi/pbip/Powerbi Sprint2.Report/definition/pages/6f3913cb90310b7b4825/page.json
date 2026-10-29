@@ -1,0 +1,68 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "6f3913cb90310b7b4825",
+  "displayName": "KPIS E MAPA",
+  "displayOption": "FitToPage",
+  "height": 1080,
+  "width": 1920,
+  "pageBinding": {
+    "name": "e74ea01e9554c7e0ff66",
+    "type": "Default",
+    "parameters": []
+  },
+  "objects": {
+    "background": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "ThemeDataColor": {
+                    "ColorId": 9,
+                    "Percent": 0.6
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "width": {
+            "expr": {
+              "Literal": {
+                "Value": "188L"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "visualInteractions": [
+    {
+      "source": "88e6be3260701c6d2265",
+      "target": "282d20a21bc52590c2dc",
+      "type": "DataFilter"
+    },
+    {
+      "source": "88e6be3260701c6d2265",
+      "target": "1de500a224ffc5b03b2e",
+      "type": "DataFilter"
+    },
+    {
+      "source": "88e6be3260701c6d2265",
+      "target": "cd85ad7348b7fce44884",
+      "type": "DataFilter"
+    },
+    {
+      "source": "88e6be3260701c6d2265",
+      "target": "cbe73ea919d514d202b6",
+      "type": "DataFilter"
+    }
+  ]
+}
