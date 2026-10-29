@@ -1,0 +1,48 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "873c84e46288929059fd",
+  "position": {
+    "x": 1528.9969604863222,
+    "y": 0,
+    "z": 4000,
+    "height": 53.981762917933132,
+    "width": 391.00303951367783,
+    "tabOrder": 4000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Fontes: RAIS 2024 (MTE) e IBGE, Sidra 5938. Compara a estrutura do VAB 2021 com a do emprego 2024 (anos diferentes, DEC-009). Administração pública fora do cruzamento (DEC-013)"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

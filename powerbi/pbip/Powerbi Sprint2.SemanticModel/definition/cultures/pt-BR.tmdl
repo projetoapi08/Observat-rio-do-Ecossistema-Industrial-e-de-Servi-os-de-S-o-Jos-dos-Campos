@@ -1,0 +1,4360 @@
+cultureInfo pt-BR
+
+	linguisticMetadata =
+			{
+			  "Version": "4.1.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "rais_sjc": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "rais sjc": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "rai sjc": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "RAIS_SJC": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "rais_sjc.CNAE_2_0_classe": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC",
+			          "ConceptualProperty": "CNAE 2.0 Classe"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "CNAE 2.0 classe": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "rais_sjc.CNAE_95_classe": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC",
+			          "ConceptualProperty": "CNAE 95 Classe"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "CNAE 95 classe": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "rais_sjc.qtd_vínculos_CLT": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC",
+			          "ConceptualProperty": "Qtd Vínculos CLT"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "qtd vínculos CLT": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "qtd vínculo CLT": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "rais_sjc.qtd_vínculos_ativo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC",
+			          "ConceptualProperty": "Qtd Vínculos Ativos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "qtd vínculos ativo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "qtd vínculo ativo": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "rais_sjc.qtd_vínculos_estatutário": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC",
+			          "ConceptualProperty": "Qtd Vínculos Estatutários"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "qtd vínculos estatutário": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "qtd vínculo estatutário": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "rais_sjc.ind_atividade_ano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC",
+			          "ConceptualProperty": "Ind Atividade Ano"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ind atividade ano": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "rais_sjc.ind_CEI_vinculado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC",
+			          "ConceptualProperty": "Ind CEI Vinculado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ind CEI vinculado": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "rais_sjc.ind_estab_participa_PAT": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC",
+			          "ConceptualProperty": "Ind Estab Participa PAT"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ind estab participa PAT": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ind estab participa tap": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "ind estab participa touch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "ind estab participa slap": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "ind estab participa stroke": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "ind estab participa hit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "ind estab participa thump": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        }
+			      ]
+			    },
+			    "rais_sjc.ind_rais_negativa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC",
+			          "ConceptualProperty": "Ind Rais Negativa"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ind rais negativa": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ind rai negativa": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "rais_sjc.ind_simple": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC",
+			          "ConceptualProperty": "Ind Simples"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ind simple": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "rais_sjc.município": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC",
+			          "ConceptualProperty": "Município"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "município": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "rais_sjc.natureza_jurídica": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC",
+			          "ConceptualProperty": "Natureza Jurídica"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "natureza jurídica": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "rais_sjc.CNAE_2_0_subclasse": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC",
+			          "ConceptualProperty": "CNAE 2.0 Subclasse"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "CNAE 2.0 subclasse": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "rais_sjc.tamanho_estabelecimento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC",
+			          "ConceptualProperty": "Tamanho Estabelecimento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tamanho estabelecimento": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "rais_sjc.tipo_estab": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC",
+			          "ConceptualProperty": "Tipo Estab"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tipo estab": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "rais_sjc.tipo_Estab_1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC",
+			          "ConceptualProperty": "Tipo Estab_1"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tipo Estab_1": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Tipo de estabelecimento": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "rais_sjc.uf": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC",
+			          "ConceptualProperty": "UF"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "uf": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "rais_sjc.IBGE_subsetor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC",
+			          "ConceptualProperty": "IBGE Subsetor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "IBGE subsetor": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "rais_sjc.CEP_estab": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC",
+			          "ConceptualProperty": "CEP Estab"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "CEP estab": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "postal code": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "estab": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ],
+			      "SemanticType": "Location"
+			    },
+			    "rais_sjc.situação_vínculo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC",
+			          "ConceptualProperty": "Situação Vínculo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "situação vínculo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "rais_sjc.setor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC",
+			          "ConceptualProperty": "Setor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "setor": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "rais_sjc.categoria_automotiva": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC",
+			          "ConceptualProperty": "Categoria Automotiva"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "categoria automotiva": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "rais_sjc.faixa_de_porte": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC",
+			          "ConceptualProperty": "Faixa de Porte"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "faixa de porte": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "rais_sjc.ordem_porte": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC",
+			          "ConceptualProperty": "Ordem Porte"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ordem porte": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "rais_sjc.natureza_nome": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC",
+			          "ConceptualProperty": "Natureza Nome"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "natureza nome": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "rais_sjc.atividade_automotiva": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC",
+			          "ConceptualProperty": "Atividade Automotiva"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "atividade automotiva": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "rais_sjc.seção_CNAE": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC",
+			          "ConceptualProperty": "Seção CNAE"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "seção CNAE": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "rais_sjc.total_de_estabelecimentos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC",
+			          "ConceptualProperty": "Total de Estabelecimentos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total de estabelecimentos": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "aggregate de estabelecimento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "overall de estabelecimento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "rais_sjc.estabelecimentos_com_vínculo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC",
+			          "ConceptualProperty": "Estabelecimentos Com Vínculo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "estabelecimentos com vínculo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "rais_sjc.com_vínculo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC",
+			          "ConceptualProperty": "% Com Vínculo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% com vínculo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage com vínculo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "pct com vínculo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "rais_sjc.estabelecimentos_sem_vínculo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC",
+			          "ConceptualProperty": "Estabelecimentos Sem Vínculo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "estabelecimentos sem vínculo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "rais_sjc.sem_vínculo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC",
+			          "ConceptualProperty": "% Sem Vínculo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% sem vínculo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage sem vínculo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "pct sem vínculo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "rais_sjc.total_vínculos_CLT": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC",
+			          "ConceptualProperty": "Total Vínculos CLT"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total vínculos CLT": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "aggregate vínculo clt": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "overall vínculo clt": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "Vínculos formais ativos": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "rais_sjc.total_vínculos_ativos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC",
+			          "ConceptualProperty": "Total Vínculos Ativos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total vínculos ativos": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "aggregate vínculo ativo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "overall vínculo ativo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "rais_sjc.total_vínculos_estatutários": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC",
+			          "ConceptualProperty": "Total Vínculos Estatutários"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total vínculos estatutários": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "aggregate vínculo estatutário": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "overall vínculo estatutário": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "rais_sjc.estab_fábricas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC",
+			          "ConceptualProperty": "Estab Fábricas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "estab fábricas": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "rais_sjc.vínculos_fábricas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC",
+			          "ConceptualProperty": "Vínculos Fábricas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vínculos fábricas": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "rais_sjc.estab_comércio_e_reparação": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC",
+			          "ConceptualProperty": "Estab Comércio e Reparação"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "estab comércio e reparação": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "rais_sjc.vínculos_comércio_e_reparação": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC",
+			          "ConceptualProperty": "Vínculos Comércio e Reparação"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vínculos comércio e reparação": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "rais_sjc.média_vínculos_por_fábrica": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC",
+			          "ConceptualProperty": "Média Vínculos por Fábrica"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "média vínculos por fábrica": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "rais_sjc.média_vínculos_por_comércio_e_reparação": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC",
+			          "ConceptualProperty": "Média Vínculos por Comércio e Reparação"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "média vínculos por comércio e reparação": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "rais_sjc.estab_transporte_de_carga": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC",
+			          "ConceptualProperty": "Estab Transporte de Carga"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "estab transporte de carga": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "rais_sjc.vínculos_transporte_de_carga": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC",
+			          "ConceptualProperty": "Vínculos Transporte de Carga"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vínculos transporte de carga": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "rais_sjc.participação_estab": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC",
+			          "ConceptualProperty": "% Participação Estab"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% participação estab": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage participação estab": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "pct participação estab": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "% Participação Estabelecimento": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "rais_sjc.participação_vínculos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RAIS_SJC",
+			          "ConceptualProperty": "% Participação Vínculos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% participação vínculos": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage participação vínculo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "pct participação vínculo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "cruzamento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Cruzamento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cruzamento": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "cruzamento.setor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Cruzamento",
+			          "ConceptualProperty": "setor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "setor": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "cruzamento.cod_setor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Cruzamento",
+			          "ConceptualProperty": "cod_setor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cod setor": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "cod_setor": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "cruzamento.ano_rai": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Cruzamento",
+			          "ConceptualProperty": "ano_rais"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ano rai": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ano_rais": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "cruzamento.ano_vab": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Cruzamento",
+			          "ConceptualProperty": "ano_vab"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ano vab": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ano_vab": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "cruzamento.estabelecimento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Cruzamento",
+			          "ConceptualProperty": "estabelecimentos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "estabelecimento": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "cruzamento.estab_com_vinculo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Cruzamento",
+			          "ConceptualProperty": "estab_com_vinculo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "estab com vinculo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "estab_com_vinculo": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "cruzamento.vinculos_ativo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Cruzamento",
+			          "ConceptualProperty": "vinculos_ativos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vinculos ativo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "vinculo ativo": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "vinculos_ativos": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "cruzamento.vab_corrente_2021": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Cruzamento",
+			          "ConceptualProperty": "vab_corrente_2021"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vab corrente 2021": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "vab_corrente_2021": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "cruzamento.vab_real_2023": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Cruzamento",
+			          "ConceptualProperty": "vab_real_2023"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "vab real 2023": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "vab_real_2023": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "cruzamento.part_emprego_pct": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Cruzamento",
+			          "ConceptualProperty": "part_emprego_pct"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "part emprego pct": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "part_emprego_pct": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "cruzamento.part_vab_pct": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Cruzamento",
+			          "ConceptualProperty": "part_vab_pct"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "part vab pct": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "part_vab_pct": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "cruzamento.produtividade_relativa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Cruzamento",
+			          "ConceptualProperty": "produtividade_relativa"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "produtividade relativa": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "produtividade_relativa": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "cruzamento.vab_por_vinculo_real_2023": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Cruzamento",
+			          "ConceptualProperty": "vab_por_vinculo_real_2023"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vab por vinculo real 2023": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "vab_por_vinculo_real_2023": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "cruzamento.vinculos_por_estab_com_vinculo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Cruzamento",
+			          "ConceptualProperty": "vinculos_por_estab_com_vinculo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vinculos por estab com vinculo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "vinculo por estab com vinculo": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "vinculos_por_estab_com_vinculo": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "PIB_anual": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "PIB anual"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "PIB anual": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "PIB_anual.ano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "PIB anual",
+			          "ConceptualProperty": "ano"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ano": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "PIB_anual.pib": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "PIB anual",
+			          "ConceptualProperty": "pib"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "pib": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "PIB_anual.pib_real_2023": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "PIB anual",
+			          "ConceptualProperty": "pib_real_2023"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "pib real 2023": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "pib_real_2023": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "PIB_anual.cresc_real_pct": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "PIB anual",
+			          "ConceptualProperty": "cresc_real_pct"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cresc real pct": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "cresc_real_pct": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "PIB_anual.indice_pib_real_2010_100": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "PIB anual",
+			          "ConceptualProperty": "indice_pib_real_2010_100"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "indice pib real 2010 100": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "indice_pib_real_2010_100": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "PIB_anual.pib_per_capita": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "PIB anual",
+			          "ConceptualProperty": "pib_per_capita"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "pib per capita": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "pib_per_capita": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "PIB_anual.pib_per_capita_real_2023": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "PIB anual",
+			          "ConceptualProperty": "pib_per_capita_real_2023"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "pib per capita real 2023": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "pib_per_capita_real_2023": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "PIB_anual.part_pib_estado_sp_pct": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "PIB anual",
+			          "ConceptualProperty": "part_pib_estado_sp_pct"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "part pib estado sp pct": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "part_pib_estado_sp_pct": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "PIB_anual.populacao": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "PIB anual",
+			          "ConceptualProperty": "populacao"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "populacao": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "PIB_anual.fonte_populacao": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "PIB anual",
+			          "ConceptualProperty": "fonte_populacao"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fonte populacao": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fonte_populacao": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "VAB_setorial": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "VAB setorial"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "VAB setorial": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "VAB_setorial.ano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "VAB setorial",
+			          "ConceptualProperty": "ano"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ano": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "VAB_setorial.cod_setor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "VAB setorial",
+			          "ConceptualProperty": "cod_setor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cod setor": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "cod_setor": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "VAB_setorial.setor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "VAB setorial",
+			          "ConceptualProperty": "setor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "setor": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "VAB_setorial.vab_corrente": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "VAB setorial",
+			          "ConceptualProperty": "vab_corrente"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vab corrente": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "vab_corrente": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "VAB_setorial.vab_real_2023": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "VAB setorial",
+			          "ConceptualProperty": "vab_real_2023"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vab real 2023": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "vab_real_2023": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "VAB_setorial.participacao_no_vab_pct": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "VAB setorial",
+			          "ConceptualProperty": "participacao_no_vab_pct"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "participacao no vab pct": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "participacao_no_vab_pct": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "participacao number vab pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "VAB_setorial.cresc_real_pct": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "VAB setorial",
+			          "ConceptualProperty": "cresc_real_pct"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cresc real pct": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "cresc_real_pct": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "cruzamento_has_VAB_setorial": {
+			      "Binding": {
+			        "ConceptualEntity": "Cruzamento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cruzamento": {
+			          "Target": {
+			            "Entity": "cruzamento"
+			          }
+			        },
+			        "VAB_setorial": {
+			          "Target": {
+			            "Entity": "VAB_setorial"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cruzamento"
+			            },
+			            "Object": {
+			              "Role": "VAB_setorial"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cruzamentos_have_VAB_setorials"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "VAB_setorial"
+			            },
+			            "Object": {
+			              "Role": "cruzamento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "VAB_setorials_have_cruzamentos"
+			        }
+			      ]
+			    },
+			    "VAB_setorial_has_cresc_real_pct": {
+			      "Binding": {
+			        "ConceptualEntity": "VAB setorial"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "VAB_setorial": {
+			          "Target": {
+			            "Entity": "VAB_setorial"
+			          }
+			        },
+			        "VAB_setorial.cresc_real_pct": {
+			          "Target": {
+			            "Entity": "VAB_setorial.cresc_real_pct"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "VAB_setorial"
+			            },
+			            "Object": {
+			              "Role": "VAB_setorial.cresc_real_pct"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "VAB_setorials_have_cresc_real_pcts"
+			        }
+			      ]
+			    },
+			    "VAB_setorial_has_participacao_no_vab_pct": {
+			      "Binding": {
+			        "ConceptualEntity": "VAB setorial"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "VAB_setorial": {
+			          "Target": {
+			            "Entity": "VAB_setorial"
+			          }
+			        },
+			        "VAB_setorial.participacao_no_vab_pct": {
+			          "Target": {
+			            "Entity": "VAB_setorial.participacao_no_vab_pct"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "VAB_setorial"
+			            },
+			            "Object": {
+			              "Role": "VAB_setorial.participacao_no_vab_pct"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "VAB_setorials_have_participacao_no_vab_pcts"
+			        }
+			      ]
+			    },
+			    "VAB_setorial_has_vab_real_2023": {
+			      "Binding": {
+			        "ConceptualEntity": "VAB setorial"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "VAB_setorial": {
+			          "Target": {
+			            "Entity": "VAB_setorial"
+			          }
+			        },
+			        "VAB_setorial.vab_real_2023": {
+			          "Target": {
+			            "Entity": "VAB_setorial.vab_real_2023"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "VAB_setorial"
+			            },
+			            "Object": {
+			              "Role": "VAB_setorial.vab_real_2023"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "VAB_setorials_have_vab_real_2023"
+			        }
+			      ]
+			    },
+			    "VAB_setorial_has_vab_corrente": {
+			      "Binding": {
+			        "ConceptualEntity": "VAB setorial"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "VAB_setorial": {
+			          "Target": {
+			            "Entity": "VAB_setorial"
+			          }
+			        },
+			        "VAB_setorial.vab_corrente": {
+			          "Target": {
+			            "Entity": "VAB_setorial.vab_corrente"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "VAB_setorial"
+			            },
+			            "Object": {
+			              "Role": "VAB_setorial.vab_corrente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "VAB_setorials_have_vab_correntes"
+			        }
+			      ]
+			    },
+			    "VAB_setorial_has_setor": {
+			      "Binding": {
+			        "ConceptualEntity": "VAB setorial"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "VAB_setorial": {
+			          "Target": {
+			            "Entity": "VAB_setorial"
+			          }
+			        },
+			        "VAB_setorial.setor": {
+			          "Target": {
+			            "Entity": "VAB_setorial.setor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "VAB_setorial"
+			            },
+			            "Object": {
+			              "Role": "VAB_setorial.setor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "VAB_setorials_have_setors"
+			        }
+			      ]
+			    },
+			    "VAB_setorial_has_cod_setor": {
+			      "Binding": {
+			        "ConceptualEntity": "VAB setorial"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "VAB_setorial": {
+			          "Target": {
+			            "Entity": "VAB_setorial"
+			          }
+			        },
+			        "VAB_setorial.cod_setor": {
+			          "Target": {
+			            "Entity": "VAB_setorial.cod_setor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "VAB_setorial"
+			            },
+			            "Object": {
+			              "Role": "VAB_setorial.cod_setor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "VAB_setorials_have_cod_setors"
+			        }
+			      ]
+			    },
+			    "VAB_setorial_has_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "VAB setorial"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "VAB_setorial": {
+			          "Target": {
+			            "Entity": "VAB_setorial"
+			          }
+			        },
+			        "VAB_setorial.ano": {
+			          "Target": {
+			            "Entity": "VAB_setorial.ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "VAB_setorial"
+			            },
+			            "Object": {
+			              "Role": "VAB_setorial.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "VAB_setorials_have_anos"
+			        }
+			      ]
+			    },
+			    "PIB_anual_has_fonte_populacao": {
+			      "Binding": {
+			        "ConceptualEntity": "PIB anual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "PIB_anual": {
+			          "Target": {
+			            "Entity": "PIB_anual"
+			          }
+			        },
+			        "PIB_anual.fonte_populacao": {
+			          "Target": {
+			            "Entity": "PIB_anual.fonte_populacao"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "PIB_anual"
+			            },
+			            "Object": {
+			              "Role": "PIB_anual.fonte_populacao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "PIB_anuals_have_fonte_populacaos"
+			        }
+			      ]
+			    },
+			    "PIB_anual_has_populacao": {
+			      "Binding": {
+			        "ConceptualEntity": "PIB anual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "PIB_anual": {
+			          "Target": {
+			            "Entity": "PIB_anual"
+			          }
+			        },
+			        "PIB_anual.populacao": {
+			          "Target": {
+			            "Entity": "PIB_anual.populacao"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "PIB_anual"
+			            },
+			            "Object": {
+			              "Role": "PIB_anual.populacao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "PIB_anuals_have_populacaos"
+			        }
+			      ]
+			    },
+			    "PIB_anual_has_part_pib_estado_sp_pct": {
+			      "Binding": {
+			        "ConceptualEntity": "PIB anual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "PIB_anual": {
+			          "Target": {
+			            "Entity": "PIB_anual"
+			          }
+			        },
+			        "PIB_anual.part_pib_estado_sp_pct": {
+			          "Target": {
+			            "Entity": "PIB_anual.part_pib_estado_sp_pct"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "PIB_anual"
+			            },
+			            "Object": {
+			              "Role": "PIB_anual.part_pib_estado_sp_pct"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "PIB_anuals_have_part_pib_estado_sp_pcts"
+			        }
+			      ]
+			    },
+			    "PIB_anual_has_pib_per_capita_real_2023": {
+			      "Binding": {
+			        "ConceptualEntity": "PIB anual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "PIB_anual": {
+			          "Target": {
+			            "Entity": "PIB_anual"
+			          }
+			        },
+			        "PIB_anual.pib_per_capita_real_2023": {
+			          "Target": {
+			            "Entity": "PIB_anual.pib_per_capita_real_2023"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "PIB_anual"
+			            },
+			            "Object": {
+			              "Role": "PIB_anual.pib_per_capita_real_2023"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "PIB_anuals_have_pib_per_capita_real_2023"
+			        }
+			      ]
+			    },
+			    "PIB_anual_has_pib_per_capita": {
+			      "Binding": {
+			        "ConceptualEntity": "PIB anual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "PIB_anual": {
+			          "Target": {
+			            "Entity": "PIB_anual"
+			          }
+			        },
+			        "PIB_anual.pib_per_capita": {
+			          "Target": {
+			            "Entity": "PIB_anual.pib_per_capita"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "PIB_anual"
+			            },
+			            "Object": {
+			              "Role": "PIB_anual.pib_per_capita"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "PIB_anuals_have_pib_per_capita"
+			        }
+			      ]
+			    },
+			    "PIB_anual_has_indice_pib_real_2010_100": {
+			      "Binding": {
+			        "ConceptualEntity": "PIB anual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "PIB_anual": {
+			          "Target": {
+			            "Entity": "PIB_anual"
+			          }
+			        },
+			        "PIB_anual.indice_pib_real_2010_100": {
+			          "Target": {
+			            "Entity": "PIB_anual.indice_pib_real_2010_100"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "PIB_anual"
+			            },
+			            "Object": {
+			              "Role": "PIB_anual.indice_pib_real_2010_100"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "PIB_anuals_have_indice_pib_real_2010_100"
+			        }
+			      ]
+			    },
+			    "PIB_anual_has_cresc_real_pct": {
+			      "Binding": {
+			        "ConceptualEntity": "PIB anual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "PIB_anual": {
+			          "Target": {
+			            "Entity": "PIB_anual"
+			          }
+			        },
+			        "PIB_anual.cresc_real_pct": {
+			          "Target": {
+			            "Entity": "PIB_anual.cresc_real_pct"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "PIB_anual"
+			            },
+			            "Object": {
+			              "Role": "PIB_anual.cresc_real_pct"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "PIB_anuals_have_cresc_real_pcts"
+			        }
+			      ]
+			    },
+			    "PIB_anual_has_pib_real_2023": {
+			      "Binding": {
+			        "ConceptualEntity": "PIB anual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "PIB_anual": {
+			          "Target": {
+			            "Entity": "PIB_anual"
+			          }
+			        },
+			        "PIB_anual.pib_real_2023": {
+			          "Target": {
+			            "Entity": "PIB_anual.pib_real_2023"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "PIB_anual"
+			            },
+			            "Object": {
+			              "Role": "PIB_anual.pib_real_2023"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "PIB_anuals_have_pib_real_2023"
+			        }
+			      ]
+			    },
+			    "PIB_anual_has_pib": {
+			      "Binding": {
+			        "ConceptualEntity": "PIB anual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "PIB_anual": {
+			          "Target": {
+			            "Entity": "PIB_anual"
+			          }
+			        },
+			        "PIB_anual.pib": {
+			          "Target": {
+			            "Entity": "PIB_anual.pib"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "PIB_anual"
+			            },
+			            "Object": {
+			              "Role": "PIB_anual.pib"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "PIB_anuals_have_pibs"
+			        }
+			      ]
+			    },
+			    "PIB_anual_has_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "PIB anual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "PIB_anual": {
+			          "Target": {
+			            "Entity": "PIB_anual"
+			          }
+			        },
+			        "PIB_anual.ano": {
+			          "Target": {
+			            "Entity": "PIB_anual.ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "PIB_anual"
+			            },
+			            "Object": {
+			              "Role": "PIB_anual.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "PIB_anuals_have_anos"
+			        }
+			      ]
+			    },
+			    "cruzamento_has_vinculos_por_estab_com_vinculo": {
+			      "Binding": {
+			        "ConceptualEntity": "Cruzamento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cruzamento": {
+			          "Target": {
+			            "Entity": "cruzamento"
+			          }
+			        },
+			        "cruzamento.vinculos_por_estab_com_vinculo": {
+			          "Target": {
+			            "Entity": "cruzamento.vinculos_por_estab_com_vinculo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cruzamento"
+			            },
+			            "Object": {
+			              "Role": "cruzamento.vinculos_por_estab_com_vinculo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cruzamentos_have_vinculos_por_estab_com_vinculos"
+			        }
+			      ]
+			    },
+			    "cruzamento_has_vab_por_vinculo_real_2023": {
+			      "Binding": {
+			        "ConceptualEntity": "Cruzamento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cruzamento": {
+			          "Target": {
+			            "Entity": "cruzamento"
+			          }
+			        },
+			        "cruzamento.vab_por_vinculo_real_2023": {
+			          "Target": {
+			            "Entity": "cruzamento.vab_por_vinculo_real_2023"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cruzamento"
+			            },
+			            "Object": {
+			              "Role": "cruzamento.vab_por_vinculo_real_2023"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cruzamentos_have_vab_por_vinculo_real_2023"
+			        }
+			      ]
+			    },
+			    "cruzamento_has_produtividade_relativa": {
+			      "Binding": {
+			        "ConceptualEntity": "Cruzamento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cruzamento": {
+			          "Target": {
+			            "Entity": "cruzamento"
+			          }
+			        },
+			        "cruzamento.produtividade_relativa": {
+			          "Target": {
+			            "Entity": "cruzamento.produtividade_relativa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cruzamento"
+			            },
+			            "Object": {
+			              "Role": "cruzamento.produtividade_relativa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cruzamentos_have_produtividade_relativas"
+			        }
+			      ]
+			    },
+			    "cruzamento_has_part_vab_pct": {
+			      "Binding": {
+			        "ConceptualEntity": "Cruzamento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cruzamento": {
+			          "Target": {
+			            "Entity": "cruzamento"
+			          }
+			        },
+			        "cruzamento.part_vab_pct": {
+			          "Target": {
+			            "Entity": "cruzamento.part_vab_pct"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cruzamento"
+			            },
+			            "Object": {
+			              "Role": "cruzamento.part_vab_pct"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cruzamentos_have_part_vab_pcts"
+			        }
+			      ]
+			    },
+			    "cruzamento_has_part_emprego_pct": {
+			      "Binding": {
+			        "ConceptualEntity": "Cruzamento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cruzamento": {
+			          "Target": {
+			            "Entity": "cruzamento"
+			          }
+			        },
+			        "cruzamento.part_emprego_pct": {
+			          "Target": {
+			            "Entity": "cruzamento.part_emprego_pct"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cruzamento"
+			            },
+			            "Object": {
+			              "Role": "cruzamento.part_emprego_pct"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cruzamentos_have_part_emprego_pcts"
+			        }
+			      ]
+			    },
+			    "cruzamento_has_vab_corrente_2021": {
+			      "Binding": {
+			        "ConceptualEntity": "Cruzamento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cruzamento": {
+			          "Target": {
+			            "Entity": "cruzamento"
+			          }
+			        },
+			        "cruzamento.vab_corrente_2021": {
+			          "Target": {
+			            "Entity": "cruzamento.vab_corrente_2021"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cruzamento"
+			            },
+			            "Object": {
+			              "Role": "cruzamento.vab_corrente_2021"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cruzamentos_have_vab_corrente_2021"
+			        }
+			      ]
+			    },
+			    "cruzamento_has_vinculos_ativo": {
+			      "Binding": {
+			        "ConceptualEntity": "Cruzamento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cruzamento": {
+			          "Target": {
+			            "Entity": "cruzamento"
+			          }
+			        },
+			        "cruzamento.vinculos_ativo": {
+			          "Target": {
+			            "Entity": "cruzamento.vinculos_ativo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cruzamento"
+			            },
+			            "Object": {
+			              "Role": "cruzamento.vinculos_ativo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cruzamentos_have_vinculos_ativos"
+			        }
+			      ]
+			    },
+			    "cruzamento_has_estab_com_vinculo": {
+			      "Binding": {
+			        "ConceptualEntity": "Cruzamento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cruzamento": {
+			          "Target": {
+			            "Entity": "cruzamento"
+			          }
+			        },
+			        "cruzamento.estab_com_vinculo": {
+			          "Target": {
+			            "Entity": "cruzamento.estab_com_vinculo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cruzamento"
+			            },
+			            "Object": {
+			              "Role": "cruzamento.estab_com_vinculo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cruzamentos_have_estab_com_vinculos"
+			        }
+			      ]
+			    },
+			    "cruzamento_has_estabelecimento": {
+			      "Binding": {
+			        "ConceptualEntity": "Cruzamento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cruzamento": {
+			          "Target": {
+			            "Entity": "cruzamento"
+			          }
+			        },
+			        "cruzamento.estabelecimento": {
+			          "Target": {
+			            "Entity": "cruzamento.estabelecimento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cruzamento"
+			            },
+			            "Object": {
+			              "Role": "cruzamento.estabelecimento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cruzamentos_have_estabelecimentos"
+			        }
+			      ]
+			    },
+			    "cruzamento_has_ano_vab": {
+			      "Binding": {
+			        "ConceptualEntity": "Cruzamento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cruzamento": {
+			          "Target": {
+			            "Entity": "cruzamento"
+			          }
+			        },
+			        "cruzamento.ano_vab": {
+			          "Target": {
+			            "Entity": "cruzamento.ano_vab"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cruzamento"
+			            },
+			            "Object": {
+			              "Role": "cruzamento.ano_vab"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cruzamentos_have_ano_vabs"
+			        }
+			      ]
+			    },
+			    "cruzamento_has_ano_rai": {
+			      "Binding": {
+			        "ConceptualEntity": "Cruzamento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cruzamento": {
+			          "Target": {
+			            "Entity": "cruzamento"
+			          }
+			        },
+			        "cruzamento.ano_rai": {
+			          "Target": {
+			            "Entity": "cruzamento.ano_rai"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cruzamento"
+			            },
+			            "Object": {
+			              "Role": "cruzamento.ano_rai"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cruzamentos_have_ano_rai"
+			        }
+			      ]
+			    },
+			    "cruzamento_has_cod_setor": {
+			      "Binding": {
+			        "ConceptualEntity": "Cruzamento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cruzamento": {
+			          "Target": {
+			            "Entity": "cruzamento"
+			          }
+			        },
+			        "cruzamento.cod_setor": {
+			          "Target": {
+			            "Entity": "cruzamento.cod_setor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cruzamento"
+			            },
+			            "Object": {
+			              "Role": "cruzamento.cod_setor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cruzamentos_have_cod_setors"
+			        }
+			      ]
+			    },
+			    "cruzamento_has_setor": {
+			      "Binding": {
+			        "ConceptualEntity": "Cruzamento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cruzamento": {
+			          "Target": {
+			            "Entity": "cruzamento"
+			          }
+			        },
+			        "cruzamento.setor": {
+			          "Target": {
+			            "Entity": "cruzamento.setor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cruzamento"
+			            },
+			            "Object": {
+			              "Role": "cruzamento.setor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cruzamentos_have_setors"
+			        }
+			      ]
+			    },
+			    "rais_sjc_has_participação_vínculos": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.participação_vínculos": {
+			          "Target": {
+			            "Entity": "rais_sjc.participação_vínculos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Object": {
+			              "Role": "rais_sjc.participação_vínculos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_have__participação_vínculos"
+			        }
+			      ]
+			    },
+			    "rais_sjc_has_participação_estab": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.participação_estab": {
+			          "Target": {
+			            "Entity": "rais_sjc.participação_estab"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Object": {
+			              "Role": "rais_sjc.participação_estab"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_have__participação_estab"
+			        }
+			      ]
+			    },
+			    "rais_sjc_has_vínculos_transporte_de_carga": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.vínculos_transporte_de_carga": {
+			          "Target": {
+			            "Entity": "rais_sjc.vínculos_transporte_de_carga"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Object": {
+			              "Role": "rais_sjc.vínculos_transporte_de_carga"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_have_vínculos_transporte_de_carga"
+			        }
+			      ]
+			    },
+			    "rais_sjc_has_estab_transporte_de_carga": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.estab_transporte_de_carga": {
+			          "Target": {
+			            "Entity": "rais_sjc.estab_transporte_de_carga"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Object": {
+			              "Role": "rais_sjc.estab_transporte_de_carga"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_have_estab_transporte_de_carga"
+			        }
+			      ]
+			    },
+			    "rais_sjc_has_média_vínculos_por_comércio_e_reparação": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.média_vínculos_por_comércio_e_reparação": {
+			          "Target": {
+			            "Entity": "rais_sjc.média_vínculos_por_comércio_e_reparação"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Object": {
+			              "Role": "rais_sjc.média_vínculos_por_comércio_e_reparação"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_have_média_vínculos_por_comércio_e_reparação"
+			        }
+			      ]
+			    },
+			    "rais_sjc_has_média_vínculos_por_fábrica": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.média_vínculos_por_fábrica": {
+			          "Target": {
+			            "Entity": "rais_sjc.média_vínculos_por_fábrica"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Object": {
+			              "Role": "rais_sjc.média_vínculos_por_fábrica"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_have_média_vínculos_por_fábrica"
+			        }
+			      ]
+			    },
+			    "rais_sjc_has_vínculos_comércio_e_reparação": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.vínculos_comércio_e_reparação": {
+			          "Target": {
+			            "Entity": "rais_sjc.vínculos_comércio_e_reparação"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Object": {
+			              "Role": "rais_sjc.vínculos_comércio_e_reparação"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_have_vínculos_comércio_e_reparação"
+			        }
+			      ]
+			    },
+			    "rais_sjc_has_estab_comércio_e_reparação": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.estab_comércio_e_reparação": {
+			          "Target": {
+			            "Entity": "rais_sjc.estab_comércio_e_reparação"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Object": {
+			              "Role": "rais_sjc.estab_comércio_e_reparação"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_have_estab_comércio_e_reparação"
+			        }
+			      ]
+			    },
+			    "rais_sjc_has_vínculos_fábricas": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.vínculos_fábricas": {
+			          "Target": {
+			            "Entity": "rais_sjc.vínculos_fábricas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Object": {
+			              "Role": "rais_sjc.vínculos_fábricas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_have_vínculos_fábricas"
+			        }
+			      ]
+			    },
+			    "rais_sjc_has_estab_fábricas": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.estab_fábricas": {
+			          "Target": {
+			            "Entity": "rais_sjc.estab_fábricas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Object": {
+			              "Role": "rais_sjc.estab_fábricas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_have_estab_fábricas"
+			        }
+			      ]
+			    },
+			    "rais_sjc_has_total_vínculos_estatutários": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.total_vínculos_estatutários": {
+			          "Target": {
+			            "Entity": "rais_sjc.total_vínculos_estatutários"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Object": {
+			              "Role": "rais_sjc.total_vínculos_estatutários"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_have_total_vínculos_estatutários"
+			        }
+			      ]
+			    },
+			    "rais_sjc_has_total_vínculos_ativos": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.total_vínculos_ativos": {
+			          "Target": {
+			            "Entity": "rais_sjc.total_vínculos_ativos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Object": {
+			              "Role": "rais_sjc.total_vínculos_ativos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_have_total_vínculos_ativos"
+			        }
+			      ]
+			    },
+			    "rais_sjc_has_total_vínculos_CLT": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.total_vínculos_CLT": {
+			          "Target": {
+			            "Entity": "rais_sjc.total_vínculos_CLT"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Object": {
+			              "Role": "rais_sjc.total_vínculos_CLT"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_have_total_vínculos_CLT"
+			        }
+			      ]
+			    },
+			    "rais_sjc_has_sem_vínculo": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.sem_vínculo": {
+			          "Target": {
+			            "Entity": "rais_sjc.sem_vínculo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Object": {
+			              "Role": "rais_sjc.sem_vínculo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_have__sem_vínculo"
+			        }
+			      ]
+			    },
+			    "rais_sjc_has_estabelecimentos_sem_vínculo": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.estabelecimentos_sem_vínculo": {
+			          "Target": {
+			            "Entity": "rais_sjc.estabelecimentos_sem_vínculo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Object": {
+			              "Role": "rais_sjc.estabelecimentos_sem_vínculo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_have_estabelecimentos_sem_vínculo"
+			        }
+			      ]
+			    },
+			    "rais_sjc_has_com_vínculo": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.com_vínculo": {
+			          "Target": {
+			            "Entity": "rais_sjc.com_vínculo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Object": {
+			              "Role": "rais_sjc.com_vínculo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_have__com_vínculo"
+			        }
+			      ]
+			    },
+			    "rais_sjc_has_estabelecimentos_com_vínculo": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.estabelecimentos_com_vínculo": {
+			          "Target": {
+			            "Entity": "rais_sjc.estabelecimentos_com_vínculo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Object": {
+			              "Role": "rais_sjc.estabelecimentos_com_vínculo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_have_estabelecimentos_com_vínculo"
+			        }
+			      ]
+			    },
+			    "rais_sjc_has_total_de_estabelecimentos": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.total_de_estabelecimentos": {
+			          "Target": {
+			            "Entity": "rais_sjc.total_de_estabelecimentos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Object": {
+			              "Role": "rais_sjc.total_de_estabelecimentos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_have_total_de_estabelecimentos"
+			        }
+			      ]
+			    },
+			    "rais_sjc_has_seção_CNAE": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.seção_CNAE": {
+			          "Target": {
+			            "Entity": "rais_sjc.seção_CNAE"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Object": {
+			              "Role": "rais_sjc.seção_CNAE"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_have_seção_CNAEs"
+			        }
+			      ]
+			    },
+			    "rais_sjc_has_atividade_automotiva": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.atividade_automotiva": {
+			          "Target": {
+			            "Entity": "rais_sjc.atividade_automotiva"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Object": {
+			              "Role": "rais_sjc.atividade_automotiva"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_have_atividade_automotivas"
+			        }
+			      ]
+			    },
+			    "rais_sjc_has_natureza_nome": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.natureza_nome": {
+			          "Target": {
+			            "Entity": "rais_sjc.natureza_nome"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Object": {
+			              "Role": "rais_sjc.natureza_nome"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_have_natureza_nome"
+			        }
+			      ]
+			    },
+			    "rais_sjc_has_ordem_porte": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.ordem_porte": {
+			          "Target": {
+			            "Entity": "rais_sjc.ordem_porte"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Object": {
+			              "Role": "rais_sjc.ordem_porte"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_have_ordem_porte"
+			        }
+			      ]
+			    },
+			    "rais_sjc_has_faixa_de_porte": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.faixa_de_porte": {
+			          "Target": {
+			            "Entity": "rais_sjc.faixa_de_porte"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Object": {
+			              "Role": "rais_sjc.faixa_de_porte"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_have_faixa_de_porte"
+			        }
+			      ]
+			    },
+			    "rais_sjc_has_categoria_automotiva": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.categoria_automotiva": {
+			          "Target": {
+			            "Entity": "rais_sjc.categoria_automotiva"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Object": {
+			              "Role": "rais_sjc.categoria_automotiva"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_have_categoria_automotivas"
+			        }
+			      ]
+			    },
+			    "rais_sjc_has_setor": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.setor": {
+			          "Target": {
+			            "Entity": "rais_sjc.setor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Object": {
+			              "Role": "rais_sjc.setor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_have_setors"
+			        }
+			      ]
+			    },
+			    "rais_sjc_has_situação_vínculo": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.situação_vínculo": {
+			          "Target": {
+			            "Entity": "rais_sjc.situação_vínculo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Object": {
+			              "Role": "rais_sjc.situação_vínculo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_have_situação_vínculos"
+			        }
+			      ]
+			    },
+			    "rais_sjc_has_CEP_estab": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.CEP_estab": {
+			          "Target": {
+			            "Entity": "rais_sjc.CEP_estab"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Object": {
+			              "Role": "rais_sjc.CEP_estab"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_have_CEP_estab"
+			        }
+			      ]
+			    },
+			    "rais_sjc_has_IBGE_subsetor": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.IBGE_subsetor": {
+			          "Target": {
+			            "Entity": "rais_sjc.IBGE_subsetor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Object": {
+			              "Role": "rais_sjc.IBGE_subsetor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_have_IBGE_subsetors"
+			        }
+			      ]
+			    },
+			    "rais_sjc_has_uf": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.uf": {
+			          "Target": {
+			            "Entity": "rais_sjc.uf"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Object": {
+			              "Role": "rais_sjc.uf"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_have_ufs"
+			        }
+			      ]
+			    },
+			    "rais_sjc_has_tipo_Estab_1": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.tipo_Estab_1": {
+			          "Target": {
+			            "Entity": "rais_sjc.tipo_Estab_1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Object": {
+			              "Role": "rais_sjc.tipo_Estab_1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_have_tipo_Estab_1"
+			        }
+			      ]
+			    },
+			    "rais_sjc_has_tipo_estab": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.tipo_estab": {
+			          "Target": {
+			            "Entity": "rais_sjc.tipo_estab"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Object": {
+			              "Role": "rais_sjc.tipo_estab"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_have_tipo_estab"
+			        }
+			      ]
+			    },
+			    "rais_sjc_has_tamanho_estabelecimento": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.tamanho_estabelecimento": {
+			          "Target": {
+			            "Entity": "rais_sjc.tamanho_estabelecimento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Object": {
+			              "Role": "rais_sjc.tamanho_estabelecimento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_have_tamanho_estabelecimentos"
+			        }
+			      ]
+			    },
+			    "rais_sjc_has_CNAE_2_0_subclasse": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.CNAE_2_0_subclasse": {
+			          "Target": {
+			            "Entity": "rais_sjc.CNAE_2_0_subclasse"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Object": {
+			              "Role": "rais_sjc.CNAE_2_0_subclasse"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_have_CNAE_2_0_subclasses"
+			        }
+			      ]
+			    },
+			    "rais_sjc_has_natureza_jurídica": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.natureza_jurídica": {
+			          "Target": {
+			            "Entity": "rais_sjc.natureza_jurídica"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Object": {
+			              "Role": "rais_sjc.natureza_jurídica"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_have_natureza_jurídicas"
+			        }
+			      ]
+			    },
+			    "rais_sjc_has_município": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.município": {
+			          "Target": {
+			            "Entity": "rais_sjc.município"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Object": {
+			              "Role": "rais_sjc.município"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_have_municípios"
+			        }
+			      ]
+			    },
+			    "rais_sjc_has_ind_simple": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.ind_simple": {
+			          "Target": {
+			            "Entity": "rais_sjc.ind_simple"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Object": {
+			              "Role": "rais_sjc.ind_simple"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_have_ind_simples"
+			        }
+			      ]
+			    },
+			    "rais_sjc_has_ind_rais_negativa": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.ind_rais_negativa": {
+			          "Target": {
+			            "Entity": "rais_sjc.ind_rais_negativa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Object": {
+			              "Role": "rais_sjc.ind_rais_negativa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_have_ind_rais_negativas"
+			        }
+			      ]
+			    },
+			    "rais_sjc_has_ind_estab_participa_PAT": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.ind_estab_participa_PAT": {
+			          "Target": {
+			            "Entity": "rais_sjc.ind_estab_participa_PAT"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Object": {
+			              "Role": "rais_sjc.ind_estab_participa_PAT"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_have_ind_estab_participa_PATs"
+			        }
+			      ]
+			    },
+			    "rais_sjc_has_ind_CEI_vinculado": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.ind_CEI_vinculado": {
+			          "Target": {
+			            "Entity": "rais_sjc.ind_CEI_vinculado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Object": {
+			              "Role": "rais_sjc.ind_CEI_vinculado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_have_ind_CEI_vinculados"
+			        }
+			      ]
+			    },
+			    "rais_sjc_has_ind_atividade_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.ind_atividade_ano": {
+			          "Target": {
+			            "Entity": "rais_sjc.ind_atividade_ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Object": {
+			              "Role": "rais_sjc.ind_atividade_ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_have_ind_atividade_anos"
+			        }
+			      ]
+			    },
+			    "rais_sjc_has_qtd_vínculos_estatutário": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.qtd_vínculos_estatutário": {
+			          "Target": {
+			            "Entity": "rais_sjc.qtd_vínculos_estatutário"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Object": {
+			              "Role": "rais_sjc.qtd_vínculos_estatutário"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_have_qtd_vínculos_estatutários"
+			        }
+			      ]
+			    },
+			    "rais_sjc_has_qtd_vínculos_ativo": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.qtd_vínculos_ativo": {
+			          "Target": {
+			            "Entity": "rais_sjc.qtd_vínculos_ativo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Object": {
+			              "Role": "rais_sjc.qtd_vínculos_ativo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_have_qtd_vínculos_ativos"
+			        }
+			      ]
+			    },
+			    "rais_sjc_has_qtd_vínculos_CLT": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.qtd_vínculos_CLT": {
+			          "Target": {
+			            "Entity": "rais_sjc.qtd_vínculos_CLT"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Object": {
+			              "Role": "rais_sjc.qtd_vínculos_CLT"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_have_qtd_vínculos_CLTs"
+			        }
+			      ]
+			    },
+			    "rais_sjc_has_CNAE_95_classe": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.CNAE_95_classe": {
+			          "Target": {
+			            "Entity": "rais_sjc.CNAE_95_classe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Object": {
+			              "Role": "rais_sjc.CNAE_95_classe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_have_CNAE_95_classes"
+			        }
+			      ]
+			    },
+			    "rais_sjc_has_CNAE_2_0_classe": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.CNAE_2_0_classe": {
+			          "Target": {
+			            "Entity": "rais_sjc.CNAE_2_0_classe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Object": {
+			              "Role": "rais_sjc.CNAE_2_0_classe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_have_CNAE_2_0_classes"
+			        }
+			      ]
+			    },
+			    "rais_sjc_in_CEP_estab": {
+			      "Binding": {
+			        "ConceptualEntity": "RAIS_SJC"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rais_sjc": {
+			          "Target": {
+			            "Entity": "rais_sjc"
+			          }
+			        },
+			        "rais_sjc.CEP_estab": {
+			          "Target": {
+			            "Entity": "rais_sjc.CEP_estab"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "rais_sjc.CEP_estab"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "rais_sjc"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "rais_sjc.CEP_estab"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rais_sjcs_are_in_CEP_estab"
+			        }
+			      ]
+			    }
+			  },
+			  "Agents": {
+			    "Internal": {
+			      "Version": "1.1.0"
+			    }
+			  }
+			}
+		contentType: json
+

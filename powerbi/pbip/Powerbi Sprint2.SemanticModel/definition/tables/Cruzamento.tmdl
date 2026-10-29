@@ -1,0 +1,146 @@
+table Cruzamento
+	lineageTag: 3c6f3bf3-4a58-425e-ad39-22d096edb755
+
+	column setor
+		dataType: string
+		lineageTag: 6a31e58a-030b-4673-b585-b5efba5e8bf9
+		summarizeBy: none
+		sourceColumn: setor
+
+		annotation SummarizationSetBy = Automatic
+
+	column cod_setor
+		dataType: string
+		lineageTag: 7088d9a6-857d-4b52-a1c3-a102391dffa6
+		summarizeBy: none
+		sourceColumn: cod_setor
+
+		annotation SummarizationSetBy = Automatic
+
+	column ano_rais
+		dataType: int64
+		formatString: 0
+		lineageTag: 6aec42f2-5875-471f-a0d8-6275f5921b99
+		summarizeBy: sum
+		sourceColumn: ano_rais
+
+		annotation SummarizationSetBy = Automatic
+
+	column ano_vab
+		dataType: int64
+		formatString: 0
+		lineageTag: 91fb6841-e626-480f-8830-19434c3e1c96
+		summarizeBy: sum
+		sourceColumn: ano_vab
+
+		annotation SummarizationSetBy = Automatic
+
+	column estabelecimentos
+		dataType: int64
+		formatString: 0
+		lineageTag: 7b83722b-2ae6-4caf-987a-d7b3987eb8c3
+		summarizeBy: sum
+		sourceColumn: estabelecimentos
+
+		annotation SummarizationSetBy = Automatic
+
+	column estab_com_vinculo
+		dataType: int64
+		formatString: 0
+		lineageTag: 5dae5c98-cf71-4759-877d-356218a95905
+		summarizeBy: sum
+		sourceColumn: estab_com_vinculo
+
+		annotation SummarizationSetBy = Automatic
+
+	column vinculos_ativos
+		dataType: int64
+		formatString: 0
+		lineageTag: 5fd9944a-98d0-4380-b73e-75dbfc15671a
+		summarizeBy: sum
+		sourceColumn: vinculos_ativos
+
+		annotation SummarizationSetBy = Automatic
+
+	column vab_corrente_2021
+		dataType: int64
+		formatString: 0
+		lineageTag: 2c05dbcb-8445-4dae-99d5-5bb9a2c83a0e
+		summarizeBy: sum
+		sourceColumn: vab_corrente_2021
+
+		annotation SummarizationSetBy = Automatic
+
+	column vab_real_2023
+		dataType: double
+		lineageTag: 254d0346-9a63-490e-ad61-183cc6fa0c88
+		summarizeBy: none
+		sourceColumn: vab_real_2023
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column part_emprego_pct
+		dataType: double
+		lineageTag: f9b5ae38-4508-40e8-be32-c359e0b4c956
+		summarizeBy: sum
+		sourceColumn: part_emprego_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column part_vab_pct
+		dataType: double
+		lineageTag: 29f760b5-bd9b-4bd3-a8b1-d903a25ebc94
+		summarizeBy: sum
+		sourceColumn: part_vab_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column produtividade_relativa
+		dataType: double
+		lineageTag: 40442c88-49c6-4e10-8e31-bc6e3733806b
+		summarizeBy: sum
+		sourceColumn: produtividade_relativa
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column vab_por_vinculo_real_2023
+		dataType: double
+		lineageTag: 8204d607-2729-4948-b67d-2c13e372ae9f
+		summarizeBy: sum
+		sourceColumn: vab_por_vinculo_real_2023
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column vinculos_por_estab_com_vinculo
+		dataType: double
+		lineageTag: 3167d00a-e023-4253-be99-4a95c7708ddc
+		summarizeBy: sum
+		sourceColumn: vinculos_por_estab_com_vinculo
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Cruzamento = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(File.Contents("C:\Users\thaly\Desktop\Api\Cruzamento_RAIS_IBGE_Observatorio_SJC (1).xlsx"), null, true),
+				    Cruzamento_Sheet = Fonte{[Item="Cruzamento",Kind="Sheet"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Cruzamento_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"setor", type text}, {"cod_setor", type text}, {"ano_rais", Int64.Type}, {"ano_vab", Int64.Type}, {"estabelecimentos", Int64.Type}, {"estab_com_vinculo", Int64.Type}, {"vinculos_ativos", Int64.Type}, {"vab_corrente_2021", Int64.Type}, {"vab_real_2023", type number}, {"part_emprego_pct", type number}, {"part_vab_pct", type number}, {"produtividade_relativa", type number}, {"vab_por_vinculo_real_2023", type number}, {"vinculos_por_estab_com_vinculo", type number}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_ResultType = Exception
+

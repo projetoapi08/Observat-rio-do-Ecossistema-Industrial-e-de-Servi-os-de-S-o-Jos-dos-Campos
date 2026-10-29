@@ -5,6 +5,7 @@
 **Cliente:** CADI e Secretaria de Desenvolvimento Econômico de São José dos Campos
 **Orientadores:** Prof. José Jaétis (M2) e Prof. Marcus Nascimento (P2)
 **Período:** 29/09/2026 a 26/10/2026 · **Entrega da Sprint 2:** 26/10/2026
+**Painel publicado:** [abrir no Power BI](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9)
 
 ---
 
@@ -17,7 +18,7 @@ Construir as análises centrais no Power BI — setores de atividade, porte e si
 | Indicador | Resultado |
 |---|---|
 | User Stories planejadas / concluídas | 4 / 2 concluídas (US07, US09) e 2 parciais (US06, US08) |
-| Painel Power BI | 4 páginas: Notas Metodológicas, KPIs e Mapa, Setor de Atividades (CNAE), PIB e Emprego |
+| Painel Power BI | 4 páginas: KPIs e Mapa, Setor de Atividades (CNAE), PIB e Emprego, Notas Metodológicas — [publicado online](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9) |
 | Base RAIS classificada pela CNAE | 47.339 estabelecimentos, de seção a subclasse; códigos validados pela CNAE 2.3 |
 | Geocodificação | 3.677 CEPs; 37.084 estabelecimentos (78,3%) com ponto no mapa, no nível de bairro |
 | Região oficial | 47.334 estabelecimentos (99,99%) classificados nas regiões da Prefeitura |
@@ -69,7 +70,7 @@ O orientador pediu para esclarecer se os 64,37% de RAIS negativa poderiam ser er
 | DEC-019 | "Com vínculo" inclui quem fechou o ano sem empregados | Coluna Situação Detalhada | Fechada |
 | DEC-020 | Descrições CNAE com grafia antiga | Texto oficial da CNAE 2.3 | Fechada |
 | DEC-021 | Tipo de atividade e intensidade tecnológica pedidos pelo cliente | Colunas derivadas por regra fixa | Fechada |
-| DEC-022 | Mapa localizava pelo texto do CEP | Base única com latitude/longitude | **Aberta** |
+| DEC-022 | Mapa localizava pelo texto do CEP | Base única com latitude/longitude | **Aberta** (mapa já por coordenadas; falta trocar a fonte) |
 
 ### 4.5 Evidências a anexar
 
@@ -77,10 +78,12 @@ Marque cada item depois de adicionar o print ou arquivo na pasta `evidencias/`.
 
 - [x] Print da página KPIs e Mapa (`evidencias/sprint2/painel_kpis_mapa.png`)
 - [x] Print da página Setor de Atividades (CNAE) (`evidencias/sprint2/painel_setor_atividades.png`)
-- [ ] Print da página PIB e Emprego (está na versão `PowerbiATT_Api_Sprint2.pbix`)
-- [ ] Print da página Notas Metodológicas (idem)
-- [x] Relatório do Power BI com as medidas DAX (`docs/Relatorio_PowerBI_Sprint2.md`)
-- [x] Painel exportado em PDF (`powerbi/Powerbi_API_Sprint2.pdf`)
+- [x] Print da página PIB e Emprego (`evidencias/sprint2/painel_pib_emprego.png`)
+- [x] Print da página Notas Metodológicas (`evidencias/sprint2/painel_notas_metodologicas.png`)
+- [x] Painel publicado no Power BI ([link](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9))
+- [x] Arquivo do painel publicado (`powerbi/pbip/`) e planilhas-fonte (`powerbi/fontes/`)
+- [x] Relatório do Power BI (`docs/Relatorio_PowerBI_Sprint2.md`) e fórmulas DAX (`docs/Formulas_PowerBI_Sprint2.md`)
+- [x] Painel exportado em PDF, 4 páginas (`powerbi/Powerbi_API_Sprint2.pdf`)
 - [x] Gráfico de vínculos por região oficial gerado da base (`evidencias/sprint2/vinculos_por_regiao.png`)
 - [x] Notebook da base única (`notebooks/02_Base_PowerBI_SJC.ipynb`)
 - [ ] Execução do notebook do PIB no Colab
@@ -97,7 +100,7 @@ Marque cada item depois de adicionar o print ou arquivo na pasta `evidencias/`.
 ├── docs/          documentação Scrum e relatórios técnicos
 ├── dados/         bases tratadas prontas para o Power BI
 ├── notebooks/     01: ETL da RAIS · 02: base única do Power BI
-├── powerbi/       dashboard
+├── powerbi/       painel (.pbip publicado, planilhas-fonte, PDF)
 └── evidencias/    prints, gráficos e guias de cada sprint
 ```
 
@@ -108,14 +111,15 @@ Marque cada item depois de adicionar o print ou arquivo na pasta `evidencias/`.
 | Lista oficial de bairros da Região Norte ou shapefile das regiões (DEC-015) | 1.024 estabelecimentos com região de confiabilidade média | Pedir à Prefeitura, via cliente |
 | Série histórica da RAIS | US08 não mostra evolução | Baixar RAIS 2022–2023 ou ajustar o critério com o cliente |
 | Datas de admissão | US10 pede contratações "ordenadas por data", mas a RAIS Estabelecimentos não tem esse campo | Avaliar a RAIS Vínculos ou revisar o critério |
-| Troca da fonte e do mapa no painel (DEC-022) | Mapa atual pouco preciso | Seguir o guia de importação na Sprint 3 |
+| Cobertura do mapa e região do painel × base única | 22% sem ponto no mapa; a planilha de regiões do painel deixa 603 sem região (1,3%), a base única deixa 5 | Unificar as fontes do painel na Sprint 3 |
+| Ajustes visuais da página 1 | Cartões com "Mil", título "Distruibuição" e dois subtítulos | Lista em `powerbi/README.md` |
 | DEC-007, DEC-010 e DEC-012 | Decisões citadas pela equipe sem registro no log | Transcrever para `docs/06-Decisoes-de-Dados.docx` |
 
 ## 7. Próximos passos
 
 **Sprint 3 (entrega em 23/11/2026): consolidação e entrega final**
 
-1. US06: importar a base única, trocar o mapa para latitude/longitude e criar os visuais por região.
+1. US06: aumentar a cobertura do mapa e criar os visuais por região (o mapa por latitude/longitude e o filtro de região já estão no painel).
 2. US08: definir a fonte da série histórica com o cliente.
 3. US10: contratações mais recentes (depende da fonte de dados).
 4. US11: dashboard consolidado, relatório técnico final e apresentação.
@@ -137,4 +141,4 @@ A Feira de Soluções (03/12/2026) é o marco de apresentação final.
 
 ---
 
-*Última atualização: 26/10/2026*
+*Última atualização: 29/10/2026*

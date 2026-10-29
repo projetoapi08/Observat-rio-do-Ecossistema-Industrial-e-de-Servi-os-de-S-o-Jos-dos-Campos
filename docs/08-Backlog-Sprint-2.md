@@ -8,13 +8,13 @@
 
 **Meta da Sprint 2:** Construir as análises centrais no Power BI — setores de atividade, porte e situação dos estabelecimentos e cruzamento RAIS × PIB — e preparar a base geocodificada com a região oficial de cada estabelecimento para o mapa da cidade.
 
-**Resultado:** meta cumprida em parte. O painel ganhou quatro páginas (Notas Metodológicas, KPIs e Mapa, Setor de Atividades, PIB e Emprego) e a base RAIS foi classificada pela CNAE 2.3, geocodificada e associada às regiões oficiais. Ficaram para a Sprint 3 a troca do mapa para coordenadas (US06) e a fonte para mostrar a evolução dos setores (US08).
+**Resultado:** meta cumprida em parte. O painel ganhou quatro páginas (Notas Metodológicas, KPIs e Mapa, Setor de Atividades, PIB e Emprego) e a base RAIS foi classificada pela CNAE 2.3, geocodificada e associada às regiões oficiais. O mapa já usa coordenadas e o painel foi publicado online. Ficaram para a Sprint 3 a cobertura do mapa (US06) e a fonte para mostrar a evolução dos setores (US08).
 
 ## User Stories da Sprint 2
 
 | ID | User Story (resumo) | Status |
 |---|---|---|
-| US06 | Distribuição geográfica e classificação das empresas (mapeamento por CEP)<br>Base pronta: 99,99% com região oficial e 78% com ponto no mapa. Falta trocar o mapa do painel do texto do CEP para latitude/longitude. | Parcial |
+| US06 | Distribuição geográfica e classificação das empresas (mapeamento por CEP)<br>Base pronta: 99,99% com região oficial e 78% com ponto no mapa. O mapa do painel já usa latitude/longitude e tem filtro por região; falta aumentar a cobertura do mapa. | Parcial |
 | US07 | Ranking das empresas que mais contratam em SJC (agregado por setor/região)<br>Top 10 de setores por estabelecimentos e por empregos CLT; tabela por porte e setor (DEC-004). | Concluído |
 | US08 | Setores em alta em termos de contratação<br>O painel mostra os setores predominantes e a participação de cada um; a evolução exige RAIS de outros anos. | Parcial |
 | US09 | Impacto de cada setor no PIB municipal<br>Página PIB e Emprego: PIB 2002–2023, valor adicionado por setor e produtividade relativa (VAB 2021 × emprego 2024). | Concluído |
@@ -42,13 +42,14 @@
 - [x] Validação dos códigos e descrições pela CNAE 2.3 oficial (DEC-020)
 - [x] Base única para o Power BI (RAIS_SJC_2024_PowerBI.csv) e guia de importação (DEC-022)
 - [x] Painel com as páginas Notas Metodológicas, KPIs e Mapa, Setor de Atividades e PIB e Emprego
-- [ ] Trocar a fonte da tabela RAIS_SJC pela base única e o mapa para latitude/longitude
+- [x] Mapa por latitude/longitude e filtro por região no painel
+- [ ] Trocar a fonte da tabela RAIS_SJC pela base única
 - [ ] Corrigir os subtítulos de três cartões da página KPIs e o texto das Notas Metodológicas
 - [ ] Receber do cliente a lista oficial de bairros da Região Norte
 
 ## Entregáveis
 
-- [x] Painel Power BI — powerbi/PowerbiATT_Api_Sprint2.pbix
+- [x] Painel Power BI — publicado (https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9) e salvo em powerbi/pbip/
 - [x] Planilhas tratadas — dados/CNAE_RAIS_SJC_2024.xlsx e dados/IBGE_PIB_SJC_Observatorio.xlsx
 - [x] Base única — dados/RAIS_SJC_2024_PowerBI.csv e evidencias/Importacao_PowerBI_RAIS_SJC.txt
 - [x] Relatório Técnico da Sprint 2 (10-Relatorio-Tecnico-Sprint-2) e Log de Decisões atualizado (06)

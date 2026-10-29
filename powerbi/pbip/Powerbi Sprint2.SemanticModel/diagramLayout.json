@@ -1,0 +1,87 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 635,
+            "y": 0
+          },
+          "nodeIndex": "RAIS_SJC",
+          "nodeLineageTag": "cddf2c55-ed76-46a0-951f-8fd7a07d1294",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 44,
+            "y": 313
+          },
+          "nodeIndex": "Cruzamento",
+          "nodeLineageTag": "3c6f3bf3-4a58-425e-ad39-22d096edb755",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 335,
+            "y": 0
+          },
+          "nodeIndex": "PIB anual",
+          "nodeLineageTag": "305adc22-912e-4232-b252-7d4d11f871e1",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": 1
+          },
+          "nodeIndex": "VAB setorial",
+          "nodeLineageTag": "f1c75905-8c38-4051-b3b4-25e1769f7a67",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 917,
+            "y": 0
+          },
+          "nodeIndex": "CEP x Região",
+          "nodeLineageTag": "7a9ec19c-2e4f-4aec-941d-3647f895cbb9",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Todas as tabelas",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas as tabelas",
+  "defaultDiagram": "Todas as tabelas"
+}

@@ -208,7 +208,7 @@ Decisões numeradas pela equipe durante a Sprint 2 sem registro neste log (DEC-0
 | Justificativa | Evita retrabalho nos visuais e torna o mapa confiável. |
 | Impacto | Troca de fonte e ajuste do mapa no Power BI, conforme o guia de importação (evidencias/). |
 | User Stories impactadas | US06, US11 |
-| Status | Aberta — troca no painel a concluir na Sprint 3 |
+| Status | Aberta — em 26/10/2026 o mapa do painel passou a usar latitude e longitude (tabela CEP x Região); a troca da fonte da RAIS_SJC pela base única fica para a Sprint 3 |
 
 ## 3. Fechamento da US03
 

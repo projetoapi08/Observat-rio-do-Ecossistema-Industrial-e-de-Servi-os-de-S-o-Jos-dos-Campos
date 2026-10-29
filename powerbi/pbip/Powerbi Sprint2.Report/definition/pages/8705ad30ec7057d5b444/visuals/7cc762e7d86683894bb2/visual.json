@@ -1,0 +1,258 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "7cc762e7d86683894bb2",
+  "position": {
+    "x": 0,
+    "y": 231.94444444444446,
+    "z": 2000,
+    "height": 830.55555555555554,
+    "width": 619.44444444444446,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "RAIS_SJC"
+                    }
+                  },
+                  "Property": "Faixa de Porte"
+                }
+              },
+              "queryRef": "RAIS_SJC.Faixa de Porte",
+              "nativeQueryRef": "Faixa de Porte"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "RAIS_SJC"
+                    }
+                  },
+                  "Property": "Setor Completo"
+                }
+              },
+              "queryRef": "RAIS_SJC.Setor Completo",
+              "nativeQueryRef": "Setor Completo"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "RAIS_SJC"
+                    }
+                  },
+                  "Property": "Total Vínculos CLT"
+                }
+              },
+              "queryRef": "RAIS_SJC.Total Vínculos CLT",
+              "nativeQueryRef": "Total Vínculos CLT"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "RAIS_SJC"
+                  }
+                },
+                "Property": "Faixa de Porte"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "grid": [
+        {
+          "properties": {
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "19D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "213.83286019521222D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "RAIS_SJC.Total Vínculos CLT"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "192.34054490306434D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "RAIS_SJC.Setor Completo"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "columnAdjustment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'fitToContent'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Calibri'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'left'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 9,
+                      "Percent": 0.6
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'ContrastAlternatingRows'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "f0b0f43e9715f1c83edc",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "RAIS_SJC"
+              }
+            },
+            "Property": "Faixa de Porte"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "ef72870ac5beb1a350a0",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "RAIS_SJC"
+              }
+            },
+            "Property": "Total Vínculos CLT"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "ca0b8528ab0dd0727d4c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "RAIS_SJC"
+              }
+            },
+            "Property": "Setor Completo"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

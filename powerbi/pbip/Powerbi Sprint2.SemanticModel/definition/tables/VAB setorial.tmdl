@@ -1,0 +1,80 @@
+table 'VAB setorial'
+	lineageTag: f1c75905-8c38-4051-b3b4-25e1769f7a67
+
+	column ano
+		dataType: int64
+		formatString: 0
+		lineageTag: 350a18ef-c2a3-42f1-8b48-3ac735a6e4e5
+		summarizeBy: none
+		sourceColumn: ano
+
+		annotation SummarizationSetBy = Automatic
+
+	column cod_setor
+		dataType: string
+		lineageTag: 74fc0a76-e915-431b-a05f-ae5550696438
+		summarizeBy: none
+		sourceColumn: cod_setor
+
+		annotation SummarizationSetBy = Automatic
+
+	column setor
+		dataType: string
+		lineageTag: cb76e707-2a9d-4aad-84ff-b4f5d517d99f
+		summarizeBy: none
+		sourceColumn: setor
+
+		annotation SummarizationSetBy = Automatic
+
+	column vab_corrente
+		dataType: int64
+		formatString: 0
+		lineageTag: 1533fb59-1fc0-4630-a72e-553b4e3982fe
+		summarizeBy: none
+		sourceColumn: vab_corrente
+
+		annotation SummarizationSetBy = Automatic
+
+	column vab_real_2023
+		dataType: double
+		lineageTag: f10986af-0b94-4dbe-90fc-49f376df6e46
+		summarizeBy: none
+		sourceColumn: vab_real_2023
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column participacao_no_vab_pct
+		dataType: double
+		lineageTag: 54ea3a9d-46f2-435a-adf9-4d6122b5beb8
+		summarizeBy: none
+		sourceColumn: participacao_no_vab_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column cresc_real_pct
+		dataType: double
+		lineageTag: eaff98f5-7fbc-46fc-9dde-47991a11fad8
+		summarizeBy: none
+		sourceColumn: cresc_real_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'VAB setorial' = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(File.Contents("C:\Users\thaly\Desktop\Api\Cruzamento_RAIS_IBGE_Observatorio_SJC (1).xlsx"), null, true),
+				    #"VAB setorial_Sheet" = Fonte{[Item="VAB setorial",Kind="Sheet"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"VAB setorial_Sheet", [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"ano", Int64.Type}, {"cod_setor", type text}, {"setor", type text}, {"vab_corrente", Int64.Type}, {"vab_real_2023", type number}, {"participacao_no_vab_pct", type number}, {"cresc_real_pct", type number}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_ResultType = Exception
+

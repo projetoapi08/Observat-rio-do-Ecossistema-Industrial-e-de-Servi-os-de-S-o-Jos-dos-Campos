@@ -4,7 +4,9 @@ Projeto da disciplina **API (Aprendizagem por Projetos Integrados)** do curso de
 
 O projeto constrói uma ferramenta de inteligência de dados, em parceria com o **CADI** e a **Secretaria de Desenvolvimento Econômico** do município, que consolida e disponibiliza indicadores públicos sobre os estabelecimentos industriais e de serviços da cidade. O produto final é um painel interativo em **Power BI**, nos moldes do [Observatório da Inovação RS](https://sict.rs.gov.br/observatorio) ([ver painel](https://sict.rs.gov.br/painel-do-observatorio)).
 
-**Acesso rápido:** [MVP da Sprint 2](MVP/sp2.md) · [Relatório da Sprint 2](RELATORIO_SPRINT_2.md) · [Log de Decisões](docs/06-Decisoes-de-Dados.md) · [Backlog do Produto](docs/02-Backlog-do-Produto.md) · [Dicionário de dados](dados/README.md) · [Painel (.pbix)](powerbi/Powerbi_API_Sprint2.pbix) · [Painel em PDF](powerbi/Powerbi_API_Sprint2.pdf)
+### 🌐 [Abrir o painel no Power BI](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9)
+
+**Acesso rápido:** [Painel online](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9) · [MVP da Sprint 2](MVP/sp2.md) · [Relatório da Sprint 2](RELATORIO_SPRINT_2.md) · [Log de Decisões](docs/06-Decisoes-de-Dados.md) · [Backlog do Produto](docs/02-Backlog-do-Produto.md) · [Dicionário de dados](dados/README.md) · [Arquivos do painel](powerbi/README.md) · [Painel em PDF](powerbi/Powerbi_API_Sprint2.pdf)
 
 ---
 
@@ -77,6 +79,18 @@ Os dados públicos existem, mas não estão prontos para análise: têm inconsis
 
 ![Vínculos ativos por região oficial](evidencias/sprint2/vinculos_por_regiao.png)
 
+### Painel da Sprint 2
+
+O painel está publicado e abre no navegador, sem instalar nada: **[abrir no Power BI](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9)**. São 4 páginas:
+
+| KPIs e Mapa | Setor de Atividades (CNAE) |
+|---|---|
+| ![KPIs e Mapa](evidencias/sprint2/painel_kpis_mapa.png) | ![Setor de Atividades](evidencias/sprint2/painel_setor_atividades.png) |
+| **PIB e Emprego** | **Notas Metodológicas** |
+| ![PIB e Emprego](evidencias/sprint2/painel_pib_emprego.png) | ![Notas Metodológicas](evidencias/sprint2/painel_notas_metodologicas.png) |
+
+Leitura de cada visual no [relatório do Power BI](docs/Relatorio_PowerBI_Sprint2.md) e código das medidas em [fórmulas DAX e Power Query](docs/Formulas_PowerBI_Sprint2.md).
+
 ---
 
 ## 📁 Estrutura do repositório
@@ -92,7 +106,7 @@ Os dados públicos existem, mas não estão prontos para análise: têm inconsis
 │   ├── entrada/            Arquivos de entrada do notebook 02
 │   └── referencia/         Tabela bairro → região e CNAE 2.3
 ├── notebooks/              01: ETL da RAIS (Sprint 1) · 02: base única do Power BI (Sprint 2)
-├── powerbi/                Arquivo do painel (.pbix)
+├── powerbi/                Painel: projeto .pbip (versão publicada), planilhas-fonte, PDF e versões anteriores (.pbix)
 └── evidencias/             Prints, gráficos, guias e comprovações de cada sprint
 ```
 
@@ -102,7 +116,9 @@ Os dados públicos existem, mas não estão prontos para análise: têm inconsis
 - [Relatório da Sprint 1](RELATORIO_SPRINT_1.md)
 - [MVP da Sprint 2](MVP/sp2.md)
 - [Relatório da Sprint 2](RELATORIO_SPRINT_2.md)
-- [Relatório do Power BI da Sprint 2](docs/Relatorio_PowerBI_Sprint2.md) — fontes, medidas DAX e leitura de cada visual
+- [Painel publicado no Power BI](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9)
+- [Relatório do Power BI da Sprint 2](docs/Relatorio_PowerBI_Sprint2.md) — fontes e leitura de cada visual
+- [Fórmulas do painel](docs/Formulas_PowerBI_Sprint2.md) — medidas DAX e colunas do Power Query, copiadas do modelo
 - Base única para o Power BI: [`dados/RAIS_SJC_2024_PowerBI.csv`](dados/RAIS_SJC_2024_PowerBI.csv) (47.339 estabelecimentos, 46 colunas) e [guia de importação](evidencias/Importacao_PowerBI_RAIS_SJC.txt)
 
 Documentos da pasta `docs/` (a coluna **Ler no GitHub** abre a versão em Markdown):
@@ -123,6 +139,7 @@ Documentos da pasta `docs/` (a coluna **Ler no GitHub** abre a versão em Markdo
 | Relatório de Desenvolvimento, Anexo 8 — Sprint 1 | [Relatorio_Sprint1_Anexo8.docx](docs/Relatorio_Sprint1_Anexo8.docx) | — |
 | Relatório de Desenvolvimento, Anexo 8 — Sprint 2 | [Relatorio_Sprint2_Anexo8.docx](docs/Relatorio_Sprint2_Anexo8.docx) | — |
 | Relatório do Power BI — Sprint 2 | [Relatorio_PowerBI_Sprint2.docx](docs/Relatorio_PowerBI_Sprint2.docx) | [Relatorio_PowerBI_Sprint2.md](docs/Relatorio_PowerBI_Sprint2.md) |
+| Fórmulas do painel Power BI — Sprint 2 | [Formulas_PowerBI_Sprint2.docx](docs/Formulas_PowerBI_Sprint2.docx) | [Formulas_PowerBI_Sprint2.md](docs/Formulas_PowerBI_Sprint2.md) |
 
 ---
 
@@ -142,6 +159,8 @@ Documentos da pasta `docs/` (a coluna **Ler no GitHub** abre a versão em Markdo
 3. O notebook gera `dados/RAIS_SJC_2024_PowerBI.csv` e confere os totais (47.339 estabelecimentos, 206.717 vínculos).
 4. Para atualizar a região oficial, edite `dados/referencia/bairros_regiao_sjc.csv` e rode de novo.
 5. No Power BI, importe a base seguindo [`evidencias/Importacao_PowerBI_RAIS_SJC.txt`](evidencias/Importacao_PowerBI_RAIS_SJC.txt) (CEP e CNAE como texto; latitude e longitude com localidade "Inglês (EUA)").
+
+**Painel** ([`powerbi/`](powerbi/README.md)): para só ver, use o [painel online](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9). Para editar, abra `powerbi/pbip/Powerbi Sprint2.pbip` no Power BI Desktop e aponte as fontes para as planilhas de `powerbi/fontes/` (passo a passo no [README do painel](powerbi/README.md)).
 
 ---
 
@@ -173,7 +192,7 @@ A coluna **Prior.** é a ordem de prioridade definida no Backlog do Produto (1 �
 
 | ID | User Story | Critério de aceite | Prior. | Status |
 |---|---|---|---|---|
-| US06 | Como gestor público (usuário do observatório), quero visualizar a distribuição geográfica das empresas de SJC no mapa, para que eu possa identificar polos e vazios industriais na cidade. | O mapa no Power BI plota os estabelecimentos geocodificados a partir do CEP, com taxa de acerto acima de 90%. | 2 | Parcial: 99,99% com região e 78% com ponto; mapa por coordenadas na Sprint 3 |
+| US06 | Como gestor público (usuário do observatório), quero visualizar a distribuição geográfica das empresas de SJC no mapa, para que eu possa identificar polos e vazios industriais na cidade. | O mapa no Power BI plota os estabelecimentos geocodificados a partir do CEP, com taxa de acerto acima de 90%. | 2 | Parcial: mapa já por latitude/longitude e filtro de região no painel; 78% dos estabelecimentos com ponto (meta: 90%) |
 | US07 | Como gestor público, quero ver um ranking das empresas que mais contratam em SJC, para que eu possa direcionar políticas de fomento ao emprego. | Visual no Power BI lista os estabelecimentos ordenados por número de vínculos ativos, com filtro por setor (agregado, sem identificação nominal; ver DEC-004). | 7 | Concluído (Top 10 de setores) |
 | US08 | Como gestor público, quero identificar quais setores/áreas estão em alta em termos de contratação, para que eu possa priorizar investimentos e qualificação de mão de obra. | Visual mostra a evolução de contratações por setor (CNAE agrupado). | 8 | Parcial: base de um só ano; série histórica na Sprint 3 |
 | US09 | Como gestor público, quero visualizar o impacto do ecossistema de empresas no PIB municipal (dados do IBGE), para que eu possa avaliar a relevância econômica de cada setor. | O dashboard cruza dados RAIS 2024 e PIB dos Municípios (IBGE) 2023 por setor, com fonte, ano e defasagem indicados (DEC-005). | 9 | Concluído |
@@ -206,7 +225,7 @@ Os problemas encontrados na RAIS e o tratamento de cada um estão registrados no
 | DEC-015 | Região oficial ausente dos arquivos | Bairro → região pelo Plano Diretor; setor do CEP para ambíguos | **Aberta** |
 | DEC-016 a 018 | Coordenadas corrompidas, bairros homônimos e CEPs sem localização | Coordenadas corretas, alerta no ponto e região pelo bairro | 016 e 018 fechadas · 017 **aberta** |
 | DEC-019 a 021 | Situação detalhada, descrições CNAE 2.3 e classificações pedidas pelo cliente | Novas colunas na base única | Fechadas |
-| DEC-022 | Mapa localizava pelo texto do CEP | Base única com latitude/longitude | **Aberta** |
+| DEC-022 | Mapa localizava pelo texto do CEP | Base única com latitude/longitude | **Aberta** (mapa já por coordenadas; falta trocar a fonte) |
 
 > Detalhes de cada decisão em `docs/06-Decisoes-de-Dados.docx`. DEC-007, DEC-010 e DEC-012 ainda precisam ser transcritas para o log.
 

@@ -1,0 +1,446 @@
+/// 
+/// 
+table RAIS_SJC
+	lineageTag: cddf2c55-ed76-46a0-951f-8fd7a07d1294
+
+	measure 'Total de Estabelecimentos' = COUNTROWS('RAIS_SJC')
+		formatString: 0
+		displayFolder: 📊 Medidas
+		lineageTag: 21373d60-25a7-4e35-96b9-3d1b33fbdbdc
+
+	measure 'Estabelecimentos Com Vínculo' = CALCULATE(COUNTROWS('RAIS_SJC'), 'RAIS_SJC'[Situação Vínculo] = "Com Vínculo")
+		formatString: 0
+		displayFolder: 📊 Medidas
+		lineageTag: 7cfc4f4e-5c67-4e8b-bc37-4f4996539a41
+
+	measure '% Com Vínculo' = DIVIDE([Estabelecimentos Com Vínculo], [Total de Estabelecimentos])
+		displayFolder: 📊 Medidas
+		lineageTag: 5f650879-50bc-4059-9db9-11aaac0bfde8
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Estabelecimentos Sem Vínculo' = CALCULATE(COUNTROWS('RAIS_SJC'), 'RAIS_SJC'[Situação Vínculo] = "Sem Vínculo")
+		formatString: 0
+		displayFolder: 📊 Medidas
+		lineageTag: 52402a6b-d666-4f85-9d8d-6d328263a827
+
+	measure '% Sem Vínculo' = DIVIDE([Estabelecimentos Sem Vínculo], [Total de Estabelecimentos])
+		displayFolder: 📊 Medidas
+		lineageTag: 3e2f8073-c9da-4b26-a760-7a73e40a09c2
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Vínculos CLT' = SUM('RAIS_SJC'[Qtd Vínculos CLT])
+		formatString: 0
+		displayFolder: 📊 Medidas
+		lineageTag: c57e94e6-f925-48cb-80c9-920f18e4d179
+
+	measure 'Total Vínculos Ativos' = SUM('RAIS_SJC'[Qtd Vínculos Ativos])
+		formatString: 0
+		displayFolder: 📊 Medidas
+		lineageTag: 91e61cda-b159-4268-a3c5-cddb52e7f74e
+
+	measure 'Total Vínculos Estatutários' = SUM('RAIS_SJC'[Qtd Vínculos Estatutários])
+		formatString: 0
+		displayFolder: 📊 Medidas
+		lineageTag: 82c2726c-6551-42d5-b208-2e1dca4306df
+
+	measure 'Estab Fábricas' = CALCULATE(COUNTROWS('RAIS_SJC'), 'RAIS_SJC'[Categoria Automotiva] = "Fabricação de Veículos (Fábricas)")
+		formatString: 0
+		displayFolder: 📊 Medidas
+		lineageTag: 271188f0-d987-48d6-9066-b1766dd15ac7
+
+	/// 🚗 Automotivo
+	/// 
+	measure 'Vínculos Fábricas' = CALCULATE([Total Vínculos CLT], 'RAIS_SJC'[Categoria Automotiva] = "Fabricação de Veículos (Fábricas)")
+		formatString: 0
+		displayFolder: 🚗 Automotivo
+		lineageTag: 9036ad48-b98f-4ba7-833e-6bb4e4e69005
+
+	/// 🚗 Automotivo
+	/// 
+	measure 'Estab Comércio e Reparação' = CALCULATE(COUNTROWS('RAIS_SJC'), 'RAIS_SJC'[Categoria Automotiva] = "Comércio/Reparação de Veículos")
+		formatString: 0
+		displayFolder: 🚗 Automotivo
+		lineageTag: 6e77f29d-db75-4779-9026-abd9dc18e398
+
+	/// 🚗 Automotivo
+	/// 
+	measure 'Vínculos Comércio e Reparação' = CALCULATE([Total Vínculos CLT], 'RAIS_SJC'[Categoria Automotiva] = "Comércio/Reparação de Veículos")
+		formatString: 0
+		displayFolder: 🚗 Automotivo
+		lineageTag: 1f50bf9a-6c20-47f9-b52a-1890f5bb7bd9
+
+	/// 🚗 Automotivo
+	/// 
+	measure 'Média Vínculos por Fábrica' = DIVIDE([Vínculos Fábricas], [Estab Fábricas])
+		displayFolder: 🚗 Automotivo
+		lineageTag: 981d9497-385d-4bb5-a240-132598070ec2
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// 
+	/// 
+	measure 'Média Vínculos por Comércio e Reparação' = DIVIDE([Vínculos Comércio e Reparação], [Estab Comércio e Reparação])
+		displayFolder: 🚗 Automotivo
+		lineageTag: ff228a19-c269-4b00-a690-d349c8935410
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// 🚗 Automotivo
+	/// 
+	measure 'Estab Transporte de Carga' = CALCULATE(COUNTROWS('RAIS_SJC'), 'RAIS_SJC'[CNAE 2.0 Classe] = "49302", REMOVEFILTERS('RAIS_SJC'[Categoria Automotiva]))
+		formatString: 0
+		displayFolder: 🚗 Automotivo
+		lineageTag: f41b3514-107e-4b2f-867a-cb7fea2dc229
+
+	/// 🚗 Automotivo
+	/// 
+	measure 'Vínculos Transporte de Carga' = CALCULATE([Total Vínculos CLT], 'RAIS_SJC'[CNAE 2.0 Classe] = "49302", REMOVEFILTERS('RAIS_SJC'[Categoria Automotiva]))
+		formatString: 0
+		displayFolder: 🚗 Automotivo
+		lineageTag: 2a544fd7-c5af-44af-914b-e6c61c0180a8
+
+	measure '% Participação Estab' = DIVIDE([Total de Estabelecimentos], CALCULATE([Total de Estabelecimentos], ALL('RAIS_SJC'[Seção CNAE])))
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: 📊 Medidas
+		lineageTag: 1694dffe-437b-4c5b-9863-00dfc0846cad
+
+	measure '% Participação Vínculos' = DIVIDE([Total Vínculos Ativos], CALCULATE([Total Vínculos Ativos], ALL('RAIS_SJC'[Seção CNAE])))
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: 📊 Medidas
+		lineageTag: 0745d3a2-a223-4596-8b18-e6ae7a2abe9a
+
+	column 'CNAE 2.0 Classe'
+		dataType: string
+		lineageTag: 80c04478-8042-4367-ab28-45f2a85078ac
+		summarizeBy: none
+		sourceColumn: CNAE 2.0 Classe
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'CNAE 95 Classe'
+		dataType: string
+		lineageTag: 7f66586b-8dbc-43a2-a570-625fee24a637
+		summarizeBy: none
+		sourceColumn: CNAE 95 Classe
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Qtd Vínculos CLT'
+		dataType: int64
+		formatString: 0
+		lineageTag: 6585800a-4f4b-411e-9b28-61763fb67c9d
+		summarizeBy: sum
+		sourceColumn: Qtd Vínculos CLT
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Qtd Vínculos Ativos'
+		dataType: int64
+		formatString: 0
+		lineageTag: 07e95fe0-97fc-4af6-8c58-a9963e236e39
+		summarizeBy: sum
+		sourceColumn: Qtd Vínculos Ativos
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Qtd Vínculos Estatutários'
+		dataType: int64
+		formatString: 0
+		lineageTag: f29f10e4-acd1-43af-bc5e-c8bc72b144d5
+		summarizeBy: sum
+		sourceColumn: Qtd Vínculos Estatutários
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Ind Atividade Ano'
+		dataType: string
+		lineageTag: 36994ad4-9f11-4675-b684-680a9aa7d7e0
+		summarizeBy: none
+		sourceColumn: Ind Atividade Ano
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Ind CEI Vinculado'
+		dataType: string
+		lineageTag: 6fd24b5b-6dee-4bdc-924e-601baa2c7281
+		summarizeBy: none
+		sourceColumn: Ind CEI Vinculado
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Ind Estab Participa PAT'
+		dataType: string
+		lineageTag: ef20862e-b326-421f-98c8-570d243ccfe9
+		summarizeBy: none
+		sourceColumn: Ind Estab Participa PAT
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Ind Rais Negativa'
+		dataType: string
+		lineageTag: bcab3413-9ab4-4461-976a-f0c291d010ca
+		summarizeBy: none
+		sourceColumn: Ind Rais Negativa
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Ind Simples'
+		dataType: string
+		lineageTag: f22d666a-cec0-4937-a40a-75ec05cbb660
+		summarizeBy: none
+		sourceColumn: Ind Simples
+
+		annotation SummarizationSetBy = Automatic
+
+	column Município
+		dataType: string
+		lineageTag: b9ee177c-93e8-4ba2-b4bb-95343c4dd5b8
+		summarizeBy: none
+		sourceColumn: Município
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Natureza Jurídica'
+		dataType: string
+		lineageTag: f235344b-0c2f-4c83-b89b-789a14652d3c
+		summarizeBy: none
+		sourceColumn: Natureza Jurídica
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'CNAE 2.0 Subclasse'
+		dataType: string
+		lineageTag: aa804dd0-9466-4429-961f-1239ab23e2e2
+		summarizeBy: none
+		sourceColumn: CNAE 2.0 Subclasse
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tamanho Estabelecimento'
+		dataType: string
+		lineageTag: c6d0dbe7-7405-453c-a293-918d198ac0ec
+		summarizeBy: none
+		sourceColumn: Tamanho Estabelecimento
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo Estab'
+		dataType: string
+		lineageTag: d7061725-9f60-450a-baa9-fd331c3b2139
+		summarizeBy: none
+		sourceColumn: Tipo Estab
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo Estab_1'
+		dataType: string
+		lineageTag: 6c4a51a0-a8f8-4d85-bcc7-3488acf5e195
+		summarizeBy: none
+		sourceColumn: Tipo Estab_1
+
+		annotation SummarizationSetBy = Automatic
+
+	column UF
+		dataType: string
+		lineageTag: 7f7f66de-39d6-4612-a0f3-b457abc03752
+		summarizeBy: none
+		sourceColumn: UF
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'IBGE Subsetor'
+		dataType: string
+		lineageTag: eb977cc5-8009-4cd3-b1a9-f250f02e7eb0
+		summarizeBy: none
+		sourceColumn: IBGE Subsetor
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'CEP Estab'
+		dataType: string
+		lineageTag: 789200bb-30a7-4de3-a51f-d4842f5bbe04
+		dataCategory: PostalCode
+		summarizeBy: none
+		sourceColumn: CEP Estab
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Situação Vínculo'
+		dataType: string
+		lineageTag: c959e36f-1e0d-4ef2-bbb4-7a788dad16fa
+		summarizeBy: none
+		sourceColumn: Situação Vínculo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Setor
+		dataType: string
+		lineageTag: 69acf08b-57b7-4d2b-bd51-802065871cbf
+		summarizeBy: none
+		sourceColumn: Setor
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Categoria Automotiva'
+		dataType: string
+		displayFolder: 🚗 Automotivo
+		lineageTag: 97a0802d-82f7-4885-bdc2-54bc0ec1669e
+		summarizeBy: none
+		sourceColumn: Categoria Automotiva
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Faixa de Porte'
+		dataType: string
+		lineageTag: cd43f3e4-3d72-45af-a20c-833529be652d
+		summarizeBy: none
+		sourceColumn: Faixa de Porte
+		sortByColumn: 'Ordem Porte'
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Ordem Porte'
+		dataType: int64
+		formatString: 0
+		lineageTag: c5416038-a085-4e35-a1e7-a263a37e5c9e
+		summarizeBy: sum
+		sourceColumn: Ordem Porte
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Natureza Nome'
+		dataType: string
+		lineageTag: 570804bd-f3db-4121-8d38-571fb0850f8d
+		summarizeBy: none
+		sourceColumn: Natureza Nome
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Atividade Automotiva'
+		dataType: string
+		displayFolder: 🚗 Automotivo
+		lineageTag: 293720c1-acdc-4714-a0b5-f072f8dfcb8d
+		summarizeBy: none
+		sourceColumn: Atividade Automotiva
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Seção CNAE'
+		dataType: string
+		lineageTag: f87d8497-e13f-4bd2-b278-6f9df8b3e9a9
+		summarizeBy: none
+		sourceColumn: Seção CNAE
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Classe Chave'
+		dataType: string
+		lineageTag: 2a9c5f2a-e2e7-4a5a-ba1d-1f5edfe178ec
+		summarizeBy: none
+		sourceColumn: Classe Chave
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Classe Descrição'
+		dataType: string
+		lineageTag: aaa5a568-8f8c-4947-8387-711913ede51d
+		summarizeBy: none
+		sourceColumn: Classe Descrição
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Setor Completo'
+		dataType: string
+		lineageTag: c9d76f9a-c2c9-4115-a902-7702ed06da86
+		summarizeBy: none
+		sourceColumn: Setor Completo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition RAIS_SJC = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents("C:\Users\thaly\Downloads\RAIS_SJC.csv"),[Delimiter=";", Columns=24, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Usar a Primeira Linha como Cabeçalho" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    #"Alterar Tipo" = Table.TransformColumnTypes(#"Usar a Primeira Linha como Cabeçalho",{{"Bairros SP", Int64.Type}, {"Bairros Fortaleza", Int64.Type}, {"Bairros RJ", Int64.Type}, {"CNAE 2.0 Classe", Int64.Type}, {"CNAE 95 Classe", Int64.Type}, {"Distritos SP", Int64.Type}, {"Qtd Vínculos CLT", Int64.Type}, {"Qtd Vínculos Ativos", Int64.Type}, {"Qtd Vínculos Estatutários", Int64.Type}, {"Ind Atividade Ano", Int64.Type}, {"Ind CEI Vinculado", Int64.Type}, {"Ind Estab Participa PAT", Int64.Type}, {"Ind Rais Negativa", Int64.Type}, {"Ind Simples", Int64.Type}, {"Município", Int64.Type}, {"Natureza Jurídica", Int64.Type}, {"Regiões Adm DF", Int64.Type}, {"CNAE 2.0 Subclasse", Int64.Type}, {"Tamanho Estabelecimento", Int64.Type}, {"Tipo Estab", Int64.Type}, {"Tipo Estab_1", type text}, {"UF", Int64.Type}, {"IBGE Subsetor", Int64.Type}, {"CEP Estab", Int64.Type}}),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Alterar Tipo",{{"Município", type text}}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"Bairros SP", "Bairros Fortaleza", "Bairros RJ", "Distritos SP", "Regiões Adm DF"}),
+				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Colunas Removidas",{{"CNAE 2.0 Classe", type text}, {"CNAE 95 Classe", type text}, {"Qtd Vínculos CLT", Int64.Type}, {"CNAE 2.0 Subclasse", type text}, {"Natureza Jurídica", type text}, {"UF", type text}, {"CEP Estab", type text}, {"Ind Atividade Ano", type text}, {"Ind CEI Vinculado", type text}, {"Ind Estab Participa PAT", type text}, {"Ind Rais Negativa", type text}, {"Ind Simples", type text}, {"Tamanho Estabelecimento", type text}, {"Tipo Estab", type text}, {"IBGE Subsetor", type text}}),
+				    #"Personalização Adicionada" = Table.AddColumn(#"Tipo Alterado1", "Situação Vínculo", each if [Ind Rais Negativa] = "0" then "Com Vínculo" else "Sem Vínculo"),
+				    #"Tipo Alterado2" = Table.TransformColumnTypes(#"Personalização Adicionada",{{"Situação Vínculo", type text}}),
+				    #"Personalização Adicionada1" = Table.AddColumn(#"Tipo Alterado2", "Setor", each if [CNAE 2.0 Classe] = "86305" then "Atenção ambulatorial (médicos/odontólogos)"
+				else if [CNAE 2.0 Classe] = "56112" then "Restaurantes e alimentação"
+				else if [CNAE 2.0 Classe] = "82113" then "Serviços de escritório e apoio administrativo"
+				else if [CNAE 2.0 Classe] = "85996" then "Ensino não especificado"
+				else if [CNAE 2.0 Classe] = "86500" then "Profissionais de saúde (exceto médicos)"
+				else if [CNAE 2.0 Classe] = "81125" then "Condomínios prediais"
+				else if [CNAE 2.0 Classe] = "73190" then "Publicidade"
+				else if [CNAE 2.0 Classe] = "47814" then "Comércio varejista de vestuário"
+				else if [CNAE 2.0 Classe] = "71120" then "Serviços de engenharia"
+				else if [CNAE 2.0 Classe] = "49302" then "Transporte rodoviário de carga"
+				else if [CNAE 2.0 Classe] = "30415" then "Fabricação de aeronaves"
+				else if [CNAE 2.0 Classe] = "86101" then "Atendimento hospitalar"
+				else if [CNAE 2.0 Classe] = "47113" then "Hipermercados e supermercados"
+				else if [CNAE 2.0 Classe] = "82202" then "Teleatendimento (call center)"
+				else if [CNAE 2.0 Classe] = "81117" then "Serviços de apoio a edifícios"
+				else if [CNAE 2.0 Classe] = "29107" then "Fabricação de automóveis"
+				else [CNAE 2.0 Classe]),
+				    #"Tipo Alterado3" = Table.TransformColumnTypes(#"Personalização Adicionada1",{{"Setor", type text}}),
+				    #"Personalização Adicionada2" = Table.AddColumn(#"Tipo Alterado3", "Categoria Automotiva", each if Text.StartsWith([CNAE 2.0 Classe], "29") then "Fabricação de Veículos (Fábricas)"
+				else if Text.StartsWith([CNAE 2.0 Classe], "45") then "Comércio/Reparação de Veículos"
+				else "Outro Setor"),
+				    #"Tipo Alterado4" = Table.TransformColumnTypes(#"Personalização Adicionada2",{{"Categoria Automotiva", type text}}),
+				    #"Personalização Adicionada3" = Table.AddColumn(#"Tipo Alterado4", "Faixa de Porte", each if [Tamanho Estabelecimento] = "1" then "Zero"
+				else if [Tamanho Estabelecimento] = "2" then "1 a 4"
+				else if [Tamanho Estabelecimento] = "3" then "5 a 9"
+				else if [Tamanho Estabelecimento] = "4" then "10 a 19"
+				else if [Tamanho Estabelecimento] = "5" then "20 a 49"
+				else if [Tamanho Estabelecimento] = "6" then "50 a 99"
+				else if [Tamanho Estabelecimento] = "7" then "100 a 249"
+				else if [Tamanho Estabelecimento] = "8" then "250 a 499"
+				else if [Tamanho Estabelecimento] = "9" then "500 a 999"
+				else if [Tamanho Estabelecimento] = "10" then "1000 ou mais"
+				else "Não informado"),
+				    #"Personalização Adicionada4" = Table.AddColumn(#"Personalização Adicionada3", "Ordem Porte", each Number.From([Tamanho Estabelecimento])),
+				    #"Tipo Alterado5" = Table.TransformColumnTypes(#"Personalização Adicionada4",{{"Ordem Porte", Int64.Type}, {"Faixa de Porte", type text}}),
+				    #"Personalização Adicionada5" = Table.AddColumn(#"Tipo Alterado5", "Natureza Nome", each if [Natureza Jurídica] = "2062" then "Sociedade Empresária Limitada" else if [Natureza Jurídica] = "2135" then "Empresário Individual" else if [Natureza Jurídica] = "2054" then "Sociedade Anônima Fechada" else if [Natureza Jurídica] = "2046" then "Sociedade Anônima Aberta" else if [Natureza Jurídica] = "2038" then "Sociedade de Economia Mista" else if [Natureza Jurídica] = "2143" then "Cooperativa" else if [Natureza Jurídica] = "2240" then "Sociedade Simples Limitada" else if [Natureza Jurídica] = "3999" then "Associação Privada" else if [Natureza Jurídica] = "3220 " then "Organização Religiosa" else if [Natureza Jurídica] = "3085" then "Condomínio Edilício" else if [Natureza Jurídica] = "2240" then "Sociedade Simples Limitada" else if [Natureza Jurídica] = "2232" then "Sociedade Simples Pura" else [Natureza Jurídica]),
+				    #"Personalização Adicionada6" = Table.AddColumn(#"Personalização Adicionada5", "Atividade Automotiva", each if [CNAE 2.0 Classe] = "29107" then "Fabricação de automóveis, camionetas e utilitários"
+				else if [CNAE 2.0 Classe] = "29301" then "Cabines, carrocerias e reboques"
+				else if [CNAE 2.0 Classe] = "29417" then "Peças para sistema motor"
+				else if [CNAE 2.0 Classe] = "29433" then "Peças para sistema de freios"
+				else if [CNAE 2.0 Classe] = "29441" then "Peças para direção e suspensão"
+				else if [CNAE 2.0 Classe] = "29492" then "Outras peças e acessórios"
+				else if [CNAE 2.0 Classe] = "29506" then "Recondicionamento de motores"
+				else if [CNAE 2.0 Classe] = "45111" then "Comércio de veículos automotores"
+				else if [CNAE 2.0 Classe] = "45129" then "Representantes comerciais de veículos"
+				else if [CNAE 2.0 Classe] = "45200" then "Manutenção e reparação de veículos"
+				else if [CNAE 2.0 Classe] = "45307" then "Comércio de peças e acessórios"
+				else if [CNAE 2.0 Classe] = "45412" then "Comércio de motocicletas, peças e acessórios"
+				else if [CNAE 2.0 Classe] = "45421" then "Representantes comerciais de motocicletas"
+				else if [CNAE 2.0 Classe] = "45439" then "Manutenção e reparação de motocicletas"
+				else null),
+				    #"Tipo Alterado6" = Table.TransformColumnTypes(#"Personalização Adicionada6",{{"Atividade Automotiva", type text}}),
+				    #"Personalização Adicionada7" = Table.AddColumn(#"Tipo Alterado6", "Seção CNAE", each let
+				  d = try Number.From(Text.Start(Text.PadStart(Text.From([CNAE 2.0 Classe]), 5, "0"), 2)) otherwise 0,
+				  lim = {3,9,33,35,39,43,47,53,56,63,66,68,75,82,84,85,88,93,96,97,99},
+				  nomes = {"A - Agricultura e pecuária","B - Indústrias extrativas","C - Indústrias de transformação","D - Eletricidade e gás","E - Água, esgoto e resíduos","F - Construção","G - Comércio e reparação de veículos","H - Transporte e armazenagem","I - Alojamento e alimentação","J - Informação e comunicação","K - Atividades financeiras e seguros","L - Atividades imobiliárias","M - Atividades profissionais e técnicas","N - Atividades administrativas","O - Administração pública","P - Educação","Q - Saúde e serviços sociais","R - Artes, cultura e esporte","S - Outros serviços","T - Serviços domésticos","U - Organismos internacionais"},
+				  pos = List.PositionOf(List.Transform(lim, each d <= _), true)
+				in
+				  if d = 0 or pos = -1 then "Não classificado" else nomes{pos}),
+				    #"Tipo Alterado7" = Table.TransformColumnTypes(#"Personalização Adicionada7",{{"Seção CNAE", type text}}),
+				    Chave = Table.AddColumn(#"Tipo Alterado7", "Classe Chave", each Text.PadStart(Text.From([CNAE 2.0 Classe]), 5, "0"), type text),
+				    Mesclar = Table.NestedJoin(Chave, {"Classe Chave"}, dCNAE, {"Classe"}, "dCNAE", JoinKind.LeftOuter),
+				    Expandir = Table.ExpandTableColumn(Mesclar, "dCNAE", {"Classe_Descricao"}, {"Classe Descrição"}),
+				    SetorCompleto = Table.AddColumn(Expandir, "Setor Completo", each if [Setor] = [CNAE 2.0 Classe] then [Classe Descrição] else [Setor], type text)
+				in
+				    SetorCompleto
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

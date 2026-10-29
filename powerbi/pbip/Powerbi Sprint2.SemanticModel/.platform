@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Powerbi Sprint2"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "93231d9e-f191-4a86-a1bb-81b4548b59a8"
+  }
+}
