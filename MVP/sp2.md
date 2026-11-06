@@ -20,18 +20,7 @@
 
 > Base RAIS 2024 de São José dos Campos classificada pela CNAE 2.3, geocodificada no nível de bairro e associada às regiões oficiais do município, integrada à série do PIB dos Municípios (IBGE) e visualizada em quatro páginas do Power BI.
 
-```mermaid
-flowchart TD
-    A["RAIS 2024 · 47.339 estabelecimentos"] --> B["Classificação CNAE 2.3"]
-    A --> C["Geocodificação do CEP"]
-    C --> D["Região oficial (Plano Diretor)"]
-    B --> E["Base única do Power BI"]
-    D --> E
-    F["PIB dos Municípios (IBGE)"] --> G["Cruzamento emprego × valor adicionado"]
-    E --> G
-    E --> H["Painel Power BI · 4 páginas"]
-    G --> H
-```
+<p align="center"><img src="../evidencias/sprint2/fluxograma_mvp_sprint2.png" alt="Fluxograma do MVP da Sprint 2: RAIS 2024, classificação CNAE e geocodificação do CEP formam a base única do Power BI, que é cruzada com o PIB dos Municípios e alimenta o painel de 4 páginas" width="620"></p>
 
 - Funcionalidades principais incluídas:
   - **KPIs e Mapa:** total de estabelecimentos, com e sem vínculo, vínculos ativos e percentuais, com filtros por seção CNAE, porte e tipo de estabelecimento.
