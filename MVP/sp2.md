@@ -21,14 +21,15 @@
 > Base RAIS 2024 de São José dos Campos classificada pela CNAE 2.3, geocodificada no nível de bairro e associada às regiões oficiais do município, integrada à série do PIB dos Municípios (IBGE) e visualizada em quatro páginas do Power BI.
 
 ```mermaid
-flowchart LR
-    A["RAIS 2024<br/>47.339 estabelecimentos"] --> B["Classificação CNAE<br/>seção a subclasse"]
-    A --> C["Geocodificação do CEP<br/>BrasilAPI + Nominatim"]
-    C --> D["Região oficial<br/>Plano Diretor PMSJC"]
-    B --> E["Base única<br/>RAIS_SJC_2024_PowerBI.csv"]
+flowchart TD
+    A["RAIS 2024 · 47.339 estabelecimentos"] --> B["Classificação CNAE 2.3"]
+    A --> C["Geocodificação do CEP"]
+    C --> D["Região oficial (Plano Diretor)"]
+    B --> E["Base única do Power BI"]
     D --> E
-    F["PIB dos Municípios<br/>IBGE 2002–2023"] --> G["Cruzamento<br/>emprego × valor adicionado"]
-    E --> H["Painel Power BI<br/>4 páginas"]
+    F["PIB dos Municípios (IBGE)"] --> G["Cruzamento emprego × valor adicionado"]
+    E --> G
+    E --> H["Painel Power BI · 4 páginas"]
     G --> H
 ```
 
