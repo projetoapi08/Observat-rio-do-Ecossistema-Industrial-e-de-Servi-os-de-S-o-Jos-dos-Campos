@@ -1,4 +1,6 @@
-# 📌 MVP - [Análises centrais e mapeamento geográfico do ecossistema de São José dos Campos no Power BI]
+# 📌 MVP - Sprint 2 · Análises centrais e mapeamento geográfico do ecossistema de São José dos Campos no Power BI
+
+> **Entrega:** 26/10/2026 · **Status:** Concluída (2 User Stories concluídas e 2 parciais, que seguem na Sprint 3) · [Relatório da Sprint 2](../docs/RELATORIO_SPRINT_2.md) · [voltar ao README](../README.md)
 
 > 🌐 **Painel publicado:** [abrir no Power BI](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9) (abre no navegador, sem login)
 
@@ -58,12 +60,12 @@ flowchart LR
 
 ## 🔑 User Stories (Backlog do MVP)
 
-| ID   | User Story | Prioridade | Status |
-| ---- | ---------- | ---------- | ------ |
-| US06 | Como gestor público (usuário do observatório), quero visualizar a distribuição geográfica das empresas de SJC no mapa, para que eu possa identificar polos e vazios industriais na cidade. | 2 | Parcial (mapa por coordenadas e filtro de região prontos; 78% com ponto) |
-| US07 | Como gestor público, quero ver um ranking das empresas que mais contratam em SJC, para que eu possa direcionar políticas de fomento ao emprego. | 7 | Concluído |
-| US08 | Como gestor público, quero identificar quais setores/áreas estão em alta em termos de contratação, para que eu possa priorizar investimentos e qualificação de mão de obra. | 8 | Parcial |
-| US09 | Como gestor público, quero visualizar o impacto do ecossistema de empresas no PIB municipal (dados do IBGE), para que eu possa avaliar a relevância econômica de cada setor. | 9 | Concluído |
+| ID   | User Story | Prioridade | Estimativa | Status |
+| ---- | ---------- | ---------- | ---------- | ------ |
+| US06 | Como gestor público (usuário do observatório), quero visualizar a distribuição geográfica das empresas de SJC no mapa, para que eu possa identificar polos e vazios industriais na cidade. | Alta | 13 pontos | Parcial (mapa por coordenadas e filtro de região prontos; 78% com ponto) |
+| US07 | Como gestor público, quero ver um ranking das empresas que mais contratam em SJC, para que eu possa direcionar políticas de fomento ao emprego. | Média | 5 pontos | Concluído |
+| US08 | Como gestor público, quero identificar quais setores/áreas estão em alta em termos de contratação, para que eu possa priorizar investimentos e qualificação de mão de obra. | Média | 8 pontos | Parcial |
+| US09 | Como gestor público, quero visualizar o impacto do ecossistema de empresas no PIB municipal (dados do IBGE), para que eu possa avaliar a relevância econômica de cada setor. | Média | 8 pontos | Concluído |
 
 > US06 e US08 continuam na Sprint 3: o mapa já usa latitude/longitude e tem filtro por região, mas 22% dos estabelecimentos ainda não têm ponto (a meta é 90%); a evolução dos setores depende de RAIS de outros anos.
 
@@ -75,7 +77,7 @@ flowchart LR
 | ------ | ------------------- | ------- | ------ |
 | 01 | US01 a US05: ETL em Colab, CSVs tratados, Log de Decisões (DEC-001 a DEC-005), documentação Scrum e repositório no GitHub | 28/09/2026 | Concluído |
 | 02 | US06 a US09: painel com KPIs, setores (CNAE), PIB e emprego; base geocodificada com região oficial; Log de Decisões até DEC-022 | 26/10/2026 | Entregue (2 concluídas, 2 parciais) |
-| 03 | Restante de US06 e US08, US10 e US11: mapa por coordenadas, dashboard consolidado, relatório final e apresentação | 23/11/2026 | A fazer |
+| 03 | Restante de US06 e US08, US10 e US11: mapa por coordenadas, dashboard consolidado, relatório final e apresentação | 23/11/2026 | Em andamento ([MVP](sp3.md)) |
 
 ---
 
@@ -104,6 +106,7 @@ flowchart LR
 | Indústria: participação no emprego privado × valor adicionado privado | 24,7% × 45,8% (índice 1,86) |
 | PIB de São José dos Campos em 2023 | R$ 61,4 bilhões |
 | Decisões de dados registradas | 22 (DEC-001 a DEC-022) |
+| Pontos entregues | 13 de 34 concluídos (US07 e US09); US06 e US08 parciais |
 
 ![Vínculos ativos por região oficial](../evidencias/sprint2/vinculos_por_regiao.png)
 
@@ -120,37 +123,9 @@ flowchart LR
 
 ---
 
-## 🖥️ Telas do MVP
-
-### Página 1 — KPIs e Mapa
-
-![KPIs e Mapa](../evidencias/sprint2/painel_kpis_mapa.png)
-
-Cartões com o total de estabelecimentos (47.339), com e sem vínculo e vínculos ativos (206.717); pizza com 35,52% com vínculo e 64,48% sem vínculo; mapa dos estabelecimentos por latitude e longitude do CEP; filtros por setor (Seção CNAE), porte, tipo de estabelecimento e região.
-
-### Página 2 — Setor de Atividades (CNAE)
-
-![Setor de Atividades](../evidencias/sprint2/painel_setor_atividades.png)
-
-Top 10 setores por empregos CLT (fabricação de aeronaves, atendimento hospitalar e restaurantes na frente) e por número de estabelecimentos; participação de cada Seção CNAE em vínculos × estabelecimentos; empregos CLT dentro da indústria (Seção C) por setor; tabela de vínculos CLT por faixa de porte e setor (206.626 no total).
-
-### Página 3 — PIB e Emprego
-
-![PIB e Emprego](../evidencias/sprint2/painel_pib_emprego.png)
-
-Peso de cada setor no emprego (RAIS 2024) e no valor adicionado (IBGE 2021); tabela de produtividade relativa (Indústria 1,86, Agropecuária 1,65, Serviços 0,72); PIB de 2002 a 2023 em R$ de 2023 (R$ 61,4 bilhões em 2023); variação anual do PIB; valor adicionado por setor de 2002 a 2021; caixa "O que isso mostra para a gestão".
-
-### Página 4 — Notas Metodológicas
-
-![Notas Metodológicas](../evidencias/sprint2/painel_notas_metodologicas.png)
-
-Limites, cruzamento com o PIB, decisões do grupo (DEC-011 e DEC-014), ferramentas e definições usadas no painel.
-
----
-
 ## 📂 Anexos / Evidências
 
-- Relatório da Sprint 2: [`RELATORIO_SPRINT_2.md`](../RELATORIO_SPRINT_2.md)
+- Relatório da Sprint 2: [`docs/RELATORIO_SPRINT_2.md`](../docs/RELATORIO_SPRINT_2.md)
 - Documentação (Backlog da Sprint 2, Log de Decisões, Relatório Técnico, Anexo 8): `docs/`
 - Base única para o Power BI: [`dados/RAIS_SJC_2024_PowerBI.csv`](../dados/RAIS_SJC_2024_PowerBI.csv) — guia em [`evidencias/Importacao_PowerBI_RAIS_SJC.txt`](../evidencias/Importacao_PowerBI_RAIS_SJC.txt)
 - Notebook que gera a base (Google Colab): [`notebooks/02_Base_PowerBI_SJC.ipynb`](../notebooks/02_Base_PowerBI_SJC.ipynb) · dicionário de dados em [`dados/README.md`](../dados/README.md)
@@ -161,6 +136,32 @@ Limites, cruzamento com o PIB, decisões do grupo (DEC-011 e DEC-014), ferrament
 - Fórmulas do painel (medidas DAX e Power Query): [`docs/Formulas_PowerBI_Sprint2.md`](../docs/Formulas_PowerBI_Sprint2.md)
 - Vídeo de incremento da Sprint 2: *(adicionar link do YouTube)*
 - Referência do projeto: [Observatório da Inovação RS](https://sict.rs.gov.br/observatorio)
+
+### Prints de tela do MVP
+
+#### Página 1 — KPIs e Mapa
+
+![KPIs e Mapa](../evidencias/sprint2/painel_kpis_mapa.png)
+
+Cartões com o total de estabelecimentos (47.339), com e sem vínculo e vínculos ativos (206.717); pizza com 35,52% com vínculo e 64,48% sem vínculo; mapa dos estabelecimentos por latitude e longitude do CEP; filtros por setor (Seção CNAE), porte, tipo de estabelecimento e região.
+
+#### Página 2 — Setor de Atividades (CNAE)
+
+![Setor de Atividades](../evidencias/sprint2/painel_setor_atividades.png)
+
+Top 10 setores por empregos CLT (fabricação de aeronaves, atendimento hospitalar e restaurantes na frente) e por número de estabelecimentos; participação de cada Seção CNAE em vínculos × estabelecimentos; empregos CLT dentro da indústria (Seção C) por setor; tabela de vínculos CLT por faixa de porte e setor (206.626 no total).
+
+#### Página 3 — PIB e Emprego
+
+![PIB e Emprego](../evidencias/sprint2/painel_pib_emprego.png)
+
+Peso de cada setor no emprego (RAIS 2024) e no valor adicionado (IBGE 2021); tabela de produtividade relativa (Indústria 1,86, Agropecuária 1,65, Serviços 0,72); PIB de 2002 a 2023 em R$ de 2023 (R$ 61,4 bilhões em 2023); variação anual do PIB; valor adicionado por setor de 2002 a 2021; caixa "O que isso mostra para a gestão".
+
+#### Página 4 — Notas Metodológicas
+
+![Notas Metodológicas](../evidencias/sprint2/painel_notas_metodologicas.png)
+
+Limites, cruzamento com o PIB, decisões do grupo (DEC-011 e DEC-014), ferramentas e definições usadas no painel.
 
 ### Log de Decisões de Dados — Sprint 2
 

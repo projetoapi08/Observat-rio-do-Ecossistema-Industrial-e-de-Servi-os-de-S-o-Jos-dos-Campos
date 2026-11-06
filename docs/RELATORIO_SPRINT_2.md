@@ -94,10 +94,8 @@ Marque cada item depois de adicionar o print ou arquivo na pasta `evidencias/`.
 ```
 .
 ├── README.md
-├── RELATORIO_SPRINT_1.md
-├── RELATORIO_SPRINT_2.md
-├── MVP/           MVP de cada sprint (sp1.md, sp2.md)
-├── docs/          documentação Scrum e relatórios técnicos
+├── MVP/           MVP de cada sprint (sp1.md, sp2.md, sp3.md)
+├── docs/          documentação Scrum, relatórios das sprints e relatórios técnicos
 ├── dados/         bases tratadas prontas para o Power BI
 ├── notebooks/     01: ETL da RAIS · 02: base única do Power BI
 ├── powerbi/       painel (.pbip publicado, planilhas-fonte, PDF)

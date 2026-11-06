@@ -88,9 +88,8 @@ Marque cada item depois de adicionar o print ou arquivo na pasta `evidencias/`.
 ```
 .
 ├── README.md
-├── RELATORIO_SPRINT_1.md
 ├── MVP/           MVP de cada sprint
-├── docs/          documentação Scrum e relatório técnico
+├── docs/          documentação Scrum, relatórios das sprints e relatório técnico
 ├── notebooks/     ETL em Google Colab
 ├── powerbi/       dashboard
 └── evidencias/    prints e comprovações da Sprint 1

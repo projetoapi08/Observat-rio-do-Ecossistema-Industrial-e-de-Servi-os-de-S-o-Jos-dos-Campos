@@ -1,4 +1,6 @@
-# 📌 MVP - [Tratamento dos dados da RAIS para o Observatório do Ecossistema Industrial e de Serviços de São José dos Campos no Power BI]
+# 📌 MVP - Sprint 1 · Tratamento dos dados da RAIS para o Observatório do Ecossistema Industrial e de Serviços de São José dos Campos
+
+> **Entrega:** 28/09/2026 · **Status:** Concluída · [Relatório da Sprint 1](../docs/RELATORIO_SPRINT_1.md) · [voltar ao README](../README.md)
 
 ## 🎯 Objetivo do MVP
 
@@ -34,15 +36,15 @@
 
 ## 🔑 User Stories (Backlog do MVP)
 
-| ID   | User Story | Prioridade | Status |
-| ---- | ---------- | ---------- | ------ |
-| US01 | Como equipe do projeto, quero um pipeline de ETL no Google Colab (Python) que extraia e prepare os dados brutos da RAIS, para que os dados estejam prontos para análise no Power BI. | 1 | Concluído |
-| US02 | Como equipe do projeto, quero filtrar e padronizar os dados para o município de São José dos Campos (código 354990), para que a análise reflita exclusivamente o ecossistema local. | 3 | Concluído |
-| US03 | Como equipe do projeto, quero identificar e tratar as inconsistências dos dados da RAIS (vínculos zerados, mistura de tipos de estabelecimento, ausência de ano e de identificação), para que o dashboard não apresente conclusões distorcidas. | 4 | Concluído |
-| US04 | Como equipe do projeto, quero produzir a documentação formal do projeto (Visão e Escopo, DoR, DoD, Log de Decisões), para que o trabalho siga a metodologia Scrum/API exigida pela disciplina. | 5 | Concluído |
-| US05 | Como equipe do projeto, quero estruturar o repositório no GitHub (docs/, notebooks/, powerbi/), para que o código, os dados e a documentação fiquem organizados e versionados. | 6 | Concluído |
+| ID   | User Story | Prioridade | Estimativa | Status |
+| ---- | ---------- | ---------- | ---------- | ------ |
+| US01 | Como equipe do projeto, quero um pipeline de ETL no Google Colab (Python) que extraia e prepare os dados brutos da RAIS, para que os dados estejam prontos para análise no Power BI. | Alta | 8 pontos | Concluído |
+| US02 | Como equipe do projeto, quero filtrar e padronizar os dados para o município de São José dos Campos (código 354990), para que a análise reflita exclusivamente o ecossistema local. | Alta | 3 pontos | Concluído |
+| US03 | Como equipe do projeto, quero identificar e tratar as inconsistências dos dados da RAIS (vínculos zerados, mistura de tipos de estabelecimento, ausência de ano e de identificação), para que o dashboard não apresente conclusões distorcidas. | Alta | 8 pontos | Concluído |
+| US04 | Como equipe do projeto, quero produzir a documentação formal do projeto (Visão e Escopo, DoR, DoD, Log de Decisões), para que o trabalho siga a metodologia Scrum/API exigida pela disciplina. | Média | 5 pontos | Concluído |
+| US05 | Como equipe do projeto, quero estruturar o repositório no GitHub (docs/, notebooks/, powerbi/), para que o código, os dados e a documentação fiquem organizados e versionados. | Média | 3 pontos | Concluído |
 
-> A prioridade é a ordem definida no Backlog do Produto (1 é a mais alta). A US06 (mapa, prioridade 2) fica na Sprint 2.
+> Total da Sprint 1: 27 pontos, todos entregues. A US06 (mapa, rank 2 no Product Backlog) fica na Sprint 2.
 
 ---
 
@@ -51,8 +53,8 @@
 | Sprint | Entregas Principais | Entrega | Status |
 | ------ | ------------------- | ------- | ------ |
 | 01 | US01 a US05: ETL em Colab, CSVs tratados, Log de Decisões (DEC-001 a DEC-005), documentação Scrum e repositório no GitHub | 28/09/2026 | Concluído |
-| 02 | US06 a US09: mapa de distribuição geográfica (geocodificação via CEP), ranking de empresas que mais contratam, setores em alta e impacto no PIB municipal | 26/10/2026 (detalhamento a confirmar) | A fazer |
-| 03 | US10 e US11: contratações mais recentes e dashboard consolidado com relatório técnico final e apresentação | 23/11/2026 (detalhamento a confirmar) | A fazer |
+| 02 | US06 a US09: mapa de distribuição geográfica (geocodificação via CEP), ranking de empresas que mais contratam, setores em alta e impacto no PIB municipal | 26/10/2026 | Concluído ([MVP](sp2.md)) |
+| 03 | US10 e US11: contratações mais recentes e dashboard consolidado com relatório técnico final e apresentação | 23/11/2026 | Em andamento ([MVP](sp3.md)) |
 
 ---
 
@@ -74,6 +76,7 @@
 - Decisões de dados: 4 fechadas e 1 aberta (DEC-004), das 5 registradas.
 - User Stories da Sprint 1: 5 de 5 concluídas.
 - Pré-visualização inicial no Power BI produzida (meta da Sprint 1 cumprida).
+- **Feedback qualitativo (avaliação da Sprint 1):** positivo. O orientador pediu para esclarecer se os 64,37% de RAIS negativa poderiam ser erro de filtragem (respondido na Sprint 2: não é erro, ver [Relatório da Sprint 2](../docs/RELATORIO_SPRINT_2.md)) e para distribuir melhor as tarefas entre os 8 integrantes.
 
 ---
 
@@ -89,6 +92,7 @@
 
 ## 📂 Anexos / Evidências
 
+- Relatório da Sprint 1: [`docs/RELATORIO_SPRINT_1.md`](../docs/RELATORIO_SPRINT_1.md)
 - Repositório: <https://github.com/projetoapi08/Observat-rio-do-Ecossistema-Industrial-e-de-Servi-os-de-S-o-Jos-dos-Campos>
 - Documentação (Visão e Escopo, Backlog, DoR, DoD, Log de Decisões, Relatório Técnico): `docs/`
 - Notebook de ETL (Google Colab): [`notebooks/01_ETL_RAIS_SJC.ipynb`](../notebooks/01_ETL_RAIS_SJC.ipynb) · [abrir no Colab](https://colab.research.google.com/drive/1zOZJ0oXUY7QJlAMfuiMbI5g9EcBWSnMz?usp=sharing)
