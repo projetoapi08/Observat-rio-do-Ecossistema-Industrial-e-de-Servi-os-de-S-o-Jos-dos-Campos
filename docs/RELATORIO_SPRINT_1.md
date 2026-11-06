@@ -76,11 +76,11 @@ Marque cada item depois de adicionar o print ou arquivo na pasta `evidencias/`.
 - [ ] Notebook executado no Google Colab (saídas visíveis)
 - [ ] Conferência do filtro por município 354990 (US02)
 - [ ] Os 3 arquivos CSV gerados (US01)
-- [ ] Contagem de estabelecimentos com e sem vínculos ativos (base do DEC-001)
+- [x] Contagem de estabelecimentos com e sem vínculos ativos (base do DEC-001) (`notebooks/estatisticas_etl.json`)
 - [ ] Pré-visualização inicial no Power BI (print ou link do arquivo)
-- [ ] Log de Decisões de Dados (DEC-001 a DEC-005) (US03)
+- [x] Log de Decisões de Dados (DEC-001 a DEC-005) (US03) (`docs/06-Decisoes-de-Dados.md`)
 - [ ] Documentos da Sprint 1 aprovados pelo orientador (US04)
-- [ ] Repositório publicado com `docs/`, `notebooks/`, `powerbi/` e README (US05)
+- [x] Repositório publicado com `docs/`, `notebooks/`, `powerbi/` e README (US05)
 - [ ] Confirmação do cliente sobre o ano-base 2024 (mensagem do grupo)
 
 ## 5. Estrutura do repositório
