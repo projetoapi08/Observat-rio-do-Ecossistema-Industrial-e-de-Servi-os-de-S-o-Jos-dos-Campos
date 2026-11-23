@@ -15,8 +15,6 @@ Projeto baseado na metodologia ágil SCRUM, procurando desenvolver a Proatividad
 > Como refazer o projeto do zero: [🛠️ Manual de Replicação](docs/final/Manual_Replicacao.md) (códigos e construção do painel, passo a passo)
 
 # Índice
-* [Para o cliente: comece aqui](#para-o-cliente-comece-aqui)
-* [Entrega final](#entrega-final)
 * [Projeto (API)](#projeto-api)
 * [Equipe](#equipe)
 * [Objetivo do Projeto](#objetivo-do-projeto)
@@ -25,33 +23,6 @@ Projeto baseado na metodologia ágil SCRUM, procurando desenvolver a Proatividad
 * [Competências desenvolvidas](#competências-desenvolvidas)
 * [Registro das Sprints](#registro-das-sprints)
 * [Documentação e estrutura do repositório](#documentação-e-estrutura-do-repositório)
-
-
-# Para o cliente: comece aqui
-
-| Quero… | Onde |
-|---|---|
-| Ver o painel | [Painel publicado no Power BI](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9) (abre no navegador, sem login) ou o [PDF do painel](powerbi/Powerbi_API_Sprint2.pdf) (versão da Sprint 2) |
-| Ler os resultados | [Respostas aos requisitos do cliente](docs/final/Respostas_Requisitos_Cliente.md) e o [Relatório Técnico final](docs/sprint-3/11-Relatorio-Tecnico-Sprint-3.md) |
-| Entender como cada número foi calculado | [Log de Decisões de Dados](docs/final/06-Decisoes-de-Dados.md) e [fórmulas do Power BI](docs/final/Formulas_PowerBI_Final.md) |
-| Abrir e editar o painel no meu computador | Projeto [`powerbi/pbip/Observatorio_SJC.pbip`](powerbi/pbip) + planilhas em [`powerbi/fontes/`](powerbi/fontes) · [Guia de atualização](docs/final/Guia_Atualizar_PowerBI.md) |
-| Refazer o projeto do zero ou com um novo ano da RAIS | [Manual de Replicação](docs/final/Manual_Replicacao.md) ([Word](docs/final/Manual_Replicacao.docx)) |
-| Ver os códigos de tratamento dos dados | [`notebooks/`](notebooks) (abrem no Google Colab) e a [explicação etapa por etapa](evidencias/codigos-tratamento-dados.md) |
-| Usar as bases tratadas | [`dados/`](dados), com [dicionário de dados](dados/README.md) |
-
-Para baixar tudo de uma vez: botão verde **Code → Download ZIP**, no alto desta página.
-
-
-# Entrega final
-
-Itens pedidos para a entrega final do projeto:
-
-| Item | Situação | Onde |
-|---|---|---|
-| Material da solução acessível ao cliente (códigos, BI e relatórios) | Pronto | [Para o cliente: comece aqui](#para-o-cliente-comece-aqui) |
-| Vídeo final de apresentação, com todos os membros da equipe | A publicar | Canal [LogMulti no YouTube](https://www.youtube.com/@LogMulti) · o link do vídeo entra aqui quando for publicado |
-| PACER preenchido | A preencher | [docs/final/PACER](docs/final/PACER/README.md) |
-| Relatório final de replicação (passo a passo dos códigos e da construção do BI) | Pronto | [Manual de Replicação](docs/final/Manual_Replicacao.md) ([Word](docs/final/Manual_Replicacao.docx)) |
 
 
 # Projeto (API)
@@ -149,7 +120,7 @@ São José dos Campos é um polo industrial, tecnológico e de serviços do Vale
 ├── docs/         Documentação (.docx e .md), com índice em docs/README.md
 │   ├── final/        documentos do projeto na versão final: Visão e Escopo, Backlog do Produto, DoR, DoD,
 │   │                 Log de Decisões, respostas aos requisitos do cliente, relatório e fórmulas do Power BI,
-│   │                 guia de atualização, Manual de Replicação e PACER
+│   │                 guia de atualização e Manual de Replicação
 │   ├── sprint-1/     backlog, relatório técnico, Anexo 8 e relatório da Sprint 1
 │   ├── sprint-2/     backlog, relatório técnico, Anexo 8 e relatório da Sprint 2
 │   └── sprint-3/     backlog, relatório técnico, Anexo 8 e relatório da Sprint 3 (relatórios finais da entrega)
@@ -175,7 +146,6 @@ São José dos Campos é um polo industrial, tecnológico e de serviços do Vale
 | Relatórios de Desenvolvimento (Anexo 8) | [Sprint 1](docs/sprint-1/Relatorio_Sprint1_Anexo8.docx) · [Sprint 2](docs/sprint-2/Relatorio_Sprint2_Anexo8.docx) · [**Sprint 3 (versão final)**](docs/sprint-3/Relatorio_Sprint3_Anexo8.docx) | [Sprint 1](docs/sprint-1/Relatorio_Sprint1_Anexo8.md) · [Sprint 2](docs/sprint-2/Relatorio_Sprint2_Anexo8.md) · [Sprint 3](docs/sprint-3/Relatorio_Sprint3_Anexo8.md) |
 | Relatório e fórmulas do Power BI (versão final) | [Relatório](docs/final/Relatorio_PowerBI_Final.docx) · [Fórmulas](docs/final/Formulas_PowerBI_Final.docx) | [Relatório](docs/final/Relatorio_PowerBI_Final.md) · [Fórmulas](docs/final/Formulas_PowerBI_Final.md) |
 | **Manual de Replicação** (refazer o projeto do zero: dados, códigos e painel) | [Manual_Replicacao.docx](docs/final/Manual_Replicacao.docx) | [Manual_Replicacao.md](docs/final/Manual_Replicacao.md) |
-| PACER da equipe | — | [PACER/README.md](docs/final/PACER/README.md) |
 | **Guia: atualizar e republicar o painel Power BI** | [Guia_Atualizar_PowerBI.docx](docs/final/Guia_Atualizar_PowerBI.docx) | [Guia_Atualizar_PowerBI.md](docs/final/Guia_Atualizar_PowerBI.md) |
 
 **Como reproduzir:** o passo a passo completo está no [Manual de Replicação](docs/final/Manual_Replicacao.md). Em resumo: o [notebook 01](notebooks/01_ETL_RAIS_SJC.ipynb) filtra o arquivo público `RAIS_ESTAB_PUB` para o município 354990; o [notebook 01b](notebooks/01b_Geocodificacao_CEPs_SJC.ipynb) busca a coordenada de cada CEP; o [notebook 02](notebooks/02_Base_PowerBI_SJC.ipynb) abre no Google Colab (*Arquivo → Abrir notebook → GitHub*), roda com *Executar tudo* e gera a base única [`dados/RAIS_SJC_2024_PowerBI.csv`](dados/RAIS_SJC_2024_PowerBI.csv). O passo a passo para abrir e editar o painel está no [README do Power BI](powerbi/README.md) e o dicionário de dados no [README dos dados](dados/README.md).

@@ -12,9 +12,6 @@ A pasta está dividida em quatro partes. Em `final/` ficam os documentos que val
 | Relatório de Desenvolvimento — Anexo 8 da Sprint 3 (versão final) | [Relatorio_Sprint3_Anexo8.docx](sprint-3/Relatorio_Sprint3_Anexo8.docx) | [Relatorio_Sprint3_Anexo8.md](sprint-3/Relatorio_Sprint3_Anexo8.md) |
 | Respostas aos requisitos do cliente | — | [Respostas_Requisitos_Cliente.md](final/Respostas_Requisitos_Cliente.md) |
 | **Manual de Replicação** (refazer o projeto do zero: dados, códigos e painel) | [Manual_Replicacao.docx](final/Manual_Replicacao.docx) | [Manual_Replicacao.md](final/Manual_Replicacao.md) |
-| PACER da equipe (a preencher) | — | [PACER/README.md](final/PACER/README.md) |
-
-O vídeo final de apresentação vai para o canal [LogMulti no YouTube](https://www.youtube.com/@LogMulti); o link entra na seção [Entrega final](../README.md#entrega-final) do README quando for publicado.
 
 ## `final/` — documentos do projeto
 
@@ -31,7 +28,6 @@ O vídeo final de apresentação vai para o canal [LogMulti no YouTube](https://
 | Respostas aos requisitos do cliente | — | [Respostas_Requisitos_Cliente.md](final/Respostas_Requisitos_Cliente.md) |
 | Relatório do painel Power BI | [Relatorio_PowerBI_Final.docx](final/Relatorio_PowerBI_Final.docx) | [Relatorio_PowerBI_Final.md](final/Relatorio_PowerBI_Final.md) |
 | Fórmulas do painel Power BI | [Formulas_PowerBI_Final.docx](final/Formulas_PowerBI_Final.docx) | [Formulas_PowerBI_Final.md](final/Formulas_PowerBI_Final.md) |
-| PACER da equipe (a preencher) | — | [PACER/README.md](final/PACER/README.md) |
 
 ## Documentos de cada sprint
 
