@@ -109,7 +109,7 @@ A soma fecha nos mesmos totais do painel (47.339 estabelecimentos e 206.717 vín
 
 > Esta classificação do painel é a da planilha do grupo. A base única do notebook 02 ([`dados/RAIS_SJC_2024_PowerBI.csv`](../../dados/RAIS_SJC_2024_PowerBI.csv)) chega a 99,99% com região; unificar as duas fica para a Sprint 3 (DEC-015).
 
-## 8. Página 4 — Notas Metodológicas
+## 8. Página 5 — Notas Metodológicas
 
 ![Página Notas Metodológicas](../../evidencias/sprint2/painel_notas_metodologicas.png)
 
@@ -123,7 +123,7 @@ Reúne as regras do painel em cinco blocos:
 
 Traz também uma linha com a base e a fonte dos dados.
 
-## 9. Página 5 — Regiões e Tecnologia (Sprint 3)
+## 9. Página 4 — Regiões e Tecnologia (Sprint 3)
 
 Página nova da Sprint 3. Responde às perguntas 2 a 5 do documento de requisitos do cliente: onde estão os empregos, que tipo de atividade predomina, quais são os macroprocessos e qual o nível tecnológico. Um filtro de região no topo filtra todos os gráficos da página.
 

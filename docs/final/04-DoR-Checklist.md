@@ -2,9 +2,9 @@
 
 # Checklist de Definition of Ready (DoR)
 
-**Modelo reutilizável para todas as sprints — Sprint 1 cumprida em 28/09/2026 · Sprint 2 cumprida em 26/10/2026**
+**Modelo reutilizável para todas as sprints — Sprint 1 cumprida em 28/09/2026 · Sprint 2 cumprida em 26/10/2026 · Sprint 3 cumprida em 23/11/2026**
 
-Baseado no Anexo III do Guia de Avaliação API 2025-2. Preencher para cada item de trabalho antes de iniciar a execução. As marcações gerais abaixo valem para as Sprints 1 e 2; a cada nova sprint, desmarcar e reavaliar item a item na Sprint Planning.
+Baseado no Anexo III do Guia de Avaliação API 2025-2. Preencher para cada item de trabalho antes de iniciar a execução. As marcações gerais abaixo valem para as Sprints 1, 2 e 3; a cada nova sprint, desmarcar e reavaliar item a item na Sprint Planning.
 
 ## Sobre a User Story / tarefa
 
@@ -48,12 +48,20 @@ Baseado no Anexo III do Guia de Avaliação API 2025-2. Preencher para cada item
 
 ☑ Acesso de todos os membros ao arquivo Power BI compartilhado (PowerbiATT_Api_Sprint2.pbix)
 
-## Itens a confirmar para a Sprint 3
+## Itens específicos da Sprint 3
 
-☐ Lista oficial de bairros por região (incluindo a Região Norte) ou shapefile das regiões, fornecido pelo cliente
+☑ Coordenadas dos CEPs disponíveis para o mapa: CNEFE 2022 do IBGE, com 99,99% dos estabelecimentos com ponto (DEC-023)
 
-☐ Fonte definida com o cliente para a evolução dos setores (US08) e as contratações recentes (US10): RAIS de anos anteriores ou RAIS Vínculos
+☑ Regra de classificação por macroprocesso logístico definida e registrada antes de montar a página Regiões e Tecnologia (DEC-024)
 
-☐ Base única RAIS_SJC_2024_PowerBI.csv importada no painel por todos os membros
+☑ Planilhas do painel no repositório, com a aba PIB anual, e caminho das fontes configurável (parâmetro PastaFontes)
 
-☐ Resposta do cliente sobre a base identificada (DEC-004) e o indicador 2 de RAIS negativa
+☑ Requisitos do cliente revisados item a item (docs/final/Respostas_Requisitos_Cliente.md)
+
+☐ Lista oficial de bairros por região (incluindo a Região Norte) ou shapefile das regiões, fornecido pelo cliente — segue pendente (DEC-015)
+
+☐ Fonte para a evolução dos setores (US08) e as contratações recentes (US10): RAIS de anos anteriores ou RAIS Vínculos — decisão do cliente na Feira de Soluções
+
+☐ Base única RAIS_SJC_2024_PowerBI.csv como fonte da tabela RAIS_SJC do painel — segue pendente (DEC-022); o painel usa as planilhas de powerbi/fontes/
+
+☐ Resposta do cliente sobre a base identificada (DEC-004) e o indicador 2 de RAIS negativa — segue pendente

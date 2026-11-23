@@ -4,7 +4,7 @@ Projeto baseado na metodologia ágil SCRUM, procurando desenvolver a Proatividad
 
 > Status do projeto: **Sprint 3 entregue (23/11/2026)** · próxima etapa: Feira de Soluções (03/12/2026) · [MVP da Sprint 3](MVP/sp3.md) · [Relatório da Sprint 3](docs/sprint-3/RELATORIO_SPRINT_3.md)
 >
-> Painel publicado: [🌐 abrir no Power BI](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9) (abre no navegador, sem login)
+> Painel publicado: [🌐 abrir no Power BI](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9) (abre no navegador, sem login). O link ainda mostra a versão de 26/10/2026; a versão final, com 5 páginas, entra ao republicar ([guia passo a passo](docs/final/Guia_Atualizar_PowerBI.md))
 >
 > Respostas aos requisitos do cliente: [✅ cada pergunta e critério, com números e onde ver no painel](docs/final/Respostas_Requisitos_Cliente.md)
 >

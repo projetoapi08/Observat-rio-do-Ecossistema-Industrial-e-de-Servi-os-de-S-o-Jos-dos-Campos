@@ -54,7 +54,7 @@
 | ------ | ------------------- | ------- | ------ |
 | 01 | US01 a US05: ETL em Colab, CSVs tratados, Log de Decisões (DEC-001 a DEC-005), documentação Scrum e repositório no GitHub | 28/09/2026 | Concluído |
 | 02 | US06 a US09: mapa de distribuição geográfica (geocodificação via CEP), ranking de empresas que mais contratam, setores em alta e impacto no PIB municipal | 26/10/2026 | Concluído ([MVP](sp2.md)) |
-| 03 | US10 e US11: contratações mais recentes e dashboard consolidado com relatório técnico final e apresentação | 23/11/2026 | Em andamento ([MVP](sp3.md)) |
+| 03 | US10 e US11: contratações mais recentes e dashboard consolidado com relatório técnico final e apresentação | 23/11/2026 | Entregue ([MVP](sp3.md)) |
 
 ---
 
