@@ -8,6 +8,8 @@ O link publicado mostra a versão de 26/10/2026, com 4 páginas: **KPIs e Mapa �
 
 ## 🔄 Como atualizar e republicar o painel (Sprint 3)
 
+> 📘 **Guia completo, com o que conferir em cada página e solução de problemas:** [Word](../docs/final/Guia_Atualizar_PowerBI.docx) · [ler no GitHub](../docs/final/Guia_Atualizar_PowerBI.md)
+
 O projeto `.pbip` tem mudanças que o link publicado ainda não mostra:
 
 - **Mapa:** coordenadas do CNEFE 2022 na aba `CEP x Região` (DEC-023), com ponto para 99,99% dos estabelecimentos.
