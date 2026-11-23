@@ -67,7 +67,7 @@
 | ------ | ------------------- | ------- | ------ |
 | 01 | US01 a US05: ETL em Colab, CSVs tratados, Log de Decisões (DEC-001 a DEC-005), documentação Scrum e repositório no GitHub | 28/09/2026 | Concluído |
 | 02 | US06 a US09: painel com KPIs, setores (CNAE), PIB e emprego; base geocodificada com região oficial; Log de Decisões até DEC-022 | 26/10/2026 | Entregue (2 concluídas, 2 parciais) |
-| 03 | Restante de US06 e US08, US10 e US11: mapa por coordenadas, dashboard consolidado, relatório final e apresentação | 23/11/2026 | Em andamento ([MVP](sp3.md)) |
+| 03 | Restante de US06 e US08, US10 e US11: mapa por coordenadas, dashboard consolidado, relatório final e apresentação | 23/11/2026 | Entregue ([MVP](sp3.md)) |
 
 ---
 
@@ -124,7 +124,7 @@
 - Arquivos do painel: [`powerbi/pbip/`](../powerbi/pbip/) (versão publicada, projeto `.pbip`), planilhas em [`powerbi/fontes/`](../powerbi/fontes/), [PDF](../powerbi/Powerbi_API_Sprint2.pdf) e versões anteriores em `.pbix` — ver [`powerbi/README.md`](../powerbi/README.md)
 - Relatório do Power BI (fontes e leitura de cada visual): [`docs/Relatorio_PowerBI_Sprint2.md`](../docs/Relatorio_PowerBI_Sprint2.md)
 - Fórmulas do painel (medidas DAX e Power Query): [`docs/Formulas_PowerBI_Sprint2.md`](../docs/Formulas_PowerBI_Sprint2.md)
-- Vídeo de incremento da Sprint 2: *(adicionar link do YouTube)*
+- Vídeos do projeto: [canal LogMulti no YouTube](https://www.youtube.com/@LogMulti)
 - Referência do projeto: [Observatório da Inovação RS](https://sict.rs.gov.br/observatorio)
 
 ### Prints de tela do MVP

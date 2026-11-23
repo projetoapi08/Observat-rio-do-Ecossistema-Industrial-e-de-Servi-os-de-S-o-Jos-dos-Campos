@@ -4,7 +4,7 @@
 
 **[Abrir o painel publicado no Power BI](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9)** — abre no navegador, sem instalar nada e sem login.
 
-Versão de 26/10/2026, com as 4 páginas: **KPIs e Mapa · Setor de Atividades (CNAE) · PIB e Emprego · Notas Metodológicas**.
+Versão de 26/10/2026, com as 4 páginas: **KPIs e Mapa · Setor de Atividades (CNAE) · PIB e Emprego · Notas Metodológicas**. É a mesma versão entregue na Sprint 3 (23/11/2026), com o mesmo link.
 
 ## Arquivos
 
@@ -50,12 +50,22 @@ Documentação do painel: [relatório do Power BI](../docs/Relatorio_PowerBI_Spr
 - Nova tabela `dCNAE` com o nome oficial das 673 classes: nenhum setor aparece mais só com o número do código (coluna `Setor Completo`).
 - Página 2 ganhou o gráfico **Indústria (Seção C): empregos CLT por setor**, e a tabela por porte passou a mostrar a base inteira (206.626 vínculos CLT).
 
-## Ajustes pequenos para a Sprint 3
+## Ajustes pequenos (pendentes)
 
-Vistos nas telas da versão publicada:
+Vistos nas telas da versão publicada, ainda não aplicados:
 
 - **Cartões com "Mil":** aparecem "47,339 Mil", "30,523 Mil", "16,816 Mil" e "206,717 Mil", que se leem como decimais. Em *Formato → Valor do balão → Unidades de exibição*, usar **Nenhum** para mostrar 47.339, 30.523, 16.816 e 206.717.
 - **Título da pizza:** "Distruibuição de" → "Distribuição".
 - **Subtítulos dos cartões:** "Unidades com CNPJ próprio" (o total inclui CAEPF e CNO; sugerido: "Estabelecimentos na base") e "Empregados com contrato formal" (o cartão conta estabelecimentos, não pessoas; sugerido: "Estabelecimentos com empregados no ano").
 - **Relação automática** `Cruzamento[vab_real_2023] → 'VAB setorial'[vab_real_2023]`: foi criada pelo Power BI sobre uma coluna de valor, não de chave. Conferir se algum visual depende dela; se não, pode ser excluída.
 - Trocar os caminhos `C:\Users\...` das fontes por uma pasta do projeto, para qualquer integrante conseguir atualizar o painel.
+
+## Melhorias sugeridas para a versão final
+
+- **Cobertura do mapa:** 5.024 estabelecimentos sem coordenada estão em bairros que já têm ponto por outro CEP. Usar esse ponto no notebook 02 leva o mapa de 78,3% para cerca de 88,9%.
+- **Fonte do mapa:** trocar a tabela `CEP x Região` pela base única `dados/RAIS_SJC_2024_PowerBI.csv` (DEC-022), que já tem latitude, longitude e região, e regeocodificar os 9 bairros homônimos (DEC-017).
+- **Página "Regiões":** vínculos e estabelecimentos por região oficial, tipo de atividade, intensidade tecnológica (OCDE) e porte SEBRAE, com as colunas que já estão na base única.
+- **Parâmetro de pasta:** criar um parâmetro no Power Query com a pasta das fontes, no lugar de `C:\Users\thaly\...`.
+- **Nome e versões:** renomear o projeto para `Observatorio_SJC.pbip` e mover os `.pbix` antigos para `versoes_anteriores/`.
+
+Lista completa, com o esforço de cada item, no [Relatório da Sprint 3](../docs/RELATORIO_SPRINT_3.md#6-melhorias-sugeridas).

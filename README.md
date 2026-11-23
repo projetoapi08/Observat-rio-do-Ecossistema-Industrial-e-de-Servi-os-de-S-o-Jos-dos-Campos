@@ -2,9 +2,11 @@
 
 Projeto baseado na metodologia ágil SCRUM, procurando desenvolver a Proatividade, Autonomia, Colaboração e Entrega de Resultados dos estudantes envolvidos.
 
-> Status do projeto: **Sprint 3 em andamento** · [MVP da Sprint 3](MVP/sp3.md)
+> Status do projeto: **Sprint 3 entregue (23/11/2026)** · próxima etapa: Feira de Soluções (03/12/2026) · [MVP da Sprint 3](MVP/sp3.md) · [Relatório da Sprint 3](docs/RELATORIO_SPRINT_3.md)
 >
 > Painel publicado: [🌐 abrir no Power BI](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9) (abre no navegador, sem login)
+>
+> Vídeos do projeto: [▶️ canal LogMulti no YouTube](https://www.youtube.com/@LogMulti)
 >
 > Documentação: [📖 pasta docs/](docs/)
 
@@ -59,6 +61,7 @@ São José dos Campos é um polo industrial, tecnológico e de serviços do Vale
 * Power BI
 * Microsoft Excel
 * GitHub
+* YouTube (canal [LogMulti](https://www.youtube.com/@LogMulti), vídeos do projeto)
 * BrasilAPI e Nominatim (OpenStreetMap), para geocodificar os CEPs
 * Microsoft Word e Microsoft Teams
 * WhatsApp (comunicação com o cliente e a equipe)
@@ -100,8 +103,8 @@ São José dos Campos é um polo industrial, tecnológico e de serviços do Vale
 |-------------------|------------|-----------|-----------|
 | 01                | 28/09/2026 | Concluída | [MVP](MVP/sp1.md) · [Relatório](docs/RELATORIO_SPRINT_1.md) |
 | 02                | 26/10/2026 | Concluída | [MVP](MVP/sp2.md) · [Relatório](docs/RELATORIO_SPRINT_2.md) |
-| 03                | 23/11/2026 | Em andamento | [MVP](MVP/sp3.md) |
-| Feira de Soluções | 03/12/2026 | A fazer   | [MVP](#) |
+| 03                | 23/11/2026 | Entregue  | [MVP](MVP/sp3.md) · [Relatório](docs/RELATORIO_SPRINT_3.md) |
+| Feira de Soluções | 03/12/2026 | A fazer   | [Vídeo](https://www.youtube.com/@LogMulti) |
 
 
 # Documentação e estrutura do repositório
@@ -126,7 +129,7 @@ São José dos Campos é um polo industrial, tecnológico e de serviços do Vale
 | Backlog das Sprints 1, 2 e 3 | [03](docs/03-Backlog-Sprint-1.docx) · [08](docs/08-Backlog-Sprint-2.docx) · [09](docs/09-Backlog-Sprint-3.docx) | [Sprint 2](docs/08-Backlog-Sprint-2.md) · [Sprint 3](docs/09-Backlog-Sprint-3.md) |
 | DoR e DoD | [04-DoR-Checklist.docx](docs/04-DoR-Checklist.docx) · [05-DoD.docx](docs/05-DoD.docx) | — |
 | Log de Decisões de Dados (DEC-001 a DEC-022) | [06-Decisoes-de-Dados.docx](docs/06-Decisoes-de-Dados.docx) | [06-Decisoes-de-Dados.md](docs/06-Decisoes-de-Dados.md) |
-| Relatórios das Sprints | — | [Sprint 1](docs/RELATORIO_SPRINT_1.md) · [Sprint 2](docs/RELATORIO_SPRINT_2.md) |
+| Relatórios das Sprints | — | [Sprint 1](docs/RELATORIO_SPRINT_1.md) · [Sprint 2](docs/RELATORIO_SPRINT_2.md) · [Sprint 3](docs/RELATORIO_SPRINT_3.md) |
 | Relatórios Técnicos | [Sprint 1](docs/07-Relatorio-Tecnico-Sprint-1.docx) · [Sprint 2](docs/10-Relatorio-Tecnico-Sprint-2.docx) | — |
 | Relatórios de Desenvolvimento (Anexo 8) | [Sprint 1](docs/Relatorio_Sprint1_Anexo8.docx) · [Sprint 2](docs/Relatorio_Sprint2_Anexo8.docx) | — |
 | Relatório e fórmulas do Power BI (Sprint 2) | [Relatório](docs/Relatorio_PowerBI_Sprint2.docx) · [Fórmulas](docs/Formulas_PowerBI_Sprint2.docx) | [Relatório](docs/Relatorio_PowerBI_Sprint2.md) · [Fórmulas](docs/Formulas_PowerBI_Sprint2.md) |
