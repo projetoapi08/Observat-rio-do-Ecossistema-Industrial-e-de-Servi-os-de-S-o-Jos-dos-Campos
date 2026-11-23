@@ -136,7 +136,7 @@ São José dos Campos é um polo industrial, tecnológico e de serviços do Vale
 | Relatórios das Sprints | — | [Sprint 1](docs/RELATORIO_SPRINT_1.md) · [Sprint 2](docs/RELATORIO_SPRINT_2.md) · [Sprint 3](docs/RELATORIO_SPRINT_3.md) |
 | Relatórios Técnicos | [Sprint 1](docs/07-Relatorio-Tecnico-Sprint-1.docx) · [Sprint 2](docs/10-Relatorio-Tecnico-Sprint-2.docx) · [**Sprint 3 (versão final)**](docs/11-Relatorio-Tecnico-Sprint-3.docx) | — |
 | Relatórios de Desenvolvimento (Anexo 8) | [Sprint 1](docs/Relatorio_Sprint1_Anexo8.docx) · [Sprint 2](docs/Relatorio_Sprint2_Anexo8.docx) · [**Sprint 3 (versão final)**](docs/Relatorio_Sprint3_Anexo8.docx) | — |
-| Relatório e fórmulas do Power BI (versão final) | [Relatório](docs/Relatorio_PowerBI_Sprint2.docx) · [Fórmulas](docs/Formulas_PowerBI_Sprint2.docx) | [Relatório](docs/Relatorio_PowerBI_Sprint2.md) · [Fórmulas](docs/Formulas_PowerBI_Sprint2.md) |
+| Relatório e fórmulas do Power BI (versão final) | [Relatório](docs/Relatorio_PowerBI_Final.docx) · [Fórmulas](docs/Formulas_PowerBI_Final.docx) | [Relatório](docs/Relatorio_PowerBI_Final.md) · [Fórmulas](docs/Formulas_PowerBI_Final.md) |
 
 **Como reproduzir:** o [notebook 01](notebooks/01_ETL_RAIS_SJC.ipynb) filtra o arquivo público `RAIS_ESTAB_PUB` para o município 354990; o [notebook 01b](notebooks/01b_Geocodificacao_CEPs_SJC.ipynb) busca a coordenada de cada CEP; o [notebook 02](notebooks/02_Base_PowerBI_SJC.ipynb) abre no Google Colab (*Arquivo → Abrir notebook → GitHub*), roda com *Executar tudo* e gera a base única [`dados/RAIS_SJC_2024_PowerBI.csv`](dados/RAIS_SJC_2024_PowerBI.csv). O passo a passo para abrir e editar o painel está no [README do Power BI](powerbi/README.md) e o dicionário de dados no [README dos dados](dados/README.md).
 

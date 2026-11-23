@@ -1,8 +1,8 @@
 # Relatório do Power BI — versão final
 
-> Versão em Markdown de [`Relatorio_PowerBI_Sprint2.docx`](Relatorio_PowerBI_Sprint2.docx). Painel LogMulti, Observatório de São José dos Campos, versão final de 23/11/2026 (Sprint 3).
+> Versão em Markdown de [`Relatorio_PowerBI_Final.docx`](Relatorio_PowerBI_Final.docx). Painel LogMulti, Observatório de São José dos Campos, versão final de 23/11/2026 (Sprint 3).
 >
-> **Painel online:** [abrir no Power BI](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9) · Arquivo: [`powerbi/pbip/`](../powerbi/pbip/) · [PDF](../powerbi/Powerbi_API_Sprint2.pdf) · Código das medidas: [`Formulas_PowerBI_Sprint2.md`](Formulas_PowerBI_Sprint2.md)
+> **Painel online:** [abrir no Power BI](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9) · Arquivo: [`powerbi/pbip/`](../powerbi/pbip/) · [PDF](../powerbi/Powerbi_API_Sprint2.pdf) · Código das medidas: [`Formulas_PowerBI_Final.md`](Formulas_PowerBI_Final.md)
 
 O painel tem 5 páginas: **KPIs e Mapa**, **Setor de Atividades (CNAE)**, **PIB e Emprego**, **Regiões e Tecnologia** (nova na Sprint 3) e **Notas Metodológicas**. O link publicado mostra a versão de 4 páginas até o painel ser atualizado e republicado no Power BI Desktop.
 
@@ -23,7 +23,7 @@ A base principal é a **RAIS Estabelecimentos 2024**, do Ministério do Trabalho
 
 ## 2. As medidas
 
-Medida é uma conta que o Power BI refaz toda vez que você mexe num filtro. O código DAX está em [`Formulas_PowerBI_Sprint2.md`](Formulas_PowerBI_Sprint2.md).
+Medida é uma conta que o Power BI refaz toda vez que você mexe num filtro. O código DAX está em [`Formulas_PowerBI_Final.md`](Formulas_PowerBI_Final.md).
 
 | Medida | O que faz | Resultado |
 |---|---|---|

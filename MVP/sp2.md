@@ -122,8 +122,8 @@
 - Planilhas tratadas: [`dados/CNAE_RAIS_SJC_2024.xlsx`](../dados/CNAE_RAIS_SJC_2024.xlsx) e [`dados/IBGE_PIB_SJC_Observatorio.xlsx`](../dados/IBGE_PIB_SJC_Observatorio.xlsx)
 - **Painel publicado:** [abrir no Power BI](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9)
 - Arquivos do painel: [`powerbi/pbip/`](../powerbi/pbip/) (versão publicada, projeto `.pbip`), planilhas em [`powerbi/fontes/`](../powerbi/fontes/), [PDF](../powerbi/Powerbi_API_Sprint2.pdf) e versões anteriores em [`powerbi/versoes_anteriores/`](../powerbi/versoes_anteriores/) — ver [`powerbi/README.md`](../powerbi/README.md)
-- Relatório do Power BI (fontes e leitura de cada visual): [`docs/Relatorio_PowerBI_Sprint2.md`](../docs/Relatorio_PowerBI_Sprint2.md)
-- Fórmulas do painel (medidas DAX e Power Query): [`docs/Formulas_PowerBI_Sprint2.md`](../docs/Formulas_PowerBI_Sprint2.md)
+- Relatório do Power BI (fontes e leitura de cada visual): [`docs/Relatorio_PowerBI_Final.md`](../docs/Relatorio_PowerBI_Final.md)
+- Fórmulas do painel (medidas DAX e Power Query): [`docs/Formulas_PowerBI_Final.md`](../docs/Formulas_PowerBI_Final.md)
 - Vídeos do projeto: [canal LogMulti no YouTube](https://www.youtube.com/@LogMulti)
 - Referência do projeto: [Observatório da Inovação RS](https://sict.rs.gov.br/observatorio)
 

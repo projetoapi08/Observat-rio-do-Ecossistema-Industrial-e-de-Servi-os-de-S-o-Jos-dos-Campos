@@ -36,7 +36,7 @@ Passo a passo:
 | [`Powerbi_API_Sprint2.pdf`](Powerbi_API_Sprint2.pdf) | Versão publicada em 26/10/2026 exportada em PDF (4 páginas), para ver sem o Power BI |
 | [`versoes_anteriores/`](versoes_anteriores/) | `Powerbi_API_Sprint2.pbix` e `.pbit` (2 páginas: KPIs e Mapa, Setor de Atividades) e `PowerbiATT_Api_Sprint2.pbix` (páginas de PIB e de notas, que foram juntadas na versão atual) |
 
-Documentação do painel: [relatório do Power BI](../docs/Relatorio_PowerBI_Sprint2.md) (fontes e leitura de cada visual) e [fórmulas DAX e Power Query](../docs/Formulas_PowerBI_Sprint2.md).
+Documentação do painel: [relatório do Power BI](../docs/Relatorio_PowerBI_Final.md) (fontes e leitura de cada visual) e [fórmulas DAX e Power Query](../docs/Formulas_PowerBI_Final.md).
 
 ### Como abrir a versão `.pbip`
 

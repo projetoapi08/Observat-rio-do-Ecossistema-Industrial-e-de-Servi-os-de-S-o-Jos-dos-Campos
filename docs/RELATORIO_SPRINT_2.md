@@ -82,7 +82,7 @@ Marque cada item depois de adicionar o print ou arquivo na pasta `evidencias/`.
 - [x] Print da página Notas Metodológicas (`evidencias/sprint2/painel_notas_metodologicas.png`)
 - [x] Painel publicado no Power BI ([link](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9))
 - [x] Arquivo do painel publicado (`powerbi/pbip/`) e planilhas-fonte (`powerbi/fontes/`)
-- [x] Relatório do Power BI (`docs/Relatorio_PowerBI_Sprint2.md`) e fórmulas DAX (`docs/Formulas_PowerBI_Sprint2.md`)
+- [x] Relatório do Power BI (`docs/Relatorio_PowerBI_Final.md`) e fórmulas DAX (`docs/Formulas_PowerBI_Final.md`)
 - [x] Painel exportado em PDF, 4 páginas (`powerbi/Powerbi_API_Sprint2.pdf`)
 - [x] Gráfico de vínculos por região oficial gerado da base (`evidencias/sprint2/vinculos_por_regiao.png`)
 - [x] Notebook da base única (`notebooks/02_Base_PowerBI_SJC.ipynb`)
