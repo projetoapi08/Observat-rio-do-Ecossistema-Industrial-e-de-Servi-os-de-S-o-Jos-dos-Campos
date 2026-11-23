@@ -68,6 +68,7 @@ Consolidar o observatório como entrega final: um painel único publicado, docum
 
 - [x] Painel publicado no Power BI ([link](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9))
 - [x] Prints das 4 páginas do painel (`evidencias/sprint2/`, mesma versão)
+- [x] Códigos de tratamento de dados dos notebooks 01 e 02, com links para abrir no Colab (`evidencias/codigos-tratamento-dados.md`)
 - [x] Canal do projeto no YouTube ([LogMulti](https://www.youtube.com/@LogMulti))
 - [ ] Link direto do vídeo de apresentação publicado no canal
 - [ ] Apresentação da Feira de Soluções (`docs/`)
