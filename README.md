@@ -131,16 +131,16 @@ São José dos Campos é um polo industrial, tecnológico e de serviços do Vale
 
 | Documento | Word | Ler no GitHub |
 |---|---|---|
-| Visão e Escopo | [01-Visao-e-Escopo.docx](docs/final/01-Visao-e-Escopo.docx) | — |
+| Visão e Escopo | [01-Visao-e-Escopo.docx](docs/final/01-Visao-e-Escopo.docx) | [01-Visao-e-Escopo.md](docs/final/01-Visao-e-Escopo.md) |
 | Backlog do Produto | [02-Backlog-do-Produto.docx](docs/final/02-Backlog-do-Produto.docx) | [02-Backlog-do-Produto.md](docs/final/02-Backlog-do-Produto.md) |
-| Backlog das Sprints 1, 2 e 3 | [03](docs/sprint-1/03-Backlog-Sprint-1.docx) · [08](docs/sprint-2/08-Backlog-Sprint-2.docx) · [09](docs/sprint-3/09-Backlog-Sprint-3.docx) | [Sprint 2](docs/sprint-2/08-Backlog-Sprint-2.md) · [Sprint 3](docs/sprint-3/09-Backlog-Sprint-3.md) |
-| DoR e DoD | [04-DoR-Checklist.docx](docs/final/04-DoR-Checklist.docx) · [05-DoD.docx](docs/final/05-DoD.docx) | — |
+| Backlog das Sprints 1, 2 e 3 | [03](docs/sprint-1/03-Backlog-Sprint-1.docx) · [08](docs/sprint-2/08-Backlog-Sprint-2.docx) · [09](docs/sprint-3/09-Backlog-Sprint-3.docx) | [Sprint 1](docs/sprint-1/03-Backlog-Sprint-1.md) · [Sprint 2](docs/sprint-2/08-Backlog-Sprint-2.md) · [Sprint 3](docs/sprint-3/09-Backlog-Sprint-3.md) |
+| DoR e DoD | [04-DoR-Checklist.docx](docs/final/04-DoR-Checklist.docx) · [05-DoD.docx](docs/final/05-DoD.docx) | [DoR](docs/final/04-DoR-Checklist.md) · [DoD](docs/final/05-DoD.md) |
 | Log de Decisões de Dados (DEC-001 a DEC-024) | [06-Decisoes-de-Dados.docx](docs/final/06-Decisoes-de-Dados.docx) | [06-Decisoes-de-Dados.md](docs/final/06-Decisoes-de-Dados.md) |
 | **Respostas aos requisitos do cliente** (perguntas, funcionalidades e RN.P) | — | [Respostas_Requisitos_Cliente.md](docs/final/Respostas_Requisitos_Cliente.md) |
 | Códigos de tratamento de dados (Colab) | — | [codigos-tratamento-dados.md](evidencias/codigos-tratamento-dados.md) · [links do Colab](evidencias/link-google-colab.md) |
 | Relatórios das Sprints | — | [Sprint 1](docs/sprint-1/RELATORIO_SPRINT_1.md) · [Sprint 2](docs/sprint-2/RELATORIO_SPRINT_2.md) · [Sprint 3](docs/sprint-3/RELATORIO_SPRINT_3.md) |
-| Relatórios Técnicos | [Sprint 1](docs/sprint-1/07-Relatorio-Tecnico-Sprint-1.docx) · [Sprint 2](docs/sprint-2/10-Relatorio-Tecnico-Sprint-2.docx) · [**Sprint 3 (versão final)**](docs/sprint-3/11-Relatorio-Tecnico-Sprint-3.docx) | — |
-| Relatórios de Desenvolvimento (Anexo 8) | [Sprint 1](docs/sprint-1/Relatorio_Sprint1_Anexo8.docx) · [Sprint 2](docs/sprint-2/Relatorio_Sprint2_Anexo8.docx) · [**Sprint 3 (versão final)**](docs/sprint-3/Relatorio_Sprint3_Anexo8.docx) | — |
+| Relatórios Técnicos | [Sprint 1](docs/sprint-1/07-Relatorio-Tecnico-Sprint-1.docx) · [Sprint 2](docs/sprint-2/10-Relatorio-Tecnico-Sprint-2.docx) · [**Sprint 3 (versão final)**](docs/sprint-3/11-Relatorio-Tecnico-Sprint-3.docx) | [Sprint 1](docs/sprint-1/07-Relatorio-Tecnico-Sprint-1.md) · [Sprint 2](docs/sprint-2/10-Relatorio-Tecnico-Sprint-2.md) · [Sprint 3](docs/sprint-3/11-Relatorio-Tecnico-Sprint-3.md) |
+| Relatórios de Desenvolvimento (Anexo 8) | [Sprint 1](docs/sprint-1/Relatorio_Sprint1_Anexo8.docx) · [Sprint 2](docs/sprint-2/Relatorio_Sprint2_Anexo8.docx) · [**Sprint 3 (versão final)**](docs/sprint-3/Relatorio_Sprint3_Anexo8.docx) | [Sprint 1](docs/sprint-1/Relatorio_Sprint1_Anexo8.md) · [Sprint 2](docs/sprint-2/Relatorio_Sprint2_Anexo8.md) · [Sprint 3](docs/sprint-3/Relatorio_Sprint3_Anexo8.md) |
 | Relatório e fórmulas do Power BI (versão final) | [Relatório](docs/final/Relatorio_PowerBI_Final.docx) · [Fórmulas](docs/final/Formulas_PowerBI_Final.docx) | [Relatório](docs/final/Relatorio_PowerBI_Final.md) · [Fórmulas](docs/final/Formulas_PowerBI_Final.md) |
 
 **Como reproduzir:** o [notebook 01](notebooks/01_ETL_RAIS_SJC.ipynb) filtra o arquivo público `RAIS_ESTAB_PUB` para o município 354990; o [notebook 01b](notebooks/01b_Geocodificacao_CEPs_SJC.ipynb) busca a coordenada de cada CEP; o [notebook 02](notebooks/02_Base_PowerBI_SJC.ipynb) abre no Google Colab (*Arquivo → Abrir notebook → GitHub*), roda com *Executar tudo* e gera a base única [`dados/RAIS_SJC_2024_PowerBI.csv`](dados/RAIS_SJC_2024_PowerBI.csv). O passo a passo para abrir e editar o painel está no [README do Power BI](powerbi/README.md) e o dicionário de dados no [README dos dados](dados/README.md).
