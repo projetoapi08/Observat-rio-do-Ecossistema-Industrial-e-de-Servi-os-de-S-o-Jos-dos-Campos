@@ -361,6 +361,84 @@ table RAIS_SJC
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Categorias do documento de requisitos do cliente, pela divisão CNAE (DEC-021). Mesma regra da base única.
+	column 'Tipo de Atividade' =
+			VAR d = IFERROR ( VALUE ( LEFT ( 'RAIS_SJC'[Classe Chave], 2 ) ), 0 )
+			RETURN
+				SWITCH (
+					TRUE (),
+					d = 0, "Não informado",
+					d >= 10 && d <= 33, "Manufatura (indústria de transformação)",
+					( d >= 58 && d <= 63 ) || d = 72, "Tecnologia, informação e P&D",
+					d >= 49 && d <= 53, "Logística e transporte",
+					( d >= 64 && d <= 66 ) || ( d >= 69 && d <= 75 ), "Serviços especializados",
+					d >= 45 && d <= 47, "Comércio",
+					d >= 41 && d <= 43, "Construção",
+					d >= 77 && d <= 82, "Serviços administrativos e de apoio",
+					d >= 85 && d <= 88, "Saúde e educação",
+					( d >= 5 && d <= 9 ) || ( d >= 35 && d <= 39 ), "Extração e utilidades",
+					d <= 3, "Agropecuária",
+					d = 84, "Administração pública",
+					"Outros serviços"
+				)
+		dataType: string
+		lineageTag: f1285e4f-31a7-4a14-9b8d-14fe31ce2326
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Taxonomia de intensidade tecnológica da OCDE (Galindo-Rueda e Verger, 2016), pela divisão e grupo CNAE (DEC-021).
+	column 'Intensidade Tecnológica OCDE' =
+			VAR d = IFERROR ( VALUE ( LEFT ( 'RAIS_SJC'[Classe Chave], 2 ) ), 0 )
+			VAR g = LEFT ( 'RAIS_SJC'[Classe Chave], 3 )
+			RETURN
+				IF (
+					d >= 10 && d <= 33,
+					SWITCH (
+						TRUE (),
+						d IN { 21, 26 } || g = "304", "Alta",
+						d IN { 20, 27, 28, 29 } || g IN { "255", "325" } || ( d = 30 && NOT ( g IN { "301", "304" } ) ), "Média-alta",
+						d IN { 22, 23, 24, 32, 33 } || g = "301", "Média",
+						"Média-baixa"
+					),
+					SWITCH (
+						TRUE (),
+						d = 72, "Alta",
+						d IN { 62, 63 }, "Média-alta",
+						"Não se aplica"
+					)
+				)
+		dataType: string
+		lineageTag: f8f7c8b6-446d-42e7-be33-68fe4ca8ce01
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Etapa da cadeia de suprimentos pela classe CNAE (DEC-024). O número ordena as etapas nos gráficos.
+	column 'Macroprocesso Logístico' =
+			VAR d = IFERROR ( VALUE ( LEFT ( 'RAIS_SJC'[Classe Chave], 2 ) ), 0 )
+			VAR cl = 'RAIS_SJC'[Classe Chave]
+			RETURN
+				SWITCH (
+					TRUE (),
+					d = 0, "Não classificado",
+					cl IN { "45200", "45439" } || d IN { 33, 95 }, "6. Pós-venda, manutenção e reparação",
+					d <= 9 || d IN { 35, 36, 37 }, "1. Suprimento (agro, extração, energia e água)",
+					( d >= 10 && d <= 32 ) || ( d >= 41 && d <= 43 ), "2. Produção (indústria e construção)",
+					d = 46, "3. Distribuição atacadista",
+					d >= 49 && d <= 53, "4. Transporte e armazenagem",
+					d IN { 45, 47 }, "5. Varejo (venda ao consumidor)",
+					d IN { 38, 39 }, "7. Logística reversa (resíduos e reciclagem)",
+					d >= 58 && d <= 82, "8. Serviços de apoio às empresas",
+					( d >= 55 && d <= 56 ) || ( d >= 84 && d <= 99 ), "9. Serviços ao consumidor e públicos",
+					"Não classificado"
+				)
+		dataType: string
+		lineageTag: 2cb9db9d-a08b-4a93-bde4-718fc114093a
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition RAIS_SJC = m
 		mode: import
 		source =

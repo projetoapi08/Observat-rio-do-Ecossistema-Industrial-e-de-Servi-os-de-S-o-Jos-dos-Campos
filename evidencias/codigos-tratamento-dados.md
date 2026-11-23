@@ -546,7 +546,7 @@ mapa
 
 [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/projetoapi08/Observat-rio-do-Ecossistema-Industrial-e-de-Servi-os-de-S-o-Jos-dos-Campos/blob/main/notebooks/02_Base_PowerBI_SJC.ipynb)
 
-Junta a base RAIS tratada com a geocodificação do CEP, a região oficial, as descrições da CNAE 2.3 e as classificações pedidas pelo cliente, e gera `dados/RAIS_SJC_2024_PowerBI.csv`. Desde 23/11/2026 (DEC-023), as coordenadas vêm do CNEFE 2022, calculado no notebook 01b.
+Junta a base RAIS tratada com a geocodificação do CEP, a região oficial, as descrições da CNAE 2.3 e as classificações pedidas pelo cliente, e gera `dados/RAIS_SJC_2024_PowerBI.csv`. Na Sprint 3 ganhou as coordenadas do CNEFE 2022 (DEC-023) e a coluna Macroprocesso Logístico (DEC-024).
 
 
 **Observatório do Ecossistema Industrial e de Serviços de São José dos Campos** · Fatec SJC · API Logística
@@ -560,7 +560,7 @@ Este notebook gera `dados/RAIS_SJC_2024_PowerBI.csv`, a base usada pelo painel (
 | 3 | Classifica a região oficial pelo bairro e pelo setor do CEP | DEC-015 |
 | 4 | Marca pontos que ficam mais perto de outra região | DEC-017 |
 | 5 | Aplica as descrições oficiais da CNAE 2.3 | DEC-020 |
-| 6 | Cria tipo de atividade, intensidade tecnológica, porte SEBRAE e setor destaque | DEC-019, DEC-021 |
+| 6 | Cria tipo de atividade, intensidade tecnológica, porte SEBRAE, setor destaque e macroprocesso logístico | DEC-019, DEC-021, DEC-024 |
 | 7 | Grava a base com os nomes de colunas do painel e confere os totais | DEC-022 |
 
 **Como rodar no Google Colab:** *Ambiente de execução → Executar tudo*. A primeira célula baixa o repositório com os arquivos de entrada.
@@ -754,6 +754,7 @@ print("Subclasses na CNAE 2.3:", len(c23), "| linhas com descrição atualizada:
 - **Porte SEBRAE:** micro, pequena, média e grande pelo número de empregados (indústria e construção × comércio e serviços).
 - **Setor Destaque:** automotiva, aeroespacial e química e farmacêutica.
 - **Situação Vínculo:** padrão do painel (DEC-011): com vínculo = RAIS positiva.
+- **Macroprocesso Logístico (DEC-024, Sprint 3):** posição do estabelecimento na cadeia de suprimentos, pela divisão CNAE: suprimento → produção → distribuição atacadista → transporte e armazenagem → varejo → pós-venda → logística reversa, mais os serviços de apoio às empresas e os serviços ao consumidor e públicos. O número na frente ordena as etapas nos gráficos.
 
 ```python
 dsec = pd.read_excel(os.path.join(DADOS, "CNAE_RAIS_SJC_2024.xlsx"), sheet_name="dSecao", dtype=str).set_index("Secao")
@@ -799,6 +800,24 @@ destaque = df.Setor_Destaque.copy()
 destaque[div.isin(["20", "21"])] = "Química e farmacêutica"
 df["destaque"] = destaque.fillna("Demais setores")
 df["sit2"] = np.where(df.Ind_Rais_Negativa.astype(int) == 0, "Com vínculo", "Sem vínculo")
+
+def macroprocesso(cl):
+    """Etapa da cadeia de suprimentos pela classe CNAE (5 dígitos). DEC-024."""
+    if not isinstance(cl, str) or not cl.isdigit(): return "Não classificado"
+    d = int(cl[:2])
+    if d == 0: return "Não classificado"  # 00999 = atividade não informada
+    if cl in ("45200", "45439") or d in (33, 95): return "6. Pós-venda, manutenção e reparação"
+    if d <= 9 or d in (35, 36, 37): return "1. Suprimento (agro, extração, energia e água)"
+    if 10 <= d <= 32 or 41 <= d <= 43: return "2. Produção (indústria e construção)"
+    if d == 46: return "3. Distribuição atacadista"
+    if 49 <= d <= 53: return "4. Transporte e armazenagem"
+    if d in (45, 47): return "5. Varejo (venda ao consumidor)"
+    if d in (38, 39): return "7. Logística reversa (resíduos e reciclagem)"
+    if 58 <= d <= 82: return "8. Serviços de apoio às empresas"
+    if 55 <= d <= 56 or 84 <= d <= 99: return "9. Serviços ao consumidor e públicos"
+    return "Não classificado"
+
+df["macro"] = df.Classe.astype(str).str.zfill(5).map(macroprocesso)
 df.groupby("tipo_ativ").Vinculos_Ativos.apply(lambda s: s.astype(int).sum()).sort_values(ascending=False)
 ```
 
@@ -834,6 +853,7 @@ out = pd.DataFrame({
     "Tipo de Atividade": df.tipo_ativ,
     "Intensidade Tecnológica OCDE": df.ocde,
     "Setor Destaque": df.destaque,
+    "Macroprocesso Logístico": df.macro,
     "Tamanho Estabelecimento": cod,
     "Faixa de Porte": df.Faixa_Tamanho,
     "Porte SEBRAE": df.porte_sebrae,
@@ -854,7 +874,7 @@ out.to_csv(SAIDA, index=False, encoding="utf-8-sig")
 
 # Conferências finais (os mesmos números do relatório da Sprint 2)
 chk = pd.read_csv(SAIDA, dtype=str, encoding="utf-8-sig")
-assert chk.shape == (47339, 46)
+assert chk.shape == (47339, 47)
 assert chk["ID Estab"].is_unique
 assert chk["Qtd Vínculos Ativos"].astype(int).sum() == 206717
 print("Arquivo gravado:", SAIDA, chk.shape)
@@ -864,4 +884,4 @@ print("Com ponto no mapa:  {:.2%}".format(chk["Latitude"].notna().mean()))
 
 ---
 
-*Gerado a partir dos notebooks em 23/11/2026 (notebook 02 com as coordenadas do CNEFE, DEC-023).*
+*Gerado a partir dos notebooks em 23/11/2026 (notebook 02 com o CNEFE, DEC-023, e o macroprocesso logístico, DEC-024).*

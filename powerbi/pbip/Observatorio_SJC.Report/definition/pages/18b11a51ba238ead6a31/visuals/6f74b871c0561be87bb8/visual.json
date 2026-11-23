@@ -1,0 +1,48 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "6f74b871c0561be87bb8",
+  "position": {
+    "x": 1529,
+    "y": 0,
+    "z": 4000,
+    "height": 54,
+    "width": 391,
+    "tabOrder": 4000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Fontes: RAIS 2024 (MTE). Tipo de atividade e intensidade tecnológica OCDE pela divisão CNAE (DEC-021); macroprocesso logístico pela classe CNAE (DEC-024); região pela tabela CEP x Região (DEC-015)."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

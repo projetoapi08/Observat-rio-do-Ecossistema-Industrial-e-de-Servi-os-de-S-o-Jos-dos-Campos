@@ -221,6 +221,17 @@ Decisões numeradas pela equipe durante a Sprint 2 sem registro neste log (DEC-0
 | User Stories impactadas | US06 |
 | Status | Fechada (23/11/2026) na base única e na planilha do painel; o painel publicado muda depois de atualizar e republicar no Power BI Desktop. |
 
+### DEC-024 — Macroprocessos produtivos pela etapa da cadeia de suprimentos
+
+| Campo | Descrição |
+|---|---|
+| Problema identificado | O cliente pergunta quais são os principais macroprocessos produtivos das empresas da região, mas a RAIS não informa os processos internos de cada empresa, só a atividade principal (CNAE). |
+| Decisão adotada | Classificar cada estabelecimento pela etapa da cadeia de suprimentos em que atua, a partir da classe CNAE: 1. Suprimento (divisões 01–09 e 35–37); 2. Produção (10–32 e 41–43); 3. Distribuição atacadista (46); 4. Transporte e armazenagem (49–53); 5. Varejo (45 e 47); 6. Pós-venda, manutenção e reparação (33, 95 e classes 45200 e 45439); 7. Logística reversa (38–39); 8. Serviços de apoio às empresas (58–82); 9. Serviços ao consumidor e públicos (55–56 e 84–99). Classe 00999 (atividade não informada) fica como "Não classificado". |
+| Justificativa | Responde à pergunta do ponto de vista da logística, com uma regra fixa, reproduzível e aplicada igual na base única (notebook 02) e no painel (coluna calculada). |
+| Impacto | Nova coluna Macroprocesso Logístico na base única (47 colunas) e no painel (página Regiões e Tecnologia). Produção e varejo somam 40,5% dos vínculos; distribuição atacadista e transporte e armazenagem, 8,3%. Cada estabelecimento conta numa só etapa, pela atividade principal: uma fábrica com transporte próprio conta só em Produção. |
+| User Stories impactadas | US08, US11 |
+| Status | Fechada (23/11/2026) |
+
 ## 3. Fechamento da US03
 
 Com as cinco decisões da Sprint 1 (DEC-001 a DEC-005), o critério de aceite da US03 (“cada inconsistência encontrada está registrada no Log de Decisões com o tratamento adotado”) foi atendido. Status da US03 no Backlog do Produto: Concluído.

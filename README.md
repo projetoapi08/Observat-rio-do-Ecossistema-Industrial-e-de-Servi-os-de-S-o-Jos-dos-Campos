@@ -6,6 +6,8 @@ Projeto baseado na metodologia ágil SCRUM, procurando desenvolver a Proatividad
 >
 > Painel publicado: [🌐 abrir no Power BI](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9) (abre no navegador, sem login)
 >
+> Respostas aos requisitos do cliente: [✅ cada pergunta e critério, com números e onde ver no painel](docs/Respostas_Requisitos_Cliente.md)
+>
 > Vídeos do projeto: [▶️ canal LogMulti no YouTube](https://www.youtube.com/@LogMulti)
 >
 > Documentação: [📖 pasta docs/](docs/)
@@ -128,7 +130,8 @@ São José dos Campos é um polo industrial, tecnológico e de serviços do Vale
 | Backlog do Produto | [02-Backlog-do-Produto.docx](docs/02-Backlog-do-Produto.docx) | [02-Backlog-do-Produto.md](docs/02-Backlog-do-Produto.md) |
 | Backlog das Sprints 1, 2 e 3 | [03](docs/03-Backlog-Sprint-1.docx) · [08](docs/08-Backlog-Sprint-2.docx) · [09](docs/09-Backlog-Sprint-3.docx) | [Sprint 2](docs/08-Backlog-Sprint-2.md) · [Sprint 3](docs/09-Backlog-Sprint-3.md) |
 | DoR e DoD | [04-DoR-Checklist.docx](docs/04-DoR-Checklist.docx) · [05-DoD.docx](docs/05-DoD.docx) | — |
-| Log de Decisões de Dados (DEC-001 a DEC-023) | [06-Decisoes-de-Dados.docx](docs/06-Decisoes-de-Dados.docx) | [06-Decisoes-de-Dados.md](docs/06-Decisoes-de-Dados.md) |
+| Log de Decisões de Dados (DEC-001 a DEC-024) | [06-Decisoes-de-Dados.docx](docs/06-Decisoes-de-Dados.docx) | [06-Decisoes-de-Dados.md](docs/06-Decisoes-de-Dados.md) |
+| **Respostas aos requisitos do cliente** (perguntas, funcionalidades e RN.P) | — | [Respostas_Requisitos_Cliente.md](docs/Respostas_Requisitos_Cliente.md) |
 | Códigos de tratamento de dados (Colab) | — | [codigos-tratamento-dados.md](evidencias/codigos-tratamento-dados.md) · [links do Colab](evidencias/link-google-colab.md) |
 | Relatórios das Sprints | — | [Sprint 1](docs/RELATORIO_SPRINT_1.md) · [Sprint 2](docs/RELATORIO_SPRINT_2.md) · [Sprint 3](docs/RELATORIO_SPRINT_3.md) |
 | Relatórios Técnicos | [Sprint 1](docs/07-Relatorio-Tecnico-Sprint-1.docx) · [Sprint 2](docs/10-Relatorio-Tecnico-Sprint-2.docx) | — |

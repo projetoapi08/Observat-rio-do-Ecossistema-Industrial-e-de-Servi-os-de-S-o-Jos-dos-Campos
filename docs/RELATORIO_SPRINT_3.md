@@ -20,13 +20,14 @@ Consolidar o observatório como entrega final: um painel único publicado, docum
 |---|---|
 | User Stories planejadas | 4: US06 e US08 (herdadas da Sprint 2), US10 e US11 |
 | Situação | US06 concluída nos dados (falta republicar o painel); US08 e US11 parciais; US10 não iniciada (sem fonte de dados) |
-| Painel Power BI | Mesma versão publicada na Sprint 2, com 4 páginas: KPIs e Mapa, Setor de Atividades (CNAE), PIB e Emprego, Notas Metodológicas — [publicado online](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9) |
+| Painel Power BI | Link publicado com 4 páginas (versão da Sprint 2). O `.pbip` do repositório tem 5 páginas, com a nova Regiões e Tecnologia, e entra no link ao republicar — [publicado online](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9) |
 | Estabelecimentos na base | 47.339 (15.058 com vínculos ativos em 31/12/2024) |
 | Vínculos ativos | 206.717 |
 | Estabelecimentos com ponto no mapa | 47.334 (99,99%) com as coordenadas do CNEFE 2022 (DEC-023); meta de 90% atingida. Antes: 37.084 (78,3%) |
 | Vínculos ativos com ponto no mapa | 206.700 (99,99%). Antes: 146.702 (71,0%) |
 | Estabelecimentos com região oficial | 47.334 (99,99%) |
-| Decisões de dados | 23 registradas (DEC-001 a DEC-023); 3 abertas (DEC-004, DEC-015, DEC-022) |
+| Decisões de dados | 24 registradas (DEC-001 a DEC-024); 3 abertas (DEC-004, DEC-015, DEC-022) |
+| Requisitos do cliente | 7 perguntas respondidas, 8 funcionalidades e 6 requisitos técnicos atendidos ([respostas](Respostas_Requisitos_Cliente.md)) |
 | Divulgação | Canal [LogMulti](https://www.youtube.com/@LogMulti) criado para o vídeo de apresentação do projeto |
 
 ## 3. Backlog da Sprint 3
@@ -43,7 +44,7 @@ Consolidar o observatório como entrega final: um painel único publicado, docum
 - **US06:** na Sprint 3, as coordenadas passaram a vir do CNEFE 2022 do IBGE (DEC-023), já calculadas no notebook de geocodificação (01b) e que não estavam sendo usadas. Com isso, 47.334 dos 47.339 estabelecimentos (99,99%) têm ponto no mapa, no nível do CEP, contra 78,3% antes; 329 dos 331 pontos em bairros homônimos (DEC-017) foram corrigidos. A troca foi feita na base única e na planilha que o mapa do painel lê; o link publicado só mostra o resultado depois de o painel ser atualizado e republicado no Power BI Desktop.
 - **US08:** o painel mostra quais setores concentram estabelecimentos e empregos em 2024, mas "em alta" pede comparação entre anos, e só a RAIS 2024 foi processada.
 - **US10:** a RAIS Estabelecimentos não tem data de admissão. A fonte com essa informação é a RAIS Vínculos (microdados por vínculo), que não faz parte do escopo atual.
-- **US11:** as 4 páginas estão num só painel publicado, com fontes e limites explicados na página de Notas Metodológicas. Falta a apresentação ao cliente e a aprovação, que acontecem na Feira de Soluções.
+- **US11:** o painel reúne tudo num só lugar, com fontes e limites explicados na página de Notas Metodológicas. Na Sprint 3 ganhou a página Regiões e Tecnologia e um documento que liga cada requisito do cliente a uma resposta ([Respostas_Requisitos_Cliente.md](Respostas_Requisitos_Cliente.md)). Falta a apresentação ao cliente e a aprovação, que acontecem na Feira de Soluções.
 
 ## 4. Entregas e evidências
 
@@ -52,12 +53,13 @@ Consolidar o observatório como entrega final: um painel único publicado, docum
 - `MVP/sp3.md`: MVP da Sprint 3 no modelo da Fatec, com resultados e métricas.
 - `docs/RELATORIO_SPRINT_3.md`: este relatório.
 - `README.md`: status final das sprints, link do painel e do canal do YouTube.
-- `powerbi/README.md`: versão do painel usada na entrega e lista de melhorias.
+- `powerbi/README.md`: versão do painel usada na entrega, passo a passo para republicar e lista de melhorias.
+- `docs/Respostas_Requisitos_Cliente.md`: resposta a cada pergunta, funcionalidade, resultado esperado e requisito técnico do documento do cliente, do ponto de vista da logística.
 
 ### 4.2 Painel e dados
 
-- Painel publicado (mesmo link da Sprint 2) e projeto `powerbi/pbip/Observatorio_SJC.pbip`, com as fontes lidas pelo parâmetro `PastaFontes`, com PDF das 4 páginas em `powerbi/Powerbi_API_Sprint2.pdf`.
-- Base única `dados/RAIS_SJC_2024_PowerBI.csv` (47.339 linhas, 46 colunas) e notebooks 01 e 02 para refazer todo o tratamento com uma nova RAIS.
+- Painel publicado (mesmo link da Sprint 2) e projeto `powerbi/pbip/Observatorio_SJC.pbip`, com as fontes lidas pelo parâmetro `PastaFontes`, com PDF da versão publicada em `powerbi/Powerbi_API_Sprint2.pdf`. Novidades no `.pbip`: página Regiões e Tecnologia, três colunas calculadas (tipo de atividade, intensidade tecnológica OCDE e macroprocesso logístico) e aba PIB anual incluída em `powerbi/fontes/`.
+- Base única `dados/RAIS_SJC_2024_PowerBI.csv` (47.339 linhas, 47 colunas, com a nova coluna Macroprocesso Logístico) e notebooks 01, 01b e 02 para refazer todo o tratamento com uma nova RAIS.
 
 ### 4.3 Vídeo e divulgação
 
@@ -67,7 +69,9 @@ Consolidar o observatório como entrega final: um painel único publicado, docum
 ### 4.4 Evidências a anexar
 
 - [x] Painel publicado no Power BI ([link](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9))
-- [x] Prints das 4 páginas do painel (`evidencias/sprint2/`, mesma versão)
+- [x] Prints das 4 páginas da versão publicada (`evidencias/sprint2/`)
+- [ ] Prints das 5 páginas depois de republicar (`evidencias/sprint3/`)
+- [x] Respostas aos requisitos do cliente (`docs/Respostas_Requisitos_Cliente.md`)
 - [x] Notebook da geocodificação dos CEPs (`notebooks/01b_Geocodificacao_CEPs_SJC.ipynb`) e coordenadas pelo CNEFE 2022 (`dados/entrada/geo_ceps_sjc_cnefe.csv`)
 - [x] Códigos de tratamento de dados dos notebooks 01, 01b e 02, com links para abrir no Colab (`evidencias/codigos-tratamento-dados.md`)
 - [x] Canal do projeto no YouTube ([LogMulti](https://www.youtube.com/@LogMulti))
@@ -85,7 +89,6 @@ Consolidar o observatório como entrega final: um painel único publicado, docum
 | Região Norte (DEC-015) | 1.024 estabelecimentos com região de confiabilidade média | Pedir à Prefeitura, via cliente, a tabela bairro → região ou o shapefile |
 | Identificação nominal (DEC-004) | Rankings só por setor | Mantido; depende de base identificada do cliente |
 | Série histórica e data de admissão | US08 e US10 não atendidas | Decidir com o cliente na Feira: nova fonte ou critério revisado |
-| Aba "PIB anual" ausente em `powerbi/fontes/` | A tabela `PIB anual` não atualiza a partir do repositório (as outras 5 atualizam) | Enviar para `fontes/` a planilha de cruzamento completa usada no painel |
 | DEC-007, DEC-010 e DEC-012 | Decisões citadas sem registro no log | Transcrever para `docs/06-Decisoes-de-Dados.docx` |
 
 ## 6. Melhorias sugeridas
@@ -95,7 +98,7 @@ Consolidar o observatório como entrega final: um painel único publicado, docum
 | 1 | ✅ **Feito em 23/11 (DEC-023).** Coordenadas do mapa pelo CNEFE 2022 (IBGE) na base única e na planilha do mapa | 47.334 dos 47.339 estabelecimentos (99,99%) com ponto, no nível do CEP | Concluído; falta republicar o painel |
 | 2 | Trocar a fonte da tabela RAIS_SJC do painel pela base única (DEC-022). Os homônimos (DEC-017) já foram resolvidos pela DEC-023 | Painel e base com a mesma região | Médio |
 | 3 | ✅ **Feito em 23/11 no `.pbip`.** Corrigir os ajustes visuais da página 1 (cartões com "Mil", título "Distruibuição", subtítulos); falta republicar | Números lidos corretamente (47.339, não "47,339 Mil") | Concluído |
-| 4 | Criar uma página "Regiões" com vínculos e estabelecimentos por região, tipo de atividade, intensidade tecnológica (OCDE) e porte SEBRAE | Responde aos requisitos do cliente com colunas que já existem (DEC-021) | Médio |
+| 4 | ✅ **Feito em 23/11 no `.pbip`.** Página "Regiões e Tecnologia", com região, tipo de atividade, intensidade tecnológica (OCDE) e macroprocesso logístico (DEC-024) | Responde às perguntas 2 a 5 do cliente dentro do painel | Concluído; falta republicar |
 | 5 | Processar a RAIS 2022 e 2023 pelo notebook 01 | Evolução dos setores (US08) | Médio |
 | 6 | Revisar o critério da US10 com o cliente: RAIS Vínculos (mês de admissão) ou "estabelecimentos com atividade no ano" | US10 com fonte ou critério registrado | Baixo para decidir |
 | 7 | ✅ **Feito em 23/11.** Trocar os caminhos `C:\Users\...` das fontes pelo parâmetro de pasta `PastaFontes` | Qualquer integrante ou o cliente atualiza o painel | Concluído |

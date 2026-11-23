@@ -1,6 +1,6 @@
 # Dados do Observatório
 
-Bases tratadas do projeto. A principal é **`RAIS_SJC_2024_PowerBI.csv`**, a base única que alimenta o painel: uma linha por estabelecimento de São José dos Campos (47.339 linhas, 46 colunas), gerada pelo notebook [`notebooks/02_Base_PowerBI_SJC.ipynb`](../notebooks/02_Base_PowerBI_SJC.ipynb).
+Bases tratadas do projeto. A principal é **`RAIS_SJC_2024_PowerBI.csv`**, a base única que alimenta o painel: uma linha por estabelecimento de São José dos Campos (47.339 linhas, 47 colunas), gerada pelo notebook [`notebooks/02_Base_PowerBI_SJC.ipynb`](../notebooks/02_Base_PowerBI_SJC.ipynb).
 
 ## Arquivos
 
@@ -58,6 +58,7 @@ Colunas marcadas com ⭐ já são usadas pelos visuais do painel e mantêm o nom
 | Tipo de Atividade | texto | Categoria do cliente: manufatura, tecnologia, logística, serviços especializados, comércio etc. (DEC-021) | Manufatura (indústria de transformação) |
 | Intensidade Tecnológica OCDE | texto | Alta, Média-alta, Média, Média-baixa ou Não se aplica | Alta |
 | Setor Destaque | texto | Automotiva, aeroespacial, química e farmacêutica ou Demais setores | Aeroespacial |
+| Macroprocesso Logístico | texto | Etapa da cadeia de suprimentos pela classe CNAE (DEC-024): 1. Suprimento, 2. Produção, 3. Distribuição atacadista, 4. Transporte e armazenagem, 5. Varejo, 6. Pós-venda, 7. Logística reversa, 8. Serviços de apoio às empresas, 9. Serviços ao consumidor e públicos | 9. Serviços ao consumidor e públicos |
 | Tamanho Estabelecimento | inteiro | Código RAIS da faixa de vínculos (1 a 10); use para ordenar a Faixa de Porte | 2 |
 | Faixa de Porte ⭐ | texto | Vínculos ativos em 31/12: Zero, 1 a 4, 5 a 9 … 1.000 ou mais | 1 a 4 |
 | Porte SEBRAE | texto | Micro, Pequena, Média, Grande ou Sem vínculos | Micro |
