@@ -1,4 +1,4 @@
-# Fórmulas do painel Power BI — Sprint 2
+# Fórmulas do painel Power BI — versão final
 
 > Versão em Markdown de [`Formulas_PowerBI_Sprint2.docx`](Formulas_PowerBI_Sprint2.docx). O código abaixo foi copiado do próprio modelo publicado ([`powerbi/pbip/`](../powerbi/pbip/), tabela `RAIS_SJC`), então é exatamente o que o painel usa. Painel online: [abrir no Power BI](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9).
 
@@ -98,6 +98,102 @@ Acima de 1, o setor gera mais valor do que a sua fatia de empregos. Resultados: 
 |---|---|---|
 | `RAIS_SJC[CEP Estab]` | `CEP x Região[CEP]` | Muitos para um — dá a região e a latitude/longitude de cada estabelecimento |
 | `Cruzamento[vab_real_2023]` | `VAB setorial[vab_real_2023]` | Criada automaticamente pelo Power BI sobre uma coluna de valor; conferir na Sprint 3 |
+
+## 5. Sprint 3: colunas da página Regiões e Tecnologia
+
+São colunas calculadas em DAX na tabela RAIS_SJC. Elas partem da coluna Classe Chave (classe CNAE com 5 dígitos) e seguem a mesma regra da base única (notebook 02). As duas versões foram conferidas: dão a mesma categoria para todos os 47.339 estabelecimentos.
+
+**Tipo de Atividade**
+
+```
+Tipo de Atividade =
+VAR d = IFERROR ( VALUE ( LEFT ( 'RAIS_SJC'[Classe Chave], 2 ) ), 0 )
+RETURN
+    SWITCH (
+        TRUE (),
+        d = 0, "Não informado",
+        d >= 10 && d <= 33, "Manufatura (indústria de transformação)",
+        ( d >= 58 && d <= 63 ) || d = 72, "Tecnologia, informação e P&D",
+        d >= 49 && d <= 53, "Logística e transporte",
+        ( d >= 64 && d <= 66 ) || ( d >= 69 && d <= 75 ), "Serviços especializados",
+        d >= 45 && d <= 47, "Comércio",
+        d >= 41 && d <= 43, "Construção",
+        d >= 77 && d <= 82, "Serviços administrativos e de apoio",
+        d >= 85 && d <= 88, "Saúde e educação",
+        ( d >= 5 && d <= 9 ) || ( d >= 35 && d <= 39 ), "Extração e utilidades",
+        d <= 3, "Agropecuária",
+        d = 84, "Administração pública",
+        "Outros serviços"
+    )
+```
+
+Pega os dois primeiros dígitos da classe CNAE (a divisão) e aplica as categorias do documento de requisitos do cliente. Exemplo: divisões 10 a 33 viram "Manufatura (indústria de transformação)". A classe 00999 (atividade não informada) fica como "Não informado".
+
+**Intensidade Tecnológica OCDE**
+
+```
+Intensidade Tecnológica OCDE =
+VAR d = IFERROR ( VALUE ( LEFT ( 'RAIS_SJC'[Classe Chave], 2 ) ), 0 )
+VAR g = LEFT ( 'RAIS_SJC'[Classe Chave], 3 )
+RETURN
+    IF (
+        d >= 10 && d <= 33,
+        SWITCH (
+            TRUE (),
+            d IN { 21, 26 } || g = "304", "Alta",
+            d IN { 20, 27, 28, 29 } || g IN { "255", "325" } || ( d = 30 && NOT ( g IN { "301", "304" } ) ), "Média-alta",
+            d IN { 22, 23, 24, 32, 33 } || g = "301", "Média",
+            "Média-baixa"
+        ),
+        SWITCH (
+            TRUE (),
+            d = 72, "Alta",
+            d IN { 62, 63 }, "Média-alta",
+            "Não se aplica"
+        )
+    )
+```
+
+Usa a divisão e o grupo (três primeiros dígitos) da classe CNAE e a taxonomia da OCDE (Galindo-Rueda e Verger, 2016). Só a indústria e os serviços de TI e P&D recebem um nível; os demais ficam em "Não se aplica". Resultado: alta e média-alta somam 28.804 vínculos (13,9%).
+
+**Macroprocesso Logístico**
+
+```
+Macroprocesso Logístico =
+VAR d = IFERROR ( VALUE ( LEFT ( 'RAIS_SJC'[Classe Chave], 2 ) ), 0 )
+VAR cl = 'RAIS_SJC'[Classe Chave]
+RETURN
+    SWITCH (
+        TRUE (),
+        d = 0, "Não classificado",
+        cl IN { "45200", "45439" } || d IN { 33, 95 }, "6. Pós-venda, manutenção e reparação",
+        d <= 9 || d IN { 35, 36, 37 }, "1. Suprimento (agro, extração, energia e água)",
+        ( d >= 10 && d <= 32 ) || ( d >= 41 && d <= 43 ), "2. Produção (indústria e construção)",
+        d = 46, "3. Distribuição atacadista",
+        d >= 49 && d <= 53, "4. Transporte e armazenagem",
+        d IN { 45, 47 }, "5. Varejo (venda ao consumidor)",
+        d IN { 38, 39 }, "7. Logística reversa (resíduos e reciclagem)",
+        d >= 58 && d <= 82, "8. Serviços de apoio às empresas",
+        ( d >= 55 && d <= 56 ) || ( d >= 84 && d <= 99 ), "9. Serviços ao consumidor e públicos",
+        "Não classificado"
+    )
+```
+
+Classifica cada estabelecimento pela etapa da cadeia de suprimentos (DEC-024). A ordem das linhas importa: a pós-venda (divisões 33 e 95 e as classes de reparação de veículos) é testada antes da produção e do varejo. O número na frente de cada etapa mantém a ordem da cadeia nos gráficos.
+
+## 6. Sprint 3: parâmetro de pasta das fontes
+
+```
+PastaFontes = "C:\Observatorio-SJC\powerbi\fontes\"
+
+Fonte = Csv.Document(File.Contents(PastaFontes & "RAIS_SJC.csv"), ...)
+```
+
+O parâmetro guarda a pasta das planilhas, e as 6 consultas do Power Query montam o caminho com PastaFontes & "nome do arquivo". Quem baixar o repositório em outra pasta muda só o parâmetro, em Página Inicial → Transformar dados → Editar parâmetros.
+
+## 7. Sprint 3: coordenadas do mapa
+
+O mapa usa as colunas Latitude e Longitude da tabela CEP x Região. Desde a Sprint 3 elas vêm do CNEFE 2022 do IBGE (DEC-023); não há fórmula no painel, só os valores da planilha.
 
 ## Resumo
 

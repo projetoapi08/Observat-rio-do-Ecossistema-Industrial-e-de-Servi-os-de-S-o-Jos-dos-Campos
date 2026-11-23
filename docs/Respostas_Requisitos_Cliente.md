@@ -206,7 +206,7 @@ O documento do cliente fala em "engenheiro de produção". Como o projeto é do 
 | Resultado | Situação | Onde |
 |---|---|---|
 | Visualizações e dashboards sobre o perfil produtivo regional | Entregue | [Painel publicado](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9) e [`powerbi/`](../powerbi/) |
-| Relatório técnico (fontes, metodologia e análises) | Entregue | Relatórios técnicos das Sprints 1 e 2, [Relatório da Sprint 3](RELATORIO_SPRINT_3.md), [Log de Decisões](06-Decisoes-de-Dados.md) e este documento (análises) |
+| Relatório técnico (fontes, metodologia e análises) | Entregue | [Relatório Técnico final](11-Relatorio-Tecnico-Sprint-3.docx), [Anexo 8 final](Relatorio_Sprint3_Anexo8.docx), relatórios técnicos das Sprints 1 e 2, [Relatório da Sprint 3](RELATORIO_SPRINT_3.md), [Log de Decisões](06-Decisoes-de-Dados.md) e este documento (análises) |
 | Repositório com dados organizados e documentação | Entregue | Este repositório: [`dados/`](../dados/), [`notebooks/`](../notebooks/), [`docs/`](./), [`evidencias/`](../evidencias/) |
 | Apresentação em evento acadêmico (Feira de Soluções) | 03/12/2026 | Vídeo no canal [LogMulti](https://www.youtube.com/@LogMulti) |
 

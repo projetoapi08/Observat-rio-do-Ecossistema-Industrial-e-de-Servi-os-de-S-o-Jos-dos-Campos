@@ -1,10 +1,10 @@
-# Relatório do Power BI — Sprint 2
+# Relatório do Power BI — versão final
 
-> Versão em Markdown de [`Relatorio_PowerBI_Sprint2.docx`](Relatorio_PowerBI_Sprint2.docx). Painel LogMulti, Observatório de São José dos Campos, versão de 26/10/2026.
+> Versão em Markdown de [`Relatorio_PowerBI_Sprint2.docx`](Relatorio_PowerBI_Sprint2.docx). Painel LogMulti, Observatório de São José dos Campos, versão final de 23/11/2026 (Sprint 3).
 >
 > **Painel online:** [abrir no Power BI](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9) · Arquivo: [`powerbi/pbip/`](../powerbi/pbip/) · [PDF](../powerbi/Powerbi_API_Sprint2.pdf) · Código das medidas: [`Formulas_PowerBI_Sprint2.md`](Formulas_PowerBI_Sprint2.md)
 
-O painel tem 4 páginas: **KPIs e Mapa**, **Setor de Atividades (CNAE)**, **PIB e Emprego** e **Notas Metodológicas**.
+O painel tem 5 páginas: **KPIs e Mapa**, **Setor de Atividades (CNAE)**, **PIB e Emprego**, **Regiões e Tecnologia** (nova na Sprint 3) e **Notas Metodológicas**. O link publicado mostra a versão de 4 páginas até o painel ser atualizado e republicado no Power BI Desktop.
 
 ## 1. De onde vêm os dados
 
@@ -51,7 +51,7 @@ Cada linha da base é 1 estabelecimento, e o filtro define quais entram na conta
 
 - **Cartões:** total de estabelecimentos (47.339), sem vínculo (30.523), com vínculo (16.816) e total de vínculos ativos (206.717), cada um com uma frase dizendo o que mede.
 - **Percentuais e pizza:** 64,48% sem vínculo e 35,52% com vínculo.
-- **Mapa:** cada ponto é o local de um CEP, colorido pela situação do vínculo, usando a latitude e a longitude da geocodificação do grupo. Muitos estabelecimentos dividem o mesmo CEP e alguns CEPs são genéricos, por isso a localização é aproximada. Estabelecimentos sem coordenadas não aparecem no mapa.
+- **Mapa:** cada ponto é o local de um CEP, colorido pela situação do vínculo, usando a latitude e a longitude da geocodificação do grupo. Muitos estabelecimentos dividem o mesmo CEP e alguns CEPs são genéricos, por isso a localização é aproximada. Estabelecimentos sem coordenadas não aparecem no mapa. Na Sprint 3, a latitude e a longitude da tabela CEP x Região passaram a vir do CNEFE 2022 do IBGE: 3.676 dos 3.677 CEPs e 99,99% dos estabelecimentos têm ponto (DEC-023).
 - **Filtros:** setor (Seção CNAE), porte (vínculos ativos), tipo de estabelecimento e região. Ao lado do mapa, uma lista para escolher entre "Com vínculo" e "Sem vínculo".
 - **Rodapé:** Base: RAIS Estabelecimentos 2024 (linha) · Setor: Seção CNAE 2.0.
 
@@ -123,7 +123,19 @@ Reúne as regras do painel em cinco blocos:
 
 Traz também uma linha com a base e a fonte dos dados.
 
-## 9. Perguntas que podem aparecer
+## 9. Página 5 — Regiões e Tecnologia (Sprint 3)
+
+Página nova da Sprint 3. Responde às perguntas 2 a 5 do documento de requisitos do cliente: onde estão os empregos, que tipo de atividade predomina, quais são os macroprocessos e qual o nível tecnológico. Um filtro de região no topo filtra todos os gráficos da página.
+
+- **Vínculos ativos por região oficial:** Barras com os empregos formais de cada região, pela tabela CEP x Região. Sul e Centro concentram cerca de um quarto dos empregos cada.
+- **Vínculos por tipo de atividade:** Categorias do documento do cliente: comércio, manufatura, serviços administrativos, saúde e educação, logística e transporte, tecnologia e P&D e outras. A soma dá 206.717.
+- **Vínculos por intensidade tecnológica (OCDE):** Alta, média-alta, média e média-baixa para a indústria e para TI e P&D; os demais setores ficam em "Não se aplica". Alta e média-alta somam 28.804 vínculos (13,9%).
+- **Vínculos por macroprocesso logístico:** Etapa da cadeia de suprimentos de cada estabelecimento, de 1. Suprimento a 7. Logística reversa, mais os serviços de apoio e ao consumidor (DEC-024). O número na frente mantém a ordem da cadeia no gráfico.
+- **Caixa "O que isso mostra para a gestão":** Três leituras: a indústria fica no Leste e no Sudeste; 69% dos empregos da indústria são de alta ou média-alta tecnologia; e atacado e transporte e armazenagem somam 8,3% dos empregos, com o Sul concentrando 52% do atacado e 35% do transporte.
+
+Os gráficos usam três colunas calculadas novas na tabela RAIS_SJC: Tipo de Atividade, Intensidade Tecnológica OCDE e Macroprocesso Logístico. As fórmulas estão no documento de fórmulas do painel.
+
+## 10. Perguntas que podem aparecer
 
 | Pergunta | Resposta |
 |---|---|
@@ -136,3 +148,5 @@ Traz também uma linha com a base e a fonte dos dados.
 | Por que 204.331 na página 3 e 206.717 na página 1? | O cruzamento usa só CNPJ e sem Administração pública. O cartão inclui CAEPF (1.419), CNO (855) e Administração pública (112). |
 | Como foram definidas as regiões? | Pela divisão oficial da Prefeitura, usando o bairro do CEP de cada estabelecimento. Parte dos CEPs é genérica, por isso a região é aproximada. |
 | Dá para falar em setores em alta? | Não. A base só tem 2024, então não há tendência. Falamos em "setores com mais vínculos em 2024". |
+| O que é macroprocesso logístico? | É a etapa da cadeia de suprimentos em que o estabelecimento atua, pela sua atividade principal: suprimento, produção, distribuição atacadista, transporte e armazenagem, varejo, pós-venda e logística reversa (DEC-024). A RAIS não informa os processos internos das empresas, por isso a classificação é pela atividade. |
+| Por que o mapa mudou na Sprint 3? | Porque as coordenadas passaram a vir do CNEFE 2022 do IBGE, o cadastro de endereços do Censo. Agora 99,99% dos estabelecimentos têm ponto, no nível do CEP, contra 78,3% antes (DEC-023). |

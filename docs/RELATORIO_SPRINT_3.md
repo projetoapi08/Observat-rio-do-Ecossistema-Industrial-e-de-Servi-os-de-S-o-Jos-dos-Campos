@@ -54,6 +54,8 @@ Consolidar o observatório como entrega final: um painel único publicado, docum
 - `docs/RELATORIO_SPRINT_3.md`: este relatório.
 - `README.md`: status final das sprints, link do painel e do canal do YouTube.
 - `powerbi/README.md`: versão do painel usada na entrega, passo a passo para republicar e lista de melhorias.
+- `docs/11-Relatorio-Tecnico-Sprint-3.docx` e `docs/Relatorio_Sprint3_Anexo8.docx`: Relatório Técnico e Relatório de Desenvolvimento (Anexo 8) finais.
+- `docs/02-Backlog-do-Produto`, `docs/09-Backlog-Sprint-3`, `docs/00-README`, `docs/01-Visao-e-Escopo` e os documentos do Power BI atualizados para a versão final.
 - `docs/Respostas_Requisitos_Cliente.md`: resposta a cada pergunta, funcionalidade, resultado esperado e requisito técnico do documento do cliente, do ponto de vista da logística.
 
 ### 4.2 Painel e dados
@@ -77,7 +79,9 @@ Consolidar o observatório como entrega final: um painel único publicado, docum
 - [x] Canal do projeto no YouTube ([LogMulti](https://www.youtube.com/@LogMulti))
 - [ ] Link direto do vídeo de apresentação publicado no canal
 - [ ] Apresentação da Feira de Soluções (`docs/`)
-- [ ] Relatório de Desenvolvimento da Sprint 3 (modelo Anexo 8 da Fatec, `docs/Relatorio_Sprint3_Anexo8.docx`)
+- [x] Relatório Técnico da Sprint 3, versão final (`docs/11-Relatorio-Tecnico-Sprint-3.docx`)
+- [x] Relatório de Desenvolvimento da Sprint 3, versão final (modelo Anexo 8 da Fatec, `docs/Relatorio_Sprint3_Anexo8.docx`)
+- [x] Documentação atualizada para a versão final: Backlog do Produto, Backlog da Sprint 3, 00-README, Visão e Escopo, relatório e fórmulas do Power BI
 
 ## 5. Pendências e riscos
 

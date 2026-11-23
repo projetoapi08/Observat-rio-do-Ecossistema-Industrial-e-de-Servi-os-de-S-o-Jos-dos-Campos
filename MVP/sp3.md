@@ -126,6 +126,7 @@
 ## 📂 Anexos / Evidências
 
 - Relatório da Sprint 3: [`docs/RELATORIO_SPRINT_3.md`](../docs/RELATORIO_SPRINT_3.md)
+- **Relatório Técnico final:** [`docs/11-Relatorio-Tecnico-Sprint-3.docx`](../docs/11-Relatorio-Tecnico-Sprint-3.docx) · **Relatório de Desenvolvimento (Anexo 8) final:** [`docs/Relatorio_Sprint3_Anexo8.docx`](../docs/Relatorio_Sprint3_Anexo8.docx)
 - **Respostas aos requisitos do cliente** (7 perguntas, funcionalidades, resultados e RN.P): [`docs/Respostas_Requisitos_Cliente.md`](../docs/Respostas_Requisitos_Cliente.md)
 - Backlog da Sprint 3: [`docs/09-Backlog-Sprint-3.md`](../docs/09-Backlog-Sprint-3.md)
 - Log de Decisões de Dados: [`docs/06-Decisoes-de-Dados.md`](../docs/06-Decisoes-de-Dados.md)
