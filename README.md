@@ -87,9 +87,6 @@ São José dos Campos é um polo industrial, tecnológico e de serviços do Vale
 | 10 | Baixa | **US10** — Como gestor público, quero acompanhar as contratações mais recentes registradas na RAIS, para que eu possa monitorar a dinâmica do mercado de trabalho local. | 5 | 3 |
 | 11 | Alta | **US11** — Como cliente (CADI / Secretaria de Desenvolvimento Econômico), quero um dashboard consolidado no Power BI, nos moldes do Observatório da Inovação RS, acompanhado do relatório técnico final e da apresentação, para que eu possa usar a ferramenta na tomada de decisão. | 13 | 3 |
 
-> Estimativa em story points (escala de Fibonacci). Critérios de aceite e situação de cada User Story no [Backlog do Produto](docs/final/02-Backlog-do-Produto.md).
-
-
 # Competências desenvolvidas
 
 * Documentação de projeto ágil (backlog do produto e das sprints, DoR, DoD, log de decisões);
@@ -109,58 +106,6 @@ São José dos Campos é um polo industrial, tecnológico e de serviços do Vale
 | 02                | 26/10/2026 | Concluída | [MVP](MVP/sp2.md) · [Relatório](docs/sprint-2/RELATORIO_SPRINT_2.md) |
 | 03                | 23/11/2026 | Entregue  | [MVP](MVP/sp3.md) · [Relatório](docs/sprint-3/RELATORIO_SPRINT_3.md) |
 | Feira de Soluções | 03/12/2026 | A fazer   | [Vídeo](https://www.youtube.com/@LogMulti) |
-
-
-# Documentação e estrutura do repositório
-
-```
-.
-├── README.md
-├── MVP/          MVP de cada sprint (sp1.md, sp2.md, sp3.md)
-├── docs/         Documentação (.docx e .md), com índice em docs/README.md
-│   ├── final/        documentos do projeto na versão final: Visão e Escopo, Backlog do Produto, DoR, DoD,
-│   │                 Log de Decisões, respostas aos requisitos do cliente, relatório e fórmulas do Power BI,
-│   │                 guia de atualização e Manual de Replicação
-│   ├── sprint-1/     backlog, relatório técnico, Anexo 8 e relatório da Sprint 1
-│   ├── sprint-2/     backlog, relatório técnico, Anexo 8 e relatório da Sprint 2
-│   └── sprint-3/     backlog, relatório técnico, Anexo 8 e relatório da Sprint 3 (relatórios finais da entrega)
-├── dados/        Bases tratadas prontas para o Power BI, com dicionário de dados
-│   ├── entrada/      arquivos de entrada do notebook 02
-│   └── referencia/   tabela bairro → região e CNAE 2.3
-├── notebooks/    01: ETL da RAIS (Sprint 1) · 01b: geocodificação dos CEPs · 02: base única do Power BI (Sprint 2)
-├── powerbi/      Painel: projeto Observatorio_SJC.pbip (versão publicada), planilhas-fonte, PDF e versões anteriores
-└── evidencias/   Prints, gráficos, guias e comprovações de cada sprint
-```
-
-| Documento | Word | Ler no GitHub |
-|---|---|---|
-| Visão e Escopo | [01-Visao-e-Escopo.docx](docs/final/01-Visao-e-Escopo.docx) | [01-Visao-e-Escopo.md](docs/final/01-Visao-e-Escopo.md) |
-| Backlog do Produto | [02-Backlog-do-Produto.docx](docs/final/02-Backlog-do-Produto.docx) | [02-Backlog-do-Produto.md](docs/final/02-Backlog-do-Produto.md) |
-| Backlog das Sprints 1, 2 e 3 | [03](docs/sprint-1/03-Backlog-Sprint-1.docx) · [08](docs/sprint-2/08-Backlog-Sprint-2.docx) · [09](docs/sprint-3/09-Backlog-Sprint-3.docx) | [Sprint 1](docs/sprint-1/03-Backlog-Sprint-1.md) · [Sprint 2](docs/sprint-2/08-Backlog-Sprint-2.md) · [Sprint 3](docs/sprint-3/09-Backlog-Sprint-3.md) |
-| DoR e DoD | [04-DoR-Checklist.docx](docs/final/04-DoR-Checklist.docx) · [05-DoD.docx](docs/final/05-DoD.docx) | [DoR](docs/final/04-DoR-Checklist.md) · [DoD](docs/final/05-DoD.md) |
-| Log de Decisões de Dados (DEC-001 a DEC-024) | [06-Decisoes-de-Dados.docx](docs/final/06-Decisoes-de-Dados.docx) | [06-Decisoes-de-Dados.md](docs/final/06-Decisoes-de-Dados.md) |
-| **Respostas aos requisitos do cliente** (perguntas, funcionalidades e RN.P) | — | [Respostas_Requisitos_Cliente.md](docs/final/Respostas_Requisitos_Cliente.md) |
-| Códigos de tratamento de dados (Colab) | — | [codigos-tratamento-dados.md](evidencias/codigos-tratamento-dados.md) · [links do Colab](evidencias/link-google-colab.md) |
-| Relatórios das Sprints | — | [Sprint 1](docs/sprint-1/RELATORIO_SPRINT_1.md) · [Sprint 2](docs/sprint-2/RELATORIO_SPRINT_2.md) · [Sprint 3](docs/sprint-3/RELATORIO_SPRINT_3.md) |
-| Relatórios Técnicos | [Sprint 1](docs/sprint-1/07-Relatorio-Tecnico-Sprint-1.docx) · [Sprint 2](docs/sprint-2/10-Relatorio-Tecnico-Sprint-2.docx) · [**Sprint 3 (versão final)**](docs/sprint-3/11-Relatorio-Tecnico-Sprint-3.docx) | [Sprint 1](docs/sprint-1/07-Relatorio-Tecnico-Sprint-1.md) · [Sprint 2](docs/sprint-2/10-Relatorio-Tecnico-Sprint-2.md) · [Sprint 3](docs/sprint-3/11-Relatorio-Tecnico-Sprint-3.md) |
-| Relatórios de Desenvolvimento (Anexo 8) | [Sprint 1](docs/sprint-1/Relatorio_Sprint1_Anexo8.docx) · [Sprint 2](docs/sprint-2/Relatorio_Sprint2_Anexo8.docx) · [**Sprint 3 (versão final)**](docs/sprint-3/Relatorio_Sprint3_Anexo8.docx) | [Sprint 1](docs/sprint-1/Relatorio_Sprint1_Anexo8.md) · [Sprint 2](docs/sprint-2/Relatorio_Sprint2_Anexo8.md) · [Sprint 3](docs/sprint-3/Relatorio_Sprint3_Anexo8.md) |
-| Relatório e fórmulas do Power BI (versão final) | [Relatório](docs/final/Relatorio_PowerBI_Final.docx) · [Fórmulas](docs/final/Formulas_PowerBI_Final.docx) | [Relatório](docs/final/Relatorio_PowerBI_Final.md) · [Fórmulas](docs/final/Formulas_PowerBI_Final.md) |
-| **Manual de Replicação** (refazer o projeto do zero: dados, códigos e painel) | [Manual_Replicacao.docx](docs/final/Manual_Replicacao.docx) | [Manual_Replicacao.md](docs/final/Manual_Replicacao.md) |
-| **Guia: atualizar e republicar o painel Power BI** | [Guia_Atualizar_PowerBI.docx](docs/final/Guia_Atualizar_PowerBI.docx) | [Guia_Atualizar_PowerBI.md](docs/final/Guia_Atualizar_PowerBI.md) |
-
-**Como reproduzir:** o passo a passo completo está no [Manual de Replicação](docs/final/Manual_Replicacao.md). Em resumo: o [notebook 01](notebooks/01_ETL_RAIS_SJC.ipynb) filtra o arquivo público `RAIS_ESTAB_PUB` para o município 354990; o [notebook 01b](notebooks/01b_Geocodificacao_CEPs_SJC.ipynb) busca a coordenada de cada CEP; o [notebook 02](notebooks/02_Base_PowerBI_SJC.ipynb) abre no Google Colab (*Arquivo → Abrir notebook → GitHub*), roda com *Executar tudo* e gera a base única [`dados/RAIS_SJC_2024_PowerBI.csv`](dados/RAIS_SJC_2024_PowerBI.csv). O passo a passo para abrir e editar o painel está no [README do Power BI](powerbi/README.md) e o dicionário de dados no [README dos dados](dados/README.md).
-
-**Fontes de dados:** RAIS 2024 (MTE) · PIB dos Municípios 2002–2023 (IBGE) · CNAE 2.3 (IBGE/CONCLA) · Plano Diretor de São José dos Campos, estudo "Regiões Urbanas" · referência de modelo: [Observatório da Inovação RS](https://sict.rs.gov.br/observatorio).
-
-### Referências
-
-- DE NEGRI, J. A. et al. *Mercado formal de trabalho: comparação entre os microdados da RAIS e da PNAD*. Texto para Discussão nº 840. Brasília: IPEA, 2001. [Link](https://repositorio.ipea.gov.br/handle/11058/2155)
-- GALINDO-RUEDA, F.; VERGER, F. *OECD taxonomy of economic activities based on R&D intensity*. OECD Science, Technology and Industry Working Papers, n. 2016/04. Paris: OECD Publishing, 2016.
-- IBGE. *Classificação Nacional de Atividades Econômicas – CNAE Subclasses 2.3*. Rio de Janeiro: IBGE/CONCLA. [Link](https://concla.ibge.gov.br)
-- MORELLI, A. B.; FIEDLER, A. C.; CUNHA, A. L. *Um banco de dados de empregos formais georreferenciados em cidades brasileiras*. arXiv:2303.09602, 2023. [Link](https://arxiv.org/pdf/2303.09602)
-- SÃO JOSÉ DOS CAMPOS (Município). *Plano Diretor: estudo técnico — Regiões Urbanas*. Prefeitura Municipal. [Link](https://www.sjc.sp.gov.br/media/1ascp0it/7_regioes_urbanas.pdf)
-- SECRETARIA DE INOVAÇÃO, CIÊNCIA E TECNOLOGIA DO RS (SICT). *Observatório da Inovação RS*. Porto Alegre, 2025. [Link](https://sict.rs.gov.br/observatorio)
-- SILVA, V. P.; LIMA, M. E. O. *Microdados RAIS e estudos sobre o mercado de trabalho no Brasil*. Revista de Políticas Públicas, São Luís, v. 22, n. 1, p. 523-544, 2018. [Link](https://periodicoseletronicos.ufma.br/index.php/rppublica/article/view/9244)
 
 ---
 
