@@ -118,7 +118,7 @@ São José dos Campos é um polo industrial, tecnológico e de serviços do Vale
 │   ├── entrada/      arquivos de entrada do notebook 02
 │   └── referencia/   tabela bairro → região e CNAE 2.3
 ├── notebooks/    01: ETL da RAIS (Sprint 1) · 02: base única do Power BI (Sprint 2)
-├── powerbi/      Painel: projeto .pbip (versão publicada), planilhas-fonte, PDF e versões anteriores
+├── powerbi/      Painel: projeto Observatorio_SJC.pbip (versão publicada), planilhas-fonte, PDF e versões anteriores
 └── evidencias/   Prints, gráficos, guias e comprovações de cada sprint
 ```
 

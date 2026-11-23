@@ -10,19 +10,20 @@ Versão de 26/10/2026, com as 4 páginas: **KPIs e Mapa · Setor de Atividades (
 
 | Arquivo / pasta | O que é |
 |---|---|
-| [`pbip/`](pbip/) | **Versão atual** do painel (a publicada), salva como projeto do Power BI (`.pbip`). Abra o arquivo `pbip/Powerbi Sprint2.pbip` no Power BI Desktop |
+| [`pbip/`](pbip/) | **Versão atual** do painel (a publicada), salva como projeto do Power BI (`.pbip`). Abra o arquivo `pbip/Observatorio_SJC.pbip` no Power BI Desktop |
 | [`fontes/`](fontes/) | Planilhas que o painel atual lê: `RAIS_SJC.csv`, `Cruzamento_RAIS_IBGE_Observatorio_SJC.xlsx`, `dCNAE_classes.xlsx` e `Regioes_SJC_filtro_por_regiao.xlsx` |
 | [`Powerbi_API_Sprint2.pdf`](Powerbi_API_Sprint2.pdf) | Versão atual exportada em PDF (4 páginas), para ver sem o Power BI |
-| [`Powerbi_API_Sprint2.pbix`](Powerbi_API_Sprint2.pbix) · [`.pbit`](Powerbi_API_Sprint2.pbit) | Versão anterior (2 páginas: KPIs e Mapa, Setor de Atividades) |
-| [`PowerbiATT_Api_Sprint2.pbix`](PowerbiATT_Api_Sprint2.pbix) | Versão anterior com as páginas de PIB e de notas, que foram juntadas na versão atual |
+| [`versoes_anteriores/`](versoes_anteriores/) | `Powerbi_API_Sprint2.pbix` e `.pbit` (2 páginas: KPIs e Mapa, Setor de Atividades) e `PowerbiATT_Api_Sprint2.pbix` (páginas de PIB e de notas, que foram juntadas na versão atual) |
 
 Documentação do painel: [relatório do Power BI](../docs/Relatorio_PowerBI_Sprint2.md) (fontes e leitura de cada visual) e [fórmulas DAX e Power Query](../docs/Formulas_PowerBI_Sprint2.md).
 
 ### Como abrir a versão `.pbip`
 
-1. Baixe a pasta `powerbi/` inteira (as pastas `.Report` e `.SemanticModel` precisam ficar ao lado do arquivo `.pbip`).
-2. Abra `pbip/Powerbi Sprint2.pbip` no Power BI Desktop.
-3. As consultas apontam para caminhos do computador de quem montou o painel (`C:\Users\thaly\...`). Para atualizar os dados, vá em **Transformar dados → Configurações da fonte de dados → Alterar fonte** e aponte cada fonte para o arquivo correspondente em `powerbi/fontes/`.
+1. Baixe o repositório inteiro (*Code → Download ZIP*) e extraia, de preferência, em `C:\Observatorio-SJC\`. As pastas `Observatorio_SJC.Report` e `Observatorio_SJC.SemanticModel` precisam ficar ao lado do arquivo `.pbip`.
+2. Abra `powerbi/pbip/Observatorio_SJC.pbip` no Power BI Desktop.
+3. Todas as consultas leem os arquivos pelo parâmetro **`PastaFontes`**, que vem com o valor `C:\Observatorio-SJC\powerbi\fontes\`. Se você extraiu o repositório em outro lugar, vá em **Página Inicial → Transformar dados → Editar parâmetros**, cole o caminho da sua pasta `powerbi\fontes\` (com a barra `\` no final) e clique em **Atualizar**.
+
+> ⚠️ **Tabela `PIB anual`:** lê a aba "PIB anual" da planilha `Cruzamento_RAIS_IBGE_Observatorio_SJC.xlsx`, mas a cópia que está em `fontes/` não tem essa aba (só a versão do computador de quem montou o painel tem). Até a planilha completa ser enviada para `fontes/`, a atualização dessa tabela dá erro; as outras cinco atualizam normalmente.
 
 ## Telas
 
@@ -42,7 +43,14 @@ Documentação do painel: [relatório do Power BI](../docs/Relatorio_PowerBI_Spr
 
 ![Notas Metodológicas](../evidencias/sprint2/painel_notas_metodologicas.png)
 
-## O que mudou em relação à versão anterior
+## O que mudou em 23/11/2026 (organização dos arquivos)
+
+- Novo parâmetro **`PastaFontes`** no Power Query: as 6 consultas passaram a ler `PastaFontes & "arquivo"` no lugar de caminhos do computador de uma integrante (`C:\Users\thaly\Desktop\...` e `C:\Users\thaly\Downloads\...`). A planilha `Cruzamento_RAIS_IBGE_Observatorio_SJC (1).xlsx` passou a ser lida pelo nome sem "(1)", que é o arquivo de `fontes/`.
+- Projeto renomeado de `Powerbi Sprint2` para **`Observatorio_SJC`** (arquivo `.pbip`, pastas `.Report` e `.SemanticModel`).
+- Versões `.pbix` e `.pbit` antigas movidas para `versoes_anteriores/`.
+- Nenhum visual, medida ou relação foi alterado. O painel publicado continua o mesmo, no mesmo link.
+
+## O que mudou na Sprint 2 em relação à versão anterior
 
 - As páginas **PIB e Emprego** e **Notas Metodológicas** foram juntadas à versão principal (cruzamento com o IBGE — US09).
 - O mapa passou a usar **latitude e longitude** da geocodificação do grupo (tabela `CEP x Região`), em vez do texto do CEP (DEC-022).
@@ -58,14 +66,11 @@ Vistos nas telas da versão publicada, ainda não aplicados:
 - **Título da pizza:** "Distruibuição de" → "Distribuição".
 - **Subtítulos dos cartões:** "Unidades com CNPJ próprio" (o total inclui CAEPF e CNO; sugerido: "Estabelecimentos na base") e "Empregados com contrato formal" (o cartão conta estabelecimentos, não pessoas; sugerido: "Estabelecimentos com empregados no ano").
 - **Relação automática** `Cruzamento[vab_real_2023] → 'VAB setorial'[vab_real_2023]`: foi criada pelo Power BI sobre uma coluna de valor, não de chave. Conferir se algum visual depende dela; se não, pode ser excluída.
-- Trocar os caminhos `C:\Users\...` das fontes por uma pasta do projeto, para qualquer integrante conseguir atualizar o painel.
 
 ## Melhorias sugeridas para a versão final
 
 - **Cobertura do mapa:** 5.024 estabelecimentos sem coordenada estão em bairros que já têm ponto por outro CEP. Usar esse ponto no notebook 02 leva o mapa de 78,3% para cerca de 88,9%.
 - **Fonte do mapa:** trocar a tabela `CEP x Região` pela base única `dados/RAIS_SJC_2024_PowerBI.csv` (DEC-022), que já tem latitude, longitude e região, e regeocodificar os 9 bairros homônimos (DEC-017).
 - **Página "Regiões":** vínculos e estabelecimentos por região oficial, tipo de atividade, intensidade tecnológica (OCDE) e porte SEBRAE, com as colunas que já estão na base única.
-- **Parâmetro de pasta:** criar um parâmetro no Power Query com a pasta das fontes, no lugar de `C:\Users\thaly\...`.
-- **Nome e versões:** renomear o projeto para `Observatorio_SJC.pbip` e mover os `.pbix` antigos para `versoes_anteriores/`.
 
 Lista completa, com o esforço de cada item, no [Relatório da Sprint 3](../docs/RELATORIO_SPRINT_3.md#6-melhorias-sugeridas).

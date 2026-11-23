@@ -115,7 +115,7 @@
 | 3 | Criar uma página "Regiões" com vínculos e estabelecimentos por região, tipo de atividade, intensidade tecnológica (OCDE) e porte SEBRAE | As colunas já estão na base única (DEC-021) e respondem aos requisitos do cliente | Médio |
 | 4 | Processar a RAIS 2022 e 2023 pelo notebook 01 | Permite mostrar a evolução dos setores (US08) | Médio (arquivos de cerca de 3 GB cada) |
 | 5 | Revisar com o cliente o critério da US10: usar a RAIS Vínculos (mês de admissão) ou trocar por "estabelecimentos com atividade no ano" | A base atual não tem data de admissão | Baixo para decidir; médio para implementar |
-| 6 | Trocar os caminhos `C:\Users\...` das fontes por um parâmetro de pasta | Qualquer integrante ou o cliente consegue atualizar o painel | Baixo |
+| 6 | ✅ Feito em 23/11: parâmetro `PastaFontes` no lugar dos caminhos `C:\Users\...`, projeto renomeado para `Observatorio_SJC` e `.pbix` antigos em `powerbi/versoes_anteriores/` | Qualquer integrante ou o cliente consegue atualizar o painel | Concluído (falta a aba "PIB anual" em `powerbi/fontes/`) |
 | 7 | Transcrever DEC-007, DEC-010 e DEC-012 para o Log de Decisões | O log fica completo para a entrega final | Baixo |
 
 ---
@@ -125,7 +125,7 @@
 - Relatório da Sprint 3: [`docs/RELATORIO_SPRINT_3.md`](../docs/RELATORIO_SPRINT_3.md)
 - Backlog da Sprint 3: [`docs/09-Backlog-Sprint-3.md`](../docs/09-Backlog-Sprint-3.md)
 - Log de Decisões de Dados: [`docs/06-Decisoes-de-Dados.md`](../docs/06-Decisoes-de-Dados.md)
-- **Painel publicado:** [abrir no Power BI](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9) · arquivos em [`powerbi/`](../powerbi/) · [PDF das 4 páginas](../powerbi/Powerbi_API_Sprint2.pdf)
+- **Painel publicado:** [abrir no Power BI](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9) · projeto [`powerbi/pbip/Observatorio_SJC.pbip`](../powerbi/pbip/) e planilhas em [`powerbi/fontes/`](../powerbi/fontes/) · [PDF das 4 páginas](../powerbi/Powerbi_API_Sprint2.pdf)
 - Base única e dicionário de dados: [`dados/RAIS_SJC_2024_PowerBI.csv`](../dados/RAIS_SJC_2024_PowerBI.csv) · [`dados/README.md`](../dados/README.md)
 - Notebooks: [`01_ETL_RAIS_SJC.ipynb`](../notebooks/01_ETL_RAIS_SJC.ipynb) · [`02_Base_PowerBI_SJC.ipynb`](../notebooks/02_Base_PowerBI_SJC.ipynb)
 - **Vídeo do MVP:** [canal LogMulti no YouTube](https://www.youtube.com/@LogMulti)

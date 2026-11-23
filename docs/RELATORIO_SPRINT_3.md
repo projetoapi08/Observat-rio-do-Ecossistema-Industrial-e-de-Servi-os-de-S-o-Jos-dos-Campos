@@ -56,7 +56,7 @@ Consolidar o observatório como entrega final: um painel único publicado, docum
 
 ### 4.2 Painel e dados
 
-- Painel publicado (mesmo link da Sprint 2) e arquivos em `powerbi/pbip/`, com PDF das 4 páginas em `powerbi/Powerbi_API_Sprint2.pdf`.
+- Painel publicado (mesmo link da Sprint 2) e projeto `powerbi/pbip/Observatorio_SJC.pbip`, com as fontes lidas pelo parâmetro `PastaFontes`, com PDF das 4 páginas em `powerbi/Powerbi_API_Sprint2.pdf`.
 - Base única `dados/RAIS_SJC_2024_PowerBI.csv` (47.339 linhas, 46 colunas) e notebooks 01 e 02 para refazer todo o tratamento com uma nova RAIS.
 
 ### 4.3 Vídeo e divulgação
@@ -83,6 +83,7 @@ Consolidar o observatório como entrega final: um painel único publicado, docum
 | Região Norte (DEC-015) | 1.024 estabelecimentos com região de confiabilidade média | Pedir à Prefeitura, via cliente, a tabela bairro → região ou o shapefile |
 | Identificação nominal (DEC-004) | Rankings só por setor | Mantido; depende de base identificada do cliente |
 | Série histórica e data de admissão | US08 e US10 não atendidas | Decidir com o cliente na Feira: nova fonte ou critério revisado |
+| Aba "PIB anual" ausente em `powerbi/fontes/` | A tabela `PIB anual` não atualiza a partir do repositório (as outras 5 atualizam) | Enviar para `fontes/` a planilha de cruzamento completa usada no painel |
 | DEC-007, DEC-010 e DEC-012 | Decisões citadas sem registro no log | Transcrever para `docs/06-Decisoes-de-Dados.docx` |
 
 ## 6. Melhorias sugeridas
@@ -95,8 +96,8 @@ Consolidar o observatório como entrega final: um painel único publicado, docum
 | 4 | Criar uma página "Regiões" com vínculos e estabelecimentos por região, tipo de atividade, intensidade tecnológica (OCDE) e porte SEBRAE | Responde aos requisitos do cliente com colunas que já existem (DEC-021) | Médio |
 | 5 | Processar a RAIS 2022 e 2023 pelo notebook 01 | Evolução dos setores (US08) | Médio |
 | 6 | Revisar o critério da US10 com o cliente: RAIS Vínculos (mês de admissão) ou "estabelecimentos com atividade no ano" | US10 com fonte ou critério registrado | Baixo para decidir |
-| 7 | Trocar os caminhos `C:\Users\...` das fontes por um parâmetro de pasta | Qualquer integrante ou o cliente atualiza o painel | Baixo |
-| 8 | Renomear o projeto do painel de "Powerbi Sprint2" para "Observatorio_SJC" e mover as versões `.pbix` antigas para `powerbi/versoes_anteriores/` | Repositório mais claro para quem recebe a entrega final | Baixo |
+| 7 | ✅ **Feito em 23/11.** Trocar os caminhos `C:\Users\...` das fontes pelo parâmetro de pasta `PastaFontes` | Qualquer integrante ou o cliente atualiza o painel | Concluído |
+| 8 | ✅ **Feito em 23/11.** Renomear o projeto do painel de "Powerbi Sprint2" para "Observatorio_SJC" e mover as versões `.pbix` antigas para `powerbi/versoes_anteriores/` | Repositório mais claro para quem recebe a entrega final | Concluído |
 | 9 | Escrever um guia curto "Como atualizar o observatório com uma nova RAIS" | O cliente consegue manter a ferramenta depois do projeto | Baixo |
 
 ## 7. Próximos passos

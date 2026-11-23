@@ -1,0 +1,5 @@
+expression PastaFontes = "C:\Observatorio-SJC\powerbi\fontes\" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 28b3a1d9-df0c-4323-b907-23d3efab0672
+
+	annotation PBI_ResultType = Text
+
