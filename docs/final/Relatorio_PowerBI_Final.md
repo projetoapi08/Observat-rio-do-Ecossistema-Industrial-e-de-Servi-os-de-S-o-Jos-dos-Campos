@@ -2,7 +2,7 @@
 
 > Versão em Markdown de [`Relatorio_PowerBI_Final.docx`](Relatorio_PowerBI_Final.docx). Painel LogMulti, Observatório de São José dos Campos, versão final de 23/11/2026 (Sprint 3).
 >
-> **Painel online:** [abrir no Power BI](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9) · Arquivo: [`powerbi/pbip/`](../powerbi/pbip/) · [PDF](../powerbi/Powerbi_API_Sprint2.pdf) · Código das medidas: [`Formulas_PowerBI_Final.md`](Formulas_PowerBI_Final.md)
+> **Painel online:** [abrir no Power BI](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9) · Arquivo: [`powerbi/pbip/`](../../powerbi/pbip/) · [PDF](../../powerbi/Powerbi_API_Sprint2.pdf) · Código das medidas: [`Formulas_PowerBI_Final.md`](Formulas_PowerBI_Final.md)
 
 O painel tem 5 páginas: **KPIs e Mapa**, **Setor de Atividades (CNAE)**, **PIB e Emprego**, **Regiões e Tecnologia** (nova na Sprint 3) e **Notas Metodológicas**. O link publicado mostra a versão de 4 páginas até o painel ser atualizado e republicado no Power BI Desktop.
 
@@ -47,7 +47,7 @@ Cada linha da base é 1 estabelecimento, e o filtro define quais entram na conta
 
 ## 4. Página 1 — KPIs e Mapa
 
-![Página KPIs e Mapa](../evidencias/sprint2/painel_kpis_mapa.png)
+![Página KPIs e Mapa](../../evidencias/sprint2/painel_kpis_mapa.png)
 
 - **Cartões:** total de estabelecimentos (47.339), sem vínculo (30.523), com vínculo (16.816) e total de vínculos ativos (206.717), cada um com uma frase dizendo o que mede.
 - **Percentuais e pizza:** 64,48% sem vínculo e 35,52% com vínculo.
@@ -57,7 +57,7 @@ Cada linha da base é 1 estabelecimento, e o filtro define quais entram na conta
 
 ## 5. Página 2 — Setor de Atividades (CNAE)
 
-![Página Setor de Atividades](../evidencias/sprint2/painel_setor_atividades.png)
+![Página Setor de Atividades](../../evidencias/sprint2/painel_setor_atividades.png)
 
 Subtítulo: "Comparação entre estabelecimentos e vínculos CLT".
 
@@ -69,7 +69,7 @@ Subtítulo: "Comparação entre estabelecimentos e vínculos CLT".
 
 ## 6. Página 3 — PIB e Emprego
 
-![Página PIB e Emprego](../evidencias/sprint2/painel_pib_emprego.png)
+![Página PIB e Emprego](../../evidencias/sprint2/painel_pib_emprego.png)
 
 Compara o emprego formal da RAIS 2024 com o valor adicionado do IBGE (PIB dos Municípios, Sidra tabela 5938, extração de 08/10/2026).
 
@@ -90,7 +90,7 @@ A tabela soma **204.331** vínculos (só CNPJ, sem Administração pública), di
 
 ## 7. Filtro de região
 
-A tabela `CEP x Região` (planilha [`Regioes_SJC_filtro_por_regiao.xlsx`](../powerbi/fontes/Regioes_SJC_filtro_por_regiao.xlsx)) liga-se à `RAIS_SJC` pela coluna `CEP Estab` (muitos para um). O filtro é a lista suspensa "Região" da página 1.
+A tabela `CEP x Região` (planilha [`Regioes_SJC_filtro_por_regiao.xlsx`](../../powerbi/fontes/Regioes_SJC_filtro_por_regiao.xlsx)) liga-se à `RAIS_SJC` pela coluna `CEP Estab` (muitos para um). O filtro é a lista suspensa "Região" da página 1.
 
 As regiões seguem a divisão oficial da Prefeitura (Plano Diretor, "Leitura técnica do Município"): o bairro de cada CEP, vindo da geocodificação do grupo, foi comparado com a lista de bairros por região desse documento.
 
@@ -107,11 +107,11 @@ As regiões seguem a divisão oficial da Prefeitura (Plano Diretor, "Leitura té
 
 A soma fecha nos mesmos totais do painel (47.339 estabelecimentos e 206.717 vínculos). Como cada região foi decidida: 75,8% estão na lista da Prefeitura; 10,7% estão na lista com grafia um pouco diferente ("Eugênio de Mello" × "Eugênio de Melo"); 11,4% têm CEP genérico e recebem a região do bairro de referência (aproximada); 0,8% (16 bairros) não estão na lista e foram classificados pelos vizinhos mais próximos; 1,3% ficam sem região (sem bairro, sem coordenadas ou sem CEP). A planilha tem uma aba "Revisar" com os casos duvidosos.
 
-> Esta classificação do painel é a da planilha do grupo. A base única do notebook 02 ([`dados/RAIS_SJC_2024_PowerBI.csv`](../dados/RAIS_SJC_2024_PowerBI.csv)) chega a 99,99% com região; unificar as duas fica para a Sprint 3 (DEC-015).
+> Esta classificação do painel é a da planilha do grupo. A base única do notebook 02 ([`dados/RAIS_SJC_2024_PowerBI.csv`](../../dados/RAIS_SJC_2024_PowerBI.csv)) chega a 99,99% com região; unificar as duas fica para a Sprint 3 (DEC-015).
 
 ## 8. Página 4 — Notas Metodológicas
 
-![Página Notas Metodológicas](../evidencias/sprint2/painel_notas_metodologicas.png)
+![Página Notas Metodológicas](../../evidencias/sprint2/painel_notas_metodologicas.png)
 
 Reúne as regras do painel em cinco blocos:
 

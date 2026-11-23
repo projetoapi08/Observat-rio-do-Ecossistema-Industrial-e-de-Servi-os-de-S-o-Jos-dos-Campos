@@ -2,15 +2,15 @@
 
 Projeto baseado na metodologia ágil SCRUM, procurando desenvolver a Proatividade, Autonomia, Colaboração e Entrega de Resultados dos estudantes envolvidos.
 
-> Status do projeto: **Sprint 3 entregue (23/11/2026)** · próxima etapa: Feira de Soluções (03/12/2026) · [MVP da Sprint 3](MVP/sp3.md) · [Relatório da Sprint 3](docs/RELATORIO_SPRINT_3.md)
+> Status do projeto: **Sprint 3 entregue (23/11/2026)** · próxima etapa: Feira de Soluções (03/12/2026) · [MVP da Sprint 3](MVP/sp3.md) · [Relatório da Sprint 3](docs/sprint-3/RELATORIO_SPRINT_3.md)
 >
 > Painel publicado: [🌐 abrir no Power BI](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9) (abre no navegador, sem login)
 >
-> Respostas aos requisitos do cliente: [✅ cada pergunta e critério, com números e onde ver no painel](docs/Respostas_Requisitos_Cliente.md)
+> Respostas aos requisitos do cliente: [✅ cada pergunta e critério, com números e onde ver no painel](docs/final/Respostas_Requisitos_Cliente.md)
 >
 > Vídeos do projeto: [▶️ canal LogMulti no YouTube](https://www.youtube.com/@LogMulti)
 >
-> Documentação: [📖 pasta docs/](docs/)
+> Documentação: [📖 índice da pasta docs/](docs/README.md)
 
 # Índice
 * [Projeto (API)](#projeto-api)
@@ -52,7 +52,7 @@ O projeto é desenvolvido no curso de **Logística** da **Fatec São José dos C
 São José dos Campos é um polo industrial, tecnológico e de serviços do Vale do Paraíba, mas não tem uma ferramenta pública e centralizada que reúna indicadores do seu ecossistema produtivo. Os dados públicos existem, mas têm inconsistências e não mostram de forma consolidada quem emprega, onde e em quais setores. Os objetivos estabelecidos para este projeto são:
 
 * Desenvolver um pipeline de tratamento de dados (ETL) em Python, no Google Colab, que filtre e trate a RAIS 2024 para São José dos Campos (código IBGE 354990);
-* Identificar e documentar formalmente cada inconsistência da base no [Log de Decisões de Dados](docs/06-Decisoes-de-Dados.md), garantindo a confiabilidade dos indicadores;
+* Identificar e documentar formalmente cada inconsistência da base no [Log de Decisões de Dados](docs/final/06-Decisoes-de-Dados.md), garantindo a confiabilidade dos indicadores;
 * Construir um painel em Power BI com indicadores de emprego, setores de atividade (CNAE), porte e distribuição geográfica dos estabelecimentos pelas regiões oficiais do município;
 * Cruzar o emprego formal com o PIB dos Municípios (IBGE) para medir o peso de cada setor na economia local e apoiar decisões de desenvolvimento econômico.
 
@@ -85,7 +85,7 @@ São José dos Campos é um polo industrial, tecnológico e de serviços do Vale
 | 10 | Baixa | **US10** — Como gestor público, quero acompanhar as contratações mais recentes registradas na RAIS, para que eu possa monitorar a dinâmica do mercado de trabalho local. | 5 | 3 |
 | 11 | Alta | **US11** — Como cliente (CADI / Secretaria de Desenvolvimento Econômico), quero um dashboard consolidado no Power BI, nos moldes do Observatório da Inovação RS, acompanhado do relatório técnico final e da apresentação, para que eu possa usar a ferramenta na tomada de decisão. | 13 | 3 |
 
-> Estimativa em story points (escala de Fibonacci). Critérios de aceite e situação de cada User Story no [Backlog do Produto](docs/02-Backlog-do-Produto.md).
+> Estimativa em story points (escala de Fibonacci). Critérios de aceite e situação de cada User Story no [Backlog do Produto](docs/final/02-Backlog-do-Produto.md).
 
 
 # Competências desenvolvidas
@@ -103,9 +103,9 @@ São José dos Campos é um polo industrial, tecnológico e de serviços do Vale
 
 | Sprint            | Previsão   | Status    | Histórico |
 |-------------------|------------|-----------|-----------|
-| 01                | 28/09/2026 | Concluída | [MVP](MVP/sp1.md) · [Relatório](docs/RELATORIO_SPRINT_1.md) |
-| 02                | 26/10/2026 | Concluída | [MVP](MVP/sp2.md) · [Relatório](docs/RELATORIO_SPRINT_2.md) |
-| 03                | 23/11/2026 | Entregue  | [MVP](MVP/sp3.md) · [Relatório](docs/RELATORIO_SPRINT_3.md) |
+| 01                | 28/09/2026 | Concluída | [MVP](MVP/sp1.md) · [Relatório](docs/sprint-1/RELATORIO_SPRINT_1.md) |
+| 02                | 26/10/2026 | Concluída | [MVP](MVP/sp2.md) · [Relatório](docs/sprint-2/RELATORIO_SPRINT_2.md) |
+| 03                | 23/11/2026 | Entregue  | [MVP](MVP/sp3.md) · [Relatório](docs/sprint-3/RELATORIO_SPRINT_3.md) |
 | Feira de Soluções | 03/12/2026 | A fazer   | [Vídeo](https://www.youtube.com/@LogMulti) |
 
 
@@ -115,7 +115,12 @@ São José dos Campos é um polo industrial, tecnológico e de serviços do Vale
 .
 ├── README.md
 ├── MVP/          MVP de cada sprint (sp1.md, sp2.md, sp3.md)
-├── docs/         Documentação Scrum, relatórios das sprints e relatórios técnicos (.docx e .md)
+├── docs/         Documentação (.docx e .md), com índice em docs/README.md
+│   ├── final/        documentos do projeto na versão final: Visão e Escopo, Backlog do Produto, DoR, DoD,
+│   │                 Log de Decisões, respostas aos requisitos do cliente, relatório e fórmulas do Power BI
+│   ├── sprint-1/     backlog, relatório técnico, Anexo 8 e relatório da Sprint 1
+│   ├── sprint-2/     backlog, relatório técnico, Anexo 8 e relatório da Sprint 2
+│   └── sprint-3/     backlog, relatório técnico, Anexo 8 e relatório da Sprint 3 (relatórios finais da entrega)
 ├── dados/        Bases tratadas prontas para o Power BI, com dicionário de dados
 │   ├── entrada/      arquivos de entrada do notebook 02
 │   └── referencia/   tabela bairro → região e CNAE 2.3
@@ -126,17 +131,17 @@ São José dos Campos é um polo industrial, tecnológico e de serviços do Vale
 
 | Documento | Word | Ler no GitHub |
 |---|---|---|
-| Visão e Escopo | [01-Visao-e-Escopo.docx](docs/01-Visao-e-Escopo.docx) | — |
-| Backlog do Produto | [02-Backlog-do-Produto.docx](docs/02-Backlog-do-Produto.docx) | [02-Backlog-do-Produto.md](docs/02-Backlog-do-Produto.md) |
-| Backlog das Sprints 1, 2 e 3 | [03](docs/03-Backlog-Sprint-1.docx) · [08](docs/08-Backlog-Sprint-2.docx) · [09](docs/09-Backlog-Sprint-3.docx) | [Sprint 2](docs/08-Backlog-Sprint-2.md) · [Sprint 3](docs/09-Backlog-Sprint-3.md) |
-| DoR e DoD | [04-DoR-Checklist.docx](docs/04-DoR-Checklist.docx) · [05-DoD.docx](docs/05-DoD.docx) | — |
-| Log de Decisões de Dados (DEC-001 a DEC-024) | [06-Decisoes-de-Dados.docx](docs/06-Decisoes-de-Dados.docx) | [06-Decisoes-de-Dados.md](docs/06-Decisoes-de-Dados.md) |
-| **Respostas aos requisitos do cliente** (perguntas, funcionalidades e RN.P) | — | [Respostas_Requisitos_Cliente.md](docs/Respostas_Requisitos_Cliente.md) |
+| Visão e Escopo | [01-Visao-e-Escopo.docx](docs/final/01-Visao-e-Escopo.docx) | — |
+| Backlog do Produto | [02-Backlog-do-Produto.docx](docs/final/02-Backlog-do-Produto.docx) | [02-Backlog-do-Produto.md](docs/final/02-Backlog-do-Produto.md) |
+| Backlog das Sprints 1, 2 e 3 | [03](docs/sprint-1/03-Backlog-Sprint-1.docx) · [08](docs/sprint-2/08-Backlog-Sprint-2.docx) · [09](docs/sprint-3/09-Backlog-Sprint-3.docx) | [Sprint 2](docs/sprint-2/08-Backlog-Sprint-2.md) · [Sprint 3](docs/sprint-3/09-Backlog-Sprint-3.md) |
+| DoR e DoD | [04-DoR-Checklist.docx](docs/final/04-DoR-Checklist.docx) · [05-DoD.docx](docs/final/05-DoD.docx) | — |
+| Log de Decisões de Dados (DEC-001 a DEC-024) | [06-Decisoes-de-Dados.docx](docs/final/06-Decisoes-de-Dados.docx) | [06-Decisoes-de-Dados.md](docs/final/06-Decisoes-de-Dados.md) |
+| **Respostas aos requisitos do cliente** (perguntas, funcionalidades e RN.P) | — | [Respostas_Requisitos_Cliente.md](docs/final/Respostas_Requisitos_Cliente.md) |
 | Códigos de tratamento de dados (Colab) | — | [codigos-tratamento-dados.md](evidencias/codigos-tratamento-dados.md) · [links do Colab](evidencias/link-google-colab.md) |
-| Relatórios das Sprints | — | [Sprint 1](docs/RELATORIO_SPRINT_1.md) · [Sprint 2](docs/RELATORIO_SPRINT_2.md) · [Sprint 3](docs/RELATORIO_SPRINT_3.md) |
-| Relatórios Técnicos | [Sprint 1](docs/07-Relatorio-Tecnico-Sprint-1.docx) · [Sprint 2](docs/10-Relatorio-Tecnico-Sprint-2.docx) · [**Sprint 3 (versão final)**](docs/11-Relatorio-Tecnico-Sprint-3.docx) | — |
-| Relatórios de Desenvolvimento (Anexo 8) | [Sprint 1](docs/Relatorio_Sprint1_Anexo8.docx) · [Sprint 2](docs/Relatorio_Sprint2_Anexo8.docx) · [**Sprint 3 (versão final)**](docs/Relatorio_Sprint3_Anexo8.docx) | — |
-| Relatório e fórmulas do Power BI (versão final) | [Relatório](docs/Relatorio_PowerBI_Final.docx) · [Fórmulas](docs/Formulas_PowerBI_Final.docx) | [Relatório](docs/Relatorio_PowerBI_Final.md) · [Fórmulas](docs/Formulas_PowerBI_Final.md) |
+| Relatórios das Sprints | — | [Sprint 1](docs/sprint-1/RELATORIO_SPRINT_1.md) · [Sprint 2](docs/sprint-2/RELATORIO_SPRINT_2.md) · [Sprint 3](docs/sprint-3/RELATORIO_SPRINT_3.md) |
+| Relatórios Técnicos | [Sprint 1](docs/sprint-1/07-Relatorio-Tecnico-Sprint-1.docx) · [Sprint 2](docs/sprint-2/10-Relatorio-Tecnico-Sprint-2.docx) · [**Sprint 3 (versão final)**](docs/sprint-3/11-Relatorio-Tecnico-Sprint-3.docx) | — |
+| Relatórios de Desenvolvimento (Anexo 8) | [Sprint 1](docs/sprint-1/Relatorio_Sprint1_Anexo8.docx) · [Sprint 2](docs/sprint-2/Relatorio_Sprint2_Anexo8.docx) · [**Sprint 3 (versão final)**](docs/sprint-3/Relatorio_Sprint3_Anexo8.docx) | — |
+| Relatório e fórmulas do Power BI (versão final) | [Relatório](docs/final/Relatorio_PowerBI_Final.docx) · [Fórmulas](docs/final/Formulas_PowerBI_Final.docx) | [Relatório](docs/final/Relatorio_PowerBI_Final.md) · [Fórmulas](docs/final/Formulas_PowerBI_Final.md) |
 
 **Como reproduzir:** o [notebook 01](notebooks/01_ETL_RAIS_SJC.ipynb) filtra o arquivo público `RAIS_ESTAB_PUB` para o município 354990; o [notebook 01b](notebooks/01b_Geocodificacao_CEPs_SJC.ipynb) busca a coordenada de cada CEP; o [notebook 02](notebooks/02_Base_PowerBI_SJC.ipynb) abre no Google Colab (*Arquivo → Abrir notebook → GitHub*), roda com *Executar tudo* e gera a base única [`dados/RAIS_SJC_2024_PowerBI.csv`](dados/RAIS_SJC_2024_PowerBI.csv). O passo a passo para abrir e editar o painel está no [README do Power BI](powerbi/README.md) e o dicionário de dados no [README dos dados](dados/README.md).
 

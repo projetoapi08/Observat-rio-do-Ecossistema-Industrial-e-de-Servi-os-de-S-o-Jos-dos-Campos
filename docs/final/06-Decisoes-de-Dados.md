@@ -1,4 +1,4 @@
-> Versão em Markdown de `docs/06-Decisoes-de-Dados.docx`, para leitura direta no GitHub. Em caso de diferença, vale o .docx.
+> Versão em Markdown de `docs/final/06-Decisoes-de-Dados.docx`, para leitura direta no GitHub. Em caso de diferença, vale o .docx.
 
 # Log de Decisões de Dados
 

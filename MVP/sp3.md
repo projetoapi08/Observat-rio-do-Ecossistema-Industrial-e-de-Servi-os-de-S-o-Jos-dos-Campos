@@ -1,6 +1,6 @@
 # 📌 MVP - Sprint 3 · Consolidação do Observatório do Ecossistema Industrial e de Serviços de São José dos Campos
 
-> **Entrega:** 23/11/2026 · **Status:** Entregue (painel consolidado publicado; US06 concluída nos dados com 99,99% dos estabelecimentos no mapa; US08 parcial; US10 sem fonte de dados) · Apresentação final na Feira de Soluções (03/12/2026) · [Relatório da Sprint 3](../docs/RELATORIO_SPRINT_3.md) · [voltar ao README](../README.md)
+> **Entrega:** 23/11/2026 · **Status:** Entregue (painel consolidado publicado; US06 concluída nos dados com 99,99% dos estabelecimentos no mapa; US08 parcial; US10 sem fonte de dados) · Apresentação final na Feira de Soluções (03/12/2026) · [Relatório da Sprint 3](../docs/sprint-3/RELATORIO_SPRINT_3.md) · [voltar ao README](../README.md)
 
 > 🌐 **Painel publicado:** [abrir no Power BI](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9) (abre no navegador, sem login)
 >
@@ -28,7 +28,7 @@
   - **PIB e Emprego:** PIB 2002–2023 corrigido pelo IPCA, variação anual, valor adicionado por setor e produtividade relativa.
   - **Notas Metodológicas:** fontes, definições, limites e decisões da equipe.
   - **Regiões e Tecnologia (nova, 23/11/2026):** vínculos por região oficial, por tipo de atividade, por intensidade tecnológica (OCDE) e por macroprocesso logístico (DEC-024), com filtro de região. Responde às perguntas 2 a 5 do cliente.
-  - **Documentação de entrega:** relatório da Sprint 3, Log de Decisões (DEC-001 a DEC-024), [respostas a cada requisito do cliente](../docs/Respostas_Requisitos_Cliente.md), notebooks 01, 01b e 02 para reproduzir a base, dicionário de dados e guia para abrir e atualizar o painel.
+  - **Documentação de entrega:** relatório da Sprint 3, Log de Decisões (DEC-001 a DEC-024), [respostas a cada requisito do cliente](../docs/final/Respostas_Requisitos_Cliente.md), notebooks 01, 01b e 02 para reproduzir a base, dicionário de dados e guia para abrir e atualizar o painel.
   - **Canal LogMulti no YouTube**, para o vídeo de apresentação do projeto (gravação de tela do GitHub e do painel, até 5 minutos).
 
 - Limitações conhecidas:
@@ -59,7 +59,7 @@
 | US10 | Como gestor público, quero acompanhar as contratações mais recentes registradas na RAIS, para que eu possa monitorar a dinâmica do mercado de trabalho local. | Baixa | 5 pontos | Não iniciada (a base não tem data de admissão; critério a revisar com o cliente) |
 | US11 | Como cliente (CADI / Secretaria de Desenvolvimento Econômico), quero um dashboard consolidado no Power BI, nos moldes do Observatório da Inovação RS, acompanhado do relatório técnico final e da apresentação, para que eu possa usar a ferramenta na tomada de decisão. | Alta | 13 pontos | Parcial (painel único publicado e documentado; apresentação e aprovação na Feira de Soluções) |
 
-> Detalhamento no [Backlog da Sprint 3](../docs/09-Backlog-Sprint-3.md) e no [Relatório da Sprint 3](../docs/RELATORIO_SPRINT_3.md).
+> Detalhamento no [Backlog da Sprint 3](../docs/sprint-3/09-Backlog-Sprint-3.md) e no [Relatório da Sprint 3](../docs/sprint-3/RELATORIO_SPRINT_3.md).
 
 ---
 
@@ -125,11 +125,11 @@
 
 ## 📂 Anexos / Evidências
 
-- Relatório da Sprint 3: [`docs/RELATORIO_SPRINT_3.md`](../docs/RELATORIO_SPRINT_3.md)
-- **Relatório Técnico final:** [`docs/11-Relatorio-Tecnico-Sprint-3.docx`](../docs/11-Relatorio-Tecnico-Sprint-3.docx) · **Relatório de Desenvolvimento (Anexo 8) final:** [`docs/Relatorio_Sprint3_Anexo8.docx`](../docs/Relatorio_Sprint3_Anexo8.docx)
-- **Respostas aos requisitos do cliente** (7 perguntas, funcionalidades, resultados e RN.P): [`docs/Respostas_Requisitos_Cliente.md`](../docs/Respostas_Requisitos_Cliente.md)
-- Backlog da Sprint 3: [`docs/09-Backlog-Sprint-3.md`](../docs/09-Backlog-Sprint-3.md)
-- Log de Decisões de Dados: [`docs/06-Decisoes-de-Dados.md`](../docs/06-Decisoes-de-Dados.md)
+- Relatório da Sprint 3: [`docs/sprint-3/RELATORIO_SPRINT_3.md`](../docs/sprint-3/RELATORIO_SPRINT_3.md)
+- **Relatório Técnico final:** [`docs/sprint-3/11-Relatorio-Tecnico-Sprint-3.docx`](../docs/sprint-3/11-Relatorio-Tecnico-Sprint-3.docx) · **Relatório de Desenvolvimento (Anexo 8) final:** [`docs/sprint-3/Relatorio_Sprint3_Anexo8.docx`](../docs/sprint-3/Relatorio_Sprint3_Anexo8.docx)
+- **Respostas aos requisitos do cliente** (7 perguntas, funcionalidades, resultados e RN.P): [`docs/final/Respostas_Requisitos_Cliente.md`](../docs/final/Respostas_Requisitos_Cliente.md)
+- Backlog da Sprint 3: [`docs/sprint-3/09-Backlog-Sprint-3.md`](../docs/sprint-3/09-Backlog-Sprint-3.md)
+- Log de Decisões de Dados: [`docs/final/06-Decisoes-de-Dados.md`](../docs/final/06-Decisoes-de-Dados.md)
 - **Painel publicado:** [abrir no Power BI](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9) · projeto [`powerbi/pbip/Observatorio_SJC.pbip`](../powerbi/pbip/) e planilhas em [`powerbi/fontes/`](../powerbi/fontes/) · [PDF das 4 páginas](../powerbi/Powerbi_API_Sprint2.pdf)
 - Base única e dicionário de dados: [`dados/RAIS_SJC_2024_PowerBI.csv`](../dados/RAIS_SJC_2024_PowerBI.csv) · [`dados/README.md`](../dados/README.md)
 - Notebooks: [`01_ETL_RAIS_SJC.ipynb`](../notebooks/01_ETL_RAIS_SJC.ipynb) · [`01b_Geocodificacao_CEPs_SJC.ipynb`](../notebooks/01b_Geocodificacao_CEPs_SJC.ipynb) · [`02_Base_PowerBI_SJC.ipynb`](../notebooks/02_Base_PowerBI_SJC.ipynb) · abrir no Colab: [01](https://colab.research.google.com/github/projetoapi08/Observat-rio-do-Ecossistema-Industrial-e-de-Servi-os-de-S-o-Jos-dos-Campos/blob/main/notebooks/01_ETL_RAIS_SJC.ipynb) · [01b](https://colab.research.google.com/github/projetoapi08/Observat-rio-do-Ecossistema-Industrial-e-de-Servi-os-de-S-o-Jos-dos-Campos/blob/main/notebooks/01b_Geocodificacao_CEPs_SJC.ipynb) · [02](https://colab.research.google.com/github/projetoapi08/Observat-rio-do-Ecossistema-Industrial-e-de-Servi-os-de-S-o-Jos-dos-Campos/blob/main/notebooks/02_Base_PowerBI_SJC.ipynb)

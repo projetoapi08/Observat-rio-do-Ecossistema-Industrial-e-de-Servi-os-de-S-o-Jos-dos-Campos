@@ -1,4 +1,4 @@
-> Versão em Markdown de `docs/02-Backlog-do-Produto.docx`, para leitura direta no GitHub. Em caso de diferença, vale o .docx.
+> Versão em Markdown de `docs/final/02-Backlog-do-Produto.docx`, para leitura direta no GitHub. Em caso de diferença, vale o .docx.
 
 # Backlog do Produto
 

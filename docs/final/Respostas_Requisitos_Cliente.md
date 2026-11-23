@@ -3,13 +3,13 @@
 **Projeto:** Observatório do Ecossistema Industrial e de Serviços de São José dos Campos
 **Cliente:** CADI e Secretaria de Desenvolvimento Econômico de São José dos Campos
 **Documento de referência:** Requisitos de Cliente 1LOG – CADI (API 2026-1, 1º semestre de Logística)
-**Ponto de vista:** Logística (cadeia de suprimentos) · **Atualizado em:** 23/11/2026 · [voltar ao README](../README.md)
+**Ponto de vista:** Logística (cadeia de suprimentos) · **Atualizado em:** 23/11/2026 · [voltar ao README](../../README.md)
 
 > O observatório responde as 7 questões de análise, atende as 8 funcionalidades e os 6 requisitos técnicos (RN.P.1 a RN.P.6). Este documento liga cada item do cliente à resposta, com os números da base e o lugar do painel onde ele aparece.
 
-**Base dos números:** RAIS 2024 de São José dos Campos (47.339 estabelecimentos e 206.717 vínculos ativos em 31/12/2024), na base única [`dados/RAIS_SJC_2024_PowerBI.csv`](../dados/RAIS_SJC_2024_PowerBI.csv), e PIB dos Municípios do IBGE em [`dados/IBGE_PIB_SJC_Observatorio.xlsx`](../dados/IBGE_PIB_SJC_Observatorio.xlsx). Os percentuais de emprego são sobre os 206.717 vínculos ativos.
+**Base dos números:** RAIS 2024 de São José dos Campos (47.339 estabelecimentos e 206.717 vínculos ativos em 31/12/2024), na base única [`dados/RAIS_SJC_2024_PowerBI.csv`](../../dados/RAIS_SJC_2024_PowerBI.csv), e PIB dos Municípios do IBGE em [`dados/IBGE_PIB_SJC_Observatorio.xlsx`](../../dados/IBGE_PIB_SJC_Observatorio.xlsx). Os percentuais de emprego são sobre os 206.717 vínculos ativos.
 
-**Painel:** [abrir no Power BI](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9). A página **Regiões e Tecnologia** e o mapa com 99,99% dos pontos estão no projeto `.pbip` e aparecem no link depois que o painel for republicado (ver [`powerbi/README.md`](../powerbi/README.md)).
+**Painel:** [abrir no Power BI](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9). A página **Regiões e Tecnologia** e o mapa com 99,99% dos pontos estão no projeto `.pbip` e aparecem no link depois que o painel for republicado (ver [`powerbi/README.md`](../../powerbi/README.md)).
 
 ## Índice
 
@@ -205,21 +205,21 @@ O documento do cliente fala em "engenheiro de produção". Como o projeto é do 
 
 | Resultado | Situação | Onde |
 |---|---|---|
-| Visualizações e dashboards sobre o perfil produtivo regional | Entregue | [Painel publicado](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9) e [`powerbi/`](../powerbi/) |
-| Relatório técnico (fontes, metodologia e análises) | Entregue | [Relatório Técnico final](11-Relatorio-Tecnico-Sprint-3.docx), [Anexo 8 final](Relatorio_Sprint3_Anexo8.docx), relatórios técnicos das Sprints 1 e 2, [Relatório da Sprint 3](RELATORIO_SPRINT_3.md), [Log de Decisões](06-Decisoes-de-Dados.md) e este documento (análises) |
-| Repositório com dados organizados e documentação | Entregue | Este repositório: [`dados/`](../dados/), [`notebooks/`](../notebooks/), [`docs/`](./), [`evidencias/`](../evidencias/) |
+| Visualizações e dashboards sobre o perfil produtivo regional | Entregue | [Painel publicado](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9) e [`powerbi/`](../../powerbi/) |
+| Relatório técnico (fontes, metodologia e análises) | Entregue | [Relatório Técnico final](../sprint-3/11-Relatorio-Tecnico-Sprint-3.docx), [Anexo 8 final](../sprint-3/Relatorio_Sprint3_Anexo8.docx), relatórios técnicos das Sprints 1 e 2, [Relatório da Sprint 3](../sprint-3/RELATORIO_SPRINT_3.md), [Log de Decisões](06-Decisoes-de-Dados.md) e este documento (análises) |
+| Repositório com dados organizados e documentação | Entregue | Este repositório: [`dados/`](../../dados/), [`notebooks/`](../../notebooks/), [`docs/`](../), [`evidencias/`](../../evidencias/) |
 | Apresentação em evento acadêmico (Feira de Soluções) | 03/12/2026 | Vídeo no canal [LogMulti](https://www.youtube.com/@LogMulti) |
 
 ## 5. Tecnologias exigidas (RN.P)
 
 | Requisito | Atendido | Evidência |
 |---|---|---|
-| RN.P.1 – Bases públicas organizadas no Google Colab | Sim | Notebooks 01 (ETL da RAIS), 01b (geocodificação) e 02 (base única), com links para abrir no Colab em [`evidencias/link-google-colab.md`](../evidencias/link-google-colab.md). O notebook de tratamento do PIB não está no repositório; só a planilha que ele gerou |
-| RN.P.2 – Tratamento em Python 3+ | Sim | [`evidencias/codigos-tratamento-dados.md`](../evidencias/codigos-tratamento-dados.md) |
-| RN.P.3 – Visualização em Power BI | Sim | [`powerbi/pbip/Observatorio_SJC.pbip`](../powerbi/pbip/) e painel publicado |
+| RN.P.1 – Bases públicas organizadas no Google Colab | Sim | Notebooks 01 (ETL da RAIS), 01b (geocodificação) e 02 (base única), com links para abrir no Colab em [`evidencias/link-google-colab.md`](../../evidencias/link-google-colab.md). O notebook de tratamento do PIB não está no repositório; só a planilha que ele gerou |
+| RN.P.2 – Tratamento em Python 3+ | Sim | [`evidencias/codigos-tratamento-dados.md`](../../evidencias/codigos-tratamento-dados.md) |
+| RN.P.3 – Visualização em Power BI | Sim | [`powerbi/pbip/Observatorio_SJC.pbip`](../../powerbi/pbip/) e painel publicado |
 | RN.P.4 – Versionamento e documentação no GitHub | Sim | Este repositório, com histórico de commits por sprint |
 | RN.P.5 – Visualizações claras e navegação intuitiva | Sim | Navegador de páginas, títulos e subtítulos explicativos, filtros no topo de cada página |
-| RN.P.6 – Organização dos dados e documentação técnica | Sim | Dicionário de dados em [`dados/README.md`](../dados/README.md), Log de Decisões com 24 decisões, relatórios das sprints |
+| RN.P.6 – Organização dos dados e documentação técnica | Sim | Dicionário de dados em [`dados/README.md`](../../dados/README.md), Log de Decisões com 24 decisões, relatórios das sprints |
 
 ## 6. Limites das respostas
 

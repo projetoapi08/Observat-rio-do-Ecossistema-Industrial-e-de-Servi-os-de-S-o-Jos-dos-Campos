@@ -82,7 +82,7 @@ Marque cada item depois de adicionar o print ou arquivo na pasta `evidencias/`.
 - [x] Print da página Notas Metodológicas (`evidencias/sprint2/painel_notas_metodologicas.png`)
 - [x] Painel publicado no Power BI ([link](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9))
 - [x] Arquivo do painel publicado (`powerbi/pbip/`) e planilhas-fonte (`powerbi/fontes/`)
-- [x] Relatório do Power BI (`docs/Relatorio_PowerBI_Final.md`) e fórmulas DAX (`docs/Formulas_PowerBI_Final.md`)
+- [x] Relatório do Power BI (`docs/final/Relatorio_PowerBI_Final.md`) e fórmulas DAX (`docs/final/Formulas_PowerBI_Final.md`)
 - [x] Painel exportado em PDF, 4 páginas (`powerbi/Powerbi_API_Sprint2.pdf`)
 - [x] Gráfico de vínculos por região oficial gerado da base (`evidencias/sprint2/vinculos_por_regiao.png`)
 - [x] Notebook da base única (`notebooks/02_Base_PowerBI_SJC.ipynb`)
@@ -111,7 +111,7 @@ Marque cada item depois de adicionar o print ou arquivo na pasta `evidencias/`.
 | Datas de admissão | US10 pede contratações "ordenadas por data", mas a RAIS Estabelecimentos não tem esse campo | Avaliar a RAIS Vínculos ou revisar o critério |
 | Cobertura do mapa e região do painel × base única | 22% sem ponto no mapa; a planilha de regiões do painel deixa 603 sem região (1,3%), a base única deixa 5 | Unificar as fontes do painel na Sprint 3 |
 | Ajustes visuais da página 1 | Cartões com "Mil", título "Distruibuição" e dois subtítulos | Lista em `powerbi/README.md` |
-| DEC-007, DEC-010 e DEC-012 | Decisões citadas pela equipe sem registro no log | Transcrever para `docs/06-Decisoes-de-Dados.docx` |
+| DEC-007, DEC-010 e DEC-012 | Decisões citadas pela equipe sem registro no log | Transcrever para `docs/final/06-Decisoes-de-Dados.docx` |
 
 ## 7. Próximos passos
 

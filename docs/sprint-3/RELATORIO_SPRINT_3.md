@@ -27,7 +27,7 @@ Consolidar o observatório como entrega final: um painel único publicado, docum
 | Vínculos ativos com ponto no mapa | 206.700 (99,99%). Antes: 146.702 (71,0%) |
 | Estabelecimentos com região oficial | 47.334 (99,99%) |
 | Decisões de dados | 24 registradas (DEC-001 a DEC-024); 3 abertas (DEC-004, DEC-015, DEC-022) |
-| Requisitos do cliente | 7 perguntas respondidas, 8 funcionalidades e 6 requisitos técnicos atendidos ([respostas](Respostas_Requisitos_Cliente.md)) |
+| Requisitos do cliente | 7 perguntas respondidas, 8 funcionalidades e 6 requisitos técnicos atendidos ([respostas](../final/Respostas_Requisitos_Cliente.md)) |
 | Divulgação | Canal [LogMulti](https://www.youtube.com/@LogMulti) criado para o vídeo de apresentação do projeto |
 
 ## 3. Backlog da Sprint 3
@@ -44,19 +44,19 @@ Consolidar o observatório como entrega final: um painel único publicado, docum
 - **US06:** na Sprint 3, as coordenadas passaram a vir do CNEFE 2022 do IBGE (DEC-023), já calculadas no notebook de geocodificação (01b) e que não estavam sendo usadas. Com isso, 47.334 dos 47.339 estabelecimentos (99,99%) têm ponto no mapa, no nível do CEP, contra 78,3% antes; 329 dos 331 pontos em bairros homônimos (DEC-017) foram corrigidos. A troca foi feita na base única e na planilha que o mapa do painel lê; o link publicado só mostra o resultado depois de o painel ser atualizado e republicado no Power BI Desktop.
 - **US08:** o painel mostra quais setores concentram estabelecimentos e empregos em 2024, mas "em alta" pede comparação entre anos, e só a RAIS 2024 foi processada.
 - **US10:** a RAIS Estabelecimentos não tem data de admissão. A fonte com essa informação é a RAIS Vínculos (microdados por vínculo), que não faz parte do escopo atual.
-- **US11:** o painel reúne tudo num só lugar, com fontes e limites explicados na página de Notas Metodológicas. Na Sprint 3 ganhou a página Regiões e Tecnologia e um documento que liga cada requisito do cliente a uma resposta ([Respostas_Requisitos_Cliente.md](Respostas_Requisitos_Cliente.md)). Falta a apresentação ao cliente e a aprovação, que acontecem na Feira de Soluções.
+- **US11:** o painel reúne tudo num só lugar, com fontes e limites explicados na página de Notas Metodológicas. Na Sprint 3 ganhou a página Regiões e Tecnologia e um documento que liga cada requisito do cliente a uma resposta ([Respostas_Requisitos_Cliente.md](../final/Respostas_Requisitos_Cliente.md)). Falta a apresentação ao cliente e a aprovação, que acontecem na Feira de Soluções.
 
 ## 4. Entregas e evidências
 
 ### 4.1 Documentação
 
 - `MVP/sp3.md`: MVP da Sprint 3 no modelo da Fatec, com resultados e métricas.
-- `docs/RELATORIO_SPRINT_3.md`: este relatório.
+- `docs/sprint-3/RELATORIO_SPRINT_3.md`: este relatório.
 - `README.md`: status final das sprints, link do painel e do canal do YouTube.
 - `powerbi/README.md`: versão do painel usada na entrega, passo a passo para republicar e lista de melhorias.
-- `docs/11-Relatorio-Tecnico-Sprint-3.docx` e `docs/Relatorio_Sprint3_Anexo8.docx`: Relatório Técnico e Relatório de Desenvolvimento (Anexo 8) finais.
+- `docs/sprint-3/11-Relatorio-Tecnico-Sprint-3.docx` e `docs/sprint-3/Relatorio_Sprint3_Anexo8.docx`: Relatório Técnico e Relatório de Desenvolvimento (Anexo 8) finais.
 - `docs/02-Backlog-do-Produto`, `docs/09-Backlog-Sprint-3`, `docs/00-README`, `docs/01-Visao-e-Escopo` e os documentos do Power BI atualizados para a versão final.
-- `docs/Respostas_Requisitos_Cliente.md`: resposta a cada pergunta, funcionalidade, resultado esperado e requisito técnico do documento do cliente, do ponto de vista da logística.
+- `docs/final/Respostas_Requisitos_Cliente.md`: resposta a cada pergunta, funcionalidade, resultado esperado e requisito técnico do documento do cliente, do ponto de vista da logística.
 
 ### 4.2 Painel e dados
 
@@ -73,14 +73,14 @@ Consolidar o observatório como entrega final: um painel único publicado, docum
 - [x] Painel publicado no Power BI ([link](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9))
 - [x] Prints das 4 páginas da versão publicada (`evidencias/sprint2/`)
 - [ ] Prints das 5 páginas depois de republicar (`evidencias/sprint3/`)
-- [x] Respostas aos requisitos do cliente (`docs/Respostas_Requisitos_Cliente.md`)
+- [x] Respostas aos requisitos do cliente (`docs/final/Respostas_Requisitos_Cliente.md`)
 - [x] Notebook da geocodificação dos CEPs (`notebooks/01b_Geocodificacao_CEPs_SJC.ipynb`) e coordenadas pelo CNEFE 2022 (`dados/entrada/geo_ceps_sjc_cnefe.csv`)
 - [x] Códigos de tratamento de dados dos notebooks 01, 01b e 02, com links para abrir no Colab (`evidencias/codigos-tratamento-dados.md`)
 - [x] Canal do projeto no YouTube ([LogMulti](https://www.youtube.com/@LogMulti))
 - [ ] Link direto do vídeo de apresentação publicado no canal
 - [ ] Apresentação da Feira de Soluções (`docs/`)
-- [x] Relatório Técnico da Sprint 3, versão final (`docs/11-Relatorio-Tecnico-Sprint-3.docx`)
-- [x] Relatório de Desenvolvimento da Sprint 3, versão final (modelo Anexo 8 da Fatec, `docs/Relatorio_Sprint3_Anexo8.docx`)
+- [x] Relatório Técnico da Sprint 3, versão final (`docs/sprint-3/11-Relatorio-Tecnico-Sprint-3.docx`)
+- [x] Relatório de Desenvolvimento da Sprint 3, versão final (modelo Anexo 8 da Fatec, `docs/sprint-3/Relatorio_Sprint3_Anexo8.docx`)
 - [x] Documentação atualizada para a versão final: Backlog do Produto, Backlog da Sprint 3, 00-README, Visão e Escopo, relatório e fórmulas do Power BI
 
 ## 5. Pendências e riscos
@@ -93,7 +93,7 @@ Consolidar o observatório como entrega final: um painel único publicado, docum
 | Região Norte (DEC-015) | 1.024 estabelecimentos com região de confiabilidade média | Pedir à Prefeitura, via cliente, a tabela bairro → região ou o shapefile |
 | Identificação nominal (DEC-004) | Rankings só por setor | Mantido; depende de base identificada do cliente |
 | Série histórica e data de admissão | US08 e US10 não atendidas | Decidir com o cliente na Feira: nova fonte ou critério revisado |
-| DEC-007, DEC-010 e DEC-012 | Decisões citadas sem registro no log | Transcrever para `docs/06-Decisoes-de-Dados.docx` |
+| DEC-007, DEC-010 e DEC-012 | Decisões citadas sem registro no log | Transcrever para `docs/final/06-Decisoes-de-Dados.docx` |
 
 ## 6. Melhorias sugeridas
 

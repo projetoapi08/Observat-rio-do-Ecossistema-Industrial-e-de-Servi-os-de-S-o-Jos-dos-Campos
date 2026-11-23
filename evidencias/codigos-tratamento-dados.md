@@ -18,7 +18,7 @@ RAIS_ESTAB_PUB (MTE) ─► 01 ETL da RAIS ─► 01b Geocodificação dos CEPs 
 
 Os botões "Abrir no Colab" carregam a versão do notebook que está no GitHub. Os links "original no Drive" abrem o notebook da equipe, com as saídas da última execução.
 
-> Os textos explicativos de cada notebook são da sprint em que ele foi escrito. As pendências citadas no notebook 01 foram tratadas depois: o ano-base foi confirmado como 2024 (DEC-003, fechada) e a falta de identificação nominal segue registrada (DEC-004). Situação atual no [Log de Decisões](../docs/06-Decisoes-de-Dados.md).
+> Os textos explicativos de cada notebook são da sprint em que ele foi escrito. As pendências citadas no notebook 01 foram tratadas depois: o ano-base foi confirmado como 2024 (DEC-003, fechada) e a falta de identificação nominal segue registrada (DEC-004). Situação atual no [Log de Decisões](../docs/final/06-Decisoes-de-Dados.md).
 
 ## Índice
 

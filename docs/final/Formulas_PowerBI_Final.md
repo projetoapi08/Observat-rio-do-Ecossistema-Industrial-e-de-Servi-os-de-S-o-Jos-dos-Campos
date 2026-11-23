@@ -1,6 +1,6 @@
 # Fórmulas do painel Power BI — versão final
 
-> Versão em Markdown de [`Formulas_PowerBI_Final.docx`](Formulas_PowerBI_Final.docx). O código abaixo foi copiado do próprio modelo publicado ([`powerbi/pbip/`](../powerbi/pbip/), tabela `RAIS_SJC`), então é exatamente o que o painel usa. Painel online: [abrir no Power BI](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9).
+> Versão em Markdown de [`Formulas_PowerBI_Final.docx`](Formulas_PowerBI_Final.docx). O código abaixo foi copiado do próprio modelo publicado ([`powerbi/pbip/`](../../powerbi/pbip/), tabela `RAIS_SJC`), então é exatamente o que o painel usa. Painel online: [abrir no Power BI](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9).
 
 ## 1. Colunas criadas no Power Query (linguagem M)
 

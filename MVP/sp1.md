@@ -1,6 +1,6 @@
 # 📌 MVP - Sprint 1 · Tratamento dos dados da RAIS para o Observatório do Ecossistema Industrial e de Serviços de São José dos Campos
 
-> **Entrega:** 28/09/2026 · **Status:** Concluída · [Relatório da Sprint 1](../docs/RELATORIO_SPRINT_1.md) · [voltar ao README](../README.md)
+> **Entrega:** 28/09/2026 · **Status:** Concluída · [Relatório da Sprint 1](../docs/sprint-1/RELATORIO_SPRINT_1.md) · [voltar ao README](../README.md)
 
 ## 🎯 Objetivo do MVP
 
@@ -76,7 +76,7 @@
 - Decisões de dados: 4 fechadas e 1 aberta (DEC-004), das 5 registradas.
 - User Stories da Sprint 1: 5 de 5 concluídas.
 - Pré-visualização inicial no Power BI produzida (meta da Sprint 1 cumprida).
-- **Feedback qualitativo (avaliação da Sprint 1):** positivo. O orientador pediu para esclarecer se os 64,37% de RAIS negativa poderiam ser erro de filtragem (respondido na Sprint 2: não é erro, ver [Relatório da Sprint 2](../docs/RELATORIO_SPRINT_2.md)) e para distribuir melhor as tarefas entre os 8 integrantes.
+- **Feedback qualitativo (avaliação da Sprint 1):** positivo. O orientador pediu para esclarecer se os 64,37% de RAIS negativa poderiam ser erro de filtragem (respondido na Sprint 2: não é erro, ver [Relatório da Sprint 2](../docs/sprint-2/RELATORIO_SPRINT_2.md)) e para distribuir melhor as tarefas entre os 8 integrantes.
 
 ---
 
@@ -92,7 +92,7 @@
 
 ## 📂 Anexos / Evidências
 
-- Relatório da Sprint 1: [`docs/RELATORIO_SPRINT_1.md`](../docs/RELATORIO_SPRINT_1.md)
+- Relatório da Sprint 1: [`docs/sprint-1/RELATORIO_SPRINT_1.md`](../docs/sprint-1/RELATORIO_SPRINT_1.md)
 - Repositório: <https://github.com/projetoapi08/Observat-rio-do-Ecossistema-Industrial-e-de-Servi-os-de-S-o-Jos-dos-Campos>
 - Documentação (Visão e Escopo, Backlog, DoR, DoD, Log de Decisões, Relatório Técnico): `docs/`
 - Notebook de ETL (Google Colab): [`notebooks/01_ETL_RAIS_SJC.ipynb`](../notebooks/01_ETL_RAIS_SJC.ipynb) · [abrir no Colab](https://colab.research.google.com/drive/1zOZJ0oXUY7QJlAMfuiMbI5g9EcBWSnMz?usp=sharing)

@@ -36,7 +36,7 @@ Passo a passo:
 | [`Powerbi_API_Sprint2.pdf`](Powerbi_API_Sprint2.pdf) | Versão publicada em 26/10/2026 exportada em PDF (4 páginas), para ver sem o Power BI |
 | [`versoes_anteriores/`](versoes_anteriores/) | `Powerbi_API_Sprint2.pbix` e `.pbit` (2 páginas: KPIs e Mapa, Setor de Atividades) e `PowerbiATT_Api_Sprint2.pbix` (páginas de PIB e de notas, que foram juntadas na versão atual) |
 
-Documentação do painel: [relatório do Power BI](../docs/Relatorio_PowerBI_Final.md) (fontes e leitura de cada visual) e [fórmulas DAX e Power Query](../docs/Formulas_PowerBI_Final.md).
+Documentação do painel: [relatório do Power BI](../docs/final/Relatorio_PowerBI_Final.md) (fontes e leitura de cada visual) e [fórmulas DAX e Power Query](../docs/final/Formulas_PowerBI_Final.md).
 
 ### Como abrir a versão `.pbip`
 
@@ -81,7 +81,7 @@ Documentação do painel: [relatório do Power BI](../docs/Relatorio_PowerBI_Fin
 
 ## Página nova: Regiões e Tecnologia (23/11/2026)
 
-Responde às perguntas 2, 3, 4 e 5 do documento de requisitos do cliente (ver [`docs/Respostas_Requisitos_Cliente.md`](../docs/Respostas_Requisitos_Cliente.md)). Fica entre PIB e Emprego e Notas Metodológicas.
+Responde às perguntas 2, 3, 4 e 5 do documento de requisitos do cliente (ver [`docs/final/Respostas_Requisitos_Cliente.md`](../docs/final/Respostas_Requisitos_Cliente.md)). Fica entre PIB e Emprego e Notas Metodológicas.
 
 | Visual | O que mostra |
 |---|---|
@@ -110,4 +110,4 @@ Ainda pendente:
 
 - **Fonte da tabela RAIS_SJC:** trocar pela base única `dados/RAIS_SJC_2024_PowerBI.csv` (DEC-022), que já tem latitude, longitude e região na mesma linha; a planilha de regiões do painel deixa 603 estabelecimentos sem região, a base única deixa 5.
 
-Lista completa, com o esforço de cada item, no [Relatório da Sprint 3](../docs/RELATORIO_SPRINT_3.md#6-melhorias-sugeridas).
+Lista completa, com o esforço de cada item, no [Relatório da Sprint 3](../docs/sprint-3/RELATORIO_SPRINT_3.md#6-melhorias-sugeridas).

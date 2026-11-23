@@ -1,6 +1,6 @@
 # 📌 MVP - Sprint 2 · Análises centrais e mapeamento geográfico do ecossistema de São José dos Campos no Power BI
 
-> **Entrega:** 26/10/2026 · **Status:** Concluída (2 User Stories concluídas e 2 parciais, que seguem na Sprint 3) · [Relatório da Sprint 2](../docs/RELATORIO_SPRINT_2.md) · [voltar ao README](../README.md)
+> **Entrega:** 26/10/2026 · **Status:** Concluída (2 User Stories concluídas e 2 parciais, que seguem na Sprint 3) · [Relatório da Sprint 2](../docs/sprint-2/RELATORIO_SPRINT_2.md) · [voltar ao README](../README.md)
 
 > 🌐 **Painel publicado:** [abrir no Power BI](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9) (abre no navegador, sem login)
 
@@ -115,15 +115,15 @@
 
 ## 📂 Anexos / Evidências
 
-- Relatório da Sprint 2: [`docs/RELATORIO_SPRINT_2.md`](../docs/RELATORIO_SPRINT_2.md)
+- Relatório da Sprint 2: [`docs/sprint-2/RELATORIO_SPRINT_2.md`](../docs/sprint-2/RELATORIO_SPRINT_2.md)
 - Documentação (Backlog da Sprint 2, Log de Decisões, Relatório Técnico, Anexo 8): `docs/`
 - Base única para o Power BI: [`dados/RAIS_SJC_2024_PowerBI.csv`](../dados/RAIS_SJC_2024_PowerBI.csv) — guia em [`evidencias/Importacao_PowerBI_RAIS_SJC.txt`](../evidencias/Importacao_PowerBI_RAIS_SJC.txt)
 - Notebook que gera a base (Google Colab): [`notebooks/02_Base_PowerBI_SJC.ipynb`](../notebooks/02_Base_PowerBI_SJC.ipynb) · dicionário de dados em [`dados/README.md`](../dados/README.md)
 - Planilhas tratadas: [`dados/CNAE_RAIS_SJC_2024.xlsx`](../dados/CNAE_RAIS_SJC_2024.xlsx) e [`dados/IBGE_PIB_SJC_Observatorio.xlsx`](../dados/IBGE_PIB_SJC_Observatorio.xlsx)
 - **Painel publicado:** [abrir no Power BI](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9)
 - Arquivos do painel: [`powerbi/pbip/`](../powerbi/pbip/) (versão publicada, projeto `.pbip`), planilhas em [`powerbi/fontes/`](../powerbi/fontes/), [PDF](../powerbi/Powerbi_API_Sprint2.pdf) e versões anteriores em [`powerbi/versoes_anteriores/`](../powerbi/versoes_anteriores/) — ver [`powerbi/README.md`](../powerbi/README.md)
-- Relatório do Power BI (fontes e leitura de cada visual): [`docs/Relatorio_PowerBI_Final.md`](../docs/Relatorio_PowerBI_Final.md)
-- Fórmulas do painel (medidas DAX e Power Query): [`docs/Formulas_PowerBI_Final.md`](../docs/Formulas_PowerBI_Final.md)
+- Relatório do Power BI (fontes e leitura de cada visual): [`docs/final/Relatorio_PowerBI_Final.md`](../docs/final/Relatorio_PowerBI_Final.md)
+- Fórmulas do painel (medidas DAX e Power Query): [`docs/final/Formulas_PowerBI_Final.md`](../docs/final/Formulas_PowerBI_Final.md)
 - Vídeos do projeto: [canal LogMulti no YouTube](https://www.youtube.com/@LogMulti)
 - Referência do projeto: [Observatório da Inovação RS](https://sict.rs.gov.br/observatorio)
 
@@ -171,4 +171,4 @@ Limites, cruzamento com o PIB, decisões do grupo (DEC-011 e DEC-014), ferrament
 | DEC-021 | Requisitos pedem tipo de atividade e intensidade tecnológica | Colunas Tipo de Atividade, OCDE, Porte SEBRAE e Setor Destaque | Fechada |
 | DEC-022 | Mapa localizava pelo texto do CEP | Base única com latitude/longitude para substituir a fonte do painel | **Aberta** (o mapa já usa latitude/longitude pela tabela CEP x Região; falta trocar a fonte pela base única) |
 
-> DEC-007, DEC-010 e DEC-012 foram numeradas pela equipe e ainda precisam ser transcritas para o Log de Decisões (`docs/06-Decisoes-de-Dados.docx`).
+> DEC-007, DEC-010 e DEC-012 foram numeradas pela equipe e ainda precisam ser transcritas para o Log de Decisões (`docs/final/06-Decisoes-de-Dados.docx`).

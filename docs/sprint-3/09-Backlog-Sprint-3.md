@@ -1,4 +1,4 @@
-> Versão em Markdown de `docs/09-Backlog-Sprint-3.docx`, para leitura direta no GitHub. Em caso de diferença, vale o .docx.
+> Versão em Markdown de `docs/sprint-3/09-Backlog-Sprint-3.docx`, para leitura direta no GitHub. Em caso de diferença, vale o .docx.
 
 # Backlog da Sprint 3
 
@@ -51,7 +51,7 @@
 - [x] Base única — dados/RAIS_SJC_2024_PowerBI.csv (47 colunas)
 - [x] Relatório Técnico da Sprint 3 (11-Relatorio-Tecnico-Sprint-3) e Log de Decisões até a DEC-024
 - [x] Relatório de Desenvolvimento — Anexo 8 da Sprint 3, versão final (docs/Relatorio_Sprint3_Anexo8)
-- [x] Respostas aos requisitos do cliente (docs/Respostas_Requisitos_Cliente.md)
+- [x] Respostas aos requisitos do cliente (docs/final/Respostas_Requisitos_Cliente.md)
 - [x] Canal do projeto no YouTube — https://www.youtube.com/@LogMulti
 - [ ] Link direto do vídeo de apresentação
 - [ ] Apresentação da Feira de Soluções (03/12/2026)

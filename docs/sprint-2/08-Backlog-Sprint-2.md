@@ -1,4 +1,4 @@
-> Versão em Markdown de `docs/08-Backlog-Sprint-2.docx`, para leitura direta no GitHub. Em caso de diferença, vale o .docx.
+> Versão em Markdown de `docs/sprint-2/08-Backlog-Sprint-2.docx`, para leitura direta no GitHub. Em caso de diferença, vale o .docx.
 
 # Backlog da Sprint 2
 

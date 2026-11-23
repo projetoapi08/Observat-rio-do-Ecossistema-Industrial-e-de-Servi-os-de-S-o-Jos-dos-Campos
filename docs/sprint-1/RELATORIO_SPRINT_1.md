@@ -78,7 +78,7 @@ Marque cada item depois de adicionar o print ou arquivo na pasta `evidencias/`.
 - [ ] Os 3 arquivos CSV gerados (US01)
 - [x] Contagem de estabelecimentos com e sem vínculos ativos (base do DEC-001) (`notebooks/estatisticas_etl.json`)
 - [ ] Pré-visualização inicial no Power BI (print ou link do arquivo)
-- [x] Log de Decisões de Dados (DEC-001 a DEC-005) (US03) (`docs/06-Decisoes-de-Dados.md`)
+- [x] Log de Decisões de Dados (DEC-001 a DEC-005) (US03) (`docs/final/06-Decisoes-de-Dados.md`)
 - [ ] Documentos da Sprint 1 aprovados pelo orientador (US04)
 - [x] Repositório publicado com `docs/`, `notebooks/`, `powerbi/` e README (US05)
 - [ ] Confirmação do cliente sobre o ano-base 2024 (mensagem do grupo)
