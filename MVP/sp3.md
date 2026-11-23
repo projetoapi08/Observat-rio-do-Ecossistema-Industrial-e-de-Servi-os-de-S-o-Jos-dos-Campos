@@ -102,7 +102,7 @@
 **Até a Feira de Soluções (03/12/2026)**
 
 - Publicar o vídeo de apresentação no [canal LogMulti](https://www.youtube.com/@LogMulti) e colocar o link direto do vídeo aqui e no README.
-- Corrigir os ajustes visuais da página 1 (cartões com "Mil", título "Distruibuição", subtítulos de dois cartões), listados em [`powerbi/README.md`](../powerbi/README.md).
+- ✅ Ajustes visuais da página 1 feitos no `.pbip` (cartões sem "Mil", título da pizza e subtítulos de dois cartões). Falta abrir no Power BI Desktop e republicar para o link mostrar a correção (ver [`powerbi/README.md`](../powerbi/README.md)).
 - Levar à Feira um QR Code para o painel publicado e outro para o repositório.
 - Perguntar ao cliente, na apresentação, se aceita revisar os critérios de US08 e US10 (ver abaixo) e registrar a resposta no Log de Decisões.
 

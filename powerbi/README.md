@@ -58,13 +58,16 @@ Documentação do painel: [relatório do Power BI](../docs/Relatorio_PowerBI_Spr
 - Nova tabela `dCNAE` com o nome oficial das 673 classes: nenhum setor aparece mais só com o número do código (coluna `Setor Completo`).
 - Página 2 ganhou o gráfico **Indústria (Seção C): empregos CLT por setor**, e a tabela por porte passou a mostrar a base inteira (206.626 vínculos CLT).
 
-## Ajustes pequenos (pendentes)
+## Ajustes visuais da página 1 (feitos em 23/11/2026 no `.pbip`)
 
-Vistos nas telas da versão publicada, ainda não aplicados:
+- ✅ **Cartões sem "Mil":** os cartões Total de Estabelecimentos, Sem Vínculo, Com Vínculo e Total de Vínculos Ativos passaram a usar a unidade de exibição **Nenhum**. Antes apareciam "47,339 Mil", "30,523 Mil", "16,816 Mil" e "206,717 Mil"; agora aparecem 47.339, 30.523, 16.816 e 206.717.
+- ✅ **Título da pizza:** "Distruibuição de" → "Distribuição dos estabelecimentos por situação de vínculo".
+- ✅ **Subtítulos dos cartões:** "Unidades com CNPJ próprio" → "Estabelecimentos na base" (o total inclui CAEPF e CNO) e "Empregados com contrato formal" → "Com empregados no ano" (o cartão conta estabelecimentos, não pessoas).
 
-- **Cartões com "Mil":** aparecem "47,339 Mil", "30,523 Mil", "16,816 Mil" e "206,717 Mil", que se leem como decimais. Em *Formato → Valor do balão → Unidades de exibição*, usar **Nenhum** para mostrar 47.339, 30.523, 16.816 e 206.717.
-- **Título da pizza:** "Distruibuição de" → "Distribuição".
-- **Subtítulos dos cartões:** "Unidades com CNPJ próprio" (o total inclui CAEPF e CNO; sugerido: "Estabelecimentos na base") e "Empregados com contrato formal" (o cartão conta estabelecimentos, não pessoas; sugerido: "Estabelecimentos com empregados no ano").
+> ⚠️ Os ajustes estão no projeto `.pbip` do repositório. O **link publicado só muda depois que alguém abrir o `.pbip` no Power BI Desktop, conferir a página 1 e clicar em Publicar** (substituindo o relatório no mesmo workspace, para manter o link).
+
+Ainda pendente:
+
 - **Relação automática** `Cruzamento[vab_real_2023] → 'VAB setorial'[vab_real_2023]`: foi criada pelo Power BI sobre uma coluna de valor, não de chave. Conferir se algum visual depende dela; se não, pode ser excluída.
 
 ## Melhorias sugeridas para a versão final

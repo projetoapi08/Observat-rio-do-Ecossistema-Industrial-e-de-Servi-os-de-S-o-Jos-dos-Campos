@@ -92,7 +92,7 @@ Consolidar o observatório como entrega final: um painel único publicado, docum
 |---|---|---|---|
 | 1 | Dar ponto no mapa aos estabelecimentos sem coordenada cujo bairro já foi geocodificado em outro CEP | 5.024 estabelecimentos a mais no mapa; cobertura de 78,3% para cerca de 88,9% | Baixo (uma etapa no notebook 02) |
 | 2 | Regeocodificar os 9 bairros homônimos e trocar a fonte do mapa pela base única | Fecha DEC-017 e DEC-022; região do painel igual à da base | Baixo |
-| 3 | Corrigir os ajustes visuais da página 1 (cartões com "Mil", título "Distruibuição", subtítulos) | Números lidos corretamente (47.339, não "47,339 Mil") | Baixo |
+| 3 | ✅ **Feito em 23/11 no `.pbip`.** Corrigir os ajustes visuais da página 1 (cartões com "Mil", título "Distruibuição", subtítulos); falta republicar | Números lidos corretamente (47.339, não "47,339 Mil") | Concluído |
 | 4 | Criar uma página "Regiões" com vínculos e estabelecimentos por região, tipo de atividade, intensidade tecnológica (OCDE) e porte SEBRAE | Responde aos requisitos do cliente com colunas que já existem (DEC-021) | Médio |
 | 5 | Processar a RAIS 2022 e 2023 pelo notebook 01 | Evolução dos setores (US08) | Médio |
 | 6 | Revisar o critério da US10 com o cliente: RAIS Vínculos (mês de admissão) ou "estabelecimentos com atividade no ano" | US10 com fonte ou critério registrado | Baixo para decidir |
@@ -105,7 +105,7 @@ Consolidar o observatório como entrega final: um painel único publicado, docum
 **Feira de Soluções (03/12/2026): apresentação final**
 
 1. Publicar o vídeo no canal LogMulti e atualizar o link no README e no MVP.
-2. Aplicar as melhorias 1 a 3, se houver tempo antes da Feira; as demais ficam como recomendação ao cliente.
+2. Abrir o `.pbip` no Power BI Desktop e republicar no mesmo workspace, para o link mostrar os ajustes da página 1. Aplicar as melhorias 1 e 2, se houver tempo antes da Feira; as demais ficam como recomendação ao cliente.
 3. Preparar a apresentação e um QR Code para o painel e para o repositório.
 4. Registrar o feedback do cliente e a decisão sobre US08 e US10 no Log de Decisões.
 

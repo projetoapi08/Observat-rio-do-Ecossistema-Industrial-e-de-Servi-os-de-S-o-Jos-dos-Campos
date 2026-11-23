@@ -175,7 +175,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Distruibuição de '"
+                  "Value": "'Distribuição dos estabelecimentos por situação de vínculo'"
                 }
               }
             }
