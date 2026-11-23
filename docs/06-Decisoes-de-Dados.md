@@ -153,7 +153,7 @@ Decisões numeradas pela equipe durante a Sprint 2 sem registro neste log (DEC-0
 | Justificativa | A região está certa (confirmada pelo setor do CEP); só o ponto precisa ser refeito. |
 | Impacto | 331 estabelecimentos fora do mapa de pontos, mas presentes nos gráficos por região. |
 | User Stories impactadas | US06 |
-| Status | Aberta — regeocodificar os 9 bairros na Sprint 3 |
+| Status | Fechada por DEC-023 (23/11/2026) — com as coordenadas do CNEFE 2022, 329 dos 331 pontos deixaram de cair em bairros homônimos |
 
 ### DEC-018 — CEPs genéricos e sem localização
 
@@ -164,7 +164,7 @@ Decisões numeradas pela equipe durante a Sprint 2 sem registro neste log (DEC-0
 | Justificativa | Um ponto no centro de uma avenida longa seria enganoso; a região, por outro lado, raramente muda ao longo dela. |
 | Impacto | 10.255 estabelecimentos sem ponto no mapa, todos com região (exceto os 5). |
 | User Stories impactadas | US06 |
-| Status | Fechada — geocodificação dos bairros não encontrados fica na Sprint 3 |
+| Status | Fechada — geocodificação dos bairros não encontrados fica na Sprint 3 · Em 23/11/2026, os CEPs genéricos e não encontrados ganharam ponto pelo CNEFE 2022 (DEC-023) |
 
 ### DEC-019 — Situação detalhada do estabelecimento
 
@@ -209,6 +209,17 @@ Decisões numeradas pela equipe durante a Sprint 2 sem registro neste log (DEC-0
 | Impacto | Troca de fonte e ajuste do mapa no Power BI, conforme o guia de importação (evidencias/). |
 | User Stories impactadas | US06, US11 |
 | Status | Aberta — em 26/10/2026 o mapa do painel passou a usar latitude e longitude (tabela CEP x Região); a troca da fonte da RAIS_SJC pela base única fica para a Sprint 3 |
+
+### DEC-023 — Coordenadas do mapa pelo CNEFE 2022 (IBGE)
+
+| Campo | Descrição |
+|---|---|
+| Problema identificado | Ao fim da Sprint 2, 10.255 estabelecimentos (21,7%) e 60.015 vínculos (29,0%) estavam sem ponto no mapa (CEPs genéricos e bairros não encontrados, DEC-018), 331 pontos caíam em bairros homônimos (DEC-017) e os demais ficavam no centro do bairro. A meta da US06 é ponto para mais de 90% dos estabelecimentos. |
+| Decisão adotada | Usar como coordenada de cada CEP o ponto médio dos endereços do CNEFE 2022 (Cadastro Nacional de Endereços para Fins Estatísticos, IBGE) com aquele CEP ou, se o CEP não está no cadastro, dos CEPs com os mesmos 5 primeiros dígitos (notebook 01b; arquivo `dados/entrada/geo_ceps_sjc_cnefe.csv`). Bairro e região continuam vindo da geocodificação do grupo; a coordenada antiga fica só como reserva. Aplicado na base única (notebook 02) e na aba CEP x Região da planilha do painel. |
+| Justificativa | O CNEFE é o cadastro oficial e georreferenciado de endereços do IBGE (320.850 endereços em São José dos Campos). Dá o ponto no nível do CEP, cobre 3.676 dos 3.677 CEPs da base e não depende de serviços com limite de consultas. |
+| Impacto | 47.334 de 47.339 estabelecimentos (99,99%) e 206.700 de 206.717 vínculos com ponto no mapa (antes 78,3% e 71,0%). 329 dos 331 alertas de homônimos resolvidos; a coluna Alerta Coordenada passa a marcar 689 estabelecimentos em CEPs perto da divisa entre regiões, para conferência. Os 5.413 estabelecimentos em CEPs genéricos ficam com ponto aproximado. A região de cada estabelecimento não mudou. |
+| User Stories impactadas | US06 |
+| Status | Fechada (23/11/2026) na base única e na planilha do painel; o painel publicado muda depois de atualizar e republicar no Power BI Desktop. |
 
 ## 3. Fechamento da US03
 

@@ -4,7 +4,18 @@
 
 **[Abrir o painel publicado no Power BI](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9)** — abre no navegador, sem instalar nada e sem login.
 
-Versão de 26/10/2026, com as 4 páginas: **KPIs e Mapa · Setor de Atividades (CNAE) · PIB e Emprego · Notas Metodológicas**. É a mesma versão entregue na Sprint 3 (23/11/2026), com o mesmo link.
+Versão de 26/10/2026, com as 4 páginas: **KPIs e Mapa · Setor de Atividades (CNAE) · PIB e Emprego · Notas Metodológicas**. É a mesma versão entregue na Sprint 3 (23/11/2026), com o mesmo link. **Em 23/11/2026 a planilha do mapa recebeu as coordenadas do CNEFE 2022 (99,99% dos estabelecimentos com ponto); o link publicado só mostra isso depois do passo a passo abaixo.**
+
+## 🔄 Como atualizar o painel com o mapa novo (CNEFE 2022)
+
+A aba **CEP x Região** de `fontes/Regioes_SJC_filtro_por_regiao.xlsx` agora tem as coordenadas do CNEFE 2022 (DEC-023): 3.676 dos 3.677 CEPs com ponto, contra 2.672 antes. Nenhuma coluna mudou de nome nem de lugar, então o painel não precisa de ajuste nos visuais, só de atualização:
+
+1. Baixe o repositório atualizado (*Code → Download ZIP*) e extraia em `C:\Observatorio-SJC\` (ou ajuste o parâmetro `PastaFontes`, como explicado abaixo).
+2. Abra `powerbi/pbip/Observatorio_SJC.pbip` no Power BI Desktop.
+3. Clique em **Página Inicial → Atualizar**. Se aparecer erro só na tabela `PIB anual`, é a aba que falta em `fontes/` (aviso abaixo): para não perder essa tabela, atualize apenas a `CEP x Região` (painel **Dados**, botão direito na tabela → **Atualizar dados**).
+4. Confira a página **KPIs e Mapa**: o mapa deve mostrar pontos também nas avenidas e no CEP `12230000` (Jardim Satélite), que antes ficavam vazios; os cartões devem aparecer sem "Mil".
+5. **Arquivo → Publicar → Publicar no Power BI**, escolha o mesmo workspace e confirme **Substituir**. O link público continua o mesmo.
+6. Tire novos prints das 4 páginas e salve em `evidencias/sprint3/`.
 
 ## Arquivos
 
@@ -49,6 +60,7 @@ Documentação do painel: [relatório do Power BI](../docs/Relatorio_PowerBI_Spr
 - Projeto renomeado de `Powerbi Sprint2` para **`Observatorio_SJC`** (arquivo `.pbip`, pastas `.Report` e `.SemanticModel`).
 - Versões `.pbix` e `.pbit` antigas movidas para `versoes_anteriores/`.
 - Nenhum visual, medida ou relação foi alterado. O painel publicado continua o mesmo, no mesmo link.
+- **Coordenadas do mapa (DEC-023):** as colunas Latitude e Longitude da aba `CEP x Região` (`fontes/Regioes_SJC_filtro_por_regiao.xlsx`) passaram a vir do CNEFE 2022 do IBGE. A região de cada CEP não mudou. A versão anterior da planilha fica no histórico do Git.
 
 ## O que mudou na Sprint 2 em relação à versão anterior
 
@@ -72,8 +84,7 @@ Ainda pendente:
 
 ## Melhorias sugeridas para a versão final
 
-- **Cobertura do mapa:** a célula do CNEFE 2022 (IBGE) no notebook 01b já calculou coordenadas para 3.676 dos 3.677 CEPs (`dados/entrada/geo_ceps_sjc_cnefe.csv`). Usar essas coordenadas no notebook 02 leva o mapa de 78,3% para 99,99% dos estabelecimentos, com o ponto no CEP e não no centro do bairro.
-- **Fonte do mapa:** trocar a tabela `CEP x Região` pela base única `dados/RAIS_SJC_2024_PowerBI.csv` (DEC-022), que já tem latitude, longitude e região, e regeocodificar os 9 bairros homônimos (DEC-017).
+- **Fonte da tabela RAIS_SJC:** trocar pela base única `dados/RAIS_SJC_2024_PowerBI.csv` (DEC-022), que já tem latitude, longitude e região na mesma linha; a planilha de regiões do painel deixa 603 estabelecimentos sem região, a base única deixa 5.
 - **Página "Regiões":** vínculos e estabelecimentos por região oficial, tipo de atividade, intensidade tecnológica (OCDE) e porte SEBRAE, com as colunas que já estão na base única.
 
 Lista completa, com o esforço de cada item, no [Relatório da Sprint 3](../docs/RELATORIO_SPRINT_3.md#6-melhorias-sugeridas).

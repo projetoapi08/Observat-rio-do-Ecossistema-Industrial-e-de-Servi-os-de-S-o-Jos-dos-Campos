@@ -10,8 +10,8 @@ Bases tratadas do projeto. A principal é **`RAIS_SJC_2024_PowerBI.csv`**, a bas
 | [`CNAE_RAIS_SJC_2024.xlsx`](CNAE_RAIS_SJC_2024.xlsx) | Base RAIS com a hierarquia CNAE (aba `Base_RAIS`), tabelas de setores, porte, RAIS negativa e legendas | Sprint 2 |
 | [`IBGE_PIB_SJC_Observatorio.xlsx`](IBGE_PIB_SJC_Observatorio.xlsx) | PIB dos Municípios 2002–2023, valor adicionado por setor (até 2021) e cruzamento com a RAIS | Sprint 2 |
 | [`entrada/RAIS_SJC_completo.csv`](entrada/RAIS_SJC_completo.csv) | Extrato da RAIS 2024 filtrado para o município 354990 | ETL da Sprint 1 (notebook 01) |
-| [`entrada/rais_sjc_geo_v2.csv`](entrada/rais_sjc_geo_v2.csv) | RAIS com bairro e coordenadas de cada CEP | Geocodificação (BrasilAPI + Nominatim), a partir do notebook 01b |
-| [`entrada/geo_ceps_sjc_cnefe.csv`](entrada/geo_ceps_sjc_cnefe.csv) | Uma linha por CEP com latitude e longitude pelo CNEFE 2022 (IBGE): 3.379 CEPs exatos, 297 aproximados pelos 5 primeiros dígitos e 1 não localizado. Separador `;` e vírgula decimal. **Ainda não usado pelo notebook 02** (ver melhoria 1 do [Relatório da Sprint 3](../docs/RELATORIO_SPRINT_3.md#6-melhorias-sugeridas)) | Notebook 01b, célula do CNEFE |
+| [`entrada/rais_sjc_geo_v2.csv`](entrada/rais_sjc_geo_v2.csv) | RAIS com bairro e coordenadas de cada CEP. Desde a DEC-023, a base única usa daqui o bairro; as coordenadas só como reserva | Geocodificação (BrasilAPI + Nominatim), a partir do notebook 01b |
+| [`entrada/geo_ceps_sjc_cnefe.csv`](entrada/geo_ceps_sjc_cnefe.csv) | Uma linha por CEP com latitude e longitude pelo CNEFE 2022 (IBGE): 3.379 CEPs exatos, 297 aproximados pelos 5 primeiros dígitos e 1 não localizado. Separador `;` e vírgula decimal. **É a fonte das coordenadas da base única desde 23/11/2026 (DEC-023)** | Notebook 01b, célula do CNEFE |
 | [`entrada/ceps_sjc_geo_v2.csv`](entrada/ceps_sjc_geo_v2.csv) | Uma linha por CEP com logradouro e marcação de CEP genérico. **Atenção:** as coordenadas deste arquivo estão corrompidas (DEC-016) | Geocodificação |
 | [`referencia/bairros_regiao_sjc.csv`](referencia/bairros_regiao_sjc.csv) | Tabela bairro → região oficial, editável. Para tornar a classificação 100% oficial, substitua pela lista da Prefeitura e rode o notebook 02 | Plano Diretor PMSJC + lista secundária (Norte) |
 | [`referencia/CNAE_Subclasses_2_3.xlsx`](referencia/CNAE_Subclasses_2_3.xlsx) | Estrutura oficial da CNAE 2.3 (1.332 subclasses) | IBGE/CONCLA |
@@ -33,16 +33,16 @@ Colunas marcadas com ⭐ já são usadas pelos visuais do painel e mantêm o nom
 | Ano Base | inteiro | Ano de referência da RAIS (DEC-003) | 2024 |
 | CEP Estab ⭐ | texto | CEP com 8 dígitos; vazio quando o CEP original é zero | 12231675 |
 | CEP Formatado | texto | CEP com hífen, para exibição | 12231-675 |
-| CEP Genérico | texto | Sim = CEP terminado em 000, de grande avenida, sem ponto no mapa | Não |
+| CEP Genérico | texto | Sim = CEP terminado em 000, de grande avenida; o ponto no mapa é aproximado (centro dos endereços do CEP) | Não |
 | Logradouro | texto | Rua ou avenida do CEP (BrasilAPI) | Avenida Cidade Jardim |
 | Bairro | texto | Bairro do CEP | Jardim Satélite |
 | Região Oficial | texto | Centro, Norte, Sul, Leste, Oeste, Sudeste, São Francisco Xavier, Rural ou Não classificado (DEC-015) | Sul |
 | Fonte Região | texto | Origem da região: lista oficial, fonte secundária, setor do CEP ou distrito/rural | Plano Diretor PMSJC 2018 |
 | Confiabilidade Região | texto | Alta, Média, Baixa ou Não se aplica | Alta |
-| Latitude | decimal | Latitude do centro do bairro; vazia quando não há ponto | -23.2280912 |
-| Longitude | decimal | Longitude do centro do bairro | -45.8867116 |
-| Precisão Geo | texto | bairro, bairro (aproximado), distrito, região (sem ponto no mapa), não localizado, sem CEP | bairro |
-| Alerta Coordenada | texto | Preenchida quando o ponto caiu em outra região por bairro homônimo (DEC-017) | (vazio) |
+| Latitude | decimal | Latitude do CEP pelo CNEFE 2022 (IBGE), DEC-023; vazia quando não há ponto | -23.225779 |
+| Longitude | decimal | Longitude do CEP pelo CNEFE 2022 (IBGE) | -45.882115 |
+| Precisão Geo | texto | CEP (CNEFE 2022); CEP genérico (CNEFE 2022, ponto aproximado); CEP aproximado (CNEFE 2022, 5 dígitos); região (sem ponto no mapa); sem CEP | CEP (CNEFE 2022) |
+| Alerta Coordenada | texto | "Ponto mais perto de outra região (conferir)": o ponto do CEP fica a mais de 1,5 km mais perto do centro de outra região do que da própria (CEPs perto da divisa). A região não muda | (vazio) |
 | Seção Cód | texto | Letra da seção CNAE (A a U; NI = ignorada) | C |
 | Seção CNAE ⭐ | texto | Letra + nome oficial IBGE da seção | C - Indústrias de transformação |
 | Setor ⭐ | texto | Nome curto da seção CNAE | Indústria de transformação |
@@ -84,4 +84,4 @@ Colunas marcadas com ⭐ já são usadas pelos visuais do painel e mantêm o nom
 | Vínculos ativos em 31/12/2024 | 206.717 |
 | Com vínculos em 31/12 / RAIS negativa | 15.058 / 30.470 |
 | Com região oficial | 47.334 (99,99%) |
-| Com ponto no mapa | 37.084 (78,3%) |
+| Com ponto no mapa | 47.334 (99,99%); antes da DEC-023, 37.084 (78,3%) |

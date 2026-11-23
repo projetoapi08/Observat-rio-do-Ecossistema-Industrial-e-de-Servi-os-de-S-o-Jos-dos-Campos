@@ -1,6 +1,6 @@
 # 📌 MVP - Sprint 3 · Consolidação do Observatório do Ecossistema Industrial e de Serviços de São José dos Campos
 
-> **Entrega:** 23/11/2026 · **Status:** Entregue (painel consolidado publicado; US06 e US08 parciais, US10 sem fonte de dados) · Apresentação final na Feira de Soluções (03/12/2026) · [Relatório da Sprint 3](../docs/RELATORIO_SPRINT_3.md) · [voltar ao README](../README.md)
+> **Entrega:** 23/11/2026 · **Status:** Entregue (painel consolidado publicado; US06 concluída nos dados com 99,99% dos estabelecimentos no mapa; US08 parcial; US10 sem fonte de dados) · Apresentação final na Feira de Soluções (03/12/2026) · [Relatório da Sprint 3](../docs/RELATORIO_SPRINT_3.md) · [voltar ao README](../README.md)
 
 > 🌐 **Painel publicado:** [abrir no Power BI](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9) (abre no navegador, sem login)
 >
@@ -27,11 +27,11 @@
   - **Setor de Atividades (CNAE):** Top 10 setores por estabelecimentos e por empregos CLT, participação de cada seção, indústria (Seção C) por setor e tabela por porte.
   - **PIB e Emprego:** PIB 2002–2023 corrigido pelo IPCA, variação anual, valor adicionado por setor e produtividade relativa.
   - **Notas Metodológicas:** fontes, definições, limites e decisões da equipe.
-  - **Documentação de entrega:** relatório da Sprint 3, Log de Decisões (DEC-001 a DEC-022), notebooks 01 e 02 para reproduzir a base, dicionário de dados e guia para abrir e atualizar o painel.
+  - **Documentação de entrega:** relatório da Sprint 3, Log de Decisões (DEC-001 a DEC-023), notebooks 01, 01b e 02 para reproduzir a base, dicionário de dados e guia para abrir e atualizar o painel.
   - **Canal LogMulti no YouTube**, para o vídeo de apresentação do projeto (gravação de tela do GitHub e do painel, até 5 minutos).
 
 - Limitações conhecidas:
-  - **Mapa:** 78,3% dos estabelecimentos têm ponto; a meta era acima de 90%. Os pontos ficam no centro do bairro, não no endereço da empresa.
+  - **Mapa:** com as coordenadas do CNEFE 2022 (DEC-023), 99,99% dos estabelecimentos têm ponto, no nível do CEP. O ponto é o centro dos endereços do CEP, não o endereço exato da empresa; nos CEPs genéricos (5.413 estabelecimentos) ele é aproximado. A versão publicada do painel só mostra isso depois de atualizada e republicada.
   - **Um único ano de RAIS (2024):** não dá para mostrar a evolução dos setores (US08).
   - **Sem data de admissão** na RAIS Estabelecimentos: a US10 não tem fonte na base atual.
   - A Região Norte não tem lista oficial de bairros no Plano Diretor (DEC-015 aberta).
@@ -53,7 +53,7 @@
 
 | ID   | User Story | Prioridade | Estimativa | Status |
 | ---- | ---------- | ---------- | ---------- | ------ |
-| US06 | Como gestor público (usuário do observatório), quero visualizar a distribuição geográfica das empresas de SJC no mapa, para que eu possa identificar polos e vazios industriais na cidade. *(restante da Sprint 2)* | Alta | 13 pontos | Parcial (mapa por coordenadas e filtro por região no painel; 78,3% com ponto, meta 90%) |
+| US06 | Como gestor público (usuário do observatório), quero visualizar a distribuição geográfica das empresas de SJC no mapa, para que eu possa identificar polos e vazios industriais na cidade. *(restante da Sprint 2)* | Alta | 13 pontos | Concluída nos dados (99,99% com ponto pelo CNEFE 2022, DEC-023); falta republicar o painel |
 | US08 | Como gestor público, quero identificar quais setores/áreas estão em alta em termos de contratação, para que eu possa priorizar investimentos e qualificação de mão de obra. *(restante da Sprint 2)* | Média | 8 pontos | Parcial (participação e ranking por setor; evolução depende da RAIS 2022–2023) |
 | US10 | Como gestor público, quero acompanhar as contratações mais recentes registradas na RAIS, para que eu possa monitorar a dinâmica do mercado de trabalho local. | Baixa | 5 pontos | Não iniciada (a base não tem data de admissão; critério a revisar com o cliente) |
 | US11 | Como cliente (CADI / Secretaria de Desenvolvimento Econômico), quero um dashboard consolidado no Power BI, nos moldes do Observatório da Inovação RS, acompanhado do relatório técnico final e da apresentação, para que eu possa usar a ferramenta na tomada de decisão. | Alta | 13 pontos | Parcial (painel único publicado e documentado; apresentação e aprovação na Feira de Soluções) |
@@ -77,7 +77,7 @@
 
 | US | Critério | Resultado |
 | -- | -------- | --------- |
-| US06 | O mapa no Power BI plota os estabelecimentos geocodificados a partir do CEP, com taxa de acerto acima de 90%, e filtra pelas regiões oficiais do município. | Mapa por latitude/longitude e filtro por região no painel. 37.084 estabelecimentos (78,3%) com ponto: **meta não atingida**. |
+| US06 | O mapa no Power BI plota os estabelecimentos geocodificados a partir do CEP, com taxa de acerto acima de 90%, e filtra pelas regiões oficiais do município. | Mapa por latitude/longitude e filtro por região no painel. Com o CNEFE 2022 (DEC-023), 47.334 estabelecimentos (99,99%) com ponto na base e na planilha do mapa: **meta atingida**; o link publicado mostra 78,3% até o painel ser republicado. |
 | US08 | Visual mostra a evolução de contratações por setor (CNAE agrupado), ou o critério revisado com o cliente está registrado no Log de Decisões. | Participação e Top 10 por setor no painel; sem série histórica e sem critério revisado registrado. |
 | US10 | O painel exibe as contratações do período mais recente disponível, ordenadas por data, ou o critério revisado com o cliente está registrado no Log de Decisões. | Não atendido: a RAIS Estabelecimentos não tem data de admissão. |
 | US11 | O dashboard publicado reúne todos os visuais das sprints anteriores; relatório técnico final e apresentação entregues e aprovados pelos orientadores. | Painel único com as 4 páginas publicado; relatório da Sprint 3 entregue e canal LogMulti criado para o vídeo; apresentação e aprovação na Feira (03/12). |
@@ -88,10 +88,10 @@
 
 | Métrica | Meta | Resultado |
 | ------- | ---- | --------- |
-| Estabelecimentos com ponto no mapa | acima de 90% | 37.084 de 47.339 (78,3%) |
-| Vínculos ativos em estabelecimentos com ponto no mapa | — | 146.702 de 206.717 (71,0%) |
+| Estabelecimentos com ponto no mapa | acima de 90% | 47.334 de 47.339 (99,99%) com o CNEFE 2022; antes, 37.084 (78,3%) |
+| Vínculos ativos em estabelecimentos com ponto no mapa | — | 206.700 de 206.717 (99,99%); antes, 146.702 (71,0%) |
 | Estabelecimentos com região oficial | 100% | 47.334 (99,99%) |
-| Decisões de dados em aberto | DEC-015, DEC-017 e DEC-022 resolvidas ou com encaminhamento | 3 abertas, com encaminhamento registrado (ver relatório) |
+| Decisões de dados em aberto | DEC-015, DEC-017 e DEC-022 resolvidas ou com encaminhamento | DEC-017 fechada pela DEC-023; DEC-015 e DEC-022 abertas, com encaminhamento registrado |
 | Usuários que testaram o MVP | equipe, orientadores e cliente | equipe; orientadores e cliente na Feira de Soluções |
 | Feedback qualitativo do cliente | aprovação do painel final | a coletar na Feira de Soluções (03/12/2026) |
 
@@ -110,8 +110,8 @@
 
 | # | Melhoria | Por quê | Esforço |
 | - | -------- | ------- | ------- |
-| 1 | Trocar as coordenadas do mapa pelas do CNEFE 2022 (IBGE), já calculadas pela célula do CNEFE no notebook 01b (`dados/entrada/geo_ceps_sjc_cnefe.csv`) | Ponto para 47.334 dos 47.339 estabelecimentos (99,99%, contra 78,3% hoje) e 99,99% dos vínculos, no nível do CEP e não do centro do bairro; atinge a meta de 90% da US06 | Baixo (uma junção no notebook 02 e conferência dos pontos) |
-| 2 | Regeocodificar os 9 bairros homônimos (DEC-017) e trocar a fonte do mapa pela base única (DEC-022) | 331 pontos hoje caem fora da região certa; fecha duas decisões abertas | Baixo |
+| 1 | ✅ **Feito em 23/11 (DEC-023).** Coordenadas do mapa pelo CNEFE 2022 (IBGE) na base única e na planilha do mapa | 47.334 dos 47.339 estabelecimentos (99,99%) com ponto, no nível do CEP | Concluído; falta republicar o painel |
+| 2 | Trocar a fonte da tabela RAIS_SJC do painel pela base única (DEC-022). Os homônimos (DEC-017) já foram resolvidos pela DEC-023 | Painel e base com a mesma região (a planilha do painel deixa 603 sem região; a base única, 5) | Médio |
 | 3 | Criar uma página "Regiões" com vínculos e estabelecimentos por região, tipo de atividade, intensidade tecnológica (OCDE) e porte SEBRAE | As colunas já estão na base única (DEC-021) e respondem aos requisitos do cliente | Médio |
 | 4 | Processar a RAIS 2022 e 2023 pelo notebook 01 | Permite mostrar a evolução dos setores (US08) | Médio (arquivos de cerca de 3 GB cada) |
 | 5 | Revisar com o cliente o critério da US10: usar a RAIS Vínculos (mês de admissão) ou trocar por "estabelecimentos com atividade no ano" | A base atual não tem data de admissão | Baixo para decidir; médio para implementar |

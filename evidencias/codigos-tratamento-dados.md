@@ -546,19 +546,19 @@ mapa
 
 [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/projetoapi08/Observat-rio-do-Ecossistema-Industrial-e-de-Servi-os-de-S-o-Jos-dos-Campos/blob/main/notebooks/02_Base_PowerBI_SJC.ipynb)
 
-Junta a base RAIS tratada com a geocodificação do CEP, a região oficial, as descrições da CNAE 2.3 e as classificações pedidas pelo cliente, e gera `dados/RAIS_SJC_2024_PowerBI.csv`.
+Junta a base RAIS tratada com a geocodificação do CEP, a região oficial, as descrições da CNAE 2.3 e as classificações pedidas pelo cliente, e gera `dados/RAIS_SJC_2024_PowerBI.csv`. Desde 23/11/2026 (DEC-023), as coordenadas vêm do CNEFE 2022, calculado no notebook 01b.
 
 
 **Observatório do Ecossistema Industrial e de Serviços de São José dos Campos** · Fatec SJC · API Logística
 
-Este notebook gera `dados/RAIS_SJC_2024_PowerBI.csv`, a base usada pelo painel na Sprint 2: uma linha por estabelecimento (47.339), com CEP, coordenadas, **região oficial** do município, CNAE 2.3, porte, tipo e situação.
+Este notebook gera `dados/RAIS_SJC_2024_PowerBI.csv`, a base usada pelo painel (Sprint 2, coordenadas atualizadas na Sprint 3): uma linha por estabelecimento (47.339), com CEP, coordenadas, **região oficial** do município, CNAE 2.3, porte, tipo e situação.
 
 | Etapa | O que faz | Decisão |
 |---|---|---|
 | 1 | Carrega a base RAIS tratada e confere com o arquivo original | DEC-001 a DEC-003 |
-| 2 | Junta a geocodificação pelo CEP | DEC-016, DEC-018 |
+| 2 | Junta a geocodificação pelo CEP e as coordenadas do CNEFE 2022 (IBGE) | DEC-016, DEC-018, DEC-023 |
 | 3 | Classifica a região oficial pelo bairro e pelo setor do CEP | DEC-015 |
-| 4 | Marca pontos que caíram em bairros homônimos | DEC-017 |
+| 4 | Marca pontos que ficam mais perto de outra região | DEC-017 |
 | 5 | Aplica as descrições oficiais da CNAE 2.3 | DEC-020 |
 | 6 | Cria tipo de atividade, intensidade tecnológica, porte SEBRAE e setor destaque | DEC-019, DEC-021 |
 | 7 | Grava a base com os nomes de colunas do painel e confere os totais | DEC-022 |
@@ -605,6 +605,8 @@ print("Linhas conferidas com o arquivo original:", len(base))
 
 `rais_sjc_geo_v2.csv` traz bairro e coordenadas de cada CEP (BrasilAPI + Nominatim). Cada CEP tem **uma única** geocodificação, então a junção é *muitos para um* e não duplica linhas.
 
+**Coordenadas do mapa (DEC-023, Sprint 3):** a latitude e a longitude vêm do **CNEFE 2022** (Cadastro Nacional de Endereços para Fins Estatísticos, IBGE), calculadas no notebook `01b_Geocodificacao_CEPs_SJC.ipynb` e gravadas em `dados/entrada/geo_ceps_sjc_cnefe.csv`: ponto médio dos endereços de cada CEP ou, se o CEP não aparece no cadastro, dos CEPs com os mesmos 5 primeiros dígitos. A geocodificação antiga (centro do bairro) só é usada se o CEP não tiver ponto no CNEFE. **O bairro e a região continuam vindo de `rais_sjc_geo_v2.csv`.**
+
 > As coordenadas de `ceps_sjc_geo_v2.csv` estão corrompidas (o Excel em português trocou o ponto decimal), por isso dele só usamos logradouro e a marcação de CEP genérico (DEC-016).
 
 ```python
@@ -620,7 +622,29 @@ gcep = gcep.merge(ceps[["cep8", "logradouro", "cep_generico"]], on="cep8", how="
 
 df = base.merge(gcep, on="cep8", how="left", validate="many_to_one")
 assert len(df) == 47339
-print("CEPs distintos:", gcep.cep8.nunique(), "| com ponto no mapa:", int(pd.to_numeric(df.lat_mapa).notna().sum()))
+print("CEPs distintos:", gcep.cep8.nunique(), "| com ponto pela geocodificação antiga:", int(pd.to_numeric(df.lat_mapa).notna().sum()))
+
+# Coordenadas do CNEFE 2022 (IBGE), calculadas no notebook 01b (DEC-023)
+cnefe = pd.read_csv(os.path.join(ENTRADA, "geo_ceps_sjc_cnefe.csv"), sep=";", decimal=",",
+                    dtype={"CEP": str}, encoding="utf-8-sig")
+cnefe["cep8"] = cnefe.CEP.str.zfill(8)
+cnefe = cnefe.dropna(subset=["LATITUDE", "LONGITUDE"]).set_index("cep8")
+assert cnefe.LATITUDE.between(-23.35, -22.75).all() and cnefe.LONGITUDE.between(-46.10, -45.65).all()
+
+PRECISAO_CNEFE = {"CEP exato": "CEP (CNEFE 2022)",
+                  "Aproximado (5 dígitos)": "CEP aproximado (CNEFE 2022, 5 dígitos)"}
+df["lat"] = df.cep8.map(cnefe.LATITUDE)
+df["lng"] = df.cep8.map(cnefe.LONGITUDE)
+df["precisao_geo"] = df.cep8.map(cnefe.PRECISAO).map(PRECISAO_CNEFE)
+df.loc[df.precisao_geo.notna() & df.cep_generico.eq("True"), "precisao_geo"] = "CEP genérico (CNEFE 2022, ponto aproximado)"
+
+# Reserva: CEP sem ponto no CNEFE fica com a geocodificação antiga (centro do bairro), se houver
+sem = df.lat.isna()
+df.loc[sem, "lat"] = pd.to_numeric(df.loc[sem, "lat_mapa"])
+df.loc[sem, "lng"] = pd.to_numeric(df.loc[sem, "lng_mapa"])
+df["precisao_geo"] = df.precisao_geo.fillna(df.precisao_mapa)
+print("Com ponto no mapa pelo CNEFE:", int(df.lat.notna().sum()), "de", len(df))
+print(df.precisao_geo.value_counts().to_string())
 ```
 
 ### 3. Região oficial
@@ -665,12 +689,12 @@ df["confiabilidade_regiao"] = df.apply(conf, axis=1)
 df.reg.value_counts()
 ```
 
-### 4. Pontos em bairros homônimos
+### 4. Pontos mais perto de outra região
 
-Cada ponto é comparado com o centro da própria região. Se cair bem mais perto de outra região (mais de 1,5 km de diferença), o geocodificador provavelmente achou um bairro de mesmo nome em outro lugar: a região é mantida e o ponto é marcado em **Alerta Coordenada**.
+Cada ponto é comparado com o centro da própria região. Se cair bem mais perto de outra região (mais de 1,5 km de diferença), a região (que vem do bairro) é mantida e o ponto é marcado em **Alerta Coordenada** para conferência. Com as coordenadas da geocodificação antiga, esses casos eram bairros homônimos achados pelo geocodificador em outro lugar (DEC-017); com o CNEFE, o ponto é o do próprio CEP, e o alerta passa a indicar CEPs perto da divisa entre regiões ou bairros com região a conferir.
 
 ```python
-lat = pd.to_numeric(df.lat_mapa); lng = pd.to_numeric(df.lng_mapa)
+lat = df.lat; lng = df.lng
 pts = df.assign(lat=lat, lng=lng).dropna(subset=["lat"])
 cen = pts[pts.reg != "Não classificado"].groupby("reg")[["lat", "lng"]].mean()
 
@@ -683,7 +707,7 @@ d_own = pd.Series([dist.at[i, r] if r in dist.columns else np.nan for i, r in zi
 near, d_near = dist.idxmin(axis=1), dist.min(axis=1)
 alerta = pd.Series(False, index=df.index)
 alerta[has] = (near != df.reg[has]) & ((d_own - d_near) > 1.5) & df.reg[has].ne("Não classificado")
-df["alerta_coordenada"] = np.where(alerta, "Ponto fora da região oficial (homônimo no geocodificador)", "")
+df["alerta_coordenada"] = np.where(alerta, "Ponto mais perto de outra região (conferir)", "")
 df[alerta].groupby(["bairro", "reg"]).size()
 ```
 
@@ -797,7 +821,7 @@ out = pd.DataFrame({
     "Confiabilidade Região": df.confiabilidade_regiao,
     "Latitude": lat.round(7),
     "Longitude": lng.round(7),
-    "Precisão Geo": df.precisao_mapa.fillna("sem CEP"),
+    "Precisão Geo": df.precisao_geo.fillna("sem CEP"),
     "Alerta Coordenada": df.alerta_coordenada,
     "Seção Cód": df.Secao,
     "Seção CNAE": df.Secao + " - " + sec_ibge,
@@ -840,4 +864,4 @@ print("Com ponto no mapa:  {:.2%}".format(chk["Latitude"].notna().mean()))
 
 ---
 
-*Gerado a partir dos notebooks em 23/11/2026.*
+*Gerado a partir dos notebooks em 23/11/2026 (notebook 02 com as coordenadas do CNEFE, DEC-023).*
