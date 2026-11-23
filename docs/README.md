@@ -11,6 +11,10 @@ A pasta está dividida em quatro partes. Em `final/` ficam os documentos que val
 | Relatório Técnico — Sprint 3 (versão final) | [11-Relatorio-Tecnico-Sprint-3.docx](sprint-3/11-Relatorio-Tecnico-Sprint-3.docx) | [11-Relatorio-Tecnico-Sprint-3.md](sprint-3/11-Relatorio-Tecnico-Sprint-3.md) |
 | Relatório de Desenvolvimento — Anexo 8 da Sprint 3 (versão final) | [Relatorio_Sprint3_Anexo8.docx](sprint-3/Relatorio_Sprint3_Anexo8.docx) | [Relatorio_Sprint3_Anexo8.md](sprint-3/Relatorio_Sprint3_Anexo8.md) |
 | Respostas aos requisitos do cliente | — | [Respostas_Requisitos_Cliente.md](final/Respostas_Requisitos_Cliente.md) |
+| **Manual de Replicação** (refazer o projeto do zero: dados, códigos e painel) | [Manual_Replicacao.docx](final/Manual_Replicacao.docx) | [Manual_Replicacao.md](final/Manual_Replicacao.md) |
+| PACER da equipe (a preencher) | — | [PACER/README.md](final/PACER/README.md) |
+
+O vídeo final de apresentação vai para o canal [LogMulti no YouTube](https://www.youtube.com/@LogMulti); o link entra na seção [Entrega final](../README.md#entrega-final) do README quando for publicado.
 
 ## `final/` — documentos do projeto
 
@@ -21,11 +25,13 @@ A pasta está dividida em quatro partes. Em `final/` ficam os documentos que val
 | 02 — Backlog do Produto | [02-Backlog-do-Produto.docx](final/02-Backlog-do-Produto.docx) | [02-Backlog-do-Produto.md](final/02-Backlog-do-Produto.md) |
 | 04 — DoR (Definition of Ready) | [04-DoR-Checklist.docx](final/04-DoR-Checklist.docx) | [04-DoR-Checklist.md](final/04-DoR-Checklist.md) |
 | 05 — DoD (Definition of Done) | [05-DoD.docx](final/05-DoD.docx) | [05-DoD.md](final/05-DoD.md) |
+| **Manual de Replicação** (refazer o projeto do zero: dados, códigos e painel) | [Manual_Replicacao.docx](final/Manual_Replicacao.docx) | [Manual_Replicacao.md](final/Manual_Replicacao.md) |
 | **Guia: atualizar e republicar o painel Power BI** | [Guia_Atualizar_PowerBI.docx](final/Guia_Atualizar_PowerBI.docx) | [Guia_Atualizar_PowerBI.md](final/Guia_Atualizar_PowerBI.md) |
 | 06 — Log de Decisões de Dados (DEC-001 a DEC-024) | [06-Decisoes-de-Dados.docx](final/06-Decisoes-de-Dados.docx) | [06-Decisoes-de-Dados.md](final/06-Decisoes-de-Dados.md) |
 | Respostas aos requisitos do cliente | — | [Respostas_Requisitos_Cliente.md](final/Respostas_Requisitos_Cliente.md) |
 | Relatório do painel Power BI | [Relatorio_PowerBI_Final.docx](final/Relatorio_PowerBI_Final.docx) | [Relatorio_PowerBI_Final.md](final/Relatorio_PowerBI_Final.md) |
 | Fórmulas do painel Power BI | [Formulas_PowerBI_Final.docx](final/Formulas_PowerBI_Final.docx) | [Formulas_PowerBI_Final.md](final/Formulas_PowerBI_Final.md) |
+| PACER da equipe (a preencher) | — | [PACER/README.md](final/PACER/README.md) |
 
 ## Documentos de cada sprint
 
