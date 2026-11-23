@@ -68,7 +68,8 @@ Consolidar o observatório como entrega final: um painel único publicado, docum
 
 - [x] Painel publicado no Power BI ([link](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9))
 - [x] Prints das 4 páginas do painel (`evidencias/sprint2/`, mesma versão)
-- [x] Códigos de tratamento de dados dos notebooks 01 e 02, com links para abrir no Colab (`evidencias/codigos-tratamento-dados.md`)
+- [x] Notebook da geocodificação dos CEPs (`notebooks/01b_Geocodificacao_CEPs_SJC.ipynb`) e coordenadas pelo CNEFE 2022 (`dados/entrada/geo_ceps_sjc_cnefe.csv`)
+- [x] Códigos de tratamento de dados dos notebooks 01, 01b e 02, com links para abrir no Colab (`evidencias/codigos-tratamento-dados.md`)
 - [x] Canal do projeto no YouTube ([LogMulti](https://www.youtube.com/@LogMulti))
 - [ ] Link direto do vídeo de apresentação publicado no canal
 - [ ] Apresentação da Feira de Soluções (`docs/`)
@@ -78,7 +79,7 @@ Consolidar o observatório como entrega final: um painel único publicado, docum
 
 | Pendência | Impacto | Encaminhamento |
 |---|---|---|
-| Cobertura do mapa (DEC-018) | 21,7% dos estabelecimentos e 29,0% dos vínculos sem ponto | Usar o ponto do bairro já geocodificado em outro CEP (melhoria 1) |
+| Cobertura do mapa (DEC-018) | 21,7% dos estabelecimentos e 29,0% dos vínculos sem ponto | Usar as coordenadas do CNEFE 2022 já geradas no notebook 01b (melhoria 1) |
 | Bairros homônimos (DEC-017) | 331 estabelecimentos com ponto fora da região certa | Regeocodificar os 9 bairros |
 | Fonte do mapa (DEC-022) | O painel ainda usa a tabela CEP x Região, que deixa 603 sem região (a base única deixa 5) | Trocar a fonte pela base única |
 | Região Norte (DEC-015) | 1.024 estabelecimentos com região de confiabilidade média | Pedir à Prefeitura, via cliente, a tabela bairro → região ou o shapefile |
@@ -91,7 +92,7 @@ Consolidar o observatório como entrega final: um painel único publicado, docum
 
 | # | Melhoria | Resultado esperado | Esforço |
 |---|---|---|---|
-| 1 | Dar ponto no mapa aos estabelecimentos sem coordenada cujo bairro já foi geocodificado em outro CEP | 5.024 estabelecimentos a mais no mapa; cobertura de 78,3% para cerca de 88,9% | Baixo (uma etapa no notebook 02) |
+| 1 | Trocar as coordenadas do mapa pelas do CNEFE 2022 (IBGE), já calculadas pela célula do CNEFE no notebook 01b (`dados/entrada/geo_ceps_sjc_cnefe.csv`) | Ponto para 47.334 dos 47.339 estabelecimentos (99,99%, contra 78,3% hoje) e 99,99% dos vínculos, no nível do CEP e não do centro do bairro; atinge a meta de 90% da US06 | Baixo (uma junção no notebook 02 e conferência dos pontos) |
 | 2 | Regeocodificar os 9 bairros homônimos e trocar a fonte do mapa pela base única | Fecha DEC-017 e DEC-022; região do painel igual à da base | Baixo |
 | 3 | ✅ **Feito em 23/11 no `.pbip`.** Corrigir os ajustes visuais da página 1 (cartões com "Mil", título "Distruibuição", subtítulos); falta republicar | Números lidos corretamente (47.339, não "47,339 Mil") | Concluído |
 | 4 | Criar uma página "Regiões" com vínculos e estabelecimentos por região, tipo de atividade, intensidade tecnológica (OCDE) e porte SEBRAE | Responde aos requisitos do cliente com colunas que já existem (DEC-021) | Médio |

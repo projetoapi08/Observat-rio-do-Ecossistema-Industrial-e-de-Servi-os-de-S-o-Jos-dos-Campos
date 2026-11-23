@@ -117,7 +117,7 @@ São José dos Campos é um polo industrial, tecnológico e de serviços do Vale
 ├── dados/        Bases tratadas prontas para o Power BI, com dicionário de dados
 │   ├── entrada/      arquivos de entrada do notebook 02
 │   └── referencia/   tabela bairro → região e CNAE 2.3
-├── notebooks/    01: ETL da RAIS (Sprint 1) · 02: base única do Power BI (Sprint 2)
+├── notebooks/    01: ETL da RAIS (Sprint 1) · 01b: geocodificação dos CEPs · 02: base única do Power BI (Sprint 2)
 ├── powerbi/      Painel: projeto Observatorio_SJC.pbip (versão publicada), planilhas-fonte, PDF e versões anteriores
 └── evidencias/   Prints, gráficos, guias e comprovações de cada sprint
 ```
@@ -135,7 +135,7 @@ São José dos Campos é um polo industrial, tecnológico e de serviços do Vale
 | Relatórios de Desenvolvimento (Anexo 8) | [Sprint 1](docs/Relatorio_Sprint1_Anexo8.docx) · [Sprint 2](docs/Relatorio_Sprint2_Anexo8.docx) | — |
 | Relatório e fórmulas do Power BI (Sprint 2) | [Relatório](docs/Relatorio_PowerBI_Sprint2.docx) · [Fórmulas](docs/Formulas_PowerBI_Sprint2.docx) | [Relatório](docs/Relatorio_PowerBI_Sprint2.md) · [Fórmulas](docs/Formulas_PowerBI_Sprint2.md) |
 
-**Como reproduzir:** o [notebook 01](notebooks/01_ETL_RAIS_SJC.ipynb) filtra o arquivo público `RAIS_ESTAB_PUB` para o município 354990; o [notebook 02](notebooks/02_Base_PowerBI_SJC.ipynb) abre no Google Colab (*Arquivo → Abrir notebook → GitHub*), roda com *Executar tudo* e gera a base única [`dados/RAIS_SJC_2024_PowerBI.csv`](dados/RAIS_SJC_2024_PowerBI.csv). O passo a passo para abrir e editar o painel está no [README do Power BI](powerbi/README.md) e o dicionário de dados no [README dos dados](dados/README.md).
+**Como reproduzir:** o [notebook 01](notebooks/01_ETL_RAIS_SJC.ipynb) filtra o arquivo público `RAIS_ESTAB_PUB` para o município 354990; o [notebook 01b](notebooks/01b_Geocodificacao_CEPs_SJC.ipynb) busca a coordenada de cada CEP; o [notebook 02](notebooks/02_Base_PowerBI_SJC.ipynb) abre no Google Colab (*Arquivo → Abrir notebook → GitHub*), roda com *Executar tudo* e gera a base única [`dados/RAIS_SJC_2024_PowerBI.csv`](dados/RAIS_SJC_2024_PowerBI.csv). O passo a passo para abrir e editar o painel está no [README do Power BI](powerbi/README.md) e o dicionário de dados no [README dos dados](dados/README.md).
 
 **Fontes de dados:** RAIS 2024 (MTE) · PIB dos Municípios 2002–2023 (IBGE) · CNAE 2.3 (IBGE/CONCLA) · Plano Diretor de São José dos Campos, estudo "Regiões Urbanas" · referência de modelo: [Observatório da Inovação RS](https://sict.rs.gov.br/observatorio).
 

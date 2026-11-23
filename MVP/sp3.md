@@ -110,7 +110,7 @@
 
 | # | Melhoria | Por quê | Esforço |
 | - | -------- | ------- | ------- |
-| 1 | Dar ponto no mapa aos estabelecimentos sem coordenada cujo bairro já foi geocodificado em outro CEP | 5.024 estabelecimentos ganham ponto e a cobertura vai de 78,3% para cerca de 88,9% | Baixo (uma etapa no notebook 02) |
+| 1 | Trocar as coordenadas do mapa pelas do CNEFE 2022 (IBGE), já calculadas pela célula do CNEFE no notebook 01b (`dados/entrada/geo_ceps_sjc_cnefe.csv`) | Ponto para 47.334 dos 47.339 estabelecimentos (99,99%, contra 78,3% hoje) e 99,99% dos vínculos, no nível do CEP e não do centro do bairro; atinge a meta de 90% da US06 | Baixo (uma junção no notebook 02 e conferência dos pontos) |
 | 2 | Regeocodificar os 9 bairros homônimos (DEC-017) e trocar a fonte do mapa pela base única (DEC-022) | 331 pontos hoje caem fora da região certa; fecha duas decisões abertas | Baixo |
 | 3 | Criar uma página "Regiões" com vínculos e estabelecimentos por região, tipo de atividade, intensidade tecnológica (OCDE) e porte SEBRAE | As colunas já estão na base única (DEC-021) e respondem aos requisitos do cliente | Médio |
 | 4 | Processar a RAIS 2022 e 2023 pelo notebook 01 | Permite mostrar a evolução dos setores (US08) | Médio (arquivos de cerca de 3 GB cada) |
@@ -127,7 +127,7 @@
 - Log de Decisões de Dados: [`docs/06-Decisoes-de-Dados.md`](../docs/06-Decisoes-de-Dados.md)
 - **Painel publicado:** [abrir no Power BI](https://app.powerbi.com/view?r=eyJrIjoiMDdlOThiMzQtNWQ5Ny00Mzk1LWI0YWEtNGM2NzAzZmNhNDRmIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9) · projeto [`powerbi/pbip/Observatorio_SJC.pbip`](../powerbi/pbip/) e planilhas em [`powerbi/fontes/`](../powerbi/fontes/) · [PDF das 4 páginas](../powerbi/Powerbi_API_Sprint2.pdf)
 - Base única e dicionário de dados: [`dados/RAIS_SJC_2024_PowerBI.csv`](../dados/RAIS_SJC_2024_PowerBI.csv) · [`dados/README.md`](../dados/README.md)
-- Notebooks: [`01_ETL_RAIS_SJC.ipynb`](../notebooks/01_ETL_RAIS_SJC.ipynb) · [`02_Base_PowerBI_SJC.ipynb`](../notebooks/02_Base_PowerBI_SJC.ipynb) · abrir no Colab: [01](https://colab.research.google.com/github/projetoapi08/Observat-rio-do-Ecossistema-Industrial-e-de-Servi-os-de-S-o-Jos-dos-Campos/blob/main/notebooks/01_ETL_RAIS_SJC.ipynb) · [02](https://colab.research.google.com/github/projetoapi08/Observat-rio-do-Ecossistema-Industrial-e-de-Servi-os-de-S-o-Jos-dos-Campos/blob/main/notebooks/02_Base_PowerBI_SJC.ipynb)
+- Notebooks: [`01_ETL_RAIS_SJC.ipynb`](../notebooks/01_ETL_RAIS_SJC.ipynb) · [`01b_Geocodificacao_CEPs_SJC.ipynb`](../notebooks/01b_Geocodificacao_CEPs_SJC.ipynb) · [`02_Base_PowerBI_SJC.ipynb`](../notebooks/02_Base_PowerBI_SJC.ipynb) · abrir no Colab: [01](https://colab.research.google.com/github/projetoapi08/Observat-rio-do-Ecossistema-Industrial-e-de-Servi-os-de-S-o-Jos-dos-Campos/blob/main/notebooks/01_ETL_RAIS_SJC.ipynb) · [01b](https://colab.research.google.com/github/projetoapi08/Observat-rio-do-Ecossistema-Industrial-e-de-Servi-os-de-S-o-Jos-dos-Campos/blob/main/notebooks/01b_Geocodificacao_CEPs_SJC.ipynb) · [02](https://colab.research.google.com/github/projetoapi08/Observat-rio-do-Ecossistema-Industrial-e-de-Servi-os-de-S-o-Jos-dos-Campos/blob/main/notebooks/02_Base_PowerBI_SJC.ipynb)
 - Códigos de tratamento de dados (evidência): [`evidencias/codigos-tratamento-dados.md`](../evidencias/codigos-tratamento-dados.md)
 - **Vídeo do MVP:** [canal LogMulti no YouTube](https://www.youtube.com/@LogMulti)
 

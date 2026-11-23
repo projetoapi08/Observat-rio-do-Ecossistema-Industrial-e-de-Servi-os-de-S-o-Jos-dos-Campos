@@ -72,7 +72,7 @@ Ainda pendente:
 
 ## Melhorias sugeridas para a versão final
 
-- **Cobertura do mapa:** 5.024 estabelecimentos sem coordenada estão em bairros que já têm ponto por outro CEP. Usar esse ponto no notebook 02 leva o mapa de 78,3% para cerca de 88,9%.
+- **Cobertura do mapa:** a célula do CNEFE 2022 (IBGE) no notebook 01b já calculou coordenadas para 3.676 dos 3.677 CEPs (`dados/entrada/geo_ceps_sjc_cnefe.csv`). Usar essas coordenadas no notebook 02 leva o mapa de 78,3% para 99,99% dos estabelecimentos, com o ponto no CEP e não no centro do bairro.
 - **Fonte do mapa:** trocar a tabela `CEP x Região` pela base única `dados/RAIS_SJC_2024_PowerBI.csv` (DEC-022), que já tem latitude, longitude e região, e regeocodificar os 9 bairros homônimos (DEC-017).
 - **Página "Regiões":** vínculos e estabelecimentos por região oficial, tipo de atividade, intensidade tecnológica (OCDE) e porte SEBRAE, com as colunas que já estão na base única.
 

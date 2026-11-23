@@ -2,22 +2,28 @@
 
 > Evidência dos códigos em Python usados no Google Colab para tratar os dados do observatório. O código abaixo foi copiado dos notebooks versionados em [`notebooks/`](../notebooks/). Para rodar, abra o notebook no Colab e use *Ambiente de execução → Executar tudo*. · [voltar ao README](../README.md)
 
+## Ordem de execução
+
+```
+RAIS_ESTAB_PUB (MTE) ─► 01 ETL da RAIS ─► 01b Geocodificação dos CEPs ─► 02 Base única do Power BI ─► Power BI
+```
+
 ## Links para abrir no Colab
 
 | Notebook | O que faz | Abrir |
 |---|---|---|
-| [`01_ETL_RAIS_SJC.ipynb`](../notebooks/01_ETL_RAIS_SJC.ipynb) | Lê o arquivo público `RAIS_ESTAB_PUB` (3,27 GB) em partes, filtra o município 354990 (São José dos Campos), padroniza os campos e gera os CSVs tratados. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/projetoapi08/Observat-rio-do-Ecossistema-Industrial-e-de-Servi-os-de-S-o-Jos-dos-Campos/blob/main/notebooks/01_ETL_RAIS_SJC.ipynb) |
+| [`01_ETL_RAIS_SJC.ipynb`](../notebooks/01_ETL_RAIS_SJC.ipynb) | Lê o arquivo público `RAIS_ESTAB_PUB` (3,27 GB) em partes, filtra o município 354990 (São José dos Campos), padroniza os campos e gera os CSVs tratados. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/projetoapi08/Observat-rio-do-Ecossistema-Industrial-e-de-Servi-os-de-S-o-Jos-dos-Campos/blob/main/notebooks/01_ETL_RAIS_SJC.ipynb) · [original no Drive](https://colab.research.google.com/drive/1zOZJ0oXUY7QJlAMfuiMbI5g9EcBWSnMz?usp=sharing) |
+| [`01b_Geocodificacao_CEPs_SJC.ipynb`](../notebooks/01b_Geocodificacao_CEPs_SJC.ipynb) | Agrupa os 47.339 estabelecimentos pelos 3.677 CEPs e busca latitude e longitude de cada CEP em serviços públicos (AwesomeAPI, BrasilAPI, ViaCEP + Nominatim) e no CNEFE 2022 do IBGE. É a primeira versão do processo que gerou os arquivos `dados/entrada/*_geo_v2.csv` usados pelo notebook 02. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/projetoapi08/Observat-rio-do-Ecossistema-Industrial-e-de-Servi-os-de-S-o-Jos-dos-Campos/blob/main/notebooks/01b_Geocodificacao_CEPs_SJC.ipynb) · [original no Drive](https://colab.research.google.com/drive/1jbl6MEEWoM4SRQQ21pqhHZZQLJs54OWR) |
 | [`02_Base_PowerBI_SJC.ipynb`](../notebooks/02_Base_PowerBI_SJC.ipynb) | Junta a base RAIS tratada com a geocodificação do CEP, a região oficial, as descrições da CNAE 2.3 e as classificações pedidas pelo cliente, e gera `dados/RAIS_SJC_2024_PowerBI.csv`. | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/projetoapi08/Observat-rio-do-Ecossistema-Industrial-e-de-Servi-os-de-S-o-Jos-dos-Campos/blob/main/notebooks/02_Base_PowerBI_SJC.ipynb) |
 
-Notebook original da Sprint 1 no Google Drive da equipe: <https://colab.research.google.com/drive/1zOZJ0oXUY7QJlAMfuiMbI5g9EcBWSnMz?usp=sharing>
-
-Os links "Abrir no Colab" carregam a versão do notebook que está no GitHub, então mostram sempre o código mais recente do repositório.
+Os botões "Abrir no Colab" carregam a versão do notebook que está no GitHub. Os links "original no Drive" abrem o notebook da equipe, com as saídas da última execução.
 
 > Os textos explicativos de cada notebook são da sprint em que ele foi escrito. As pendências citadas no notebook 01 foram tratadas depois: o ano-base foi confirmado como 2024 (DEC-003, fechada) e a falta de identificação nominal segue registrada (DEC-004). Situação atual no [Log de Decisões](../docs/06-Decisoes-de-Dados.md).
 
 ## Índice
 
 * [Notebook 01 — ETL da RAIS (Sprint 1)](#notebook-01--etl-da-rais-sprint-1)
+* [Notebook 01b — Geocodificação dos CEPs (Sprint 2)](#notebook-01b--geocodificação-dos-ceps-sprint-2)
 * [Notebook 02 — Base única do Power BI (Sprint 2)](#notebook-02--base-única-do-power-bi-sprint-2)
 
 ---
@@ -201,6 +207,337 @@ files.download(f"{OUTPUT_DIR}.zip")
 - **DEC-003** — confirmar com o cliente o ano/competência de referência deste arquivo (não presente nos dados).
 - **DEC-004** — aguardar decisão do cliente sobre fornecimento de base identificada (razão social/CNPJ).
 - Implementar geocodificação a partir do campo `CEP_Estab` para viabilizar o mapeamento geográfico (User Story Rank 2).
+
+
+---
+
+## Notebook 01b — Geocodificação dos CEPs (Sprint 2)
+
+[![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/projetoapi08/Observat-rio-do-Ecossistema-Industrial-e-de-Servi-os-de-S-o-Jos-dos-Campos/blob/main/notebooks/01b_Geocodificacao_CEPs_SJC.ipynb)
+
+Agrupa os 47.339 estabelecimentos pelos 3.677 CEPs e busca latitude e longitude de cada CEP em serviços públicos (AwesomeAPI, BrasilAPI, ViaCEP + Nominatim) e no CNEFE 2022 do IBGE. É a primeira versão do processo que gerou os arquivos `dados/entrada/*_geo_v2.csv` usados pelo notebook 02.
+
+**Resultados registrados nas saídas do notebook:** 47.339 estabelecimentos, 3.677 CEPs distintos, 2 sem CEP e 32 CEPs genéricos (terminados em 000). Pelo CNEFE 2022, 3.379 CEPs com coordenada exata, 297 aproximados pelos 5 primeiros dígitos e 1 não localizado (`12200000`, CEP geral da cidade). O arquivo gerado por essa célula está em [`dados/entrada/geo_ceps_sjc_cnefe.csv`](../dados/entrada/geo_ceps_sjc_cnefe.csv).
+
+
+Transforma o CEP de cada estabelecimento em **latitude e longitude** para o mapa do Power BI.
+
+Rode as células **na ordem**, de cima para baixo (Shift + Enter). Cada célula diz o que deve aparecer.
+O passo a passo completo está no documento *Passo a passo – Geocodificar os CEPs da RAIS*.
+
+### Célula 1 – Conectar o Google Drive e definir os caminhos
+
+```python
+from google.colab import drive
+drive.mount('/content/drive')   # na primeira vez, autorize com a sua conta Google
+
+# Ajuste se a sua pasta tiver outro nome
+PASTA = '/content/drive/MyDrive/observatorio-sjc/dados/'
+
+ARQ_RAIS       = '/content/RAIS_SJC_completo.csv'   # entrada alterada para o caminho local
+ARQ_CACHE      = PASTA + 'cache_ceps_sjc.csv'      # resultado de cada consulta (NÃO apague)
+ARQ_SAIDA_CEP  = PASTA + 'ceps_sjc_geo.csv'        # saída 1: uma linha por CEP (para o mapa)
+ARQ_SAIDA_BASE = PASTA + 'rais_sjc_geo.csv'        # saída 2: base RAIS com lat/lng
+
+import os
+print('RAIS encontrada' if os.path.exists(ARQ_RAIS) else 'ATENÇÃO: RAIS não encontrada em ' + ARQ_RAIS)
+```
+
+### Célula 2 – Configuração e funções (só define, não consulta nada)
+
+```python
+import time
+from pathlib import Path
+import pandas as pd
+import requests
+
+PAUSA_API = 0.4         # segundos entre consultas às APIs de CEP
+PAUSA_NOMINATIM = 1.1   # o Nominatim (OpenStreetMap) aceita no máximo 1 consulta por segundo
+USER_AGENT = 'observatorio-sjc-fatec/1.0 (projeto academico)'
+
+# Caixa aproximada do município de SJC (inclui São Francisco Xavier, ao norte)
+LAT_MIN, LAT_MAX = -23.35, -22.75
+LON_MIN, LON_MAX = -46.10, -45.65
+
+sessao = requests.Session()
+sessao.headers.update({'User-Agent': USER_AGENT})
+
+
+def carregar_ceps(arq_rais):
+    """Lê a RAIS, padroniza o CEP como texto de 8 dígitos e agrega por CEP."""
+    base = pd.read_csv(arq_rais, sep=None, engine='python')
+    base['CEP'] = base['CEP_Estab'].fillna(0).astype(int).astype(str).str.zfill(8)
+    base.loc[base['CEP'] == '00000000', 'CEP'] = None            # CEP 0 = não informado
+    base['com_vinculos'] = (base['Ind_Rais_Negativa'] == 0) & (base['Qtd_Vinculos_Ativos'] > 0)
+    por_cep = (base.dropna(subset=['CEP'])
+                   .groupby('CEP')
+                   .agg(estabelecimentos=('CEP', 'size'),
+                        estab_com_vinculos=('com_vinculos', 'sum'),
+                        vinculos=('Qtd_Vinculos_Ativos', 'sum'))
+                   .reset_index())
+    # CEP terminado em 000 costuma ser genérico (região ou grande logradouro): ponto pouco preciso
+    por_cep['cep_generico'] = por_cep['CEP'].str.endswith('000')
+    return base, por_cep
+
+
+def _get_json(url, **kw):
+    """Faz a consulta; se o serviço pedir para esperar (erro 429), espera 30 s e tenta de novo uma vez."""
+    for tentativa in range(2):
+        try:
+            r = sessao.get(url, timeout=15, **kw)
+            if r.status_code == 200:
+                return r.json()
+            if r.status_code == 429 and tentativa == 0:
+                time.sleep(30)
+                continue
+        except (requests.RequestException, ValueError):
+            pass
+        return None
+    return None
+
+
+def via_awesomeapi(cep):
+    d = _get_json(f'https://cep.awesomeapi.com.br/json/{cep}')
+    if d and d.get('lat') and d.get('lng'):
+        return {'lat': float(d['lat']), 'lng': float(d['lng']), 'bairro': d.get('district'),
+                'logradouro': d.get('address'), 'fonte_geo': 'AwesomeAPI'}
+    return None
+
+
+def via_brasilapi(cep):
+    d = _get_json(f'https://brasilapi.com.br/api/cep/v2/{cep}')
+    coords = ((d or {}).get('location') or {}).get('coordinates') or {}
+    if coords.get('latitude') and coords.get('longitude'):
+        return {'lat': float(coords['latitude']), 'lng': float(coords['longitude']),
+                'bairro': d.get('neighborhood'), 'logradouro': d.get('street'), 'fonte_geo': 'BrasilAPI'}
+    return None
+
+
+def via_viacep_nominatim(cep):
+    """ViaCEP dá o endereço (sem coordenadas); o Nominatim transforma o endereço em coordenadas."""
+    end = _get_json(f'https://viacep.com.br/ws/{cep}/json/')
+    if not end or end.get('erro'):
+        return None
+    partes = [end.get('logradouro'), end.get('bairro'), 'São José dos Campos', 'SP', 'Brasil']
+    consulta = ', '.join(p for p in partes if p)
+    time.sleep(PAUSA_NOMINATIM)
+    res = _get_json('https://nominatim.openstreetmap.org/search',
+                    params={'q': consulta, 'format': 'json', 'limit': 1, 'countrycodes': 'br'})
+    if res:
+        return {'lat': float(res[0]['lat']), 'lng': float(res[0]['lon']), 'bairro': end.get('bairro'),
+                'logradouro': end.get('logradouro'), 'fonte_geo': 'ViaCEP + Nominatim'}
+    return {'lat': None, 'lng': None, 'bairro': end.get('bairro'),
+            'logradouro': end.get('logradouro'), 'fonte_geo': 'ViaCEP (só endereço)'}
+
+
+def dentro_de_sjc(r):
+    return (r.get('lat') is not None and LAT_MIN <= r['lat'] <= LAT_MAX
+            and LON_MIN <= r['lng'] <= LON_MAX)
+
+
+def geocodificar(cep):
+    """Tenta os 3 serviços em ordem e para no primeiro que der um ponto dentro de SJC."""
+    reserva = None
+    for servico in (via_awesomeapi, via_brasilapi, via_viacep_nominatim):
+        resultado = servico(cep)
+        time.sleep(PAUSA_API)
+        if resultado and dentro_de_sjc(resultado):
+            return resultado
+        if resultado and (reserva is None or reserva.get('lat') is None):
+            reserva = resultado     # guarda ponto fora de SJC ou só o endereço, e tenta o próximo
+    return reserva or {'lat': None, 'lng': None, 'bairro': None,
+                       'logradouro': None, 'fonte_geo': 'não encontrado'}
+
+
+def rodar_geocodificacao(ceps, arq_cache, salvar_a_cada=50):
+    """Consulta só os CEPs que ainda não estão no cache e salva o cache a cada 50."""
+    cache = (pd.read_csv(arq_cache, dtype={'CEP': str}) if Path(arq_cache).exists()
+             else pd.DataFrame(columns=['CEP']))
+    feitos = set(cache['CEP'])
+    faltam = [c for c in ceps if c not in feitos]
+    print(f'{len(feitos)} CEPs já no cache, {len(faltam)} para consultar')
+    novos, inicio = [], time.time()
+    for i, cep in enumerate(faltam, 1):
+        novos.append({'CEP': cep, **geocodificar(cep)})
+        if i % salvar_a_cada == 0 or i == len(faltam):
+            cache = pd.concat([cache, pd.DataFrame(novos)], ignore_index=True)
+            cache.to_csv(arq_cache, index=False)
+            novos = []
+            min_restantes = (time.time() - inicio) / i * (len(faltam) - i) / 60
+            print(f'  {i}/{len(faltam)} consultados · faltam ~{min_restantes:.0f} min')
+    return cache
+
+
+def classificar(geo):
+    """Marca a precisão de cada CEP e tira do mapa os pontos fora de SJC."""
+    geo = geo.copy()
+    dentro = geo['lat'].between(LAT_MIN, LAT_MAX) & geo['lng'].between(LON_MIN, LON_MAX)
+    geo['precisao'] = 'não localizado'
+    geo.loc[geo['lat'].notna() & ~dentro, 'precisao'] = 'fora de SJC (conferir)'
+    geo.loc[dentro, 'precisao'] = 'CEP'
+    geo.loc[dentro & geo['fonte_geo'].eq('ViaCEP + Nominatim'), 'precisao'] = 'endereço aproximado'
+    geo.loc[dentro & geo['cep_generico'], 'precisao'] = 'CEP genérico (baixa)'
+    geo.loc[~dentro, ['lat', 'lng']] = None
+    return geo
+
+print('Funções prontas')
+```
+
+### Célula 3 – Carregar a RAIS e conferir os números
+
+```python
+import os
+
+if not os.path.exists(ARQ_RAIS):
+    print(f"ERRO: O arquivo da RAIS não foi encontrado no caminho: {ARQ_RAIS}")
+    print("Por favor, faça o upload do arquivo 'RAIS_SJC_completo.csv' para o Colab ou ajuste o caminho na Célula 1.")
+else:
+    base, por_cep = carregar_ceps(ARQ_RAIS)
+    print(f'Estabelecimentos: {len(base):,}   (esperado: 47.339)')
+    print(f'CEPs distintos:   {len(por_cep):,}   (esperado: 3.677)')
+    print(f'Sem CEP:          {base["CEP"].isna().sum()}   (esperado: 2)')
+    print(f'Vínculos com CEP: {por_cep["vinculos"].sum():,}   (esperado: 206.702)')
+    print(f'CEPs genéricos (terminam em 000): {por_cep["cep_generico"].sum()}   (esperado: 32)')
+    display(por_cep.sort_values('vinculos', ascending=False).head())
+```
+
+### Célula extra – Coordenadas pelo CNEFE 2022 (IBGE)
+
+Baixa o Cadastro Nacional de Endereços para Fins Estatísticos de São José dos Campos, tira o ponto médio dos endereços de cada CEP e, quando o CEP não aparece no cadastro, usa o centro dos CEPs com os mesmos 5 primeiros dígitos.
+
+```python
+import requests, re, io, zipfile, os
+import pandas as pd
+
+# 1) Baixar o CNEFE 2022 de São José dos Campos (IBGE 3549904)
+BASE = ("https://ftp.ibge.gov.br/Cadastro_Nacional_de_Enderecos_para_Fins_Estatisticos/"
+        "Censo_Demografico_2022/Arquivos_CNEFE/CSV/Municipio/35_SP/")
+html = requests.get(BASE, timeout=60).text
+achado = re.search(r'href="(3549904[^"]*\.zip)"', html)
+if not achado:
+    raise SystemExit("Arquivo de SJC não encontrado na pasta do IBGE — abra o link BASE no navegador e confira o nome.")
+nome_zip = achado.group(1)
+print("Baixando", nome_zip, "...")
+zbytes = requests.get(BASE + nome_zip, timeout=900).content
+z = zipfile.ZipFile(io.BytesIO(zbytes))
+cnefe = pd.read_csv(z.open(z.namelist()[0]), sep=";", encoding="latin-1",
+                    usecols=["CEP", "LATITUDE", "LONGITUDE"], dtype={"CEP": str})
+print(f"{len(cnefe):,} endereços no CNEFE de SJC")
+
+# 2) Padronizar CEP (8 dígitos) e tirar o ponto médio de cada CEP
+def limpa_cep(s):
+    return s.astype(str).str.replace(r"\D", "", regex=True).str.zfill(8)
+
+cnefe["CEP"] = limpa_cep(cnefe["CEP"])
+cnefe = cnefe.dropna(subset=["LATITUDE", "LONGITUDE"])
+ref_cep = cnefe.groupby("CEP")[["LATITUDE", "LONGITUDE"]].median()
+cnefe["CEP5"] = cnefe["CEP"].str[:5]
+ref_cep5 = cnefe.groupby("CEP5")[["LATITUDE", "LONGITUDE"]].median()
+
+# 3) Cruzar com os CEPs da RAIS (por_cep vem da Célula 3)
+ceps = pd.DataFrame({"CEP": limpa_cep(por_cep["CEP"]).unique()})
+geo = ceps.merge(ref_cep, left_on="CEP", right_index=True, how="left")
+geo["PRECISAO"] = geo["LATITUDE"].notna().map({True: "CEP exato", False: None})
+
+# Fallback: CEP de grande usuário / não visitado -> centro dos 5 primeiros dígitos
+faltam = geo["LATITUDE"].isna()
+aprox = geo.loc[faltam, "CEP"].str[:5].map(ref_cep5["LATITUDE"]), geo.loc[faltam, "CEP"].str[:5].map(ref_cep5["LONGITUDE"])
+geo.loc[faltam, "LATITUDE"], geo.loc[faltam, "LONGITUDE"] = aprox
+geo.loc[faltam & geo["LATITUDE"].notna(), "PRECISAO"] = "Aproximado (5 dígitos)"
+geo["PRECISAO"] = geo["PRECISAO"].fillna("Não localizado")
+
+print(geo["PRECISAO"].value_counts())
+
+# 4) Salvar no formato que o Power BI em português lê sem erro
+pasta = os.path.dirname(ARQ_CACHE) if "ARQ_CACHE" in globals() else "/content"
+saida = os.path.join(pasta, "geo_ceps_sjc.csv")
+geo.to_csv(saida, sep=";", decimal=",", index=False, encoding="utf-8-sig")
+print("Salvo em", saida)
+```
+
+### Célula 4 – Teste com 10 CEPs (não grava nada)
+
+```python
+if 'por_cep' not in locals() and 'por_cep' not in globals():
+    print("ERRO: A variável 'por_cep' não foi definida.")
+    print("Por favor, execute primeiro a Célula 3 com sucesso (carregando o arquivo da RAIS) antes de rodar esta célula.")
+else:
+    teste = por_cep.sort_values('vinculos', ascending=False).head(10)['CEP']
+    resultado_teste = pd.DataFrame([{'CEP': c, **geocodificar(c)} for c in teste])
+    display(resultado_teste)
+    # Esperado: a maioria das linhas com lat perto de -23,2 e lng perto de -45,9, e fonte_geo preenchida.
+```
+
+### Célula 5 – Geocodificação completa (30 a 60 min; pode rodar de novo se cair)
+
+```python
+import os
+
+if 'por_cep' not in locals() and 'por_cep' not in globals():
+    print("ERRO: A variável 'por_cep' não foi definida.")
+    print("Por favor, certifique-se de que o arquivo da RAIS foi carregado com sucesso na Célula 3 antes de rodar esta célula.")
+else:
+    # Garante que a pasta no Google Drive seja criada se não existir
+    pasta_salvamento = os.path.dirname(ARQ_CACHE)
+    if pasta_salvamento and not os.path.exists(pasta_salvamento):
+        os.makedirs(pasta_salvamento, exist_ok=True)
+        print(f'Pasta criada: {pasta_salvamento}')
+
+    geo = rodar_geocodificacao(por_cep['CEP'].tolist(), ARQ_CACHE)
+    print('Concluído:', len(geo), 'CEPs no cache')
+```
+
+### Célula 6 – Conferir a qualidade
+
+```python
+por_cep_geo = classificar(por_cep.merge(geo, on='CEP', how='left'))
+
+resumo = (por_cep_geo.groupby('precisao')
+          .agg(CEPs=('CEP', 'size'), estabelecimentos=('estabelecimentos', 'sum'), vinculos=('vinculos', 'sum'))
+          .sort_values('vinculos', ascending=False))
+resumo['% dos vínculos'] = (resumo['vinculos'] / resumo['vinculos'].sum() * 100).round(1)
+print(resumo)
+print('\nFontes usadas:')
+print(por_cep_geo['fonte_geo'].value_counts())
+no_mapa = por_cep_geo.loc[por_cep_geo['lat'].notna(), 'vinculos'].sum()
+print(f'\nVínculos com ponto no mapa: {no_mapa:,} de {por_cep_geo["vinculos"].sum():,} '
+      f'({no_mapa / por_cep_geo["vinculos"].sum():.1%})')
+```
+
+Para ver os CEPs que não foram localizados ou caíram fora de SJC:
+
+```python
+por_cep_geo[por_cep_geo['precisao'].isin(['não localizado', 'fora de SJC (conferir)'])] \
+    .sort_values('vinculos', ascending=False).head(20)
+```
+
+### Célula 7 – Exportar para o Power BI
+
+```python
+por_cep_geo.to_csv(ARQ_SAIDA_CEP, index=False, encoding='utf-8')
+base_geo = base.merge(por_cep_geo[['CEP', 'lat', 'lng', 'bairro', 'precisao']], on='CEP', how='left')
+base_geo.to_csv(ARQ_SAIDA_BASE, index=False, encoding='utf-8')
+print('Gravados:')
+print(' ', ARQ_SAIDA_CEP, '->', len(por_cep_geo), 'linhas')
+print(' ', ARQ_SAIDA_BASE, '->', len(base_geo), 'linhas (esperado: 47.339)')
+```
+
+### Célula 8 – (Opcional) Ver o mapa aqui no Colab
+
+```python
+import folium
+mapa = folium.Map(location=[-23.19, -45.88], zoom_start=11, tiles='CartoDB positron')
+cores = {'CEP': '#2A78D6', 'endereço aproximado': '#EB6834', 'CEP genérico (baixa)': '#9AA1AA'}
+for _, r in por_cep_geo.dropna(subset=['lat']).iterrows():
+    if r.vinculos == 0:
+        continue
+    folium.CircleMarker(
+        [r.lat, r.lng], radius=max(2, (r.vinculos ** 0.5) / 3),
+        color=cores.get(r.precisao, '#2A78D6'), fill=True, fill_opacity=0.6, weight=0,
+        popup=f'CEP {r.CEP} · {r.bairro} · {int(r.vinculos)} vínculos · {r.precisao}',
+    ).add_to(mapa)
+mapa
+```
 
 
 ---

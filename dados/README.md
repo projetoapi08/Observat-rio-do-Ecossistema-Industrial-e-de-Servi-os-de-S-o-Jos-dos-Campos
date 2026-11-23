@@ -10,7 +10,8 @@ Bases tratadas do projeto. A principal é **`RAIS_SJC_2024_PowerBI.csv`**, a bas
 | [`CNAE_RAIS_SJC_2024.xlsx`](CNAE_RAIS_SJC_2024.xlsx) | Base RAIS com a hierarquia CNAE (aba `Base_RAIS`), tabelas de setores, porte, RAIS negativa e legendas | Sprint 2 |
 | [`IBGE_PIB_SJC_Observatorio.xlsx`](IBGE_PIB_SJC_Observatorio.xlsx) | PIB dos Municípios 2002–2023, valor adicionado por setor (até 2021) e cruzamento com a RAIS | Sprint 2 |
 | [`entrada/RAIS_SJC_completo.csv`](entrada/RAIS_SJC_completo.csv) | Extrato da RAIS 2024 filtrado para o município 354990 | ETL da Sprint 1 (notebook 01) |
-| [`entrada/rais_sjc_geo_v2.csv`](entrada/rais_sjc_geo_v2.csv) | RAIS com bairro e coordenadas de cada CEP | Geocodificação (BrasilAPI + Nominatim) |
+| [`entrada/rais_sjc_geo_v2.csv`](entrada/rais_sjc_geo_v2.csv) | RAIS com bairro e coordenadas de cada CEP | Geocodificação (BrasilAPI + Nominatim), a partir do notebook 01b |
+| [`entrada/geo_ceps_sjc_cnefe.csv`](entrada/geo_ceps_sjc_cnefe.csv) | Uma linha por CEP com latitude e longitude pelo CNEFE 2022 (IBGE): 3.379 CEPs exatos, 297 aproximados pelos 5 primeiros dígitos e 1 não localizado. Separador `;` e vírgula decimal. **Ainda não usado pelo notebook 02** (ver melhoria 1 do [Relatório da Sprint 3](../docs/RELATORIO_SPRINT_3.md#6-melhorias-sugeridas)) | Notebook 01b, célula do CNEFE |
 | [`entrada/ceps_sjc_geo_v2.csv`](entrada/ceps_sjc_geo_v2.csv) | Uma linha por CEP com logradouro e marcação de CEP genérico. **Atenção:** as coordenadas deste arquivo estão corrompidas (DEC-016) | Geocodificação |
 | [`referencia/bairros_regiao_sjc.csv`](referencia/bairros_regiao_sjc.csv) | Tabela bairro → região oficial, editável. Para tornar a classificação 100% oficial, substitua pela lista da Prefeitura e rode o notebook 02 | Plano Diretor PMSJC + lista secundária (Norte) |
 | [`referencia/CNAE_Subclasses_2_3.xlsx`](referencia/CNAE_Subclasses_2_3.xlsx) | Estrutura oficial da CNAE 2.3 (1.332 subclasses) | IBGE/CONCLA |
